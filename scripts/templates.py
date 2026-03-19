@@ -388,6 +388,68 @@ def generate_faq_html(faqs, heading="Frequently Asked Questions"):
 
 
 # =============================================================================
+# SCHEMA HELPERS
+# =============================================================================
+
+def get_organization_schema():
+    """Generate Organization + WebSite JSON-LD schema for the homepage."""
+    org = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": SITE_NAME,
+        "url": BASE_URL,
+        "logo": f"{BASE_URL}/assets/logos/logo-full-dark.svg",
+        "description": "Done-for-you event registration websites and targeted ad campaigns that fill seats.",
+        "founder": {
+            "@type": "Person",
+            "name": "Rome Thorndike"
+        },
+        "sameAs": []
+    }
+    website = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": SITE_NAME,
+        "url": BASE_URL,
+        "description": "SharpPages builds high-converting event registration sites and runs the ad campaigns to fill them."
+    }
+    return f'''
+    <script type="application/ld+json">
+{json.dumps(org, indent=2)}
+    </script>
+    <script type="application/ld+json">
+{json.dumps(website, indent=2)}
+    </script>'''
+
+
+def get_service_schema(services):
+    """Generate Service JSON-LD schema.
+
+    Args:
+        services: List of dicts with 'name', 'description', 'url' keys.
+    """
+    parts = []
+    for svc in services:
+        item = {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": svc["name"],
+            "description": svc["description"],
+            "url": svc.get("url", BASE_URL + "/services/"),
+            "provider": {
+                "@type": "Organization",
+                "name": SITE_NAME,
+                "url": BASE_URL
+            }
+        }
+        parts.append(f'''
+    <script type="application/ld+json">
+{json.dumps(item, indent=2)}
+    </script>''')
+    return "".join(parts)
+
+
+# =============================================================================
 # CTA SECTION
 # =============================================================================
 
