@@ -7,14 +7,14 @@
 
 ### Infrastructure
 
-- [ ] **INFR-01**: Python build system generates all pages via `python3 scripts/build.py`
+- [x] **INFR-01**: Python build system generates all pages via `python3 scripts/build.py`
 - [x] **INFR-02**: nav_config.py is single source of truth for nav links, site info, footer columns
 - [x] **INFR-03**: templates.py provides shared HTML generators (head, nav, footer, breadcrumbs, FAQ, CTA, schema)
 - [x] **INFR-04**: Brand assets (tokens.css, logos, favicons, OG images, webmanifest) copied into project
 - [x] **INFR-05**: Single CSS file with BEM naming, cache busting via ?v=N
-- [ ] **INFR-06**: CNAME file for sharppages.com
-- [ ] **INFR-07**: Sitemap.xml auto-generated with correct priorities (homepage 1.0, services 0.9, /for/ 0.8, blog 0.7, static 0.5)
-- [ ] **INFR-08**: robots.txt generated with AI crawler allowances (GPTBot, ClaudeBot, PerplexityBot)
+- [x] **INFR-06**: CNAME file for sharppages.com
+- [x] **INFR-07**: Sitemap.xml auto-generated with correct priorities (homepage 1.0, services 0.9, /for/ 0.8, blog 0.7, static 0.5)
+- [x] **INFR-08**: robots.txt generated with AI crawler allowances (GPTBot, ClaudeBot, PerplexityBot)
 - [x] **INFR-09**: Minimal JS for mobile nav toggle, FAQ accordion, form validation
 - [x] **INFR-10**: GA4 tracking placeholder in every page head
 
@@ -155,14 +155,14 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFR-01 | Phase 1 | Pending |
+| INFR-01 | Phase 1 | Complete |
 | INFR-02 | Phase 1 | Complete |
 | INFR-03 | Phase 1 | Complete |
 | INFR-04 | Phase 1 | Complete |
 | INFR-05 | Phase 1 | Complete |
-| INFR-06 | Phase 1 | Pending |
-| INFR-07 | Phase 1 | Pending |
-| INFR-08 | Phase 1 | Pending |
+| INFR-06 | Phase 1 | Complete |
+| INFR-07 | Phase 1 | Complete |
+| INFR-08 | Phase 1 | Complete |
 | INFR-09 | Phase 1 | Complete |
 | INFR-10 | Phase 1 | Complete |
 | HOME-01 | Phase 2 | Pending |

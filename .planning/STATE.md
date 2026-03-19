@@ -1,3 +1,19 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: executing
+stopped_at: Completed 01-02-PLAN.md (build pipeline + placeholder pages)
+last_updated: "2026-03-19T19:19:14.004Z"
+last_activity: 2026-03-19 -- Completed 01-01-PLAN.md
+progress:
+  total_phases: 3
+  completed_phases: 1
+  total_plans: 2
+  completed_plans: 2
+  percent: 100
+---
+
 # Project State
 
 ## Project Reference
@@ -14,7 +30,7 @@ Plan: 1 of 2 in current phase (complete)
 Status: Executing
 Last activity: 2026-03-19 -- Completed 01-01-PLAN.md
 
-Progress: [█████░░░░░] 50%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -34,6 +50,7 @@ Progress: [█████░░░░░] 50%
 - Trend: starting
 
 *Updated after each plan completion*
+| Phase 01 P02 | 1 min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -47,6 +64,8 @@ Recent decisions affecting current work:
 - Google Fonts CDN (not self-hosted) for Instrument Sans + DM Sans
 - templates.py writes to output/ subdirectory (not in-place like Provyx)
 - Fixed webmanifest icon paths to /assets/favicons/ to match project structure
+- [Phase 01]: ALL_PAGES as module-level list of (path, priority, changefreq) tuples for sitemap generation
+- [Phase 01]: Clean output/ on every build (shutil.rmtree) for reproducible builds
 
 ### Pending Todos
 
@@ -58,6 +77,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-19
-Stopped at: Completed 01-01-PLAN.md (brand assets + shared templates)
+Last session: 2026-03-19T19:19:14.002Z
+Stopped at: Completed 01-02-PLAN.md (build pipeline + placeholder pages)
 Resume file: None
