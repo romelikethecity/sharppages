@@ -1,0 +1,147 @@
+/* SharpPages Design Tokens */
+/* Import: tokens.css */
+
+:root {
+  /* ── Primary ── */
+  --color-midnight: #06090E;
+  --color-deep-navy: #0C1118;
+  --color-primary: #00C2E0;
+  --color-primary-hover: #00D4F5;
+  --color-primary-muted: #0A7EA8;
+  --color-primary-dim: #066A80;
+
+  /* ── Accent ── */
+  --color-accent: #E8B931;
+  --color-accent-hover: #F0C842;
+  --color-accent-muted: #B8941F;
+
+  /* ── Backgrounds ── */
+  --color-bg: #06090E;
+  --color-surface: #0C1118;
+  --color-card: #111820;
+  --color-card-hover: #162030;
+
+  /* ── Borders ── */
+  --color-border: #1E2A38;
+  --color-border-hover: #2A3A4E;
+  --color-border-active: #00C2E0;
+
+  /* ── Text ── */
+  --color-text: #E4E8ED;
+  --color-text-muted: #7A8899;
+  --color-text-subtle: #3A4A5C;
+  --color-text-inverse: #06090E;
+
+  /* ── Semantic ── */
+  --color-success: #34D399;
+  --color-warning: #E8B931;
+  --color-danger: #EF4444;
+
+  /* ── Typography ── */
+  --font-heading: 'Instrument Sans', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+
+  --leading-tight: 1.15;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.12em;
+
+  /* ── Spacing ── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* ── Radius ── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+  /* ── Transitions ── */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+  /* ── Layout ── */
+  --max-width: 1200px;
+  --max-width-narrow: 720px;
+  --max-width-wide: 1440px;
+}
+
+/* ── Light Mode Override ── */
+@media (prefers-color-scheme: light) {
+  :root.auto-theme {
+    --color-bg: #F6F8FA;
+    --color-surface: #FFFFFF;
+    --color-card: #FFFFFF;
+    --color-card-hover: #F0F2F5;
+    --color-border: #D8DCE4;
+    --color-border-hover: #C0C6D0;
+    --color-text: #0C1118;
+    --color-text-muted: #5A6577;
+    --color-text-subtle: #8A94A6;
+    --color-primary: #0A7EA8;
+    --color-primary-hover: #0990BE;
+  }
+}
+
+/* ── Base Resets ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
