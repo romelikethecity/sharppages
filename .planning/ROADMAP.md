@@ -31,7 +31,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Brand assets, nav_config.py, templates.py, styles.css, main.js (shared foundation)
+- [x] 01-01-PLAN.md — Brand assets, nav_config.py, templates.py, styles.css, main.js (shared foundation)
 - [ ] 01-02-PLAN.md — build.py, sitemap, robots.txt, CNAME, placeholder pages (build system)
 
 ### Phase 2: Core Pages
@@ -75,6 +75,6 @@ Phases execute in numeric order: 1 -> 2 -> 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/2 | Planned | - |
+| 1. Foundation | 1/2 | In Progress | - |
 | 2. Core Pages | 0/0 | Not started | - |
 | 3. Content Expansion | 0/0 | Not started | - |

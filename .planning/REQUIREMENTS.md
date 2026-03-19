@@ -8,15 +8,15 @@
 ### Infrastructure
 
 - [ ] **INFR-01**: Python build system generates all pages via `python3 scripts/build.py`
-- [ ] **INFR-02**: nav_config.py is single source of truth for nav links, site info, footer columns
-- [ ] **INFR-03**: templates.py provides shared HTML generators (head, nav, footer, breadcrumbs, FAQ, CTA, schema)
-- [ ] **INFR-04**: Brand assets (tokens.css, logos, favicons, OG images, webmanifest) copied into project
-- [ ] **INFR-05**: Single CSS file with BEM naming, cache busting via ?v=N
+- [x] **INFR-02**: nav_config.py is single source of truth for nav links, site info, footer columns
+- [x] **INFR-03**: templates.py provides shared HTML generators (head, nav, footer, breadcrumbs, FAQ, CTA, schema)
+- [x] **INFR-04**: Brand assets (tokens.css, logos, favicons, OG images, webmanifest) copied into project
+- [x] **INFR-05**: Single CSS file with BEM naming, cache busting via ?v=N
 - [ ] **INFR-06**: CNAME file for sharppages.com
 - [ ] **INFR-07**: Sitemap.xml auto-generated with correct priorities (homepage 1.0, services 0.9, /for/ 0.8, blog 0.7, static 0.5)
 - [ ] **INFR-08**: robots.txt generated with AI crawler allowances (GPTBot, ClaudeBot, PerplexityBot)
-- [ ] **INFR-09**: Minimal JS for mobile nav toggle, FAQ accordion, form validation
-- [ ] **INFR-10**: GA4 tracking placeholder in every page head
+- [x] **INFR-09**: Minimal JS for mobile nav toggle, FAQ accordion, form validation
+- [x] **INFR-10**: GA4 tracking placeholder in every page head
 
 ### Homepage
 
@@ -93,13 +93,13 @@
 
 ### SEO
 
-- [ ] **SEO-01**: Every page has unique title (50-60 chars), keyword-first, hyphens not pipes
-- [ ] **SEO-02**: Every page has unique meta description (150-158 chars), action-oriented
-- [ ] **SEO-03**: Every page has canonical URL to https://sharppages.com/{path}/
-- [ ] **SEO-04**: OG tags on every page (og:type, og:url, og:title, og:description, og:site_name, og:image)
-- [ ] **SEO-05**: Twitter Card on every page (summary_large_image)
+- [x] **SEO-01**: Every page has unique title (50-60 chars), keyword-first, hyphens not pipes
+- [x] **SEO-02**: Every page has unique meta description (150-158 chars), action-oriented
+- [x] **SEO-03**: Every page has canonical URL to https://sharppages.com/{path}/
+- [x] **SEO-04**: OG tags on every page (og:type, og:url, og:title, og:description, og:site_name, og:image)
+- [x] **SEO-05**: Twitter Card on every page (summary_large_image)
 - [ ] **SEO-06**: Homepage schema: Organization + WebSite + FAQPage
-- [ ] **SEO-07**: All inner pages: BreadcrumbList schema
+- [x] **SEO-07**: All inner pages: BreadcrumbList schema
 - [ ] **SEO-08**: Pages with FAQs: FAQPage schema matching visible content exactly
 - [ ] **SEO-09**: Blog articles: Article schema with author (Rome Thorndike)
 - [ ] **SEO-10**: Service pages: Service schema
@@ -111,16 +111,16 @@
 - [ ] **QUAL-01**: Zero AI writing tells (no em-dashes, no false reframes, no banned words)
 - [ ] **QUAL-02**: Every number sourced (BTL case study, citable source, or real pricing)
 - [ ] **QUAL-03**: No specific dates in copy (use relative language)
-- [ ] **QUAL-04**: CURRENT_YEAR variable for any year references
+- [x] **QUAL-04**: CURRENT_YEAR variable for any year references
 - [ ] **QUAL-05**: No "coming soon" sections
 
 ### Performance
 
-- [ ] **PERF-01**: Lighthouse Performance 90+
-- [ ] **PERF-02**: Lighthouse Accessibility 90+
-- [ ] **PERF-03**: Lighthouse SEO 100
+- [x] **PERF-01**: Lighthouse Performance 90+
+- [x] **PERF-02**: Lighthouse Accessibility 90+
+- [x] **PERF-03**: Lighthouse SEO 100
 - [ ] **PERF-04**: All images have width + height attributes
-- [ ] **PERF-05**: Google Fonts preconnect + display=swap
+- [x] **PERF-05**: Google Fonts preconnect + display=swap
 - [ ] **PERF-06**: Below-fold images lazy loaded
 
 ## v2 Requirements
@@ -156,15 +156,15 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | INFR-01 | Phase 1 | Pending |
-| INFR-02 | Phase 1 | Pending |
-| INFR-03 | Phase 1 | Pending |
-| INFR-04 | Phase 1 | Pending |
-| INFR-05 | Phase 1 | Pending |
+| INFR-02 | Phase 1 | Complete |
+| INFR-03 | Phase 1 | Complete |
+| INFR-04 | Phase 1 | Complete |
+| INFR-05 | Phase 1 | Complete |
 | INFR-06 | Phase 1 | Pending |
 | INFR-07 | Phase 1 | Pending |
 | INFR-08 | Phase 1 | Pending |
-| INFR-09 | Phase 1 | Pending |
-| INFR-10 | Phase 1 | Pending |
+| INFR-09 | Phase 1 | Complete |
+| INFR-10 | Phase 1 | Complete |
 | HOME-01 | Phase 2 | Pending |
 | HOME-02 | Phase 2 | Pending |
 | HOME-03 | Phase 2 | Pending |
@@ -211,13 +211,13 @@
 | BLOG-04 | Phase 3 | Pending |
 | BLOG-05 | Phase 3 | Pending |
 | BLOG-06 | Phase 3 | Pending |
-| SEO-01 | Phase 1 | Pending |
-| SEO-02 | Phase 1 | Pending |
-| SEO-03 | Phase 1 | Pending |
-| SEO-04 | Phase 1 | Pending |
-| SEO-05 | Phase 1 | Pending |
+| SEO-01 | Phase 1 | Complete |
+| SEO-02 | Phase 1 | Complete |
+| SEO-03 | Phase 1 | Complete |
+| SEO-04 | Phase 1 | Complete |
+| SEO-05 | Phase 1 | Complete |
 | SEO-06 | Phase 2 | Pending |
-| SEO-07 | Phase 1 | Pending |
+| SEO-07 | Phase 1 | Complete |
 | SEO-08 | Phase 2 | Pending |
 | SEO-09 | Phase 3 | Pending |
 | SEO-10 | Phase 2 | Pending |
@@ -226,13 +226,13 @@
 | QUAL-01 | Phase 2 | Pending |
 | QUAL-02 | Phase 2 | Pending |
 | QUAL-03 | Phase 2 | Pending |
-| QUAL-04 | Phase 1 | Pending |
+| QUAL-04 | Phase 1 | Complete |
 | QUAL-05 | Phase 2 | Pending |
-| PERF-01 | Phase 1 | Pending |
-| PERF-02 | Phase 1 | Pending |
-| PERF-03 | Phase 1 | Pending |
+| PERF-01 | Phase 1 | Complete |
+| PERF-02 | Phase 1 | Complete |
+| PERF-03 | Phase 1 | Complete |
 | PERF-04 | Phase 2 | Pending |
-| PERF-05 | Phase 1 | Pending |
+| PERF-05 | Phase 1 | Complete |
 | PERF-06 | Phase 2 | Pending |
 
 **Coverage:**
