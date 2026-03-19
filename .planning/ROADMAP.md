@@ -28,11 +28,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Every generated page has unique meta title, meta description, canonical URL, OG tags, Twitter Card, BreadcrumbList schema, and GA4 placeholder in head
   4. Mobile nav toggle, FAQ accordion, and form validation JS work on mobile and desktop
   5. A placeholder page scores Lighthouse Performance 90+, Accessibility 90+, SEO 100 with Google Fonts preconnected and display=swap
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md — Brand assets, nav_config.py, templates.py, styles.css, main.js (shared foundation)
+- [ ] 01-02-PLAN.md — build.py, sitemap, robots.txt, CNAME, placeholder pages (build system)
 
 ### Phase 2: Core Pages
 **Goal**: A complete marketing site with homepage, services, pricing, work, about, contact, privacy, and terms pages -- each with real copy, proper schema, and conversion-driving CTAs
@@ -75,6 +75,6 @@ Phases execute in numeric order: 1 -> 2 -> 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/0 | Not started | - |
+| 1. Foundation | 0/2 | Planned | - |
 | 2. Core Pages | 0/0 | Not started | - |
 | 3. Content Expansion | 0/0 | Not started | - |
