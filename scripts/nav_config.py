@@ -10,7 +10,7 @@ After editing, regenerate all pages by running:
 # Site info
 SITE_NAME = "SharpPages"
 SITE_URL = "https://sharppages.com"
-SITE_TAGLINE = "Sharp pages. Full rooms."
+SITE_TAGLINE = "Fast sites. Real SEO results."
 COPYRIGHT_YEAR = "2026"
 
 # CTA button
@@ -22,7 +22,7 @@ NAV_ITEMS = [
     {"href": "/services/", "label": "Services"},
     {"href": "/pricing/", "label": "Pricing"},
     {"href": "/work/", "label": "Work"},
-    {"href": "/about/", "label": "About"},
+    {"href": "/audit/", "label": "Free Audit"},
     {"href": "/blog/", "label": "Blog"},
 ]
 
@@ -41,9 +41,16 @@ FOOTER_COLUMNS = {
         {"href": "/for/conference-organizers/", "label": "Conferences"},
         {"href": "/for/med-spas/", "label": "Med Spas"},
         {"href": "/for/real-estate/", "label": "Real Estate"},
+        {"href": "/for/healthcare-practices/", "label": "Healthcare"},
+        {"href": "/for/law-firms/", "label": "Law Firms"},
+        {"href": "/for/home-services/", "label": "Home Services"},
+        {"href": "/for/professional-services/", "label": "Professional Services"},
+        {"href": "/for/startups/", "label": "Startups"},
+        {"href": "/for/franchise-multi-location/", "label": "Franchise"},
     ],
     "Resources": [
         {"href": "/blog/", "label": "Blog"},
+        {"href": "/audit/", "label": "Free Site Audit"},
         {"href": "/about/", "label": "About"},
     ],
     "Legal": [

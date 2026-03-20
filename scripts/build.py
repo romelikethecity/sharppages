@@ -47,59 +47,135 @@ ALL_PAGES = []
 # =============================================================================
 
 PRICING = {
-    "site_build_first": {"low": 3500, "high": 5000},
-    "site_build_additional": {"low": 1500, "high": 2500},
-    "ad_management_monthly": {"low": 1500, "high": 2500},
-    "ad_setup_fee": {"low": 500, "high": 1000},
+    # Website Design & Build
+    "site_landing": {"low": 1500, "high": 2500},
+    "site_standard": {"low": 3000, "high": 6000},
+    "site_content": {"low": 5000, "high": 12000},
+    "site_enterprise": {"low": 10000, "high": 25000},
+    "lead_magnet_addon": {"low": 1000, "high": 3000},
+    # Website Redesign & Migration
+    "redesign_wp_sq_wix": {"low": 2500, "high": 6000},
+    "redesign_webflow": {"low": 3000, "high": 8000},
+    "redesign_custom_cms": {"low": 5000, "high": 15000},
+    # SEO & Content Strategy
+    "seo_audit": {"low": 500, "high": 1500},
+    "seo_programmatic": {"low": 3000, "high": 10000},
+    "seo_monthly": {"low": 1500, "high": 3000},
+    # Event Registration Sites
+    "event_first": {"low": 2000, "high": 4000},
+    "event_clone": {"low": 500, "high": 1000},
+    # Paid Social Advertising
+    "ad_setup": {"low": 500, "high": 1000},
+    "ad_monthly": {"low": 1000, "high": 2500},
+    # PageSpeed Audit & Fix
+    "pagespeed_free": 0,
+    "pagespeed_detailed": 500,
+    "pagespeed_fix": {"low": 1000, "high": 3000},
 }
 
-TIERS = [
+# Services overview data for homepage cards and services page
+SERVICES = [
     {
-        "name": "Single Event",
-        "desc": "One event registration site with tracking, built in 5 to 7 business days.",
-        "price_display": f"${PRICING['site_build_first']['low']:,}",
-        "price_note": f"to ${PRICING['site_build_first']['high']:,}",
-        "features": [
-            "Custom event registration page",
-            "Mobile-responsive design",
-            "GA4 + Meta Pixel installed",
-            "Confirmation page with conversion tracking",
-            "Deployed on your domain",
-            "5 to 7 business day turnaround",
-        ],
-        "featured": False,
-        "cta": "Book a Call",
+        "id": "website-design",
+        "name": "Website Design & Build",
+        "short": "Static HTML/CSS sites, mobile-first, sub-1-second load times. 90+ PageSpeed scores. Full schema markup, OG tags, sitemap. No WordPress maintenance. Flat fee, you own all files.",
+        "icon": "&#9889;",
     },
     {
-        "name": "Event + Ads",
-        "desc": "Registration site plus a managed Facebook ad campaign targeting your audience. The full loop.",
-        "price_display": f"${PRICING['site_build_first']['low'] + PRICING['ad_management_monthly']['low']:,}",
-        "price_note": f"site + first month of ads (setup fee ${PRICING['ad_setup_fee']['low']:,} to ${PRICING['ad_setup_fee']['high']:,})",
+        "id": "website-redesign",
+        "name": "Website Redesign & Migration",
+        "short": "Migrate from WordPress, Webflow, or Squarespace to static. Same design (or improved), 5x faster load times. No recurring hosting fees, no plugin bloat.",
+        "icon": "&#128257;",
+    },
+    {
+        "id": "seo-content",
+        "name": "SEO & Content Strategy",
+        "short": "Programmatic SEO at scale. Hub-and-spoke architecture for topical authority. Keyword-targeted content (glossary, comparisons, alternatives, location pages). Schema markup for rich results.",
+        "icon": "&#128200;",
+    },
+    {
+        "id": "event-sites",
+        "name": "Event Registration Sites",
+        "short": "Custom registration pages with GA4 + Meta Pixel. Template cloning for multi-city events (48hr turnaround). No per-registrant fees, no platform lock-in.",
+        "icon": "&#127919;",
+    },
+    {
+        "id": "paid-social",
+        "name": "Paid Social Advertising",
+        "short": "Facebook/Instagram campaign management. Custom audience targeting, retargeting, urgency scheduling. 2x industry-average CTR, lower CPC. Full attribution from ad to conversion.",
+        "icon": "&#128176;",
+    },
+    {
+        "id": "pagespeed-audit",
+        "name": "PageSpeed Audit & Fix",
+        "short": "Free instant audit or paid detailed audit with consult. Identify performance bottlenecks and fix them. Before/after PageSpeed scores as deliverable.",
+        "icon": "&#128337;",
+    },
+]
+
+# Pricing page tier cards (the 4 main website build tiers)
+TIERS = [
+    {
+        "name": "Landing Page",
+        "desc": "Single page, mobile-optimized, tracking setup. For launches, campaigns, and lead capture.",
+        "price_display": f"${PRICING['site_landing']['low']:,}",
+        "price_note": f"to ${PRICING['site_landing']['high']:,}",
         "features": [
-            "Everything in Single Event",
-            "Custom audience targeting (your patient/client list)",
-            "Facebook retargeting campaigns",
-            "Carousel + static ad creative",
-            "25-day urgency schedule",
-            "Weekly performance reporting",
-            "Dedicated campaign manager",
+            "Single-page site, mobile-first",
+            "90+ PageSpeed score",
+            "GA4 + conversion tracking",
+            "Schema markup + OG tags",
+            "Deployed on your domain",
+            "You own all files",
+        ],
+        "featured": False,
+        "cta": "Get a Free Audit",
+    },
+    {
+        "name": "Standard Site",
+        "desc": "5 to 10 pages with full SEO, contact forms, and schema markup. The right fit for most businesses.",
+        "price_display": f"${PRICING['site_standard']['low']:,}",
+        "price_note": f"to ${PRICING['site_standard']['high']:,}",
+        "features": [
+            "5-10 pages, custom design",
+            "Full schema + structured data",
+            "Contact form with spam protection",
+            "Blog-ready architecture",
+            "Sitemap + robots.txt",
+            "90+ PageSpeed score",
         ],
         "featured": True,
         "badge": "Most Popular",
-        "cta": "Book a Call",
+        "cta": "Get a Free Audit",
     },
     {
-        "name": "Multi-City / Ongoing",
-        "desc": "Reuse your proven template across multiple cities or events. Same quality, fraction of the cost.",
-        "price_display": f"${PRICING['site_build_additional']['low']:,}",
-        "price_note": f"to ${PRICING['site_build_additional']['high']:,} per additional site",
+        "name": "Content Site",
+        "desc": "10 to 50+ pages with programmatic SEO, blog infrastructure, and content at scale.",
+        "price_display": f"${PRICING['site_content']['low']:,}",
+        "price_note": f"to ${PRICING['site_content']['high']:,}",
         "features": [
-            "Clone from your existing template",
-            "New city/event details swapped in",
-            "Fresh ad campaign per market",
-            "Separate tracking per event",
-            "48-hour turnaround for clones",
-            "Volume discounts on ad management",
+            "10-50+ pages",
+            "Programmatic SEO architecture",
+            "Blog with Article schema",
+            "Hub-and-spoke content model",
+            "Automated sitemap generation",
+            "Internal linking strategy",
+        ],
+        "featured": False,
+        "cta": "Get a Free Audit",
+    },
+    {
+        "name": "Enterprise / pSEO",
+        "desc": "100+ pages generated from structured data. For businesses that need search dominance at scale.",
+        "price_display": f"${PRICING['site_enterprise']['low']:,}",
+        "price_note": f"to ${PRICING['site_enterprise']['high']:,}",
+        "features": [
+            "100+ data-driven pages",
+            "Custom build scripts",
+            "Comparison + alternative pages",
+            "Location + industry verticals",
+            "Full schema per page type",
+            "Ongoing content expansion",
         ],
         "featured": False,
         "cta": "Book a Call",
@@ -127,36 +203,51 @@ def _breadcrumbs(page_name, page_path):
 # =============================================================================
 
 def build_homepage():
-    """Build homepage with Harry Dry 10-element formula."""
+    """Build homepage with Harry Dry formula: hero, social proof, problem, animated proof, services, how it works, audit CTA, industries, final CTA."""
 
     # Organization + WebSite schema
     org_schema = get_organization_schema()
 
+    # Service cards from SERVICES data
+    service_cards = ""
+    for svc in SERVICES:
+        service_cards += f'''
+                    <a href="/services/#{svc['id']}" class="feature-card" style="text-decoration: none; display: block;">
+                        <span class="feature-card__icon">{svc['icon']}</span>
+                        <h3 class="feature-card__title">{svc['name']}</h3>
+                        <p class="feature-card__text">{svc['short']}</p>
+                    </a>'''
+
+    # ICP industry links grid
+    icp_links = ""
+    for icp in ICP_PAGES:
+        icp_links += f'<a href="/for/{icp["slug"]}/" class="industry-link">{icp["name"]}</a>\n'
+
     # FAQ data
     faqs = [
         {
-            "question": "How long does it take to build an event registration site?",
-            "answer": "5 to 7 business days from kickoff to a live, deployed site. If you need a second site for another city or event, clones take 48 hours because the template is already built."
+            "question": "How is SharpPages different from a marketing agency?",
+            "answer": "Agencies bill hours, staff projects across junior teams, and deliver on Webflow or WordPress. We build static sites that score 90+ on PageSpeed, charge flat fees, and hand you the files when we are done. No retainers unless you want ongoing SEO or ad management."
         },
         {
-            "question": "Do I need to provide copy and images?",
-            "answer": "You provide event details (date, venue, speakers, agenda). We write the copy, source imagery, and build the page. You review and approve before we go live."
+            "question": "What does a 98 PageSpeed score mean for my business?",
+            "answer": "Google uses Core Web Vitals (including page speed) as a ranking factor. A score of 98 means your site loads in under a second on mobile, which reduces bounce rates and improves conversion rates. Most agency-built sites score between 60 and 80."
         },
         {
-            "question": "What ad platforms do you use?",
-            "answer": "Facebook and Instagram via Meta Ads Manager. We build custom audiences from your contact list (email, phone, name, zip) and run retargeting campaigns against site visitors who did not register."
+            "question": "Do you build on WordPress or Webflow?",
+            "answer": "Neither. We build static HTML/CSS sites. They load faster, score higher on PageSpeed, cost nothing to host, and have zero security vulnerabilities from plugins. You own all the files."
         },
         {
-            "question": "Can I use my own domain?",
-            "answer": "Yes. We deploy to your domain via GitHub Pages. You point your DNS, we handle the rest. If you do not have a domain, we can help you pick one."
+            "question": "What is programmatic SEO?",
+            "answer": "Building hundreds or thousands of pages from structured data. Each page targets a specific keyword (a school profile, a comparison, a location page). We built 398 pages for one client and 322 for another. Both rank on page one for their target terms."
         },
         {
-            "question": "What does the ad management retainer cover?",
-            "answer": f"Campaign strategy, audience building, ad creative (carousel + static images), a 25-day urgency schedule, retargeting setup, and weekly performance reports. ${PRICING['ad_management_monthly']['low']:,} to ${PRICING['ad_management_monthly']['high']:,} per month plus a one-time setup fee."
+            "question": "How long does a typical project take?",
+            "answer": "Landing pages: 1 to 2 weeks. Standard sites (5-10 pages): 2 to 4 weeks. Content sites with programmatic SEO: 4 to 8 weeks. Event registration sites: 5 to 7 business days."
         },
         {
-            "question": "Do you charge per registrant or take a percentage?",
-            "answer": "No. You pay a flat fee for the site and a flat monthly retainer for ad management. No per-registrant charges, no platform fees, no annual contracts."
+            "question": "What happens after the site launches?",
+            "answer": "You own the files. Host them anywhere. If you want ongoing SEO management, content expansion, or ad campaigns, we offer monthly retainers. Otherwise, the site runs on its own with zero maintenance cost."
         },
     ]
     faq_html = generate_faq_html(faqs)
@@ -164,10 +255,10 @@ def build_homepage():
     body = f'''
         <section class="section hero">
             <div class="container">
-                <h1 class="hero__title">Sharp pages. <span class="text-accent">Full rooms.</span></h1>
-                <p class="hero__subtitle">We build your event registration site, install tracking pixels, and run Facebook ad campaigns to fill seats. You focus on the event.</p>
+                <h1 class="hero__title">Fast sites. Real SEO results. <span class="text-accent">No hourly billing.</span></h1>
+                <p class="hero__subtitle">Sites that load in under a second. SEO that drives traffic in weeks. Ad campaigns with 2x industry CTR. No change orders, no surprises.</p>
                 <div class="hero__cta-group">
-                    <a href="/contact/" class="btn btn--primary btn--lg">Book a Call</a>
+                    <a href="/audit/" class="btn btn--primary btn--lg">Get a Free Site Audit</a>
                     <a href="/work/" class="btn btn--outline btn--lg">See Our Work</a>
                 </div>
             </div>
@@ -177,20 +268,37 @@ def build_homepage():
             <div class="container">
                 <div class="stats-bar">
                     <div class="stats-bar__item">
-                        <span class="stats-bar__number">5-7</span>
-                        <span class="stats-bar__label">Days to Launch</span>
+                        <span class="stats-bar__number">98</span>
+                        <span class="stats-bar__label">Mobile PageSpeed Score</span>
                     </div>
                     <div class="stats-bar__item">
-                        <span class="stats-bar__number">48hr</span>
-                        <span class="stats-bar__label">Clone Turnaround</span>
+                        <span class="stats-bar__number">0.9s</span>
+                        <span class="stats-bar__label">Speed Index</span>
                     </div>
                     <div class="stats-bar__item">
-                        <span class="stats-bar__number">100%</span>
-                        <span class="stats-bar__label">Mobile Responsive</span>
+                        <span class="stats-bar__number">2x</span>
+                        <span class="stats-bar__label">Industry Avg CTR</span>
                     </div>
-                    <div class="stats-bar__item">
-                        <span class="stats-bar__number">$0</span>
-                        <span class="stats-bar__label">Per-Registrant Fees</span>
+                </div>
+                <p class="social-proof-row">Built 700+ pages across client sites. <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">Run yours through PageSpeed Insights and compare.</a></p>
+            </div>
+        </section>
+
+        <section class="section section--alt">
+            <div class="container">
+                <h2 class="text-center mb-8">Agencies Bill Hours. We Ship Results.</h2>
+                <div class="feature-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                    <div class="feature-card">
+                        <h3 class="feature-card__title">$150-$300/hr</h3>
+                        <p class="feature-card__text">Agency hourly rates for sites that score 73 on mobile PageSpeed with 5-second load times. Plus change orders when the first version does not work. Plus Phase 2 when Phase 1 underdelivers.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-card__title">6-8 Weeks</h3>
+                        <p class="feature-card__text">Typical agency timeline for a site that could ship in two. Meetings about meetings. Design reviews that loop three times. A "strategy phase" that produces a PDF nobody reads.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-card__title">Scope Creep Built In</h3>
+                        <p class="feature-card__text">Agencies profit from scope changes. Every revision, every new page, every "can we also..." triggers a change order. The original quote was a starting point, not a final price.</p>
                     </div>
                 </div>
             </div>
@@ -198,37 +306,67 @@ def build_homepage():
 
         <section class="section">
             <div class="container">
-                <h2 class="text-center mb-8">What You Get</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <span class="feature-card__icon">&#9889;</span>
-                        <h3 class="feature-card__title">Event Registration Site</h3>
-                        <p class="feature-card__text">A custom, mobile-responsive landing page built to convert visitors into registrants. Your branding, your domain, your event details. Not a template you wrestle with yourself.</p>
+                <h2 class="text-center mb-8">The Proof</h2>
+
+                <div class="proof-section">
+                    <h3 class="proof-section__heading">PageSpeed: SharpPages vs. Average Agency</h3>
+                    <div class="gauge-comparison" data-animate>
+                        <div class="gauge-wrapper">
+                            <div class="gauge" data-score="98" data-color="green">
+                                <svg class="gauge__svg" viewBox="0 0 120 120">
+                                    <circle class="gauge__bg" cx="60" cy="60" r="54" />
+                                    <circle class="gauge__fill gauge__fill--green" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+                                </svg>
+                                <span class="gauge__score" data-target="98">0</span>
+                            </div>
+                            <span class="gauge__label">SharpPages</span>
+                            <span class="gauge__detail">0.9s Speed Index &middot; 30ms TBT</span>
+                        </div>
+                        <div class="gauge-wrapper">
+                            <div class="gauge" data-score="73" data-color="orange">
+                                <svg class="gauge__svg" viewBox="0 0 120 120">
+                                    <circle class="gauge__bg" cx="60" cy="60" r="54" />
+                                    <circle class="gauge__fill gauge__fill--orange" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+                                </svg>
+                                <span class="gauge__score" data-target="73">0</span>
+                            </div>
+                            <span class="gauge__label">Average Agency</span>
+                            <span class="gauge__detail">5.0s Speed Index &middot; 280ms TBT</span>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <span class="feature-card__icon">&#128200;</span>
-                        <h3 class="feature-card__title">Tracking + Pixels</h3>
-                        <p class="feature-card__text">GA4 and Meta Pixel installed from day one. Every page view, every registration, every conversion tracked. You know exactly what is working and what is not.</p>
+                </div>
+
+                <div class="proof-section">
+                    <h3 class="proof-section__heading">SEO: PE Collective Impression Growth</h3>
+                    <p class="proof-section__subtext">From near-zero to 363K impressions in 30 days. 322 pages, programmatic SEO. <a href="https://pecollective.com" target="_blank" rel="noopener noreferrer">See the live site.</a></p>
+                    <div class="seo-chart" data-animate>
+                        <svg class="seo-chart__svg" viewBox="0 0 600 200" preserveAspectRatio="none">
+                            <polyline class="seo-chart__line" points="0,195 150,180 300,150 450,100 600,10" fill="none" />
+                        </svg>
+                        <div class="seo-chart__labels">
+                            <span class="seo-chart__label" data-delay="0">Week 1: 2K</span>
+                            <span class="seo-chart__label" data-delay="1">Week 2: 15K</span>
+                            <span class="seo-chart__label" data-delay="2">Week 3: 30K</span>
+                            <span class="seo-chart__label" data-delay="3">Week 4: 45K/day</span>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <span class="feature-card__icon">&#127919;</span>
-                        <h3 class="feature-card__title">Facebook Ad Campaigns</h3>
-                        <p class="feature-card__text">Custom audience targeting from your contact list. Retargeting for site visitors who did not register. Carousel and static creative. A 25-day urgency schedule leading up to your event.</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="feature-card__icon">&#128337;</span>
-                        <h3 class="feature-card__title">5 to 7 Day Turnaround</h3>
-                        <p class="feature-card__text">From kickoff call to live, deployed site. Not weeks of revisions and scope creep. We move fast because the playbook is proven.</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="feature-card__icon">&#128257;</span>
-                        <h3 class="feature-card__title">Clone to New Markets</h3>
-                        <p class="feature-card__text">Running the same event in another city? We clone your template, swap the details, and deploy in 48 hours. Same quality at a fraction of the original cost.</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="feature-card__icon">&#128176;</span>
-                        <h3 class="feature-card__title">Flat Pricing, No Surprises</h3>
-                        <p class="feature-card__text">No per-registrant fees. No platform charges. No annual contracts. You pay for the site build and (optionally) monthly ad management. That is it.</p>
+                </div>
+
+                <div class="proof-section">
+                    <h3 class="proof-section__heading">Ad Performance: BTL Events Campaign</h3>
+                    <div class="stats-bar">
+                        <div class="stats-bar__item">
+                            <span class="stats-bar__number">2x</span>
+                            <span class="stats-bar__label">Industry Avg CTR</span>
+                        </div>
+                        <div class="stats-bar__item">
+                            <span class="stats-bar__number">Lower</span>
+                            <span class="stats-bar__label">Cost per Click</span>
+                        </div>
+                        <div class="stats-bar__item">
+                            <span class="stats-bar__number">25 days</span>
+                            <span class="stats-bar__label">Campaign Structure</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -236,29 +374,58 @@ def build_homepage():
 
         <section class="section section--alt">
             <div class="container">
-                <div class="case-study">
-                    <span class="case-study__label">Case Study</span>
-                    <h2 class="case-study__title">Medical Device Manufacturer, Detroit</h2>
-                    <p class="case-study__summary">A medical device company needed a registration site for a physician dinner event in Detroit. We built the page, installed tracking, and ran targeted Facebook ads against their contact database.</p>
-                    <div class="case-study__stats">
-                        <div class="case-study__stat">
-                            <span class="case-study__stat-number">5 days</span>
-                            <span class="case-study__stat-label">Build time</span>
-                        </div>
-                        <div class="case-study__stat">
-                            <span class="case-study__stat-number">100%</span>
-                            <span class="case-study__stat-label">Mobile responsive</span>
-                        </div>
-                        <div class="case-study__stat">
-                            <span class="case-study__stat-number">48hrs</span>
-                            <span class="case-study__stat-label">Second city clone</span>
-                        </div>
-                        <div class="case-study__stat">
-                            <span class="case-study__stat-number">2 cities</span>
-                            <span class="case-study__stat-label">Same template</span>
+                <h2 class="text-center mb-8">What We Build</h2>
+                <div class="feature-grid">
+                    {service_cards}
+                </div>
+                <p class="text-center" style="margin-top: var(--space-6);"><a href="/services/" class="btn btn--outline">All Services &amp; Details</a></p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center mb-8">How It Works</h2>
+                <div class="process-steps process-steps--horizontal">
+                    <div class="process-step">
+                        <div class="process-step__number">1</div>
+                        <div class="process-step__content">
+                            <h3>Scope</h3>
+                            <p>You tell us what you need. We review your current site, your goals, and your timeline. You get a fixed quote within two business days.</p>
                         </div>
                     </div>
-                    <a href="/work/" class="btn btn--outline">Read the Full Story</a>
+                    <div class="process-step">
+                        <div class="process-step__number">2</div>
+                        <div class="process-step__content">
+                            <h3>Build</h3>
+                            <p>We build the site, write the copy, configure tracking, and set up SEO. You review drafts and approve before anything goes live.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-step__number">3</div>
+                        <div class="process-step__content">
+                            <h3>Launch</h3>
+                            <p>Site goes live on your domain. You own all files. If you want ongoing SEO or ad management, we set that up too. Otherwise, you are done.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt">
+            <div class="container audit-cta">
+                <h2 class="text-center mb-4">Free Site Audit</h2>
+                <p class="text-center" style="color: var(--color-text-muted); max-width: 640px; margin: 0 auto var(--space-6); line-height: var(--leading-relaxed);">Run your site through our free audit. See your PageSpeed score, SEO gaps, and what is fixable. Takes 30 seconds.</p>
+                <div class="text-center">
+                    <a href="/audit/" class="btn btn--primary btn--lg">Run Your Free Audit</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center mb-8">Industries We Serve</h2>
+                <div class="industry-grid">
+                    {icp_links}
                 </div>
             </div>
         </section>
@@ -266,27 +433,14 @@ def build_homepage():
 {faq_html}
 
 {generate_cta_section(
-    title="Let Us Build Your Next Event Page",
-    text="Tell us about your event. We will scope it, price it, and get back to you within one business day.",
+    title="Ready to See What Your Site Could Be?",
+    text="Book a call. We will review your current site, discuss your goals, and send a fixed quote within two business days.",
     button_text="Book a Call",
-)}
-
-        <section class="section">
-            <div class="container">
-                <div class="founder-note">
-                    <span class="founder-note__label">From the Founder</span>
-                    <p class="founder-note__text">I built SharpPages because I kept seeing the same problem: event organizers spending weeks going back and forth with agencies, or trying to piece together Eventbrite pages and boosted Facebook posts themselves.</p>
-                    <p class="founder-note__text">Before SharpPages, I spent a decade in enterprise SaaS (Salesforce, Microsoft, Databricks) and earned my MBA at UC Berkeley Haas. I know what good marketing ops looks like at scale, and I know most event teams do not have time to build it themselves.</p>
-                    <p class="founder-note__text">So we productized it. A sharp registration page, proper tracking, and targeted ads. One package, one flat fee, delivered in under a week. The playbook works because we have run it ourselves for real events with real registrations.</p>
-                    <p class="founder-note__signature">Rome Thorndike</p>
-                    <p class="founder-note__title">Founder, SharpPages</p>
-                </div>
-            </div>
-        </section>'''
+)}'''
 
     html = get_page_wrapper(
-        title="Event Registration Sites That Fill Rooms",
-        description="SharpPages builds high-converting event registration sites and runs ad campaigns to fill seats. Page, pixels, and paid media. 5 to 7 day turnaround.",
+        title="Fast Sites. Real SEO Results. No Hourly Billing.",
+        description="Sites that load in under a second. SEO that drives traffic in weeks. Ad campaigns with 2x industry CTR. Flat fees, no change orders. SharpPages.",
         canonical_path="/",
         body_content=body,
         extra_schema=org_schema,
@@ -296,52 +450,39 @@ def build_homepage():
 
 
 def build_services():
-    """Build services page with 3 core services + FAQ."""
+    """Build services page with 6 services, each with description, includes, and anchor IDs."""
 
     crumbs, breadcrumb_nav, breadcrumb_schema = _breadcrumbs("Services", "/services/")
 
     service_schema = get_service_schema([
-        {
-            "name": "Event Registration Site Build",
-            "description": "Custom, mobile-responsive event registration websites with tracking pixels, deployed on your domain in 5 to 7 business days.",
-            "url": BASE_URL + "/services/",
-        },
-        {
-            "name": "Paid Social Ad Management",
-            "description": "Facebook and Instagram ad campaigns with custom audience targeting and retargeting to fill event seats.",
-            "url": BASE_URL + "/services/",
-        },
-        {
-            "name": "Tracking and Analytics Setup",
-            "description": "GA4, Meta Pixel, and conversion tracking installed and configured for event registration attribution.",
-            "url": BASE_URL + "/services/",
-        },
+        {"name": s["name"], "description": s["short"], "url": BASE_URL + "/services/#" + s["id"]}
+        for s in SERVICES
     ])
 
     faqs = [
         {
-            "question": "What is included in the site build?",
-            "answer": "A custom registration page, confirmation page with conversion tracking, mobile-responsive design, GA4 and Meta Pixel installation, deployment on your domain, and a 5 to 7 business day turnaround. You provide event details. We handle design, copy, build, and deployment."
+            "question": "Do you build on WordPress or Webflow?",
+            "answer": "Neither. We build static HTML/CSS sites. They load faster (sub-1-second), score 90+ on PageSpeed, cost nothing to host on GitHub Pages or Cloudflare Pages, and have zero plugin vulnerabilities. You own every file."
         },
         {
-            "question": "Can you manage ads without building the site?",
-            "answer": "We can, but the results are better when we control the full loop. If we build the site, we know the pixel is installed correctly, the conversion events fire properly, and the landing page is optimized for the audience we are targeting."
+            "question": "Can you redesign my existing site without changing the design?",
+            "answer": "Yes. We can replicate your current design pixel-for-pixel on a static stack. Same look, 5x faster load time, no CMS maintenance. Or we can improve the design during migration. Your call."
         },
         {
-            "question": "What ad budget do you recommend?",
-            "answer": "For most events, $15 to $25 per day over a 25-day campaign works well. That is $375 to $625 in ad spend on top of the management retainer. We can adjust based on your audience size and registration goals."
+            "question": "What does programmatic SEO look like in practice?",
+            "answer": "We built 398 pages for getprovyx.com (scored 98 on PageSpeed) and 322 pages for pecollective.com (363K impressions in 30 days). Each page targets a specific keyword with unique, structured content. The build script generates all pages from data."
         },
         {
-            "question": "Do you build on WordPress or Squarespace?",
-            "answer": "Neither. We build static HTML sites. They load faster, score higher on Lighthouse, and have zero platform dependencies. No monthly hosting fees, no plugin updates, no security patches. Your site lives on GitHub Pages and is served through a CDN."
+            "question": "How long does a typical site build take?",
+            "answer": "Landing pages: 1 to 2 weeks. Standard sites (5-10 pages): 2 to 4 weeks. Content sites with programmatic SEO: 4 to 8 weeks. Event registration sites: 5 to 7 business days. Timelines depend on content volume and review cycles."
         },
         {
-            "question": "How do you track conversions across the funnel?",
-            "answer": "GA4 tracks page views and user behavior. Meta Pixel fires a Lead event on the confirmation page when someone completes registration. We connect the pixel to your ad account so Meta can optimize delivery toward people most likely to register."
+            "question": "What is included in the free site audit?",
+            "answer": "You enter your URL and get your PageSpeed scores (Performance, Accessibility, Best Practices, SEO), Speed Index, LCP, CLS, TBT, plus an SEO checklist covering title tags, meta descriptions, H1 presence, schema markup, OG tags, and mobile viewport. Summary is free. Detailed fix priorities require an email."
         },
         {
-            "question": "What happens after the event?",
-            "answer": "The site stays live as long as you want. For recurring events, we update the date, venue, and details. For multi-city events, we clone the template and deploy a new site with fresh tracking. The ad campaign pauses 2 days before the event and can restart for the next one."
+            "question": "Do you handle ongoing SEO after launch?",
+            "answer": "Yes. We offer monthly SEO management ($1,500 to $3,000/mo) that covers content expansion, keyword targeting, technical SEO monitoring, and search performance reporting. Or you can launch and manage it yourself with the infrastructure we build."
         },
     ]
     faq_html = generate_faq_html(faqs)
@@ -350,82 +491,122 @@ def build_services():
         {breadcrumb_nav}
         <section class="page-header">
             <div class="container">
-                <h1 class="page-header__title">Everything Your Event Needs to <span class="text-accent">Fill Seats</span></h1>
-                <p class="page-header__subtitle">Registration page, tracking pixels, ad campaigns. One provider, one flat fee, and your event team does not have to learn a single new tool.</p>
+                <h1 class="page-header__title">Sites That Perform. <span class="text-accent">SEO That Compounds.</span></h1>
+                <p class="page-header__subtitle">Six services, all flat-fee. We build fast sites, drive organic traffic, run ad campaigns, and hand you the files. No hourly billing, no platform lock-in.</p>
             </div>
         </section>
 
         <section class="content-section">
             <div class="container">
-                <div class="service-block">
+                <div class="service-block" id="website-design">
+                    <h2 class="service-block__title">Website Design &amp; Build</h2>
+                    <p class="service-block__text">Static HTML/CSS sites built mobile-first with sub-1-second load times. Every site scores 90+ on <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a>. Full schema markup, Open Graph tags, XML sitemap, and robots.txt included. No WordPress to maintain, no plugins to update, no security patches to worry about.</p>
+                    <p class="service-block__text">You get a flat fee, a fixed timeline, and you own all files when we are done. Host them anywhere. No recurring platform costs.</p>
+                    <p class="service-block__text">We also build interactive lead magnets (PageSpeed audit tools, ROI calculators, assessment quizzes) that convert 2-5x better than static contact forms. These are lightweight client-side tools with no server costs.</p>
+                    <div class="service-block__includes">
+                        <span class="service-block__item">Mobile-first, responsive design</span>
+                        <span class="service-block__item">90+ PageSpeed score guaranteed</span>
+                        <span class="service-block__item">Full schema markup + OG tags</span>
+                        <span class="service-block__item">XML sitemap + robots.txt</span>
+                        <span class="service-block__item">GA4 + conversion tracking</span>
+                        <span class="service-block__item">Contact form with spam protection</span>
+                        <span class="service-block__item">Deployed on your domain</span>
+                        <span class="service-block__item">You own all source files</span>
+                    </div>
+                    <p class="service-block__pricing">Landing page: ${PRICING['site_landing']['low']:,} to ${PRICING['site_landing']['high']:,} &middot; Standard site: ${PRICING['site_standard']['low']:,} to ${PRICING['site_standard']['high']:,} &middot; Content site: ${PRICING['site_content']['low']:,} to ${PRICING['site_content']['high']:,} &middot; <a href="/pricing/">Full pricing</a></p>
+                </div>
+
+                <div class="service-block" id="website-redesign">
+                    <h2 class="service-block__title">Website Redesign &amp; Migration</h2>
+                    <p class="service-block__text">Migrate from WordPress, Webflow, Squarespace, or Wix to a static site. Same design (or improved), 5x faster load times. No more recurring hosting fees, no plugin bloat, no CMS updates breaking your layout at 2 AM.</p>
+                    <p class="service-block__text">We provide before/after <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed scores</a> as proof. Most WordPress sites score 40 to 65 on mobile. After migration, those same sites score 90+. The design stays the same. The speed changes everything.</p>
+                    <div class="service-block__includes">
+                        <span class="service-block__item">Design-faithful or improved migration</span>
+                        <span class="service-block__item">5x faster load times (typical)</span>
+                        <span class="service-block__item">Before/after PageSpeed scores</span>
+                        <span class="service-block__item">No recurring hosting fees</span>
+                        <span class="service-block__item">Zero plugin dependencies</span>
+                        <span class="service-block__item">Full SEO preservation (redirects, canonicals)</span>
+                    </div>
+                    <p class="service-block__pricing">From WordPress/Squarespace/Wix: ${PRICING['redesign_wp_sq_wix']['low']:,} to ${PRICING['redesign_wp_sq_wix']['high']:,} &middot; From Webflow: ${PRICING['redesign_webflow']['low']:,} to ${PRICING['redesign_webflow']['high']:,} &middot; <a href="/pricing/">Full pricing</a></p>
+                </div>
+
+                <div class="service-block" id="seo-content">
+                    <h2 class="service-block__title">SEO &amp; Content Strategy</h2>
+                    <p class="service-block__text">Programmatic SEO that builds hundreds of pages from structured data. Hub-and-spoke architecture for topical authority. Keyword-targeted content at scale: glossary pages, comparison pages, alternative pages, location pages. Schema markup for rich results in Google.</p>
+                    <p class="service-block__text">We built 322 pages for <a href="https://pecollective.com" target="_blank" rel="noopener noreferrer">PE Collective</a> and drove 363K impressions in 30 days from near-zero. We built 398 pages for getprovyx.com with a 98 PageSpeed score. The model works because the content is structured, the pages are fast, and each one targets a specific search intent.</p>
+                    <div class="service-block__includes">
+                        <span class="service-block__item">Programmatic SEO buildout</span>
+                        <span class="service-block__item">Hub-and-spoke content architecture</span>
+                        <span class="service-block__item">Keyword research + targeting</span>
+                        <span class="service-block__item">Schema markup for rich results</span>
+                        <span class="service-block__item">Internal linking strategy</span>
+                        <span class="service-block__item">Monthly performance reporting</span>
+                    </div>
+                    <p class="service-block__pricing">SEO audit: ${PRICING['seo_audit']['low']:,} to ${PRICING['seo_audit']['high']:,} &middot; Programmatic buildout: ${PRICING['seo_programmatic']['low']:,} to ${PRICING['seo_programmatic']['high']:,} &middot; Monthly management: ${PRICING['seo_monthly']['low']:,} to ${PRICING['seo_monthly']['high']:,}/mo &middot; <a href="/pricing/">Full pricing</a></p>
+                </div>
+
+                <div class="service-block" id="event-sites">
                     <h2 class="service-block__title">Event Registration Sites</h2>
-                    <p class="service-block__text">Your event deserves better than a generic Eventbrite page with someone else's branding. We build custom registration sites from scratch: your logo, your colors, your domain. Every site is mobile-responsive, fast-loading, and designed with one goal in mind: getting visitors to register.</p>
-                    <p class="service-block__text">The build takes 5 to 7 business days. You send us the event details (date, venue, speakers, agenda). We write the copy, source imagery, design the page, install tracking, and deploy. You review, approve, and share the link.</p>
-                    <p class="service-block__text">Running the same event in another city? We clone the template and swap the details. 48-hour turnaround at a fraction of the original cost. The design, structure, and tracking setup carry over. You get consistency across markets without paying for a full rebuild.</p>
-                    <p class="service-block__text">Every site is built as static HTML. No WordPress plugins to update, no CMS to maintain, no hosting fees beyond your domain. The site loads fast, scores well on <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">Lighthouse</a>, and works on every device and browser your attendees use.</p>
+                    <p class="service-block__text">Custom registration pages with GA4 and <a href="https://www.facebook.com/business/tools/meta-pixel" target="_blank" rel="noopener noreferrer">Meta Pixel</a> installed from day one. Template cloning for multi-city events with 48-hour turnaround. No per-registrant fees, no Eventbrite branding, no platform lock-in.</p>
+                    <p class="service-block__text">Your event page lives on your domain with your branding. Every registration fires a conversion event so your ad spend is measurable down to the individual signup. Running the same event in another city? We clone the template, swap the details, and deploy in 48 hours.</p>
                     <div class="service-block__includes">
                         <span class="service-block__item">Custom registration page design</span>
-                        <span class="service-block__item">Mobile-responsive layout</span>
+                        <span class="service-block__item">Mobile-responsive, sub-1-second load</span>
+                        <span class="service-block__item">GA4 + Meta Pixel pre-installed</span>
                         <span class="service-block__item">Confirmation page with conversion tracking</span>
-                        <span class="service-block__item">Deployed on your domain</span>
-                        <span class="service-block__item">GA4 and Meta Pixel pre-installed</span>
-                        <span class="service-block__item">Copy written from your event brief</span>
                         <span class="service-block__item">5 to 7 business day turnaround</span>
                         <span class="service-block__item">48-hour clones for additional cities</span>
+                        <span class="service-block__item">No per-registrant fees</span>
                     </div>
+                    <p class="service-block__pricing">First event site: ${PRICING['event_first']['low']:,} to ${PRICING['event_first']['high']:,} &middot; Additional city: ${PRICING['event_clone']['low']:,} to ${PRICING['event_clone']['high']:,} &middot; <a href="/pricing/">Full pricing</a></p>
                 </div>
 
-                <div class="service-block">
-                    <h2 class="service-block__title">Paid Social Ad Management</h2>
-                    <p class="service-block__text">A registration page without traffic is a billboard in the desert. We run targeted Facebook and Instagram campaigns that put your event in front of the people most likely to attend.</p>
-                    <p class="service-block__text">It starts with your contact list. If you have emails, phone numbers, and zip codes for your target audience, we upload that as a custom audience in Meta Ads Manager. Facebook matches those records to real user profiles and serves ads directly to them.</p>
-                    <p class="service-block__text">Then we layer retargeting on top. Anyone who visits your registration page but does not complete the form gets follow-up ads. Different creative, different angles, escalating urgency as the event approaches. We run a 25-day schedule: value-led awareness for the first 10 days, agenda retargeting from day 7, exclusivity messaging from day 11, and countdown copy in the final week.</p>
-                    <p class="service-block__text">Every campaign includes carousel ads (6 cards) and multiple static image variations. We build the creative using your event photography or stock imagery with dark overlays and your branding. No text on images, all copy in the ad fields, because that is what performs.</p>
+                <div class="service-block" id="paid-social">
+                    <h2 class="service-block__title">Paid Social Advertising</h2>
+                    <p class="service-block__text">Facebook and Instagram campaign management with custom audience targeting, retargeting, and urgency scheduling. Our campaigns hit 2x industry-average CTR with lower CPC. Full attribution from ad impression to conversion.</p>
+                    <p class="service-block__text">We upload your contact list as a custom audience, build retargeting pools from site visitors, and run a structured campaign schedule (awareness, retargeting, urgency, countdown). Every campaign includes carousel and static ad creative with multiple copy variations tested against each other.</p>
                     <div class="service-block__includes">
                         <span class="service-block__item">Custom audience upload from your contact list</span>
-                        <span class="service-block__item">Facebook + Instagram ad placements</span>
+                        <span class="service-block__item">Facebook + Instagram placements</span>
                         <span class="service-block__item">Carousel and static ad creative</span>
-                        <span class="service-block__item">25-day urgency schedule</span>
                         <span class="service-block__item">Website visitor retargeting</span>
+                        <span class="service-block__item">Urgency schedule with countdown copy</span>
                         <span class="service-block__item">Weekly performance reports</span>
-                        <span class="service-block__item">Ad copy variations (clinical, ROI, exclusivity, agenda)</span>
-                        <span class="service-block__item">Countdown copy in the final week</span>
+                        <span class="service-block__item">Full conversion attribution</span>
                     </div>
+                    <p class="service-block__pricing">Campaign setup: ${PRICING['ad_setup']['low']:,} to ${PRICING['ad_setup']['high']:,} &middot; Monthly management: ${PRICING['ad_monthly']['low']:,} to ${PRICING['ad_monthly']['high']:,}/mo &middot; <a href="/pricing/">Full pricing</a></p>
                 </div>
 
-                <div class="service-block">
-                    <h2 class="service-block__title">Tracking and Analytics Setup</h2>
-                    <p class="service-block__text">Tracking is the part most people skip or get wrong. A misconfigured pixel means your ad spend is flying blind: Meta cannot optimize delivery, you cannot measure ROI, and your retargeting audiences never build.</p>
-                    <p class="service-block__text">We install <a href="https://analytics.google.com/" target="_blank" rel="noopener noreferrer">GA4</a> for site analytics and <a href="https://www.facebook.com/business/tools/meta-pixel" target="_blank" rel="noopener noreferrer">Meta Pixel</a> for ad conversion tracking. The pixel fires a PageView on every page and a Lead event on the confirmation page when someone registers. We configure Advanced Matching so Meta can link more conversions back to ad clicks even when cookies are blocked.</p>
-                    <p class="service-block__text">We also set up Consent Mode v2 with a cookie banner, connect the pixel dataset to your ad account, and verify everything in Test Events before your campaign launches. No guessing. No "I think it is working." You see real events flowing in before a single ad dollar is spent.</p>
+                <div class="service-block" id="pagespeed-audit">
+                    <h2 class="service-block__title">PageSpeed Audit &amp; Fix</h2>
+                    <p class="service-block__text">Start with our <a href="/audit/">free instant audit</a>. Enter your URL and see your PageSpeed scores, SEO checklist, and performance bottlenecks in 30 seconds. The summary is free. Detailed fix priorities and a consult are available as a paid service.</p>
+                    <p class="service-block__text">For sites that need hands-on work, we identify the bottlenecks (render-blocking resources, oversized images, JavaScript bloat, server response time) and fix them. You get before/after PageSpeed scores as a deliverable. This is often the entry point for a full redesign or migration project.</p>
                     <div class="service-block__includes">
-                        <span class="service-block__item">GA4 property creation and configuration</span>
-                        <span class="service-block__item">Meta Pixel installation with Lead event</span>
-                        <span class="service-block__item">Advanced Matching enabled</span>
-                        <span class="service-block__item">Consent Mode v2 with cookie banner</span>
-                        <span class="service-block__item">Dataset connected to your ad account</span>
-                        <span class="service-block__item">Test Events verification before launch</span>
+                        <span class="service-block__item">Free instant audit (PageSpeed + SEO checklist)</span>
+                        <span class="service-block__item">Performance bottleneck identification</span>
+                        <span class="service-block__item">Before/after PageSpeed scores</span>
+                        <span class="service-block__item">Image optimization + compression</span>
+                        <span class="service-block__item">Render-blocking resource fixes</span>
+                        <span class="service-block__item">Core Web Vitals improvement</span>
                     </div>
-                </div>
-
-                <div class="service-block">
-                    <h2 class="service-block__title">The Full Loop</h2>
-                    <p class="service-block__text">Most event marketers cobble this together from 3 or 4 vendors. A designer for the page. A media buyer for the ads. A developer to install tracking. Then weeks of coordination making sure the pixel is on the right page, the conversion event fires correctly, and the audiences are connected.</p>
-                    <p class="service-block__text">We do all of it. Page, pixels, paid media. One team, one flat fee, one Slack channel. The person who builds your site is the same person who installs the pixel and manages the ad campaign. Nothing gets lost in handoffs because there are no handoffs.</p>
-                    <p class="service-block__text">That matters more than it sounds. When the pixel is installed by the same team running the ads, attribution works from day one. When the landing page is built by the same team writing the ad copy, the messaging is consistent from first impression to registration confirmation.</p>
-                    <p class="service-block__text">You get one point of contact, one invoice, and one team accountable for the entire funnel from ad impression to confirmed registration. If the ads are not converting, we know whether the problem is targeting, creative, or the landing page, because we built all three.</p>
-                    <p class="service-block__text">See how this works in practice in our <a href="/work/">case study</a>, or check <a href="/pricing/">pricing</a> to understand what each piece costs. When you are ready, <a href="/contact/">book a call</a> and we will scope your event.</p>
+                    <p class="service-block__pricing">Free instant audit: $0 &middot; Detailed audit + consult: $500 &middot; Audit + fix: ${PRICING['pagespeed_fix']['low']:,} to ${PRICING['pagespeed_fix']['high']:,} &middot; <a href="/pricing/">Full pricing</a></p>
                 </div>
             </div>
         </section>
 
 {faq_html}
 
-{generate_cta_section()}'''
+{generate_cta_section(
+    title="Not Sure Which Service You Need?",
+    text="Start with a free site audit. We will show you your PageSpeed score, SEO gaps, and what is fixable. Then we can scope the right project together.",
+    button_text="Get a Free Audit",
+    button_href="/audit/",
+)}'''
 
     html = get_page_wrapper(
-        title="Services: Event Sites, Ad Campaigns, Tracking",
-        description="Custom event registration sites in 5 to 7 days. Facebook ad campaigns with retargeting. GA4 and Meta Pixel tracking. One provider, flat pricing.",
+        title="Services: Web Design, SEO, Ads, PageSpeed",
+        description="Website design, redesign, programmatic SEO, event sites, paid social, and PageSpeed audits. Flat fees, 90+ PageSpeed scores, you own the files. SharpPages.",
         canonical_path="/services/",
         body_content=body,
         active_page="/services/",
@@ -436,11 +617,11 @@ def build_services():
 
 
 def build_pricing():
-    """Build pricing page from PRICING/TIERS data structure."""
+    """Build pricing page with all 6 service categories, tier cards for site builds, and lead magnet add-on."""
 
     crumbs, breadcrumb_nav, breadcrumb_schema = _breadcrumbs("Pricing", "/pricing/")
 
-    # Build pricing cards
+    # Build pricing cards for website design tiers
     cards_html = ""
     for tier in TIERS:
         featured_class = " pricing-card--featured" if tier.get("featured") else ""
@@ -452,6 +633,7 @@ def build_pricing():
         for feat in tier["features"]:
             features_html += f"<li>{feat}</li>\n"
 
+        cta_href = "/audit/" if "Audit" in tier["cta"] else "/contact/"
         cards_html += f'''
                     <div class="pricing-card{featured_class}">
                         {badge_html}
@@ -462,29 +644,29 @@ def build_pricing():
                         <ul class="pricing-card__features">
                             {features_html}
                         </ul>
-                        <a href="/contact/" class="btn btn--primary">{tier["cta"]}</a>
+                        <a href="{cta_href}" class="btn btn--primary">{tier["cta"]}</a>
                     </div>'''
 
     faqs = [
         {
-            "question": "Why is there a price range instead of a fixed number?",
-            "answer": f"Scope varies. A single-page registration site with 3 speakers is on the lower end. A multi-page site with agenda breakouts, speaker bios, and venue details is on the higher end. We scope it on the kickoff call and give you a fixed quote before we start."
+            "question": "Why price ranges instead of fixed numbers?",
+            "answer": "Scope varies. A 5-page standard site with a contact form is on the lower end. A 10-page site with custom illustrations, multiple form types, and blog infrastructure is on the higher end. We scope it on the first call and give you a fixed quote before any work starts."
         },
         {
-            "question": "What is included in the setup fee for ad management?",
-            "answer": f"Pixel installation and verification, custom audience upload, ad creative production (carousel + static images), campaign structure in Ads Manager, and the retargeting audience configuration. It is a one-time fee of ${PRICING['ad_setup_fee']['low']:,} to ${PRICING['ad_setup_fee']['high']:,}."
+            "question": "What does the lead magnet add-on include?",
+            "answer": f"An interactive tool built into your site: a PageSpeed audit, ROI calculator, assessment quiz, or similar. These convert 2-5x better than static contact forms because the visitor gets immediate value before you ask for their email. ${PRICING['lead_magnet_addon']['low']:,} to ${PRICING['lead_magnet_addon']['high']:,} depending on complexity."
         },
         {
-            "question": "Is there a minimum ad spend requirement?",
-            "answer": "We recommend $15 to $25 per day for a 25-day campaign. That is $375 to $625 in ad spend paid directly to Meta. We do not mark up your ad spend or take a percentage."
+            "question": "Are there recurring fees?",
+            "answer": "Only if you choose ongoing services (monthly SEO management or monthly ad management). Site builds, redesigns, and audits are one-time flat fees. Hosting on GitHub Pages or Cloudflare Pages is free. You own all files."
         },
         {
-            "question": "Do you offer retainer discounts for multiple events?",
-            "answer": "Yes. If you are running 3 or more events per year, we offer volume pricing on both site builds and ad management. Book a call and we will scope a package."
+            "question": "What if my project does not fit these categories?",
+            "answer": "Book a call. We will scope the work, give you a fixed quote, and explain exactly what is included. If it is not a fit, we will tell you."
         },
         {
-            "question": "What if I only need the site, not the ads?",
-            "answer": "That works. The site build is a standalone service. Many clients start with just the site and add ad management for their second or third event once they see the page quality."
+            "question": "Do you offer payment plans?",
+            "answer": "For projects over $5,000, we can split payment into milestones (typically 50% upfront, 50% on delivery). For smaller projects, payment is due on completion."
         },
     ]
     faq_html = generate_faq_html(faqs)
@@ -493,37 +675,117 @@ def build_pricing():
         {breadcrumb_nav}
         <section class="page-header">
             <div class="container">
-                <h1 class="page-header__title">Flat Pricing. <span class="text-accent">No Surprises.</span></h1>
-                <p class="page-header__subtitle">No per-registrant charges. No platform fees. No annual contracts. You pay for the work, and you own the result.</p>
+                <h1 class="page-header__title">Flat Pricing. <span class="text-accent">No Hourly Billing.</span></h1>
+                <p class="page-header__subtitle">Every project is scoped upfront with a fixed quote. No change orders, no scope creep, no surprises. You own all files when we are done.</p>
             </div>
         </section>
 
         <section class="content-section">
             <div class="container">
-                <div class="pricing-grid">
+                <h2 class="text-center mb-8">Website Design &amp; Build</h2>
+                <div class="pricing-grid pricing-grid--four">
                     {cards_html}
                 </div>
+                <p class="text-center" style="color: var(--color-text-muted); margin-top: var(--space-6); line-height: var(--leading-relaxed);"><strong>Lead magnet add-on:</strong> +${PRICING['lead_magnet_addon']['low']:,} to ${PRICING['lead_magnet_addon']['high']:,}. Interactive audit tools, calculators, or quizzes built into your site. Convert 2-5x better than static contact forms.</p>
             </div>
         </section>
 
         <section class="content-section section--alt">
+            <div class="container">
+                <h2 class="text-center mb-8">All Services</h2>
+
+                <div class="pricing-table-wrap">
+                    <h3>Website Redesign &amp; Migration</h3>
+                    <table class="pricing-table">
+                        <thead><tr><th>From</th><th>Price Range</th></tr></thead>
+                        <tbody>
+                            <tr><td>WordPress / Squarespace / Wix</td><td>${PRICING['redesign_wp_sq_wix']['low']:,} to ${PRICING['redesign_wp_sq_wix']['high']:,}</td></tr>
+                            <tr><td>Webflow</td><td>${PRICING['redesign_webflow']['low']:,} to ${PRICING['redesign_webflow']['high']:,}</td></tr>
+                            <tr><td>Custom CMS</td><td>${PRICING['redesign_custom_cms']['low']:,} to ${PRICING['redesign_custom_cms']['high']:,}</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pricing-table-wrap">
+                    <h3>SEO &amp; Content Strategy</h3>
+                    <table class="pricing-table">
+                        <thead><tr><th>Service</th><th>Price Range</th></tr></thead>
+                        <tbody>
+                            <tr><td>SEO audit</td><td>${PRICING['seo_audit']['low']:,} to ${PRICING['seo_audit']['high']:,}</td></tr>
+                            <tr><td>Programmatic SEO buildout</td><td>${PRICING['seo_programmatic']['low']:,} to ${PRICING['seo_programmatic']['high']:,}</td></tr>
+                            <tr><td>Monthly SEO management</td><td>${PRICING['seo_monthly']['low']:,} to ${PRICING['seo_monthly']['high']:,}/mo</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pricing-table-wrap">
+                    <h3>Event Registration Sites</h3>
+                    <table class="pricing-table">
+                        <thead><tr><th>Service</th><th>Price Range</th></tr></thead>
+                        <tbody>
+                            <tr><td>First event site</td><td>${PRICING['event_first']['low']:,} to ${PRICING['event_first']['high']:,}</td></tr>
+                            <tr><td>Additional city / clone</td><td>${PRICING['event_clone']['low']:,} to ${PRICING['event_clone']['high']:,}</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pricing-table-wrap">
+                    <h3>Paid Social Advertising</h3>
+                    <table class="pricing-table">
+                        <thead><tr><th>Service</th><th>Price Range</th></tr></thead>
+                        <tbody>
+                            <tr><td>Campaign setup</td><td>${PRICING['ad_setup']['low']:,} to ${PRICING['ad_setup']['high']:,}</td></tr>
+                            <tr><td>Monthly management</td><td>${PRICING['ad_monthly']['low']:,} to ${PRICING['ad_monthly']['high']:,}/mo</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pricing-table-wrap">
+                    <h3>PageSpeed Audit &amp; Fix</h3>
+                    <table class="pricing-table">
+                        <thead><tr><th>Service</th><th>Price</th></tr></thead>
+                        <tbody>
+                            <tr><td>Free instant audit</td><td>$0 (<a href="/audit/">try it now</a>)</td></tr>
+                            <tr><td>Detailed audit + consult</td><td>$500</td></tr>
+                            <tr><td>Audit + fix</td><td>${PRICING['pagespeed_fix']['low']:,} to ${PRICING['pagespeed_fix']['high']:,}</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
             <div class="container text-center">
-                <h2 class="mb-4">What You Will Not Find Here</h2>
-                <p style="color: var(--color-text-muted); max-width: 640px; margin: 0 auto var(--space-4); line-height: var(--leading-relaxed);">Per-registrant fees that punish you for success. Annual contracts that lock you in before you have seen results. Platform subscription costs on top of the build. Hidden revision charges.</p>
-                <p style="color: var(--color-text-muted); max-width: 640px; margin: 0 auto; line-height: var(--leading-relaxed);">We quote a flat number on the kickoff call. That is what you pay. Ad spend goes directly to Meta. We do not mark it up.</p>
+                <h2 class="mb-4">Pricing Principles</h2>
+                <div class="feature-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); text-align: left;">
+                    <div class="feature-card">
+                        <h3 class="feature-card__title">All Flat Fee</h3>
+                        <p class="feature-card__text">No hourly billing. No change orders. Scope defined upfront. If scope changes, you get a new quote before any work happens.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-card__title">You Own Everything</h3>
+                        <p class="feature-card__text">HTML, CSS, JS files are yours. Host them anywhere. No vendor lock-in. No "you can leave but your site stays."</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-card__title">No Recurring Unless Ongoing</h3>
+                        <p class="feature-card__text">Site builds are one-time. Hosting is free (GitHub Pages / Cloudflare). Monthly fees only apply to ongoing SEO or ad management.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
 {faq_html}
 
 {generate_cta_section(
-    title="Let Us Scope Your Event",
-    text="Book a call. We will ask about your event, your audience, and your timeline, then send you a fixed quote.",
+    title="Not Sure What You Need?",
+    text="Start with a free site audit, or book a call and we will scope the right project together.",
+    button_text="Get a Free Audit",
+    button_href="/audit/",
 )}'''
 
     html = get_page_wrapper(
-        title="Pricing: Event Sites and Ad Campaigns",
-        description=f"Event registration sites from ${PRICING['site_build_first']['low']:,}. Ad management from ${PRICING['ad_management_monthly']['low']:,}/mo. Flat pricing, no per-registrant fees, no annual contracts.",
+        title="Pricing: Flat Fees for Web Design, SEO, Ads",
+        description=f"Website builds from ${PRICING['site_landing']['low']:,}. SEO from ${PRICING['seo_audit']['low']}. Event sites from ${PRICING['event_first']['low']:,}. All flat fee, no hourly billing, you own everything.",
         canonical_path="/pricing/",
         body_content=body,
         active_page="/pricing/",
@@ -534,7 +796,7 @@ def build_pricing():
 
 
 def build_work():
-    """Build work/portfolio page with anonymized BTL case study."""
+    """Build work/portfolio page with 3 case studies: PageSpeed, SEO, Ad campaign."""
 
     crumbs, breadcrumb_nav, breadcrumb_schema = _breadcrumbs("Work", "/work/")
 
@@ -543,63 +805,139 @@ def build_work():
         <section class="page-header">
             <div class="container">
                 <h1 class="page-header__title">Our <span class="text-accent">Work</span></h1>
-                <p class="page-header__subtitle">Real projects, real results. Here is what it looks like when the page, pixels, and paid media work together.</p>
+                <p class="page-header__subtitle">Three projects, three types of proof. PageSpeed scores are public. Search Console data is real. Ad metrics are from live campaigns. Verify anything you want.</p>
             </div>
         </section>
 
         <section class="content-section">
             <div class="container">
                 <div class="case-study">
-                    <span class="case-study__label">Featured Project</span>
-                    <h2 class="case-study__title">Medical Device Manufacturer: Detroit Physician Dinner</h2>
-                    <p class="case-study__summary">A medical device company was hosting a physician dinner event at a hotel in downtown Detroit. They needed a registration site, tracking, and a targeted ad campaign to fill seats from their physician contact database.</p>
+                    <span class="case-study__label">PageSpeed Proof</span>
+                    <h2 class="case-study__title">getprovyx.com: 398 Pages, 98 PageSpeed Score</h2>
+                    <p class="case-study__summary">A 398-page static site built with programmatic SEO. Every page loads in under a second on mobile. Run it through <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a> yourself.</p>
 
                     <div class="case-study__stats">
                         <div class="case-study__stat">
-                            <span class="case-study__stat-number">5 days</span>
-                            <span class="case-study__stat-label">Site build time</span>
+                            <span class="case-study__stat-number">98</span>
+                            <span class="case-study__stat-label">Performance</span>
                         </div>
                         <div class="case-study__stat">
-                            <span class="case-study__stat-number">100%</span>
-                            <span class="case-study__stat-label">Mobile responsive</span>
+                            <span class="case-study__stat-number">95</span>
+                            <span class="case-study__stat-label">Accessibility</span>
                         </div>
                         <div class="case-study__stat">
-                            <span class="case-study__stat-number">48hrs</span>
-                            <span class="case-study__stat-label">Second city clone</span>
+                            <span class="case-study__stat-number">100</span>
+                            <span class="case-study__stat-label">Best Practices</span>
                         </div>
                         <div class="case-study__stat">
-                            <span class="case-study__stat-number">2 cities</span>
-                            <span class="case-study__stat-label">Same template reused</span>
+                            <span class="case-study__stat-number">100</span>
+                            <span class="case-study__stat-label">SEO</span>
                         </div>
                     </div>
 
-                    <h3>The Problem</h3>
-                    <p class="case-study__summary">The client had a contact database of physicians in the Detroit metro area but no way to turn that list into event registrations. They had tried boosted Facebook posts in the past with minimal results. Their existing registration workflow was an email RSVP that made tracking impossible.</p>
+                    <h3>The Comparison</h3>
+                    <p class="case-study__summary">An agency-built competitor site on Webflow (reelist.stream) scores 83 on Performance with a 5.0s Speed Index. Our site scores 98 with a 0.9s Speed Index. Same type of content, same audience. The difference is the build approach: static HTML vs. a platform that adds framework overhead to every page load.</p>
 
-                    <h3>What We Built</h3>
-                    <p class="case-study__summary">A custom registration site on their own domain with event details, speaker information, venue logistics, and a registration form that fed directly into a tracking spreadsheet. Every registration triggered a confirmation page with a Meta Pixel Lead event and a GA4 conversion.</p>
-                    <p class="case-study__summary">On the ad side, we uploaded their physician contact list as a custom audience in <a href="https://www.facebook.com/business/tools/ads-manager" target="_blank" rel="noopener noreferrer">Meta Ads Manager</a>. Facebook matched those records to real user profiles. We ran carousel ads (6 cards showing the venue, speakers, and agenda) alongside static image ads with clinical and ROI-focused copy. The site was hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a> with a custom domain through Cloudflare DNS.</p>
-                    <p class="case-study__summary">Retargeting kicked in on day 7. Physicians who visited the site but did not register saw follow-up ads with the full agenda and countdown messaging as the event approached.</p>
+                    <div class="case-study__comparison">
+                        <table class="pricing-table">
+                            <thead><tr><th>Metric</th><th>SharpPages (getprovyx.com)</th><th>Agency / Webflow</th></tr></thead>
+                            <tbody>
+                                <tr><td>Performance</td><td>98</td><td>83</td></tr>
+                                <tr><td>Speed Index</td><td>0.9s</td><td>5.0s</td></tr>
+                                <tr><td>Total Blocking Time</td><td>30ms</td><td>280ms</td></tr>
+                                <tr><td>Accessibility</td><td>95</td><td>92</td></tr>
+                                <tr><td>Best Practices</td><td>100</td><td>73</td></tr>
+                                <tr><td>SEO</td><td>100</td><td>100</td></tr>
+                                <tr><td>Pages</td><td>398</td><td>~50</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="case-study__summary">Both scores are publicly verifiable. Go to <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">pagespeed.web.dev</a>, enter the URLs, and compare.</p>
+                </div>
+            </div>
+        </section>
 
-                    <h3>The Replication</h3>
-                    <p class="case-study__summary">The same client needed an identical event in a second city. We cloned the template, swapped the city, venue, and date details, deployed on a new domain, and launched a fresh ad campaign against the local contact list. Total time from request to live site: 48 hours.</p>
-                    <p class="case-study__summary">That replication model is the whole point. The first event takes 5 to 7 days. Every event after that takes a fraction of the time and cost because the design, structure, and tracking setup carry over.</p>
+        <section class="content-section section--alt">
+            <div class="container">
+                <div class="case-study">
+                    <span class="case-study__label">SEO Proof</span>
+                    <h2 class="case-study__title">PE Collective: 363K Impressions in 30 Days</h2>
+                    <p class="case-study__summary">A 322-page content site built with programmatic SEO. From near-zero search visibility to 363K impressions in a single month. Average position 8.8 and climbing. <a href="https://pecollective.com" target="_blank" rel="noopener noreferrer">See the live site.</a></p>
 
-                    <h3>What Made It Work</h3>
-                    <p class="case-study__summary">Three things separated this from the client's previous attempts. First, the registration page was on their own domain with their branding, not a generic third-party form. Second, the pixel was installed correctly from day one, so the ad platform could optimize delivery toward people likely to register. Third, the retargeting layers meant no interested physician fell through the cracks. A site visitor who did not register on the first visit saw follow-up ads within 24 hours.</p>
-                    <p class="case-study__summary">Read more about how each piece works on our <a href="/services/">services page</a>, or see <a href="/pricing/">pricing</a> for what a project like this costs. <a href="/about/">Meet the team</a> behind the work.</p>
+                    <div class="case-study__stats">
+                        <div class="case-study__stat">
+                            <span class="case-study__stat-number">363K</span>
+                            <span class="case-study__stat-label">Impressions (30 days)</span>
+                        </div>
+                        <div class="case-study__stat">
+                            <span class="case-study__stat-number">322</span>
+                            <span class="case-study__stat-label">Pages Built</span>
+                        </div>
+                        <div class="case-study__stat">
+                            <span class="case-study__stat-number">8.8</span>
+                            <span class="case-study__stat-label">Avg Position</span>
+                        </div>
+                        <div class="case-study__stat">
+                            <span class="case-study__stat-number">30 days</span>
+                            <span class="case-study__stat-label">Time to Results</span>
+                        </div>
+                    </div>
+
+                    <h3>How It Works</h3>
+                    <p class="case-study__summary">Each page targets a specific search intent with structured content: firm profiles, comparison pages, industry verticals, location pages. The build script generates all 322 pages from data, with unique titles, meta descriptions, schema markup, and internal links on every page.</p>
+                    <p class="case-study__summary">The growth curve was steep. Week 1: 2K impressions. Week 2: 15K. Week 3: 30K. By week 4, the site was generating 45K impressions per day. Google indexed the pages quickly because the site loads fast, the content is structured, and the schema markup is correct on every page.</p>
+                    <p class="case-study__summary">This is the same programmatic SEO approach we offer as a <a href="/services/#seo-content">service</a>. The build system, content architecture, and schema patterns are reusable across industries.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="case-study">
+                    <span class="case-study__label">Ad Campaign Proof</span>
+                    <h2 class="case-study__title">BTL Events: 2x Industry CTR, Lower CPC</h2>
+                    <p class="case-study__summary">A multi-city event campaign with custom audience targeting, retargeting, and a 25-day urgency schedule. The registration sites and ad campaigns were built and managed together, so attribution worked from day one.</p>
+
+                    <div class="case-study__stats">
+                        <div class="case-study__stat">
+                            <span class="case-study__stat-number">2x</span>
+                            <span class="case-study__stat-label">Industry Avg CTR</span>
+                        </div>
+                        <div class="case-study__stat">
+                            <span class="case-study__stat-number">Lower</span>
+                            <span class="case-study__stat-label">Cost per Click</span>
+                        </div>
+                        <div class="case-study__stat">
+                            <span class="case-study__stat-number">25 days</span>
+                            <span class="case-study__stat-label">Campaign Structure</span>
+                        </div>
+                        <div class="case-study__stat">
+                            <span class="case-study__stat-number">48hrs</span>
+                            <span class="case-study__stat-label">Clone Turnaround</span>
+                        </div>
+                    </div>
+
+                    <h3>Campaign Structure</h3>
+                    <p class="case-study__summary">Custom audiences built from the client's contact database (physicians, medical device professionals). Facebook matched email and phone records to real user profiles. Carousel ads (6 cards) and static image variations ran with clinical, ROI, and exclusivity copy angles.</p>
+                    <p class="case-study__summary">Retargeting kicked in on day 7: site visitors who did not register saw follow-up ads with full event agendas and countdown messaging. The 25-day schedule progressed from awareness to urgency, with copy updates matching the event timeline.</p>
+
+                    <h3>The Replication Model</h3>
+                    <p class="case-study__summary">The first city took 5 to 7 days for the site build. Each additional city cloned in 48 hours with fresh venue details, local contact lists, and separate tracking. The design, tracking architecture, and proven page structure carried over. By the third city, the per-event cost and setup time were a fraction of the first.</p>
+                    <p class="case-study__summary">Read about our <a href="/services/#event-sites">event registration</a> and <a href="/services/#paid-social">paid social</a> services, or see <a href="/pricing/">pricing</a> for what campaigns like this cost.</p>
                 </div>
             </div>
         </section>
 
 {generate_cta_section(
-    title="Your Event Could Be Next",
-    text="Tell us about your event and we will show you what a SharpPages registration site looks like for your industry.",
+    title="Want Results Like These?",
+    text="Start with a free site audit to see where you stand, or book a call to scope your project.",
+    button_text="Get a Free Audit",
+    button_href="/audit/",
 )}'''
 
     html = get_page_wrapper(
-        title="Our Work: Event Registration Case Studies",
-        description="See how SharpPages built event registration sites and ran ad campaigns for real clients. Medical device, pharma, and B2B event case studies.",
+        title="Our Work: PageSpeed, SEO, and Ad Campaign Proof",
+        description="98 PageSpeed score across 398 pages. 363K impressions in 30 days from programmatic SEO. 2x industry CTR on ad campaigns. See the proof.",
         canonical_path="/work/",
         body_content=body,
         active_page="/work/",
@@ -610,7 +948,7 @@ def build_work():
 
 
 def build_about():
-    """Build about page with Rome's background and why SharpPages exists."""
+    """Build about page with broader performance web studio positioning."""
 
     crumbs, breadcrumb_nav, breadcrumb_schema = _breadcrumbs("About", "/about/")
 
@@ -619,7 +957,7 @@ def build_about():
         <section class="page-header">
             <div class="container">
                 <h1 class="page-header__title">About <span class="text-accent">SharpPages</span></h1>
-                <p class="page-header__subtitle">One person who knows data, marketing, and engineering. That is the whole team, and that is the point.</p>
+                <p class="page-header__subtitle">A performance web studio that competes with agencies on outcomes, not hours. One person, full stack, measurable results.</p>
             </div>
         </section>
 
@@ -634,11 +972,10 @@ def build_about():
                     </div>
                     <div class="about-intro__text">
                         <h2>Data + Marketing + Engineering</h2>
-                        <p>I spent a decade in enterprise SaaS before starting SharpPages. The short version: I sold software at <a href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer">Salesforce</a>, ran customer success at Microsoft, and helped scale a data startup (Datajoy) that was acquired by <a href="https://www.databricks.com/" target="_blank" rel="noopener noreferrer">Databricks</a>. Along the way, I earned my MBA at <a href="https://haas.berkeley.edu/" target="_blank" rel="noopener noreferrer">UC Berkeley Haas</a>.</p>
-                        <p>That background matters because event marketing sits at the intersection of three things most agencies only do one of: data (who to target), marketing (what to say), and engineering (how to build and track it). Most agencies have designers who cannot install a pixel, media buyers who cannot build a landing page, and project managers relaying messages between both.</p>
-                        <p>SharpPages is one person doing all three. I build the site, install the tracking, write the ad copy, and manage the campaign. No handoffs. No telephone game. No "let me check with our developer and get back to you."</p>
-                        <p>The result is faster delivery, tighter feedback loops, and a site where the tracking actually works on launch day. Every event site I build, I also run ads against. I see the full funnel from impression to registration, and I know where the drop-offs happen because I built every piece of it.</p>
-                        <p>If your event marketing is stuck between an expensive agency and a DIY tool you do not have time to learn, that is the gap SharpPages fills.</p>
+                        <p>I spent a decade in enterprise SaaS before starting SharpPages. I sold software at <a href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer">Salesforce</a>, ran customer success at Microsoft, and helped scale a data startup (Datajoy) that was acquired by <a href="https://www.databricks.com/" target="_blank" rel="noopener noreferrer">Databricks</a>. Along the way, I earned my MBA at <a href="https://haas.berkeley.edu/" target="_blank" rel="noopener noreferrer">UC Berkeley Haas</a>.</p>
+                        <p>SharpPages grew out of a pattern I kept seeing: businesses paying agencies $150 to $300 per hour for sites that score 70 on PageSpeed, take 8 weeks to deliver, and come with change orders for every revision. Then those same businesses wonder why their site does not rank and their ads do not convert.</p>
+                        <p>I started building sites the way I thought they should be built: static HTML that loads in under a second, programmatic SEO that generates hundreds of targeted pages, and ad campaigns with full attribution from impression to conversion. The results spoke for themselves. A 98 PageSpeed score across 398 pages. 363K impressions in 30 days from programmatic SEO. 2x industry CTR on paid social campaigns.</p>
+                        <p>Agencies staff projects across junior designers, developers, and project managers. Every handoff introduces delay and information loss. SharpPages is one person doing all of it: site architecture, design, development, SEO, content, and ad management. Faster delivery, tighter feedback loops, and zero "let me check with the developer and get back to you."</p>
                         <ul class="credentials-list">
                             <li>UC Berkeley, Haas School of Business (MBA)</li>
                             <li>Databricks (via Datajoy acquisition)</li>
@@ -653,34 +990,34 @@ def build_about():
 
         <section class="content-section section--alt">
             <div class="container">
-                <h2 class="text-center mb-8">Why SharpPages Exists</h2>
+                <h2 class="text-center mb-8">Why This Approach Wins</h2>
                 <div class="feature-grid">
                     <div class="feature-card">
-                        <h3 class="feature-card__title">Agencies Are Slow and Expensive</h3>
-                        <p class="feature-card__text">A typical marketing agency takes 3 to 6 weeks to build a landing page. They charge $8,000 to $15,000 for a site that could be built in 5 days. You are paying for their overhead, their project managers, their account executives, and their office in a trendy neighborhood.</p>
+                        <h3 class="feature-card__title">Speed Matters More Than Agencies Admit</h3>
+                        <p class="feature-card__text">Google uses Core Web Vitals as a ranking factor. A 98 PageSpeed score means your site loads in under a second. Most agency-built sites on WordPress or Webflow score 60 to 80. The performance gap shows up in search rankings, bounce rates, and conversion rates.</p>
                     </div>
                     <div class="feature-card">
-                        <h3 class="feature-card__title">DIY Tools Require Expertise</h3>
-                        <p class="feature-card__text">Eventbrite, Splash, and Cvent all assume you have time to learn their platform, customize their templates, and figure out pixel installation yourself. Your event team has enough to do. They should not be debugging tracking code at 10 PM.</p>
+                        <h3 class="feature-card__title">SEO at Scale Requires Engineering</h3>
+                        <p class="feature-card__text">Building 300+ pages of keyword-targeted content requires build scripts, data structures, and template systems. Agencies hire copywriters to produce 4 blog posts per month. We generate hundreds of pages from structured data, each with unique content, schema markup, and internal links.</p>
                     </div>
                     <div class="feature-card">
-                        <h3 class="feature-card__title">Generic Platforms Kill Conversions</h3>
-                        <p class="feature-card__text">An Eventbrite page with default styling does not communicate the quality of your event. The URL says eventbrite.com, not your brand. The design looks like every other event on the platform. Attendees notice, and your conversion rate reflects it.</p>
+                        <h3 class="feature-card__title">Flat Fees Align Incentives</h3>
+                        <p class="feature-card__text">Agencies profit from scope creep and change orders. Hourly billing rewards slow work. Flat fees mean I am incentivized to scope correctly, build efficiently, and ship on time. If the scope changes, you get a new quote before any extra work starts.</p>
                     </div>
                 </div>
-                <p style="color: var(--color-text-muted); text-align: center; margin-top: var(--space-8); line-height: var(--leading-relaxed);">See what the alternative looks like in our <a href="/work/">case study</a>, review <a href="/services/">what we offer</a>, or check <a href="/pricing/">pricing</a>.</p>
+                <p style="color: var(--color-text-muted); text-align: center; margin-top: var(--space-8); line-height: var(--leading-relaxed);">See the proof in our <a href="/work/">case studies</a>, review <a href="/services/">services and pricing</a>, or <a href="/audit/">run a free audit</a> on your current site.</p>
             </div>
         </section>
 
 {generate_cta_section(
     title="Ready to Work Together?",
-    text="Book a call. I will ask about your event, scope the work, and send a fixed quote within a day.",
+    text="Book a call. I will review your current site, discuss your goals, and send a fixed quote within two business days.",
     button_text="Book a Call",
 )}'''
 
     html = get_page_wrapper(
-        title="About SharpPages and Rome Thorndike",
-        description="SharpPages was built by Rome Thorndike (UC Berkeley Haas MBA, ex-Salesforce, Microsoft, Databricks) to give event organizers sharp registration pages and full rooms.",
+        title="About SharpPages: Performance Web Studio",
+        description="SharpPages is a performance web studio built by Rome Thorndike (UC Berkeley Haas MBA, ex-Salesforce, Microsoft, Databricks). Fast sites, real SEO, flat fees.",
         canonical_path="/about/",
         body_content=body,
         active_page="/about/",
@@ -943,238 +1280,8 @@ def build_terms():
 # ICP PAGES
 # =============================================================================
 
-ICP_PAGES = [
-    {
-        "slug": "medical-device-companies",
-        "name": "Medical Device Companies",
-        "title": "Event Registration Sites for Medical Device Companies",
-        "description": "SharpPages builds registration sites and runs ad campaigns for medical device physician dinners, KOL events, and product demos. 5 to 7 day turnaround.",
-        "h1": "Event Marketing for <span class=\"text-accent\">Medical Device Companies</span>",
-        "intro": "Physician dinners, KOL speaker events, product demonstrations, city-by-city lunch-and-learns. Medical device companies run more field marketing events than almost any other industry, and most of them are still using email RSVPs and boosted Facebook posts to fill seats.",
-        "pain_points": [
-            "Your field marketing team runs 10 to 20 events per year across multiple cities, but each one starts from scratch. New landing page, new tracking setup, new ad campaign. The overhead compounds.",
-            "Compliance makes everything slower. Your legal team needs to review copy. Your design team is backlogged with product launches. Meanwhile, the event is 3 weeks out and you still do not have a registration page.",
-            "Eventbrite does not cut it for a premium physician dinner at a downtown hotel. The URL, the branding, the layout, none of it communicates the quality of the event or the company behind it.",
-        ],
-        "workflow": [
-            "You send us the event brief: date, venue, speakers, agenda, specialties, and any compliance requirements for copy.",
-            "We build a custom registration site on your domain with your branding. Mobile-responsive, fast-loading, and designed to convert physician traffic into registrations.",
-            "We install GA4 and Meta Pixel on every page. The confirmation page fires a Lead conversion event so your ad spend can be measured down to the registration.",
-            "We upload your physician contact list as a custom audience in Meta Ads Manager. Facebook matches emails, phone numbers, and zip codes to real user profiles and serves ads directly to those physicians.",
-            "We run a 25-day ad campaign with carousel and static creative. Clinical angles, ROI messaging, exclusivity, and countdown urgency as the event approaches. Retargeting catches physicians who visited but did not register.",
-            "After the event, we clone the template for your next city. New venue, new date, new local contact list. 48-hour turnaround. Same quality.",
-        ],
-        "pricing_context": f"A first event site runs ${PRICING['site_build_first']['low']:,} to ${PRICING['site_build_first']['high']:,}. Additional cities are ${PRICING['site_build_additional']['low']:,} to ${PRICING['site_build_additional']['high']:,} each because we clone from the proven template. Ad management is ${PRICING['ad_management_monthly']['low']:,} to ${PRICING['ad_management_monthly']['high']:,} per month per active campaign.",
-        "faqs": [
-            {"question": "Can you work with compliance-reviewed copy?", "answer": "Yes. You send us the approved copy and we build from that. Or we write the copy and send it to your compliance team for review before the site goes live. Either workflow works."},
-            {"question": "How do you handle multiple events across different cities?", "answer": "We build the first event site as a template. For each additional city, we clone it, swap the venue, date, speakers, and local details, and deploy on a new subdomain or domain. 48-hour turnaround per clone."},
-            {"question": "Can you target specific specialties with the ads?", "answer": "If your contact list includes specialty data (orthopedics, dermatology, urology, etc.), we can segment the audience and tailor ad copy to each group. The more specific the targeting, the better the registration rate."},
-            {"question": "What if we already have a pixel on our corporate site?", "answer": "We create a separate pixel and dataset for each event site. This keeps your event tracking clean and prevents it from mixing with corporate site data. Each campaign gets its own attribution chain."},
-        ],
-        "deep_dive": [
-            "Medical device field marketing has a pattern that most agencies do not understand. The audience is small, high-value, and skeptical. You are not targeting 50,000 consumers. You are targeting 200 to 500 physicians in a specific metro area who specialize in a handful of disciplines. They get invited to events constantly. Pharma reps, competing device companies, hospital systems, and professional associations all compete for the same calendar slots.",
-            "The registration page has to do more than collect a name and email. It has to communicate clinical credibility, event exclusivity, and professional relevance in the first 5 seconds. A physician scrolling through Facebook on their phone between patients will give you exactly that long before deciding whether to tap or keep scrolling. Generic event platforms cannot deliver that level of specificity.",
-            "Tracking matters more in medical device marketing than in almost any other vertical. Your field marketing budget is scrutinized quarterly. Every event needs to show ROI in the form of registrations, attendance, and downstream revenue conversations. If you cannot attribute registrations to specific ad campaigns and audience segments, you cannot defend the budget. We build that attribution chain from the first ad impression to the confirmation page.",
-            "The template cloning model is built for how medical device companies actually operate. You run the same event format in Minneapolis, then Detroit, then Dallas, then Miami. Each city gets a fresh site with local venue details, but the design, tracking architecture, and proven copy structure carry over. The second city takes 48 hours instead of 7 days. By the fourth city, your cost per event site is a fraction of the first.",
-        ],
-        "outbound_links": [
-            {"text": "Meta Business Suite", "url": "https://business.facebook.com/"},
-            {"text": "Google Analytics 4", "url": "https://analytics.google.com/"},
-        ],
-    },
-    {
-        "slug": "pharma-field-marketing",
-        "name": "Pharma Field Marketing",
-        "title": "Event Sites for Pharma Field Marketing Teams",
-        "description": "Registration sites and ad campaigns for pharma speaker programs, advisory boards, and field marketing events. Compliance-friendly. 5 to 7 day turnaround.",
-        "h1": "Event Marketing for <span class=\"text-accent\">Pharma Field Marketing</span>",
-        "intro": "Speaker programs, advisory boards, regional symposia, HCP engagement dinners. Pharma field marketing teams run high-touch events where the registration experience matters as much as the event itself. Your attendees are physicians and KOLs who evaluate your brand before they walk through the door.",
-        "pain_points": [
-            "Your marketing agency takes 4 to 6 weeks to build an event page. By the time it is live, you have lost half your promotion window. The event is 3 weeks out and your only registration channel is an email PDF with an RSVP link.",
-            "Internal teams are stretched thin across product launches, congress prep, and quarterly campaigns. A regional dinner event does not get priority until it is an emergency.",
-            "Generic event platforms do not meet pharma branding standards. Compliance needs to review every word on the page, and you cannot customize an Eventbrite layout to match your corporate identity system.",
-        ],
-        "workflow": [
-            "You send us the event details and any compliance-approved copy. If copy needs writing, we draft it for your medical/legal/regulatory review.",
-            "We build a branded registration site on your domain. Clean design, mobile-responsive, and compliant with your visual identity guidelines.",
-            "Tracking is installed: GA4 for site analytics, Meta Pixel for conversion attribution. Each event gets its own pixel dataset to keep reporting clean.",
-            "We build custom audiences from your HCP contact data (email, phone, NPI if available, zip code) and upload to Meta Ads Manager.",
-            "Targeted ads run across Facebook and Instagram. Professional creative with clinical messaging, speaker credentials, and CME/CE credit details where applicable.",
-            "Post-event, we clone the template for your next market. You get consistency across regions without starting over.",
-        ],
-        "pricing_context": f"First event site: ${PRICING['site_build_first']['low']:,} to ${PRICING['site_build_first']['high']:,}. Clone sites for additional markets: ${PRICING['site_build_additional']['low']:,} to ${PRICING['site_build_additional']['high']:,}. Ad management: ${PRICING['ad_management_monthly']['low']:,} to ${PRICING['ad_management_monthly']['high']:,}/month.",
-        "faqs": [
-            {"question": "Do you have experience with pharma compliance requirements?", "answer": "We build the site and copy. Your compliance team reviews and approves. We make revisions until it passes. The process is the same as working with any external agency, but faster because there are fewer people in the chain."},
-            {"question": "Can the registration page capture custom fields?", "answer": "Yes. We can add fields for specialty, NPI number, institution, or any other data your team needs. All submissions flow into a tracking spreadsheet or your preferred system."},
-            {"question": "How do you handle speaker programs with CME credits?", "answer": "We include CME/CE credit details, speaker bios, learning objectives, and accreditation statements on the registration page. Your medical education team provides the content; we handle the presentation."},
-            {"question": "What happens to the site after the event?", "answer": "You own the files. We can take the site down, redirect it to your corporate site, or update it for a future event in the same market. For recurring programs, we archive the current version and clone the template with updated details for the next date."},
-        ],
-        "deep_dive": [
-            "Pharma field marketing operates under constraints that most web agencies have never dealt with. Medical/legal/regulatory review cycles add days to every deliverable. Copy that mentions efficacy data, clinical outcomes, or off-label indications triggers a review chain that can stall a project for weeks if you are not prepared for it.",
-            "The registration page is often the first touchpoint between your field team and the HCP audience. Speaker programs, advisory boards, and regional symposia are relationship-building events. The page needs to reflect the same professionalism that your medical science liaisons bring to one-on-one meetings. A generic Eventbrite layout with the default font and a stock photo header does not meet that standard.",
-            "We have built registration sites for events where the compliance team revised copy three times before approval. The turnaround matters because every revision cycle eats into your promotion window. A 4-week agency timeline with 2 weeks of revisions leaves you 2 weeks to promote. Our 5 to 7 day build gives your compliance team room to review without killing the campaign schedule.",
-            "Custom audience targeting for pharma events is precise. NPI-matched contact lists, specialty-filtered databases, and geographic targeting around the event venue. The physicians you want in the room are identifiable and reachable through Meta's custom audience matching. But only if the pixel is configured correctly and the conversion events fire on the confirmation page. We handle the technical plumbing so your field team can focus on the relationships.",
-        ],
-        "outbound_links": [
-            {"text": "Meta Ads Manager", "url": "https://www.facebook.com/business/tools/ads-manager"},
-            {"text": "GitHub Pages", "url": "https://pages.github.com/"},
-        ],
-    },
-    {
-        "slug": "b2b-saas",
-        "name": "B2B SaaS",
-        "title": "Event Registration Sites for B2B SaaS Companies",
-        "description": "Registration sites and ad campaigns for B2B SaaS roadshows, user groups, partner summits, and product launches. Custom branding, fast turnaround.",
-        "h1": "Event Marketing for <span class=\"text-accent\">B2B SaaS Companies</span>",
-        "intro": "Roadshows, user group meetups, partner summits, product launch events, customer advisory boards. B2B SaaS companies run field events to deepen relationships, generate pipeline, and turn users into advocates. The registration page is the first impression, and most SaaS companies are still sending prospects to a generic form.",
-        "pain_points": [
-            "Your marketing team is optimized for digital campaigns, not event logistics. Building a registration page means pulling a designer off the product launch, getting engineering to install tracking, and hoping the handoff works.",
-            "You are running the same event format in 5 cities but building each page from scratch. The design drifts, the tracking is inconsistent, and nobody can compare performance across markets.",
-            "Splash, Bizzabo, and Cvent charge per-registrant fees or annual contracts that do not make sense for a 6-event roadshow. You end up paying platform costs on top of the actual event budget.",
-        ],
-        "workflow": [
-            "Send us the event brief: cities, dates, venues, speakers, agenda, and your brand guidelines.",
-            "We build the first city's registration site on your domain. Your brand, your design system, your tracking.",
-            "GA4 and Meta Pixel installed from day one. You get clean attribution from ad impression to registration.",
-            "We upload your target account list or contact database as a custom audience. If you have an ABM list, we can target those accounts directly.",
-            "Ads run on Facebook and Instagram with messaging tailored to your ICP. Product-led, outcome-focused creative. No buzzwords.",
-            "We clone the template for each additional city. Same design, fresh tracking, new local audience targeting. 48-hour turnaround per city.",
-        ],
-        "pricing_context": f"First city: ${PRICING['site_build_first']['low']:,} to ${PRICING['site_build_first']['high']:,}. Each additional city: ${PRICING['site_build_additional']['low']:,} to ${PRICING['site_build_additional']['high']:,}. Ad management: ${PRICING['ad_management_monthly']['low']:,} to ${PRICING['ad_management_monthly']['high']:,}/month per active campaign.",
-        "faqs": [
-            {"question": "Can you integrate with our existing marketing stack?", "answer": "The registration form can post data to Formspree, a webhook, or any endpoint your team specifies. From there, your team can route it to Salesforce, HubSpot, Marketo, or wherever leads need to go."},
-            {"question": "Do you support multi-track or multi-day events?", "answer": "Yes. We can build pages with session selectors, track breakdowns, and multi-day agendas. The site structure scales with the event complexity."},
-            {"question": "What about ABM targeting?", "answer": "If you have a target account list with contact data, we upload it as a custom audience. Facebook matches those records to real profiles. You can also layer LinkedIn advertising on top if your budget supports it. We handle the Meta side."},
-            {"question": "Can you build pages for virtual or hybrid events?", "answer": "Yes. Virtual events get the same registration page treatment with tracking and ad campaigns. The page links to your streaming platform (Zoom, Hopin, or whatever you use) instead of a venue address. Hybrid events can display both in-person and virtual attendance options on the same registration form."},
-        ],
-        "deep_dive": [
-            "B2B SaaS field events serve a different purpose than consumer marketing events. You are not trying to sell a product at the event. You are trying to deepen relationships with existing customers, generate pipeline from target accounts, and create content moments (customer stories, product demos, partner announcements) that your marketing team can repurpose for months afterward.",
-            "The registration page for a SaaS roadshow needs to communicate value to a specific audience: VPs of Sales, Revenue Operations leaders, CIOs, or whatever your ICP looks like. Generic event copy does not work. The page needs to name the roles, the challenges, and the outcomes that matter to the people you want in the room.",
-            "Most SaaS marketing teams are optimized for digital. They run webinars, email sequences, and LinkedIn campaigns with sophisticated attribution. When they shift to field events, the attribution infrastructure disappears. The registration page lives on a platform that does not support their pixel. The ad campaign runs without conversion tracking. The event happens and nobody can connect it to pipeline.",
-            "We bridge that gap. The registration site gets the same tracking rigor your digital campaigns have: Meta Pixel with Lead events, GA4 with custom events, UTM parameter capture, and source attribution on every registration. Your field events feed the same attribution model as your digital programs. The data lives in the same dashboards.",
-            "Multi-city roadshows are where the model scales best. Five cities over three months, same event format, different local audiences. We build the first city in a week. Each additional city clones in 48 hours with fresh venue details, local targeting, and a separate tracking dataset. Your marketing team can compare cost per registration across markets and double down on the cities that convert.",
-        ],
-        "outbound_links": [
-            {"text": "Meta Pixel documentation", "url": "https://www.facebook.com/business/tools/meta-pixel"},
-            {"text": "Google Analytics", "url": "https://analytics.google.com/"},
-        ],
-    },
-    {
-        "slug": "conference-organizers",
-        "name": "Conference Organizers",
-        "title": "Event Registration Sites for Conference Organizers",
-        "description": "Custom registration sites and ad campaigns for conferences, summits, and multi-day events. No per-registrant fees. No platform lock-in.",
-        "h1": "Event Marketing for <span class=\"text-accent\">Conference Organizers</span>",
-        "intro": "You run a conference. Not a 20-person dinner, but a 200-plus attendee event with sponsors, speakers, breakout sessions, and a registration flow that needs to handle volume. You cannot justify Cvent pricing, but you need more than Eventbrite gives you.",
-        "pain_points": [
-            "Cvent costs $15,000 to $50,000 per year. For a single annual conference or a small series, that math does not work. You are paying for enterprise features your event does not need.",
-            "Eventbrite is affordable but limited. You cannot fully customize the page, the URL says eventbrite.com, and the per-ticket fees add up fast when registration is free or low-cost.",
-            "Your current setup is stitched together: Google Form for registration, Mailchimp for confirmations, a WordPress page nobody maintains, and no tracking connecting your ad spend to actual registrations.",
-        ],
-        "workflow": [
-            "Send us the conference details: sessions, speakers, sponsors, schedule, venue, and any tiered registration (early bird, VIP, general).",
-            "We build a multi-section registration site on your domain. Speaker bios, session descriptions, sponsor logos, venue details, and a registration form that feeds your tracking.",
-            "GA4 and Meta Pixel installed. Every registration fires a conversion event. You know exactly which ad, audience, or channel drove each signup.",
-            "We build custom audiences from your mailing list, past attendee data, or sponsor contact databases and run targeted campaigns on Facebook and Instagram.",
-            "Retargeting captures interested visitors who did not complete registration. Different messaging, escalating urgency, countdown to early bird deadlines.",
-            "After the conference, we keep the site live as an archive or update it for next year. The template, tracking, and audiences carry over.",
-        ],
-        "pricing_context": f"Conference registration site: ${PRICING['site_build_first']['low']:,} to ${PRICING['site_build_first']['high']:,}. Ad management: ${PRICING['ad_management_monthly']['low']:,} to ${PRICING['ad_management_monthly']['high']:,}/month. No per-registrant fees. No annual platform contract.",
-        "faqs": [
-            {"question": "Can you handle tiered registration pricing?", "answer": "Yes. Early bird, general admission, VIP, speaker, and sponsor tiers can all be displayed on the registration page with different pricing. The form captures which tier the registrant selects."},
-            {"question": "How do sponsors get visibility on the site?", "answer": "Sponsor logos, descriptions, and links can be included on the main page and/or a dedicated sponsors section. We can tier sponsor visibility (platinum, gold, silver) to match your sponsorship packages."},
-            {"question": "Can attendees select specific sessions during registration?", "answer": "We can add session selection fields, track/breakout preferences, and dietary/accessibility questions to the registration form. The data flows into your tracking spreadsheet with the rest of the registration details."},
-            {"question": "Do you handle email confirmations and reminders?", "answer": "The registration form triggers an automatic confirmation email through Formspree or your preferred email system. For reminder sequences (1 week before, 1 day before, morning of), we can set those up through your email platform or recommend a lightweight automation tool that connects to the registration data."},
-        ],
-        "deep_dive": [
-            "Conference organizers face a unique version of the build-vs-buy decision. Cvent and Bizzabo are built for enterprises running 50+ events per year with dedicated event operations teams. If you run one annual conference or a small series, you are paying for features you will never touch: attendee networking apps, badge printing integrations, multi-track session management at scale.",
-            "The other end of the spectrum is Eventbrite, which caps out quickly for professional conferences. Limited customization, per-ticket fees that scale with attendance, and a URL that signals 'casual meetup' rather than 'industry-leading conference.' Your sponsors paid $10,000 for a booth. They expect the registration experience to reflect that investment.",
-            "A custom registration site sits in the middle. Full branding control, unlimited customization, proper tracking, and no per-registrant fees. Speaker bios with headshots and session descriptions. Sponsor logos tiered by package level. An agenda that visitors can scan in 10 seconds. Early bird pricing with countdown timers. All on your domain, loading in under a second.",
-            "For recurring conferences, the template model saves weeks of work each year. Update the speakers, sessions, sponsors, and dates. The design, tracking, and proven page structure carry over. Your team spends time on programming and promotion instead of rebuilding the registration infrastructure from scratch every cycle.",
-            "Sponsor visibility is another factor platform-based solutions handle poorly. Your sponsors paid to be associated with the conference. Their logos, descriptions, and links deserve prominent placement on the registration page, tiered by sponsorship level. Eventbrite gives you a description field. A custom site gives you a dedicated sponsor section with platinum, gold, and silver tiers, each with the visual prominence the sponsorship package promises.",
-        ],
-        "outbound_links": [
-            {"text": "Google Analytics 4", "url": "https://analytics.google.com/"},
-            {"text": "Formspree form backend", "url": "https://formspree.io/"},
-        ],
-    },
-    {
-        "slug": "med-spas",
-        "name": "Med Spas",
-        "title": "Event Registration Sites for Med Spas",
-        "description": "Registration sites and ad campaigns for med spa grand openings, patient acquisition events, and treatment showcases. Local targeting, fast turnaround.",
-        "h1": "Event Marketing for <span class=\"text-accent\">Med Spas</span>",
-        "intro": "Grand openings, patient appreciation events, treatment showcases, injector meet-and-greets. Med spas thrive on events that get potential patients through the door. Once they see the space, meet the providers, and experience a demo, they book. The hard part is getting them there.",
-        "pain_points": [
-            "Your front desk team is fielding phone calls and managing appointments. They do not have time to build a landing page, install a Facebook pixel, or set up an ad campaign for next month's event.",
-            "Boosted Instagram posts reach your existing followers, but not the new patients in your zip code who have never heard of your practice. You are advertising to people who already know you.",
-            "A generic Eventbrite page for a med spa event sends the wrong signal. Your business sells premium aesthetics. The registration experience should match the quality of the service.",
-        ],
-        "workflow": [
-            "Send us the event details: date, location, featured treatments, special offers, and any provider bios you want highlighted.",
-            "We build a branded event page on your domain (or a dedicated event domain). Clean, premium design that matches the aesthetic your patients expect.",
-            "GA4 and Meta Pixel track every page view and registration. You know exactly how many people your ads brought to the page and how many registered.",
-            "We build a local custom audience: your patient email list, lookalike audiences in your zip code radius, and interest-based targeting for aesthetics, skincare, and wellness.",
-            "Facebook and Instagram ads run with before/after-safe creative (no before/after patient photos per Meta policy, but lifestyle and treatment imagery works). Local targeting ensures your budget reaches people who can actually attend.",
-            "Retargeting catches visitors who did not register. Follow-up ads with event details, provider credentials, and special offer reminders.",
-        ],
-        "pricing_context": f"Event registration site: ${PRICING['site_build_first']['low']:,} to ${PRICING['site_build_first']['high']:,}. Ad management: ${PRICING['ad_management_monthly']['low']:,} to ${PRICING['ad_management_monthly']['high']:,}/month. If you run recurring events, additional sites clone from your template at ${PRICING['site_build_additional']['low']:,} to ${PRICING['site_build_additional']['high']:,}.",
-        "faqs": [
-            {"question": "Can the page include special event pricing for treatments?", "answer": "Yes. We can display event-exclusive pricing, bundled packages, or promotional offers directly on the registration page. This gives attendees a reason to register rather than just showing up."},
-            {"question": "Do you handle before-and-after imagery?", "answer": "We follow Meta's advertising policies, which restrict before-and-after patient imagery in ads. On the registration page itself, you can include whatever imagery your practice is comfortable displaying. We use lifestyle and treatment imagery for the ads."},
-            {"question": "Can you target a specific radius around our location?", "answer": "Yes. We set a geographic radius in your ad targeting (typically 10 to 25 miles depending on your market) and layer it with interest-based and demographic targeting to reach potential patients in your area."},
-            {"question": "How quickly can you turn around a site for an upcoming event?", "answer": "Standard turnaround is 5 to 7 business days for a new site. If your event is sooner, we can discuss expedited delivery. The key constraint is usually copy approval and image assets from your team, not our build time."},
-        ],
-        "deep_dive": [
-            "Med spa marketing is visual, local, and trust-dependent. Potential patients are deciding whether to inject a substance into their face or commit to a body contouring treatment plan. The registration page for your event is the first impression of your practice for many of these prospects. If the page looks like a generic form on a free platform, it undermines the premium positioning your practice depends on.",
-            "Local targeting is where the ad budget works hardest. A med spa in Scottsdale does not need to reach people in Phoenix suburbs 40 miles away. We set geographic targeting to a 10 to 15 mile radius and layer interest-based targeting (aesthetics, skincare, wellness, anti-aging) on top. The result is ads that reach potential patients who can actually walk through your door.",
-            "Event marketing for med spas follows a specific conversion pattern. The prospect sees an ad, visits the registration page, attends the event, and books a consultation or treatment on-site. The registration page needs to preview the experience: which treatments will be demonstrated, which providers will be there, and what exclusive pricing is available for attendees. Vague event descriptions do not drive registrations. Specific treatment names, provider credentials, and promotional offers do.",
-            "Meta's advertising policies restrict before-and-after patient imagery in ads. This is a common stumbling block for med spa marketing teams. On the registration page itself, you can display whatever imagery your practice is comfortable with. But the ads that drive traffic need to use lifestyle imagery, treatment device photos, and provider portraits. We handle this split so your ads stay compliant while your page showcases results.",
-        ],
-        "outbound_links": [
-            {"text": "Meta advertising policies", "url": "https://www.facebook.com/business/help/488043719226498"},
-            {"text": "Google Analytics 4", "url": "https://analytics.google.com/"},
-        ],
-    },
-    {
-        "slug": "real-estate",
-        "name": "Real Estate",
-        "title": "Event Registration Sites for Real Estate Events",
-        "description": "Registration sites and ad campaigns for property launches, investor events, broker previews, and open houses. Professional branding, targeted ads.",
-        "h1": "Event Marketing for <span class=\"text-accent\">Real Estate</span>",
-        "intro": "Property launches, investor presentations, broker previews, luxury open houses, community events. Real estate marketing lives and dies on getting the right people in the room. A developer launching a condo project needs pre-sales interest. A brokerage hosting an investor event needs qualified attendees, not tire-kickers.",
-        "pain_points": [
-            "Your brokerage website is built for listings, not events. When you need a registration page for a property launch, the options are a PDF flyer with a phone number or a generic form that does not track where leads came from.",
-            "Facebook ads for real estate events are powerful, but only if the pixel is installed correctly. Most real estate teams boost a post, send traffic to a page with no tracking, and have no idea which ad dollars produced which registrations.",
-            "You are running events across multiple properties or markets but managing each one as a separate project. Different designers, different tracking, different follow-up systems. No consistency and no way to compare performance.",
-        ],
-        "workflow": [
-            "Send us the event details: property, date, venue, target audience (investors, brokers, buyers), and any imagery or renderings you want featured.",
-            "We build a premium registration page on your domain or a dedicated event domain. Property photos, floor plans, location maps, and event details presented in a layout that matches the caliber of the project.",
-            "GA4 and Meta Pixel installed. Every registration is tracked as a conversion, and your ad spend is attributable to actual RSVPs.",
-            "We build custom audiences from your contact database (broker lists, investor lists, buyer inquiry lists) and target them with Facebook and Instagram ads.",
-            "Ad creative features property imagery with professional overlays. Location callouts, pricing teasers, and event exclusivity messaging drive registrations.",
-            "For multi-property firms, we clone the template for each launch. Same quality, fresh branding per project, separate tracking per event.",
-        ],
-        "pricing_context": f"Event registration site: ${PRICING['site_build_first']['low']:,} to ${PRICING['site_build_first']['high']:,}. Additional property sites: ${PRICING['site_build_additional']['low']:,} to ${PRICING['site_build_additional']['high']:,}. Ad management: ${PRICING['ad_management_monthly']['low']:,} to ${PRICING['ad_management_monthly']['high']:,}/month.",
-        "faqs": [
-            {"question": "Can you include property renderings and floor plans?", "answer": "Yes. We embed high-resolution images, renderings, and floor plan PDFs directly on the registration page. The page becomes both a marketing asset and a registration tool."},
-            {"question": "Do you handle real estate advertising compliance?", "answer": "We follow Meta's advertising policies for real estate, including the Special Ad Category requirements for housing-related ads. This limits some targeting options (no age, gender, or zip code targeting in housing ads) but we work within those constraints using interest and behavior targeting."},
-            {"question": "Can you target specific investor or broker lists?", "answer": "Yes. If you have a contact list with emails, phone numbers, and names, we upload it as a custom audience. Facebook matches those records to profiles and serves your ads directly to those individuals."},
-            {"question": "How do Special Ad Category restrictions affect real estate ads?", "answer": "Meta requires housing-related ads to use the Special Ad Category, which removes age, gender, and zip code targeting. We compensate by using interest-based targeting (real estate investment, luxury lifestyle, property development), custom audiences from your contact database, and lookalike audiences built from your existing buyer or investor profiles. The restrictions narrow the targeting options but do not eliminate effective reach."},
-        ],
-        "deep_dive": [
-            "Real estate event marketing operates under Meta's Special Ad Category for housing, which restricts targeting options. You cannot target by age, gender, or zip code in housing-related ads. This limitation catches many real estate marketers off guard when they try to run the same targeting strategy they use for other campaigns. We work within these constraints using interest-based, behavior-based, and custom audience targeting that complies with the housing ad category rules.",
-            "The registration page for a property launch or investor event serves double duty. It is both a registration tool and a marketing asset. Prospects who land on the page may not register immediately, but they are evaluating the project based on what they see. High-resolution renderings, floor plans, location maps, pricing context, and developer credentials all belong on the page. The more information available, the more qualified the registrations.",
-            "For brokerages and developers running events across multiple properties, consistency matters. Each property has different branding, pricing, and positioning. But the registration infrastructure, tracking, and ad campaign structure should be consistent so you can compare performance across projects. Our template cloning model gives each property its own branded site while maintaining the same tracking architecture and campaign framework.",
-            "Investor events have a different conversion dynamic than consumer open houses. Investors evaluate opportunities based on financial projections, market data, and developer track record. The registration page needs to present this information clearly and professionally. A PDF flyer attached to an email does not cut it for a $50 million condo development. The registration experience should match the scale of the project.",
-        ],
-        "outbound_links": [
-            {"text": "Meta Special Ad Categories", "url": "https://www.facebook.com/business/help/298000447747885"},
-            {"text": "GitHub Pages hosting", "url": "https://pages.github.com/"},
-        ],
-    },
-]
+from _icp_data import get_icp_pages
+ICP_PAGES = get_icp_pages(PRICING)
 
 
 def build_icp_page(icp):
@@ -1184,7 +1291,7 @@ def build_icp_page(icp):
 
     crumbs = [
         {"name": "Home", "url": BASE_URL + "/"},
-        {"name": "Industries", "url": BASE_URL + "/for/{slug}/".format(slug=slug)},
+        {"name": "Industries", "url": BASE_URL + "/for/" + slug + "/"},
         {"name": icp["name"], "url": BASE_URL + page_path},
     ]
     breadcrumb_nav = get_breadcrumb_html(crumbs)
@@ -1198,10 +1305,10 @@ def build_icp_page(icp):
     # Workflow steps
     workflow_html = '<div class="process-steps">\n'
     for i, step in enumerate(icp["workflow"], 1):
-        workflow_html += f'''<div class="process-step">
+        workflow_html += f'''''<div class="process-step">
                             <div class="process-step__number">{i}</div>
                             <div class="process-step__content"><p>{step}</p></div>
-                        </div>\n'''
+                        </div>\n'''''
     workflow_html += '</div>'
 
     # Outbound links
@@ -1216,7 +1323,7 @@ def build_icp_page(icp):
 
     faq_html = generate_faq_html(icp["faqs"])
 
-    body = f'''
+    body = f'''''
         {breadcrumb_nav}
         <section class="page-header">
             <div class="container">
@@ -1234,14 +1341,14 @@ def build_icp_page(icp):
 
         <section class="content-section section--alt">
             <div class="container">
-                <h2>Why Event Marketing Is Different for {icp["name"]}</h2>
+                <h2>Why {icp["name"]} Need a Different Approach</h2>
                 {deep_dive_html}
             </div>
         </section>
 
         <section class="content-section">
             <div class="container">
-                <h2>How SharpPages Works for {icp["name"]}</h2>
+                <h2>How We Work with {icp["name"]}</h2>
                 {workflow_html}
             </div>
         </section>
@@ -1250,17 +1357,19 @@ def build_icp_page(icp):
             <div class="container">
                 <h2>Pricing</h2>
                 <p style="color: var(--color-text-muted); line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">{icp["pricing_context"]}</p>
-                <p style="color: var(--color-text-muted); line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">No per-registrant fees. No annual contracts. See full details on our <a href="/pricing/">pricing page</a>.</p>
-                <p style="color: var(--color-text-muted); line-height: var(--leading-relaxed);">Learn more about what is included in each service on our <a href="/services/">services page</a>, or see a <a href="/work/">case study</a> of a recent project. External tools we use:{outbound_html}</p>
+                <p style="color: var(--color-text-muted); line-height: var(--leading-relaxed); margin-bottom: var(--space-4);">All flat fee. No hourly billing. See full details on our <a href="/pricing/">pricing page</a>.</p>
+                <p style="color: var(--color-text-muted); line-height: var(--leading-relaxed);">Learn more about our <a href="/services/">services</a>, see <a href="/work/">proof of results</a>, or <a href="/audit/">run a free audit</a> on your current site.{outbound_html}</p>
             </div>
         </section>
 
 {faq_html}
 
 {generate_cta_section(
-    title=f"Ready to Fill Your Next {icp['name']} Event?",
-    text="Tell us about your event. We will scope it, price it, and get back to you within one business day.",
-)}'''
+    title=f"Ready to Upgrade Your {icp['name']} Web Presence?",
+    text="Start with a free site audit, or book a call and we will scope the right project together.",
+    button_text="Get a Free Audit",
+    button_href="/audit/",
+)}'''''
 
     html = get_page_wrapper(
         title=icp["title"],
@@ -1373,7 +1482,7 @@ BLOG_ARTICLES = [
             {
                 "heading": "Cost Comparison",
                 "content": f"""<p>Eventbrite is free for free events. For paid events, fees range from 3.7% + $1.79 per ticket (Essentials) to 6.95% + $1.79 (Professional). A $50 ticket event with 200 registrants costs $997 to $1,937 in fees.</p>
-<p>A custom registration site costs ${PRICING['site_build_first']['low']:,} to ${PRICING['site_build_first']['high']:,} as a one-time build. No per-registrant fees. No percentage of ticket sales. You own the site and can reuse it for future events.</p>
+<p>A custom registration site costs ${PRICING['event_first']['low']:,} to ${PRICING['event_first']['high']:,} as a one-time build. No per-registrant fees. No percentage of ticket sales. You own the site and can reuse it for future events.</p>
 <p>For free events, Eventbrite's cost advantage is clear. For paid events with 100+ registrants, or for recurring events where you reuse the template, a custom site pays for itself quickly. The break-even is usually around the second or third event when template cloning eliminates the rebuild cost.</p>""",
             },
             {
@@ -1502,16 +1611,16 @@ BLOG_ARTICLES = [
             {
                 "heading": "Done-For-You Costs (What You Get)",
                 "content": f"""<p>A done-for-you service like SharpPages bundles the page build, tracking setup, and (optionally) ad campaign management into flat-fee packages.</p>
-<p><strong>Site build:</strong> ${PRICING['site_build_first']['low']:,} to ${PRICING['site_build_first']['high']:,} for a custom registration site. Includes design, copy, mobile optimization, GA4, Meta Pixel, confirmation page, and deployment. Delivered in 5 to 7 business days.</p>
-<p><strong>Additional cities:</strong> ${PRICING['site_build_additional']['low']:,} to ${PRICING['site_build_additional']['high']:,} per clone. Same template, new details, 48-hour turnaround.</p>
-<p><strong>Ad management:</strong> ${PRICING['ad_management_monthly']['low']:,} to ${PRICING['ad_management_monthly']['high']:,}/month plus a ${PRICING['ad_setup_fee']['low']:,} to ${PRICING['ad_setup_fee']['high']:,} setup fee. Includes custom audience upload, ad creative, 25-day campaign schedule, retargeting, and weekly reporting.</p>
+<p><strong>Site build:</strong> ${PRICING['event_first']['low']:,} to ${PRICING['event_first']['high']:,} for a custom registration site. Includes design, copy, mobile optimization, GA4, Meta Pixel, confirmation page, and deployment. Delivered in 5 to 7 business days.</p>
+<p><strong>Additional cities:</strong> ${PRICING['event_clone']['low']:,} to ${PRICING['event_clone']['high']:,} per clone. Same template, new details, 48-hour turnaround.</p>
+<p><strong>Ad management:</strong> ${PRICING['ad_monthly']['low']:,} to ${PRICING['ad_monthly']['high']:,}/month plus a ${PRICING['ad_setup']['low']:,} to ${PRICING['ad_setup']['high']:,} setup fee. Includes custom audience upload, ad creative, 25-day campaign schedule, retargeting, and weekly reporting.</p>
 <p>No per-registrant fees. No annual contract. You own the site files. Full <a href="/pricing/">pricing details here</a>.</p>""",
             },
             {
                 "heading": "The Break-Even Math",
                 "content": f"""<p>For a single free event with minimal branding requirements, DIY on Eventbrite is cheaper. No question.</p>
-<p>For a paid event with 100+ registrants, the per-ticket fees on Eventbrite approach the cost of a custom site build. At $50/ticket and 200 registrants, Eventbrite fees are roughly ${50 * 200 * 0.037 + 200 * 1.79:.0f} to ${50 * 200 * 0.0695 + 200 * 1.79:.0f}. A custom site is ${PRICING['site_build_first']['low']:,} to ${PRICING['site_build_first']['high']:,} with zero per-registrant fees and a reusable template for next time.</p>
-<p>For recurring events (same format, different cities), the math tilts further toward done-for-you. The first site costs ${PRICING['site_build_first']['low']:,} to ${PRICING['site_build_first']['high']:,}. Each clone costs ${PRICING['site_build_additional']['low']:,} to ${PRICING['site_build_additional']['high']:,}. By the third event, your per-event cost is a fraction of the original investment.</p>
+<p>For a paid event with 100+ registrants, the per-ticket fees on Eventbrite approach the cost of a custom site build. At $50/ticket and 200 registrants, Eventbrite fees are roughly ${50 * 200 * 0.037 + 200 * 1.79:.0f} to ${50 * 200 * 0.0695 + 200 * 1.79:.0f}. A custom site is ${PRICING['event_first']['low']:,} to ${PRICING['event_first']['high']:,} with zero per-registrant fees and a reusable template for next time.</p>
+<p>For recurring events (same format, different cities), the math tilts further toward done-for-you. The first site costs ${PRICING['event_first']['low']:,} to ${PRICING['event_first']['high']:,}. Each clone costs ${PRICING['event_clone']['low']:,} to ${PRICING['event_clone']['high']:,}. By the third event, your per-event cost is a fraction of the original investment.</p>
 <p>Factor in the hidden costs (team hours, misconfigured tracking, lower conversion rates from generic pages) and the break-even point arrives sooner than the sticker prices suggest.</p>""",
             },
             {
@@ -1534,6 +1643,9 @@ BLOG_ARTICLES = [
         ],
     },
 ]
+
+from _blog_new_articles import get_new_articles
+BLOG_ARTICLES.extend(get_new_articles(PRICING))
 
 
 def build_blog_article(article):
@@ -1669,6 +1781,217 @@ def build_all_blog():
     build_blog_index()
     for article in BLOG_ARTICLES:
         build_blog_article(article)
+
+
+# =============================================================================
+# AUDIT PAGE
+# =============================================================================
+
+def build_audit():
+    """Build the free site audit page with URL input form and results area."""
+
+    crumbs, breadcrumb_nav, breadcrumb_schema = _breadcrumbs("Free Site Audit", "/audit/")
+
+    action_url = f"https://formspree.io/f/{FORMSPREE_ID}"
+
+    body = f'''
+        {breadcrumb_nav}
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Free <span class="text-accent">Site Audit</span></h1>
+                <p class="page-header__subtitle">Enter your URL. Get your PageSpeed score, SEO gaps, and what is fixable. Takes 15 seconds.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container" style="max-width: 720px;">
+                <form id="audit-form" class="audit-form">
+                    <div class="audit-form__input-row">
+                        <input class="form__input audit-form__url" type="url" id="audit-url" name="url" placeholder="https://yoursite.com" required>
+                        <button type="submit" class="btn btn--primary btn--lg audit-form__submit" id="audit-submit">Run Audit</button>
+                    </div>
+                    <p style="font-size: var(--text-xs); color: var(--color-text-subtle); margin-top: var(--space-2);">We check mobile performance, accessibility, SEO, and best practices using Google PageSpeed Insights.</p>
+                </form>
+
+                <div id="audit-loading" class="audit-loading" style="display: none;">
+                    <div class="audit-loading__spinner"></div>
+                    <p>Analyzing your site...</p>
+                </div>
+
+                <div id="audit-results" class="audit-results" style="display: none;">
+                    <h2 class="audit-results__title">Your Results</h2>
+
+                    <div class="audit-scores">
+                        <div class="audit-score" id="score-performance">
+                            <svg class="audit-score__gauge" viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="54" fill="none" stroke="var(--color-border)" stroke-width="8"/>
+                                <circle class="audit-score__ring" cx="60" cy="60" r="54" fill="none" stroke-width="8" stroke-linecap="round"
+                                    stroke-dasharray="339.292" stroke-dashoffset="339.292" transform="rotate(-90 60 60)"/>
+                            </svg>
+                            <span class="audit-score__value">0</span>
+                            <span class="audit-score__label">Performance</span>
+                        </div>
+                        <div class="audit-score" id="score-accessibility">
+                            <svg class="audit-score__gauge" viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="54" fill="none" stroke="var(--color-border)" stroke-width="8"/>
+                                <circle class="audit-score__ring" cx="60" cy="60" r="54" fill="none" stroke-width="8" stroke-linecap="round"
+                                    stroke-dasharray="339.292" stroke-dashoffset="339.292" transform="rotate(-90 60 60)"/>
+                            </svg>
+                            <span class="audit-score__value">0</span>
+                            <span class="audit-score__label">Accessibility</span>
+                        </div>
+                        <div class="audit-score" id="score-best-practices">
+                            <svg class="audit-score__gauge" viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="54" fill="none" stroke="var(--color-border)" stroke-width="8"/>
+                                <circle class="audit-score__ring" cx="60" cy="60" r="54" fill="none" stroke-width="8" stroke-linecap="round"
+                                    stroke-dasharray="339.292" stroke-dashoffset="339.292" transform="rotate(-90 60 60)"/>
+                            </svg>
+                            <span class="audit-score__value">0</span>
+                            <span class="audit-score__label">Best Practices</span>
+                        </div>
+                        <div class="audit-score" id="score-seo">
+                            <svg class="audit-score__gauge" viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="54" fill="none" stroke="var(--color-border)" stroke-width="8"/>
+                                <circle class="audit-score__ring" cx="60" cy="60" r="54" fill="none" stroke-width="8" stroke-linecap="round"
+                                    stroke-dasharray="339.292" stroke-dashoffset="339.292" transform="rotate(-90 60 60)"/>
+                            </svg>
+                            <span class="audit-score__value">0</span>
+                            <span class="audit-score__label">SEO</span>
+                        </div>
+                    </div>
+
+                    <div class="audit-metrics">
+                        <div class="audit-metric">
+                            <span class="audit-metric__label">Speed Index</span>
+                            <span class="audit-metric__value" id="metric-speed-index">--</span>
+                        </div>
+                        <div class="audit-metric">
+                            <span class="audit-metric__label">LCP</span>
+                            <span class="audit-metric__value" id="metric-lcp">--</span>
+                        </div>
+                        <div class="audit-metric">
+                            <span class="audit-metric__label">CLS</span>
+                            <span class="audit-metric__value" id="metric-cls">--</span>
+                        </div>
+                        <div class="audit-metric">
+                            <span class="audit-metric__label">TBT</span>
+                            <span class="audit-metric__value" id="metric-tbt">--</span>
+                        </div>
+                    </div>
+
+                    <div class="audit-seo-checks" id="audit-seo-checks">
+                        <h3>SEO Checklist</h3>
+                        <div id="seo-checklist"></div>
+                    </div>
+
+                    <div class="audit-cta">
+                        <h3>Want the full report with fix priorities?</h3>
+                        <p>Your site scored <span id="audit-cta-score" class="text-accent">--</span> on mobile performance. Our clients average 95+. Enter your email for the detailed breakdown and recommended fixes.</p>
+                        <form class="audit-cta__form" action="{action_url}" method="POST">
+                            <input type="hidden" name="_subject" value="Audit Report Request">
+                            <input type="hidden" name="audit_url" id="audit-cta-url" value="">
+                            <input type="hidden" name="audit_score" id="audit-cta-score-hidden" value="">
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                            <div class="audit-cta__input-row">
+                                <input class="form__input" type="email" name="email" placeholder="you@company.com" required>
+                                <button type="submit" class="btn btn--primary">Get Full Report</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="audit-error" class="audit-error" style="display: none;">
+                    <p id="audit-error-message">Something went wrong. Check the URL and try again.</p>
+                    <button class="btn btn--outline" onclick="document.getElementById('audit-form').style.display='block'; document.getElementById('audit-error').style.display='none';">Try Again</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="border-top: 1px solid var(--color-border);">
+            <div class="container" style="max-width: 720px;">
+                <h2>How the Audit Works</h2>
+                <p>We run your URL through Google PageSpeed Insights (the same tool Google uses to evaluate sites for search ranking) and check your HTML for common SEO issues: missing title tags, meta descriptions, heading structure, schema markup, OG tags, and mobile viewport configuration.</p>
+                <p>The scores you see are the same scores Google sees. If your site scores below 90 on mobile, you are leaving traffic and conversions on the table.</p>
+                <p>Our clients' sites average 95+ on Performance and 100 on SEO. If you want to see what that looks like, <a href="/work/">check our case studies</a> or <a href="/contact/">book a call</a>.</p>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container" style="max-width: 720px;">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary class="faq-item__question">Is this really free?</summary>
+                        <div class="faq-item__answer"><p>Yes. The summary scores and SEO checklist are free with no email required. We ask for your email only if you want the detailed report with prioritized fix recommendations.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-item__question">What data do you collect?</summary>
+                        <div class="faq-item__answer"><p>The URL you enter and the scores returned by Google. If you submit your email, we store that to send the report. We do not track, sell, or share your data. See our <a href="/privacy/">privacy policy</a>.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-item__question">Why does my score differ from what I see on PageSpeed Insights directly?</summary>
+                        <div class="faq-item__answer"><p>Scores can vary slightly between runs because Google tests from different servers and network conditions. The variance is typically 3 to 5 points. If your score is consistently below 80, the issue is your site, not the measurement.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-item__question">Can you fix my site if it scores poorly?</summary>
+                        <div class="faq-item__answer"><p>Yes. We offer a <a href="/pricing/">PageSpeed audit and fix service</a> starting at ${PRICING["pagespeed_fix"]["low"]:,}. For sites on WordPress or Webflow that need a deeper overhaul, we do full <a href="/services/#website-redesign">redesigns and migrations</a> to static HTML that consistently score 90+.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>'''
+
+    faq_schema = """
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is this really free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The summary scores and SEO checklist are free with no email required. We ask for your email only if you want the detailed report with prioritized fix recommendations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What data do you collect?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The URL you enter and the scores returned by Google. If you submit your email, we store that to send the report. We do not track, sell, or share your data."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why does my score differ from what I see on PageSpeed Insights directly?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Scores can vary slightly between runs because Google tests from different servers and network conditions. The variance is typically 3 to 5 points."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can you fix my site if it scores poorly?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We offer a PageSpeed audit and fix service. For sites needing a deeper overhaul, we do full redesigns and migrations to static HTML that consistently score 90+."
+                }
+            }
+        ]
+    }
+    </script>"""
+
+    html = get_page_wrapper(
+        title="Free Site Audit: Check Your PageSpeed and SEO",
+        description="Run your site through our free audit. See your PageSpeed score, SEO gaps, and what is fixable. Instant results, no signup required.",
+        canonical_path="/audit/",
+        body_content=body,
+        active_page="/audit/",
+        extra_schema=breadcrumb_schema + faq_schema,
+    )
+    write_page("audit/index.html", html)
+    ALL_PAGES.append(("/audit/", 0.9, "monthly"))
 
 
 # =============================================================================
@@ -1809,6 +2132,7 @@ def main():
     build_terms()
     build_all_icp_pages()
     build_all_blog()
+    build_audit()
 
     # Static assets
     copy_static_assets()
