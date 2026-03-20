@@ -1775,6 +1775,14 @@ def build_cname():
     print("  Generated: /CNAME")
 
 
+def build_nojekyll():
+    """Write .nojekyll file to prevent Jekyll processing on GitHub Pages."""
+    output_path = os.path.join(PROJECT_ROOT, OUTPUT_DIR, ".nojekyll")
+    with open(output_path, "w") as f:
+        pass
+    print("  Generated: /.nojekyll")
+
+
 # =============================================================================
 # MAIN
 # =============================================================================
@@ -1809,6 +1817,7 @@ def main():
     build_sitemap()
     build_robots_txt()
     build_cname()
+    build_nojekyll()
 
     print(f"Build complete: {len(ALL_PAGES)} pages generated")
 
