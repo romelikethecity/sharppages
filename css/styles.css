@@ -704,18 +704,17 @@ main {
    ============================================================================= */
 
 .stats-bar {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-8);
   padding: var(--space-8) 0;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
 
-@media (min-width: 768px) {
-  .stats-bar {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.stats-bar__item {
+  min-width: 120px;
 }
 
 .stats-bar__item {
