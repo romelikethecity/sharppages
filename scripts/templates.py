@@ -41,7 +41,7 @@ from nav_config import (
 # =============================================================================
 
 BASE_URL = "https://sharppages.com"
-CSS_VERSION = "3"
+CSS_VERSION = "7"
 OUTPUT_DIR = "output"
 
 
@@ -240,7 +240,7 @@ def get_footer_html():
             <div class="footer__grid">
                 <div class="footer__brand">
                     <a href="/" class="footer__logo">
-                        <img src="/assets/logos/logo-full-dark.svg" alt="" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
                     </a>
                     <p class="footer__tagline">{SITE_TAGLINE}</p>
                 </div>
@@ -399,7 +399,7 @@ def get_organization_schema():
         "name": SITE_NAME,
         "url": BASE_URL,
         "logo": f"{BASE_URL}/assets/logos/logo-full-dark.svg",
-        "description": "Done-for-you event registration websites and targeted ad campaigns that fill seats.",
+        "description": "Performance web studio: fast static sites, programmatic SEO, paid social, and PageSpeed optimization. Flat fees, 90+ PageSpeed scores, you own the files.",
         "founder": {
             "@type": "Person",
             "name": "Rome Thorndike"
@@ -411,7 +411,7 @@ def get_organization_schema():
         "@type": "WebSite",
         "name": SITE_NAME,
         "url": BASE_URL,
-        "description": "SharpPages builds high-converting event registration sites and runs the ad campaigns to fill them."
+        "description": "SharpPages builds fast static sites, runs programmatic SEO at scale, and manages paid social campaigns. Flat fees, no platform lock-in."
     }
     return f'''
     <script type="application/ld+json">

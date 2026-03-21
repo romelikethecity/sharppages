@@ -30,9 +30,13 @@ NAV_ITEMS = [
 FOOTER_COLUMNS = {
     "Services": [
         {"href": "/services/", "label": "All Services"},
+        {"href": "/services/web-design/", "label": "Web Design & Build"},
+        {"href": "/services/redesign/", "label": "Redesign & Migration"},
+        {"href": "/services/seo/", "label": "SEO & Content"},
+        {"href": "/services/events/", "label": "Event Sites"},
+        {"href": "/services/ads/", "label": "Paid Social"},
+        {"href": "/services/audit/", "label": "PageSpeed Audit"},
         {"href": "/pricing/", "label": "Pricing"},
-        {"href": "/work/", "label": "Our Work"},
-        {"href": "/contact/", "label": "Contact"},
     ],
     "Industries": [
         {"href": "/for/medical-device-companies/", "label": "Medical Devices"},

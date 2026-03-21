@@ -208,11 +208,20 @@ def build_homepage():
     # Organization + WebSite schema
     org_schema = get_organization_schema()
 
-    # Service cards from SERVICES data
+    # Service cards from SERVICES data — link to individual pages
+    _svc_slug_map = {
+        "website-design": "web-design",
+        "website-redesign": "redesign",
+        "seo-content": "seo",
+        "event-sites": "events",
+        "paid-social": "ads",
+        "pagespeed-audit": "audit",
+    }
     service_cards = ""
     for svc in SERVICES:
+        slug = _svc_slug_map.get(svc["id"], svc["id"])
         service_cards += f'''
-                    <a href="/services/#{svc['id']}" class="feature-card" style="text-decoration: none; display: block;">
+                    <a href="/services/{slug}/" class="feature-card" style="text-decoration: none; display: block;">
                         <span class="feature-card__icon">{svc['icon']}</span>
                         <h3 class="feature-card__title">{svc['name']}</h3>
                         <p class="feature-card__text">{svc['short']}</p>
@@ -450,12 +459,12 @@ def build_homepage():
 
 
 def build_services():
-    """Build services page with 6 services, each with description, includes, and anchor IDs."""
+    """Build services page with visual service blocks: value headline, animation, stats, learn-more link."""
 
     crumbs, breadcrumb_nav, breadcrumb_schema = _breadcrumbs("Services", "/services/")
 
     service_schema = get_service_schema([
-        {"name": s["name"], "description": s["short"], "url": BASE_URL + "/services/#" + s["id"]}
+        {"name": s["name"], "description": s["short"], "url": BASE_URL + "/services/" + s["id"].replace("website-", "web-").replace("website-", "").replace("seo-content", "seo").replace("event-sites", "events").replace("paid-social", "ads").replace("pagespeed-audit", "audit") + "/"}
         for s in SERVICES
     ])
 
@@ -496,112 +505,351 @@ def build_services():
             </div>
         </section>
 
+        <section class="section">
+            <div class="container">
+                <div class="stats-bar">
+                    <div class="stats-bar__item">
+                        <span class="stats-bar__number">700+</span>
+                        <span class="stats-bar__label">Pages Built</span>
+                    </div>
+                    <div class="stats-bar__item">
+                        <span class="stats-bar__number">98</span>
+                        <span class="stats-bar__label">Avg PageSpeed</span>
+                    </div>
+                    <div class="stats-bar__item">
+                        <span class="stats-bar__number">$0/mo</span>
+                        <span class="stats-bar__label">Hosting Cost</span>
+                    </div>
+                    <div class="stats-bar__item">
+                        <span class="stats-bar__number">363K</span>
+                        <span class="stats-bar__label">Impressions in 30 Days</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="content-section">
             <div class="container">
-                <div class="service-block" id="website-design">
-                    <h2 class="service-block__title">Website Design &amp; Build</h2>
-                    <p class="service-block__text">Static HTML/CSS sites built mobile-first with sub-1-second load times. Every site scores 90+ on <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a>. Full schema markup, Open Graph tags, XML sitemap, and robots.txt included. No WordPress to maintain, no plugins to update, no security patches to worry about.</p>
-                    <p class="service-block__text">You get a flat fee, a fixed timeline, and you own all files when we are done. Host them anywhere. No recurring platform costs.</p>
-                    <p class="service-block__text">We also build interactive lead magnets (PageSpeed audit tools, ROI calculators, assessment quizzes) that convert 2-5x better than static contact forms. These are lightweight client-side tools with no server costs.</p>
-                    <div class="service-block__includes">
-                        <span class="service-block__item">Mobile-first, responsive design</span>
-                        <span class="service-block__item">90+ PageSpeed score guaranteed</span>
-                        <span class="service-block__item">Full schema markup + OG tags</span>
-                        <span class="service-block__item">XML sitemap + robots.txt</span>
-                        <span class="service-block__item">GA4 + conversion tracking</span>
-                        <span class="service-block__item">Contact form with spam protection</span>
-                        <span class="service-block__item">Deployed on your domain</span>
-                        <span class="service-block__item">You own all source files</span>
+
+                <div class="service-card" id="website-design">
+                    <div class="service-card__content">
+                        <h2 class="service-card__headline">Sites That Load in Under a Second</h2>
+                        <p class="service-card__text">Your visitors decide in 3 seconds. Our static HTML sites load in under one. Every site scores 90+ on Google PageSpeed, costs $0/mo to host, and you own every file. No WordPress maintenance, no plugin vulnerabilities, no platform lock-in.</p>
+                        <div class="service-card__visual">
+                            <div class="gauge-comparison gauge-comparison--compact" data-animate>
+                                <div class="gauge-wrapper">
+                                    <div class="gauge" data-score="98" data-color="green">
+                                        <svg class="gauge__svg" viewBox="0 0 120 120">
+                                            <circle class="gauge__bg" cx="60" cy="60" r="54" />
+                                            <circle class="gauge__fill gauge__fill--green" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+                                        </svg>
+                                        <span class="gauge__score" data-target="98">0</span>
+                                    </div>
+                                    <span class="gauge__label">SharpPages</span>
+                                    <span class="gauge__detail">0.9s load &middot; $0/mo</span>
+                                </div>
+                                <div class="gauge-wrapper">
+                                    <div class="gauge" data-score="73" data-color="orange">
+                                        <svg class="gauge__svg" viewBox="0 0 120 120">
+                                            <circle class="gauge__bg" cx="60" cy="60" r="54" />
+                                            <circle class="gauge__fill gauge__fill--orange" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+                                        </svg>
+                                        <span class="gauge__score" data-target="73">0</span>
+                                    </div>
+                                    <span class="gauge__label">Avg Agency Site</span>
+                                    <span class="gauge__detail">5.0s load &middot; $50+/mo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-card__stats">
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">98</span>
+                                <span class="service-card__stat-label">PageSpeed Score</span>
+                            </div>
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">0.9s</span>
+                                <span class="service-card__stat-label">Speed Index</span>
+                            </div>
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">$0</span>
+                                <span class="service-card__stat-label">Monthly Hosting</span>
+                            </div>
+                        </div>
+                        <div class="service-card__footer">
+                            <a href="/services/web-design/" class="service-card__link">See how it works &rarr;</a>
+                            <span class="service-card__price">From ${PRICING['site_landing']['low']:,}</span>
+                        </div>
                     </div>
-                    <p class="service-block__pricing">Landing page: ${PRICING['site_landing']['low']:,} to ${PRICING['site_landing']['high']:,} &middot; Standard site: ${PRICING['site_standard']['low']:,} to ${PRICING['site_standard']['high']:,} &middot; Content site: ${PRICING['site_content']['low']:,} to ${PRICING['site_content']['high']:,} &middot; <a href="/pricing/">Full pricing</a></p>
                 </div>
 
-                <div class="service-block" id="website-redesign">
-                    <h2 class="service-block__title">Website Redesign &amp; Migration</h2>
-                    <p class="service-block__text">Migrate from WordPress, Webflow, Squarespace, or Wix to a static site. Same design (or improved), 5x faster load times. No more recurring hosting fees, no plugin bloat, no CMS updates breaking your layout at 2 AM.</p>
-                    <p class="service-block__text">We provide before/after <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed scores</a> as proof. Most WordPress sites score 40 to 65 on mobile. After migration, those same sites score 90+. The design stays the same. The speed changes everything.</p>
-                    <div class="service-block__includes">
-                        <span class="service-block__item">Design-faithful or improved migration</span>
-                        <span class="service-block__item">5x faster load times (typical)</span>
-                        <span class="service-block__item">Before/after PageSpeed scores</span>
-                        <span class="service-block__item">No recurring hosting fees</span>
-                        <span class="service-block__item">Zero plugin dependencies</span>
-                        <span class="service-block__item">Full SEO preservation (redirects, canonicals)</span>
+                <div class="service-card" id="website-redesign">
+                    <div class="service-card__content">
+                        <h2 class="service-card__headline">Same Design. 5x Faster.</h2>
+                        <p class="service-card__text">Migrate from WordPress, Webflow, or Squarespace without changing your design. Your site goes from scoring 45 on mobile to 95+. Same look, zero recurring hosting fees, no plugin vulnerabilities. We deliver before/after PageSpeed scores as proof.</p>
+                        <div class="service-card__visual">
+                            <div class="before-after" data-animate>
+                                <div class="before-after__item before-after__item--before">
+                                    <span class="before-after__badge before-after__badge--red">Before</span>
+                                    <div class="before-after__browser">
+                                        <div class="before-after__bar"></div>
+                                        <div class="before-after__skeleton">
+                                            <div class="skeleton-line skeleton-line--title"></div>
+                                            <div class="skeleton-line skeleton-line--text"></div>
+                                            <div class="skeleton-line skeleton-line--text skeleton-line--short"></div>
+                                            <div class="skeleton-line skeleton-line--img"></div>
+                                            <div class="skeleton-line skeleton-line--text"></div>
+                                        </div>
+                                        <div class="before-after__loader">
+                                            <div class="before-after__spinner"></div>
+                                            <span>Loading... 4.2s</span>
+                                        </div>
+                                    </div>
+                                    <span class="before-after__score before-after__score--red">45</span>
+                                </div>
+                                <div class="before-after__item before-after__item--after">
+                                    <span class="before-after__badge before-after__badge--green">After</span>
+                                    <div class="before-after__browser">
+                                        <div class="before-after__bar"></div>
+                                        <div class="before-after__loaded">
+                                            <div class="loaded-line loaded-line--title"></div>
+                                            <div class="loaded-line loaded-line--text"></div>
+                                            <div class="loaded-line loaded-line--text loaded-line--short"></div>
+                                            <div class="loaded-line loaded-line--img"></div>
+                                            <div class="loaded-line loaded-line--text"></div>
+                                        </div>
+                                    </div>
+                                    <span class="before-after__score before-after__score--green">95</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-card__stats">
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">5x</span>
+                                <span class="service-card__stat-label">Faster Load</span>
+                            </div>
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">$0</span>
+                                <span class="service-card__stat-label">Recurring Cost</span>
+                            </div>
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">0</span>
+                                <span class="service-card__stat-label">Plugin Vulnerabilities</span>
+                            </div>
+                        </div>
+                        <div class="service-card__footer">
+                            <a href="/services/redesign/" class="service-card__link">See how it works &rarr;</a>
+                            <span class="service-card__price">From ${PRICING['redesign_wp_sq_wix']['low']:,}</span>
+                        </div>
                     </div>
-                    <p class="service-block__pricing">From WordPress/Squarespace/Wix: ${PRICING['redesign_wp_sq_wix']['low']:,} to ${PRICING['redesign_wp_sq_wix']['high']:,} &middot; From Webflow: ${PRICING['redesign_webflow']['low']:,} to ${PRICING['redesign_webflow']['high']:,} &middot; <a href="/pricing/">Full pricing</a></p>
                 </div>
 
-                <div class="service-block" id="seo-content">
-                    <h2 class="service-block__title">SEO &amp; Content Strategy</h2>
-                    <p class="service-block__text">Programmatic SEO that builds hundreds of pages from structured data. Hub-and-spoke architecture for topical authority. Keyword-targeted content at scale: glossary pages, comparison pages, alternative pages, location pages. Schema markup for rich results in Google.</p>
-                    <p class="service-block__text">We built 322 pages for <a href="https://pecollective.com" target="_blank" rel="noopener noreferrer">PE Collective</a> and drove 363K impressions in 30 days from near-zero. We built 398 pages for getprovyx.com with a 98 PageSpeed score. The model works because the content is structured, the pages are fast, and each one targets a specific search intent.</p>
-                    <div class="service-block__includes">
-                        <span class="service-block__item">Programmatic SEO buildout</span>
-                        <span class="service-block__item">Hub-and-spoke content architecture</span>
-                        <span class="service-block__item">Keyword research + targeting</span>
-                        <span class="service-block__item">Schema markup for rich results</span>
-                        <span class="service-block__item">Internal linking strategy</span>
-                        <span class="service-block__item">Monthly performance reporting</span>
+                <div class="service-card" id="seo-content">
+                    <div class="service-card__content">
+                        <h2 class="service-card__headline">363K Impressions in 30 Days</h2>
+                        <p class="service-card__text">Programmatic SEO that builds hundreds of keyword-targeted pages from structured data. Hub-and-spoke architecture for topical authority. We built 322 pages for PE Collective and drove 363K impressions in a single month from near-zero.</p>
+                        <div class="service-card__visual">
+                            <div class="seo-chart" data-animate>
+                                <svg class="seo-chart__svg" viewBox="0 0 600 200" preserveAspectRatio="none">
+                                    <polyline class="seo-chart__line" points="0,195 150,180 300,150 450,100 600,10" fill="none" />
+                                </svg>
+                                <div class="seo-chart__labels">
+                                    <span class="seo-chart__label" data-delay="0">Week 1: 2K</span>
+                                    <span class="seo-chart__label" data-delay="1">Week 2: 15K</span>
+                                    <span class="seo-chart__label" data-delay="2">Week 3: 30K</span>
+                                    <span class="seo-chart__label" data-delay="3">Week 4: 45K/day</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-card__stats">
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">363K</span>
+                                <span class="service-card__stat-label">Impressions</span>
+                            </div>
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">322</span>
+                                <span class="service-card__stat-label">Pages Built</span>
+                            </div>
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">30</span>
+                                <span class="service-card__stat-label">Days to Results</span>
+                            </div>
+                        </div>
+                        <div class="service-card__footer">
+                            <a href="/services/seo/" class="service-card__link">See how it works &rarr;</a>
+                            <span class="service-card__price">From ${PRICING['seo_audit']['low']:,}</span>
+                        </div>
                     </div>
-                    <p class="service-block__pricing">SEO audit: ${PRICING['seo_audit']['low']:,} to ${PRICING['seo_audit']['high']:,} &middot; Programmatic buildout: ${PRICING['seo_programmatic']['low']:,} to ${PRICING['seo_programmatic']['high']:,} &middot; Monthly management: ${PRICING['seo_monthly']['low']:,} to ${PRICING['seo_monthly']['high']:,}/mo &middot; <a href="/pricing/">Full pricing</a></p>
                 </div>
 
-                <div class="service-block" id="event-sites">
-                    <h2 class="service-block__title">Event Registration Sites</h2>
-                    <p class="service-block__text">Custom registration pages with GA4 and <a href="https://www.facebook.com/business/tools/meta-pixel" target="_blank" rel="noopener noreferrer">Meta Pixel</a> installed from day one. Template cloning for multi-city events with 48-hour turnaround. No per-registrant fees, no Eventbrite branding, no platform lock-in.</p>
-                    <p class="service-block__text">Your event page lives on your domain with your branding. Every registration fires a conversion event so your ad spend is measurable down to the individual signup. Running the same event in another city? We clone the template, swap the details, and deploy in 48 hours.</p>
-                    <div class="service-block__includes">
-                        <span class="service-block__item">Custom registration page design</span>
-                        <span class="service-block__item">Mobile-responsive, sub-1-second load</span>
-                        <span class="service-block__item">GA4 + Meta Pixel pre-installed</span>
-                        <span class="service-block__item">Confirmation page with conversion tracking</span>
-                        <span class="service-block__item">5 to 7 business day turnaround</span>
-                        <span class="service-block__item">48-hour clones for additional cities</span>
-                        <span class="service-block__item">No per-registrant fees</span>
+                <div class="service-card" id="event-sites">
+                    <div class="service-card__content">
+                        <h2 class="service-card__headline">One Site Built. Every City Cloned in 48 Hours.</h2>
+                        <p class="service-card__text">Custom event registration pages with GA4 and Meta Pixel installed from day one. Running the same event in another city? We clone the template, swap the details, and deploy in 48 hours. No per-registrant fees, no Eventbrite branding.</p>
+                        <div class="service-card__visual">
+                            <div class="multi-city" data-animate>
+                                <div class="multi-city__frame multi-city__frame--1">
+                                    <div class="multi-city__bar"></div>
+                                    <div class="multi-city__body">
+                                        <div class="multi-city__title-line"></div>
+                                        <div class="multi-city__text-line"></div>
+                                        <div class="multi-city__btn-line"></div>
+                                    </div>
+                                    <span class="multi-city__label">Houston</span>
+                                </div>
+                                <div class="multi-city__frame multi-city__frame--2">
+                                    <div class="multi-city__bar"></div>
+                                    <div class="multi-city__body">
+                                        <div class="multi-city__title-line"></div>
+                                        <div class="multi-city__text-line"></div>
+                                        <div class="multi-city__btn-line"></div>
+                                    </div>
+                                    <span class="multi-city__label">Dallas</span>
+                                </div>
+                                <div class="multi-city__frame multi-city__frame--3">
+                                    <div class="multi-city__bar"></div>
+                                    <div class="multi-city__body">
+                                        <div class="multi-city__title-line"></div>
+                                        <div class="multi-city__text-line"></div>
+                                        <div class="multi-city__btn-line"></div>
+                                    </div>
+                                    <span class="multi-city__label">Phoenix</span>
+                                </div>
+                                <span class="multi-city__time">48hrs each</span>
+                            </div>
+                        </div>
+                        <div class="service-card__stats">
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">$0</span>
+                                <span class="service-card__stat-label">Per-Registrant Fee</span>
+                            </div>
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">48hr</span>
+                                <span class="service-card__stat-label">Clone Turnaround</span>
+                            </div>
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">100%</span>
+                                <span class="service-card__stat-label">Attribution</span>
+                            </div>
+                        </div>
+                        <div class="service-card__footer">
+                            <a href="/services/events/" class="service-card__link">See how it works &rarr;</a>
+                            <span class="service-card__price">From ${PRICING['event_first']['low']:,}</span>
+                        </div>
                     </div>
-                    <p class="service-block__pricing">First event site: ${PRICING['event_first']['low']:,} to ${PRICING['event_first']['high']:,} &middot; Additional city: ${PRICING['event_clone']['low']:,} to ${PRICING['event_clone']['high']:,} &middot; <a href="/pricing/">Full pricing</a></p>
                 </div>
 
-                <div class="service-block" id="paid-social">
-                    <h2 class="service-block__title">Paid Social Advertising</h2>
-                    <p class="service-block__text">Facebook and Instagram campaign management with custom audience targeting, retargeting, and urgency scheduling. Our campaigns hit 2x industry-average CTR with lower CPC. Full attribution from ad impression to conversion.</p>
-                    <p class="service-block__text">We upload your contact list as a custom audience, build retargeting pools from site visitors, and run a structured campaign schedule (awareness, retargeting, urgency, countdown). Every campaign includes carousel and static ad creative with multiple copy variations tested against each other.</p>
-                    <div class="service-block__includes">
-                        <span class="service-block__item">Custom audience upload from your contact list</span>
-                        <span class="service-block__item">Facebook + Instagram placements</span>
-                        <span class="service-block__item">Carousel and static ad creative</span>
-                        <span class="service-block__item">Website visitor retargeting</span>
-                        <span class="service-block__item">Urgency schedule with countdown copy</span>
-                        <span class="service-block__item">Weekly performance reports</span>
-                        <span class="service-block__item">Full conversion attribution</span>
+                <div class="service-card" id="paid-social">
+                    <div class="service-card__content">
+                        <h2 class="service-card__headline">62% Lower Ad Costs. 2x More Clicks.</h2>
+                        <p class="service-card__text">Facebook and Instagram campaigns with custom audience targeting from your contact list. We build retargeting pools, run structured urgency schedules, and deliver full attribution from ad impression to conversion. Our clients pay 62% less per click than industry average.</p>
+                        <div class="service-card__visual">
+                            <div class="cost-comparison" data-animate>
+                                <div class="cost-comparison__bar">
+                                    <span class="cost-comparison__label">Industry Average</span>
+                                    <div class="cost-comparison__track">
+                                        <div class="cost-comparison__fill cost-comparison__fill--competitor" style="width: 0%;" data-width="100%"></div>
+                                    </div>
+                                    <span class="cost-comparison__value cost-comparison__value--competitor">$3&ndash;$8+</span>
+                                </div>
+                                <div class="cost-comparison__bar">
+                                    <span class="cost-comparison__label">SharpPages</span>
+                                    <div class="cost-comparison__track">
+                                        <div class="cost-comparison__fill cost-comparison__fill--sharp" style="width: 0%;" data-width="38%"></div>
+                                    </div>
+                                    <span class="cost-comparison__value cost-comparison__value--sharp">$1.50</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-card__stats">
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">62%</span>
+                                <span class="service-card__stat-label">Lower CPC</span>
+                            </div>
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">2x</span>
+                                <span class="service-card__stat-label">Industry Avg CTR</span>
+                            </div>
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">Full</span>
+                                <span class="service-card__stat-label">Ad-to-Conversion Tracking</span>
+                            </div>
+                        </div>
+                        <div class="service-card__footer">
+                            <a href="/services/ads/" class="service-card__link">See how it works &rarr;</a>
+                            <span class="service-card__price">From ${PRICING['ad_setup']['low']:,}</span>
+                        </div>
                     </div>
-                    <p class="service-block__pricing">Campaign setup: ${PRICING['ad_setup']['low']:,} to ${PRICING['ad_setup']['high']:,} &middot; Monthly management: ${PRICING['ad_monthly']['low']:,} to ${PRICING['ad_monthly']['high']:,}/mo &middot; <a href="/pricing/">Full pricing</a></p>
                 </div>
 
-                <div class="service-block" id="pagespeed-audit">
-                    <h2 class="service-block__title">PageSpeed Audit &amp; Fix</h2>
-                    <p class="service-block__text">Start with our <a href="/audit/">free instant audit</a>. Enter your URL and see your PageSpeed scores, SEO checklist, and performance bottlenecks in 30 seconds. The summary is free. Detailed fix priorities and a consult are available as a paid service.</p>
-                    <p class="service-block__text">For sites that need hands-on work, we identify the bottlenecks (render-blocking resources, oversized images, JavaScript bloat, server response time) and fix them. You get before/after PageSpeed scores as a deliverable. This is often the entry point for a full redesign or migration project.</p>
-                    <div class="service-block__includes">
-                        <span class="service-block__item">Free instant audit (PageSpeed + SEO checklist)</span>
-                        <span class="service-block__item">Performance bottleneck identification</span>
-                        <span class="service-block__item">Before/after PageSpeed scores</span>
-                        <span class="service-block__item">Image optimization + compression</span>
-                        <span class="service-block__item">Render-blocking resource fixes</span>
-                        <span class="service-block__item">Core Web Vitals improvement</span>
+                <div class="service-card" id="pagespeed-audit">
+                    <div class="service-card__content">
+                        <h2 class="service-card__headline">Find Out What Is Slowing You Down</h2>
+                        <p class="service-card__text">Enter your URL and get your PageSpeed scores, SEO checklist, and performance bottlenecks in 30 seconds. Free, no signup required. If your site needs hands-on work, we fix render-blocking resources, oversized images, and JavaScript bloat. Before/after scores as proof.</p>
+                        <div class="service-card__visual">
+                            <div class="gauge-comparison gauge-comparison--compact" data-animate>
+                                <div class="gauge-wrapper">
+                                    <div class="gauge" data-score="45" data-color="red">
+                                        <svg class="gauge__svg" viewBox="0 0 120 120">
+                                            <circle class="gauge__bg" cx="60" cy="60" r="54" />
+                                            <circle class="gauge__fill gauge__fill--red" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+                                        </svg>
+                                        <span class="gauge__score" data-target="45">0</span>
+                                    </div>
+                                    <span class="gauge__label">Before</span>
+                                </div>
+                                <div class="gauge-wrapper gauge-wrapper--arrow">
+                                    <span class="gauge-arrow">&rarr;</span>
+                                </div>
+                                <div class="gauge-wrapper">
+                                    <div class="gauge" data-score="95" data-color="green">
+                                        <svg class="gauge__svg" viewBox="0 0 120 120">
+                                            <circle class="gauge__bg" cx="60" cy="60" r="54" />
+                                            <circle class="gauge__fill gauge__fill--green" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+                                        </svg>
+                                        <span class="gauge__score" data-target="95">0</span>
+                                    </div>
+                                    <span class="gauge__label">After</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-card__stats">
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">Free</span>
+                                <span class="service-card__stat-label">Instant Audit</span>
+                            </div>
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">30s</span>
+                                <span class="service-card__stat-label">Time to Results</span>
+                            </div>
+                            <div class="service-card__stat">
+                                <span class="service-card__stat-number">90+</span>
+                                <span class="service-card__stat-label">Post-Fix Score</span>
+                            </div>
+                        </div>
+                        <div class="service-card__footer">
+                            <a href="/services/audit/" class="service-card__link">See how it works &rarr;</a>
+                            <span class="service-card__price">Free / From ${PRICING['pagespeed_fix']['low']:,}</span>
+                        </div>
                     </div>
-                    <p class="service-block__pricing">Free instant audit: $0 &middot; Detailed audit + consult: $500 &middot; Audit + fix: ${PRICING['pagespeed_fix']['low']:,} to ${PRICING['pagespeed_fix']['high']:,} &middot; <a href="/pricing/">Full pricing</a></p>
                 </div>
+
+            </div>
+        </section>
+
+        <section class="section section--alt">
+            <div class="container text-center">
+                <h2 class="mb-4">Not Sure Where to Start?</h2>
+                <p style="color: var(--color-text-muted); max-width: 640px; margin: 0 auto var(--space-8); line-height: var(--leading-relaxed);">Run a free audit on your current site. It takes 30 seconds and shows you exactly what is fixable. Then we can scope the right project together.</p>
+                <a href="/audit/" class="btn btn--primary btn--lg">Run Your Free Audit</a>
             </div>
         </section>
 
 {faq_html}
 
 {generate_cta_section(
-    title="Not Sure Which Service You Need?",
-    text="Start with a free site audit. We will show you your PageSpeed score, SEO gaps, and what is fixable. Then we can scope the right project together.",
-    button_text="Get a Free Audit",
-    button_href="/audit/",
+    title="Ready to See What Your Site Could Be?",
+    text="Book a call. We will review your current site, discuss your goals, and send a fixed quote within two business days.",
+    button_text="Book a Call",
 )}'''
 
     html = get_page_wrapper(
@@ -614,6 +862,689 @@ def build_services():
     )
     write_page("services/index.html", html)
     ALL_PAGES.append(("/services/", 0.9, "monthly"))
+
+
+def _service_breadcrumbs(service_name, service_path):
+    """Return 3-level breadcrumbs for a service sub-page."""
+    crumbs = [
+        {"name": "Home", "url": BASE_URL + "/"},
+        {"name": "Services", "url": BASE_URL + "/services/"},
+        {"name": service_name, "url": BASE_URL + service_path},
+    ]
+    return crumbs, get_breadcrumb_html(crumbs), get_breadcrumb_schema(crumbs)
+
+
+def _service_page(slug, title, meta_desc, headline, hero_text, proof_html,
+                  process_steps, includes, stats, pricing_html, faqs,
+                  related_services=None,
+                  cta_title="Ready to Get Started?",
+                  cta_text="Book a call. We will scope the work, give you a fixed quote, and explain exactly what is included.",
+                  cta_btn="Book a Call", cta_href="/contact/"):
+    """Build an individual service page with standardized structure."""
+
+    path = f"/services/{slug}/"
+    crumbs, breadcrumb_nav, breadcrumb_schema = _service_breadcrumbs(title, path)
+
+    service_schema = get_service_schema([
+        {"name": title, "description": meta_desc, "url": BASE_URL + path}
+    ])
+    faq_html = generate_faq_html(faqs)
+
+    # Process steps HTML
+    steps_html = ""
+    for i, step in enumerate(process_steps, 1):
+        steps_html += f'''
+                    <div class="process-step">
+                        <div class="process-step__number">{i}</div>
+                        <div class="process-step__content">
+                            <h3>{step["title"]}</h3>
+                            <p>{step["text"]}</p>
+                        </div>
+                    </div>'''
+
+    # Includes grid HTML
+    includes_html = ""
+    for item in includes:
+        includes_html += f'<span class="service-block__item">{item}</span>\n'
+
+    # Stats bar HTML
+    stats_html = ""
+    for stat in stats:
+        stats_html += f'''
+                        <div class="service-card__stat">
+                            <span class="service-card__stat-number">{stat["number"]}</span>
+                            <span class="service-card__stat-label">{stat["label"]}</span>
+                        </div>'''
+
+    body = f'''
+        {breadcrumb_nav}
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">{headline}</h1>
+                <p class="page-header__subtitle">{hero_text}</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                {proof_html}
+            </div>
+        </section>
+
+        <section class="content-section section--alt">
+            <div class="container">
+                <h2 class="text-center mb-8">How It Works</h2>
+                <div class="process-steps process-steps--horizontal">
+                    {steps_html}
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2 class="mb-8">What Is Included</h2>
+                <div class="service-block__includes">
+                    {includes_html}
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="service-card__stats" style="justify-content: center; max-width: 600px; margin: 0 auto;">
+                    {stats_html}
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section section--alt">
+            <div class="container">
+                <h2 class="mb-8">Pricing</h2>
+                {pricing_html}
+                <p style="color: var(--color-text-muted); margin-top: var(--space-6);"><a href="/pricing/">See full pricing for all services &rarr;</a></p>
+            </div>
+        </section>
+
+{faq_html}
+'''
+
+    # Related services cross-links
+    if related_services:
+        related_html = ""
+        for rs in related_services:
+            related_html += f'''
+                        <a href="/services/{rs["slug"]}/" class="related-service">
+                            <span class="related-service__name">{rs["name"]}</span>
+                            <span class="related-service__desc">{rs["desc"]}</span>
+                        </a>'''
+        body += f'''
+        <section class="content-section section--alt">
+            <div class="container">
+                <h2 class="text-center mb-8">Related Services</h2>
+                <div class="related-services">
+                    {related_html}
+                </div>
+            </div>
+        </section>
+'''
+
+    body += f'''
+{generate_cta_section(title=cta_title, text=cta_text, button_text=cta_btn, button_href=cta_href)}'''
+
+    html = get_page_wrapper(
+        title=f"{title} | Services",
+        description=meta_desc,
+        canonical_path=path,
+        body_content=body,
+        active_page="/services/",
+        extra_schema=breadcrumb_schema + service_schema,
+    )
+    write_page(f"services/{slug}/index.html", html)
+    ALL_PAGES.append((path, 0.8, "monthly"))
+
+
+def build_service_web_design():
+    """Build individual service page: Website Design & Build."""
+    _service_page(
+        slug="web-design",
+        title="Website Design & Build",
+        meta_desc="Static HTML/CSS sites that load in under a second. 90+ PageSpeed scores, $0/mo hosting, you own every file. Flat fee, no platform lock-in.",
+        headline='Sites That Load in <span class="text-accent">Under a Second</span>',
+        hero_text="Static HTML/CSS sites built mobile-first. Every site scores 90+ on Google PageSpeed, costs $0/mo to host, and you own all source files. No WordPress, no plugins, no recurring platform costs.",
+        proof_html=f'''
+                <h2>The Proof</h2>
+                <p class="case-study__summary">We built getprovyx.com: 398 pages, 98 PageSpeed score, 0.9s Speed Index. Run it through <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a> yourself. Compare it to any agency-built Webflow or WordPress site.</p>
+                <div class="gauge-comparison" data-animate style="margin-top: var(--space-8);">
+                    <div class="gauge-wrapper">
+                        <div class="gauge" data-score="98" data-color="green">
+                            <svg class="gauge__svg" viewBox="0 0 120 120">
+                                <circle class="gauge__bg" cx="60" cy="60" r="54" />
+                                <circle class="gauge__fill gauge__fill--green" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+                            </svg>
+                            <span class="gauge__score" data-target="98">0</span>
+                        </div>
+                        <span class="gauge__label">SharpPages</span>
+                        <span class="gauge__detail">0.9s Speed Index &middot; 30ms TBT</span>
+                    </div>
+                    <div class="gauge-wrapper">
+                        <div class="gauge" data-score="73" data-color="orange">
+                            <svg class="gauge__svg" viewBox="0 0 120 120">
+                                <circle class="gauge__bg" cx="60" cy="60" r="54" />
+                                <circle class="gauge__fill gauge__fill--orange" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+                            </svg>
+                            <span class="gauge__score" data-target="73">0</span>
+                        </div>
+                        <span class="gauge__label">Average Agency</span>
+                        <span class="gauge__detail">5.0s Speed Index &middot; 280ms TBT</span>
+                    </div>
+                </div>
+
+                <div class="case-study__comparison" style="margin-top: var(--space-8);">
+                    <table class="comparison-table">
+                        <thead><tr><th>Metric</th><th class="col-sharp">SharpPages</th><th class="col-competitor">Agency / Webflow</th></tr></thead>
+                        <tbody>
+                            <tr><td>Performance</td><td class="col-sharp">98</td><td class="col-competitor">73</td></tr>
+                            <tr><td>Speed Index</td><td class="col-sharp">0.9s</td><td class="col-competitor">5.0s</td></tr>
+                            <tr><td>Monthly Hosting</td><td class="col-sharp">$0</td><td class="col-competitor">$29-$79/mo</td></tr>
+                            <tr><td>Plugin Vulnerabilities</td><td class="col-sharp">0</td><td class="col-competitor">Varies</td></tr>
+                            <tr><td>File Ownership</td><td class="col-sharp">You own all files</td><td class="col-competitor">Platform-locked</td></tr>
+                        </tbody>
+                    </table>
+                </div>''',
+        process_steps=[
+            {"title": "Scope", "text": "You tell us what you need. We review your goals, content, and timeline. You get a fixed quote within two business days."},
+            {"title": "Build", "text": "We design and develop the site, configure tracking and SEO. You review drafts and approve before launch."},
+            {"title": "Launch", "text": "Site goes live on your domain. You own all files. Host them anywhere with zero recurring costs."},
+        ],
+        includes=[
+            "Mobile-first, responsive design",
+            "90+ PageSpeed score guaranteed",
+            "Full schema markup + OG tags",
+            "XML sitemap + robots.txt",
+            "GA4 + conversion tracking",
+            "Contact form with spam protection",
+            "Deployed on your domain",
+            "You own all source files",
+        ],
+        stats=[
+            {"number": "98", "label": "PageSpeed Score"},
+            {"number": "0.9s", "label": "Speed Index"},
+            {"number": "$0/mo", "label": "Hosting Cost"},
+            {"number": "398", "label": "Pages Built"},
+        ],
+        pricing_html=f'''
+                <div class="pricing-table-wrap">
+                    <table class="pricing-table">
+                        <thead><tr><th>Tier</th><th>Price Range</th></tr></thead>
+                        <tbody>
+                            <tr><td>Landing Page (1 page)</td><td>${PRICING['site_landing']['low']:,} to ${PRICING['site_landing']['high']:,}</td></tr>
+                            <tr><td>Standard Site (5-10 pages)</td><td>${PRICING['site_standard']['low']:,} to ${PRICING['site_standard']['high']:,}</td></tr>
+                            <tr><td>Content Site (10-50+ pages)</td><td>${PRICING['site_content']['low']:,} to ${PRICING['site_content']['high']:,}</td></tr>
+                            <tr><td>Enterprise / pSEO (100+ pages)</td><td>${PRICING['site_enterprise']['low']:,} to ${PRICING['site_enterprise']['high']:,}</td></tr>
+                            <tr><td>Lead Magnet Add-on</td><td>+${PRICING['lead_magnet_addon']['low']:,} to ${PRICING['lead_magnet_addon']['high']:,}</td></tr>
+                        </tbody>
+                    </table>
+                </div>''',
+        faqs=[
+            {"question": "Do you build on WordPress or Webflow?", "answer": "Neither. We build static HTML/CSS sites. They load faster (sub-1-second), score 90+ on PageSpeed, cost nothing to host, and have zero plugin vulnerabilities. You own every file."},
+            {"question": "How long does a typical site build take?", "answer": "Landing pages: 1 to 2 weeks. Standard sites (5-10 pages): 2 to 4 weeks. Content sites with programmatic SEO: 4 to 8 weeks. We give you a fixed timeline upfront."},
+            {"question": "Can I update the site myself after launch?", "answer": "Yes. You own all HTML/CSS/JS files. Edit them in any code editor or hire any developer. No proprietary CMS, no platform dependency."},
+            {"question": "What is a lead magnet add-on?", "answer": "An interactive tool built into your site: a PageSpeed audit, ROI calculator, assessment quiz, or similar. These convert 2-5x better than static contact forms because the visitor gets immediate value."},
+        ],
+        related_services=[
+            {"slug": "redesign", "name": "Redesign & Migration", "desc": "Already have a site? We migrate it to static HTML."},
+            {"slug": "seo", "name": "SEO & Content", "desc": "Drive organic traffic with programmatic SEO at scale."},
+        ],
+    )
+
+
+def build_service_redesign():
+    """Build individual service page: Website Redesign & Migration."""
+    _service_page(
+        slug="redesign",
+        title="Website Redesign & Migration",
+        meta_desc="Migrate from WordPress, Webflow, or Squarespace to static HTML. Same design, 5x faster load times, zero recurring hosting costs.",
+        headline='Same Design. <span class="text-accent">5x Faster.</span>',
+        hero_text="Migrate from WordPress, Webflow, Squarespace, or Wix to a static site. Same design (or improved), 5x faster load times. No recurring hosting fees, no plugin vulnerabilities, no CMS updates breaking your layout.",
+        proof_html='''
+                <h2>Before &amp; After</h2>
+                <p class="case-study__summary">Most WordPress sites score 40 to 65 on mobile PageSpeed. After migration to static HTML, those same sites score 90+. The design stays the same. The speed changes everything.</p>
+                <div class="before-after" data-animate style="margin-top: var(--space-8);">
+                    <div class="before-after__item before-after__item--before">
+                        <span class="before-after__badge before-after__badge--red">Before (WordPress)</span>
+                        <div class="before-after__browser">
+                            <div class="before-after__bar"></div>
+                            <div class="before-after__skeleton">
+                                <div class="skeleton-line skeleton-line--title"></div>
+                                <div class="skeleton-line skeleton-line--text"></div>
+                                <div class="skeleton-line skeleton-line--text skeleton-line--short"></div>
+                                <div class="skeleton-line skeleton-line--img"></div>
+                                <div class="skeleton-line skeleton-line--text"></div>
+                            </div>
+                            <div class="before-after__loader">
+                                <div class="before-after__spinner"></div>
+                                <span>Loading... 4.2s</span>
+                            </div>
+                        </div>
+                        <span class="before-after__score before-after__score--red">45</span>
+                    </div>
+                    <div class="before-after__item before-after__item--after">
+                        <span class="before-after__badge before-after__badge--green">After (Static)</span>
+                        <div class="before-after__browser">
+                            <div class="before-after__bar"></div>
+                            <div class="before-after__loaded">
+                                <div class="loaded-line loaded-line--title"></div>
+                                <div class="loaded-line loaded-line--text"></div>
+                                <div class="loaded-line loaded-line--text loaded-line--short"></div>
+                                <div class="loaded-line loaded-line--img"></div>
+                                <div class="loaded-line loaded-line--text"></div>
+                            </div>
+                        </div>
+                        <span class="before-after__score before-after__score--green">95</span>
+                    </div>
+                </div>''',
+        process_steps=[
+            {"title": "Audit", "text": "We run your current site through PageSpeed, inventory all pages and content, and identify what needs to migrate."},
+            {"title": "Rebuild", "text": "We recreate your design in static HTML/CSS. Same look (or improved), dramatically faster. Full SEO preservation with redirects."},
+            {"title": "Deploy", "text": "New site goes live on your domain. Before/after PageSpeed scores delivered as proof. Zero recurring hosting costs."},
+        ],
+        includes=[
+            "Design-faithful or improved migration",
+            "5x faster load times (typical)",
+            "Before/after PageSpeed scores",
+            "No recurring hosting fees",
+            "Zero plugin dependencies",
+            "Full SEO preservation (redirects, canonicals)",
+            "Content migration from existing CMS",
+            "GA4 + tracking reconfiguration",
+        ],
+        stats=[
+            {"number": "5x", "label": "Faster Load Times"},
+            {"number": "$0/mo", "label": "Recurring Costs"},
+            {"number": "0", "label": "Plugin Vulnerabilities"},
+        ],
+        pricing_html=f'''
+                <div class="pricing-table-wrap">
+                    <table class="pricing-table">
+                        <thead><tr><th>Migrating From</th><th>Price Range</th></tr></thead>
+                        <tbody>
+                            <tr><td>WordPress / Squarespace / Wix</td><td>${PRICING['redesign_wp_sq_wix']['low']:,} to ${PRICING['redesign_wp_sq_wix']['high']:,}</td></tr>
+                            <tr><td>Webflow</td><td>${PRICING['redesign_webflow']['low']:,} to ${PRICING['redesign_webflow']['high']:,}</td></tr>
+                            <tr><td>Custom CMS</td><td>${PRICING['redesign_custom_cms']['low']:,} to ${PRICING['redesign_custom_cms']['high']:,}</td></tr>
+                        </tbody>
+                    </table>
+                </div>''',
+        faqs=[
+            {"question": "Will my design change?", "answer": "Only if you want it to. We can replicate your current design pixel-for-pixel on a static stack, or improve it during migration. Your call."},
+            {"question": "What about my existing SEO rankings?", "answer": "We set up 301 redirects for every URL, preserve canonical tags, and carry over all meta data. Your rankings are protected."},
+            {"question": "How long does a migration take?", "answer": "Most migrations take 2 to 4 weeks depending on page count and content complexity. We give you a fixed timeline upfront."},
+            {"question": "What if I have a custom CMS?", "answer": "We can migrate from any platform. Custom CMS migrations start at $5,000 and depend on the complexity of the content structure."},
+        ],
+        related_services=[
+            {"slug": "audit", "name": "PageSpeed Audit", "desc": "See your current scores before migrating."},
+            {"slug": "seo", "name": "SEO & Content", "desc": "Preserve rankings and grow organic traffic post-migration."},
+        ],
+    )
+
+
+def build_service_seo():
+    """Build individual service page: SEO & Content Strategy."""
+    _service_page(
+        slug="seo",
+        title="SEO & Content Strategy",
+        meta_desc="Programmatic SEO at scale. 322 pages drove 363K impressions in 30 days. Hub-and-spoke architecture, keyword targeting, schema markup.",
+        headline='363K Impressions. <span class="text-accent">30 Days.</span>',
+        hero_text="Programmatic SEO that builds hundreds of keyword-targeted pages from structured data. Hub-and-spoke architecture for topical authority. Real results from real campaigns.",
+        proof_html='''
+                <h2>PE Collective Case Study</h2>
+                <p class="case-study__summary">We built 322 pages for <a href="https://pecollective.com" target="_blank" rel="noopener noreferrer">PE Collective</a> and drove 363K impressions in 30 days from near-zero. Each page targets a specific search intent with structured content. Google indexed the pages quickly because the site loads fast, the content is structured, and the schema markup is correct on every page.</p>
+
+                <div class="case-study__stats" style="margin: var(--space-8) 0;">
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">363K</span>
+                        <span class="case-study__stat-label">Impressions (30 days)</span>
+                    </div>
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">322</span>
+                        <span class="case-study__stat-label">Pages Built</span>
+                    </div>
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">8.8</span>
+                        <span class="case-study__stat-label">Avg Position</span>
+                    </div>
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">30 days</span>
+                        <span class="case-study__stat-label">Time to Results</span>
+                    </div>
+                </div>
+
+                <h3>Impression Growth</h3>
+                <div class="seo-chart" data-animate>
+                    <svg class="seo-chart__svg" viewBox="0 0 600 200" preserveAspectRatio="none">
+                        <polyline class="seo-chart__line" points="0,195 150,180 300,150 450,100 600,10" fill="none" />
+                    </svg>
+                    <div class="seo-chart__labels">
+                        <span class="seo-chart__label" data-delay="0">Week 1: 2K</span>
+                        <span class="seo-chart__label" data-delay="1">Week 2: 15K</span>
+                        <span class="seo-chart__label" data-delay="2">Week 3: 30K</span>
+                        <span class="seo-chart__label" data-delay="3">Week 4: 45K/day</span>
+                    </div>
+                </div>
+
+                <p class="case-study__summary" style="margin-top: var(--space-6);">We also built 398 pages for getprovyx.com with a 98 PageSpeed score. The model works because the content is structured, the pages are fast, and each one targets a specific search intent.</p>''',
+        process_steps=[
+            {"title": "Research", "text": "Keyword research, competitive analysis, and content architecture planning. We identify the pages that will drive the most traffic."},
+            {"title": "Build", "text": "Generate pages from structured data with unique content, schema markup, and internal links on every page. Hub-and-spoke architecture for topical authority."},
+            {"title": "Launch & Monitor", "text": "Deploy all pages, submit to Search Console, and monitor indexing and rankings. Monthly reports on impressions, clicks, and position changes."},
+        ],
+        includes=[
+            "Programmatic SEO buildout",
+            "Hub-and-spoke content architecture",
+            "Keyword research + targeting",
+            "Schema markup for rich results",
+            "Internal linking strategy",
+            "Monthly performance reporting",
+            "Search Console monitoring",
+            "Content expansion roadmap",
+        ],
+        stats=[
+            {"number": "363K", "label": "Impressions in 30 Days"},
+            {"number": "322", "label": "Pages Built"},
+            {"number": "8.8", "label": "Average Position"},
+            {"number": "98", "label": "PageSpeed Score"},
+        ],
+        pricing_html=f'''
+                <div class="pricing-table-wrap">
+                    <table class="pricing-table">
+                        <thead><tr><th>Service</th><th>Price Range</th></tr></thead>
+                        <tbody>
+                            <tr><td>SEO Audit</td><td>${PRICING['seo_audit']['low']:,} to ${PRICING['seo_audit']['high']:,}</td></tr>
+                            <tr><td>Programmatic SEO Buildout</td><td>${PRICING['seo_programmatic']['low']:,} to ${PRICING['seo_programmatic']['high']:,}</td></tr>
+                            <tr><td>Monthly SEO Management</td><td>${PRICING['seo_monthly']['low']:,} to ${PRICING['seo_monthly']['high']:,}/mo</td></tr>
+                        </tbody>
+                    </table>
+                </div>''',
+        faqs=[
+            {"question": "What is programmatic SEO?", "answer": "Building hundreds or thousands of pages from structured data. Each page targets a specific keyword with unique content. We built 398 pages for one client and 322 for another. Both rank on page one for their target terms."},
+            {"question": "How long until I see results?", "answer": "PE Collective hit 363K impressions in 30 days. Most projects see meaningful traffic within 2 to 6 weeks of launch, depending on domain authority and keyword difficulty."},
+            {"question": "Do you write the content?", "answer": "We generate structured content from data. Each page has unique titles, descriptions, and body content targeting specific search intents. This is not AI-generated blog spam. It is structured, keyword-targeted content at scale."},
+            {"question": "Can I manage SEO myself after launch?", "answer": "Yes. We hand you the build system, content architecture, and all files. You can expand it yourself or hire us for monthly management."},
+        ],
+        related_services=[
+            {"slug": "web-design", "name": "Web Design & Build", "desc": "Need a new site to go with your SEO strategy?"},
+            {"slug": "ads", "name": "Paid Social", "desc": "Supplement organic traffic with targeted Meta campaigns."},
+        ],
+    )
+
+
+def build_service_events():
+    """Build individual service page: Event Registration Sites."""
+    _service_page(
+        slug="events",
+        title="Event Registration Sites",
+        meta_desc="Custom event registration pages with GA4 + Meta Pixel. Multi-city cloning in 48 hours. No per-registrant fees, no Eventbrite branding.",
+        headline='One Site Built. <span class="text-accent">Every City Cloned.</span>',
+        hero_text="Custom registration pages with GA4 and Meta Pixel installed from day one. Running the same event in another city? We clone the template, swap the details, and deploy in 48 hours. No per-registrant fees, no platform lock-in.",
+        proof_html=f'''
+                <h2>BTL Events Case Study</h2>
+                <p class="case-study__summary">Multi-city physician event campaign. We built the registration sites and ran the ads together. The first city took 5 to 7 days. Each additional city cloned in 48 hours with fresh venue details, local contact lists, and separate tracking.</p>
+
+                <div class="case-study__stats" style="margin: var(--space-8) 0;">
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">$0</span>
+                        <span class="case-study__stat-label">Per-Registrant Fee</span>
+                    </div>
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">48hrs</span>
+                        <span class="case-study__stat-label">Per-City Clone</span>
+                    </div>
+                    <div class="case-study__stat">
+                        <span class="case-study__stat-number">100%</span>
+                        <span class="case-study__stat-label">Attribution</span>
+                    </div>
+                </div>
+
+                <div class="multi-city" data-animate style="margin-top: var(--space-8);">
+                    <div class="multi-city__frame multi-city__frame--1">
+                        <div class="multi-city__bar"></div>
+                        <div class="multi-city__body">
+                            <div class="multi-city__title-line"></div>
+                            <div class="multi-city__text-line"></div>
+                            <div class="multi-city__btn-line"></div>
+                        </div>
+                        <span class="multi-city__label">Houston</span>
+                    </div>
+                    <div class="multi-city__frame multi-city__frame--2">
+                        <div class="multi-city__bar"></div>
+                        <div class="multi-city__body">
+                            <div class="multi-city__title-line"></div>
+                            <div class="multi-city__text-line"></div>
+                            <div class="multi-city__btn-line"></div>
+                        </div>
+                        <span class="multi-city__label">Dallas</span>
+                    </div>
+                    <div class="multi-city__frame multi-city__frame--3">
+                        <div class="multi-city__bar"></div>
+                        <div class="multi-city__body">
+                            <div class="multi-city__title-line"></div>
+                            <div class="multi-city__text-line"></div>
+                            <div class="multi-city__btn-line"></div>
+                        </div>
+                        <span class="multi-city__label">Phoenix</span>
+                    </div>
+                    <span class="multi-city__time">48hrs each</span>
+                </div>''',
+        process_steps=[
+            {"title": "Design", "text": "Custom registration page on your domain with your branding. GA4 and Meta Pixel pre-installed for full conversion tracking."},
+            {"title": "Track", "text": "Every registration fires a conversion event. Your ad spend is measurable down to the individual signup. Full attribution dashboard."},
+            {"title": "Clone", "text": "Running another city? We clone the template, swap venue details, and deploy in 48 hours. Same proven design, new tracking."},
+        ],
+        includes=[
+            "Custom registration page design",
+            "Mobile-responsive, sub-1-second load",
+            "GA4 + Meta Pixel pre-installed",
+            "Confirmation page with conversion tracking",
+            "5 to 7 business day turnaround",
+            "48-hour clones for additional cities",
+            "No per-registrant fees",
+            "Full conversion attribution",
+        ],
+        stats=[
+            {"number": "$0", "label": "Per-Registrant Fee"},
+            {"number": "48hr", "label": "Clone Turnaround"},
+            {"number": "100%", "label": "Ad Attribution"},
+        ],
+        pricing_html=f'''
+                <div class="pricing-table-wrap">
+                    <table class="pricing-table">
+                        <thead><tr><th>Service</th><th>Price Range</th></tr></thead>
+                        <tbody>
+                            <tr><td>First Event Site</td><td>${PRICING['event_first']['low']:,} to ${PRICING['event_first']['high']:,}</td></tr>
+                            <tr><td>Additional City / Clone</td><td>${PRICING['event_clone']['low']:,} to ${PRICING['event_clone']['high']:,}</td></tr>
+                        </tbody>
+                    </table>
+                </div>''',
+        faqs=[
+            {"question": "Why not use Eventbrite or Splash?", "answer": "Platform registration sites charge per registrant, put their branding on your page, and limit your tracking. Our sites live on your domain with your branding. Every registration fires a conversion event you own."},
+            {"question": "What tracking is included?", "answer": "GA4 and Meta Pixel are pre-installed. Every form submission fires a conversion event. You get full attribution from ad impression to registration."},
+            {"question": "How fast can you build the first site?", "answer": "5 to 7 business days for a new event site. Additional cities clone in 48 hours."},
+            {"question": "Can you also run the ads?", "answer": "Yes. We offer paid social management as a separate service. When we build the site and run the ads together, attribution is seamless."},
+        ],
+        related_services=[
+            {"slug": "ads", "name": "Paid Social", "desc": "Run Meta ad campaigns to fill seats at your events."},
+            {"slug": "web-design", "name": "Web Design & Build", "desc": "Need a full company site alongside your event pages?"},
+        ],
+    )
+
+
+def build_service_ads():
+    """Build individual service page: Paid Social Advertising."""
+    _service_page(
+        slug="ads",
+        title="Paid Social Advertising",
+        meta_desc="Facebook and Instagram campaigns with 62% lower ad costs and 2x industry CTR. Custom audience targeting, retargeting, full attribution.",
+        headline='62% Lower Ad Costs. <span class="text-accent">2x More Clicks.</span>',
+        hero_text="Facebook and Instagram campaign management with custom audience targeting, retargeting, and urgency scheduling. Our clients pay 62% less per click than industry average while getting double the click-through rate.",
+        proof_html='''
+                <h2>BTL Events Campaign Results</h2>
+                <p class="case-study__summary">Reaching physicians with ads is expensive. Most healthcare advertisers pay $3 to $8+ per click. We got it down to $1.50 per click by building custom audiences from the client's own contact database instead of relying on broad targeting.</p>
+
+                <div class="cost-comparison" data-animate style="margin: var(--space-8) 0;">
+                    <div class="cost-comparison__bar">
+                        <span class="cost-comparison__label">Industry Average</span>
+                        <div class="cost-comparison__track">
+                            <div class="cost-comparison__fill cost-comparison__fill--competitor" style="width: 0%;" data-width="100%"></div>
+                        </div>
+                        <span class="cost-comparison__value cost-comparison__value--competitor">$3&ndash;$8+</span>
+                    </div>
+                    <div class="cost-comparison__bar">
+                        <span class="cost-comparison__label">SharpPages</span>
+                        <div class="cost-comparison__track">
+                            <div class="cost-comparison__fill cost-comparison__fill--sharp" style="width: 0%;" data-width="38%"></div>
+                        </div>
+                        <span class="cost-comparison__value cost-comparison__value--sharp">$1.50</span>
+                    </div>
+                </div>
+
+                <p class="case-study__summary">We uploaded the client's physician contact database directly to Facebook, which matched real profiles instead of relying on broad "healthcare" interest targeting. Retargeting kicked in on day 7 for anyone who visited but did not register.</p>''',
+        process_steps=[
+            {"title": "Audience", "text": "Upload your contact list as a custom audience. Build lookalike audiences and retargeting pools from site visitors."},
+            {"title": "Launch", "text": "Run structured campaigns: awareness, retargeting, urgency, countdown. Carousel and static creative with multiple copy variations."},
+            {"title": "Optimize", "text": "Weekly performance reports. A/B testing on creative and copy. Full attribution from ad impression to conversion."},
+        ],
+        includes=[
+            "Custom audience upload from your contact list",
+            "Facebook + Instagram placements",
+            "Carousel and static ad creative",
+            "Website visitor retargeting",
+            "Urgency schedule with countdown copy",
+            "Weekly performance reports",
+            "Full conversion attribution",
+            "A/B testing on creative and copy",
+        ],
+        stats=[
+            {"number": "62%", "label": "Lower CPC"},
+            {"number": "2x", "label": "Industry Avg CTR"},
+            {"number": "$1.50", "label": "Cost Per Click"},
+        ],
+        pricing_html=f'''
+                <div class="pricing-table-wrap">
+                    <table class="pricing-table">
+                        <thead><tr><th>Service</th><th>Price Range</th></tr></thead>
+                        <tbody>
+                            <tr><td>Campaign Setup</td><td>${PRICING['ad_setup']['low']:,} to ${PRICING['ad_setup']['high']:,}</td></tr>
+                            <tr><td>Monthly Management</td><td>${PRICING['ad_monthly']['low']:,} to ${PRICING['ad_monthly']['high']:,}/mo</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-3);">Ad spend is separate and paid directly to Meta. We manage strategy, creative, and optimization.</p>''',
+        faqs=[
+            {"question": "Do you manage the ad spend budget?", "answer": "No. You pay Meta directly for ad spend. We manage the strategy, audience targeting, creative, and optimization. Our fee covers management only."},
+            {"question": "What platforms do you manage?", "answer": "Facebook and Instagram (Meta). If you need Google Ads or LinkedIn, we can discuss, but our strongest results are on Meta."},
+            {"question": "How do you get 62% lower costs?", "answer": "Custom audience uploads. Instead of broad interest targeting, we upload your actual contact list. Facebook matches real profiles, so every dollar goes to people who are already in your pipeline."},
+            {"question": "What attribution do I get?", "answer": "Full funnel: ad impression to site visit to registration/conversion. We install Meta Pixel and GA4 on your site so every conversion is tracked and attributable."},
+        ],
+        related_services=[
+            {"slug": "events", "name": "Event Sites", "desc": "Build registration pages that convert, then drive traffic with ads."},
+            {"slug": "seo", "name": "SEO & Content", "desc": "Organic traffic to complement your paid campaigns."},
+        ],
+    )
+
+
+def build_service_audit():
+    """Build individual service page: PageSpeed Audit & Fix."""
+    _service_page(
+        slug="audit",
+        title="PageSpeed Audit & Fix",
+        meta_desc="Free instant PageSpeed audit. See your scores, SEO gaps, and performance bottlenecks in 30 seconds. Paid fix service available.",
+        headline='Find Out What Is <span class="text-accent">Slowing You Down</span>',
+        hero_text="Enter your URL and get your PageSpeed scores, SEO checklist, and performance bottlenecks in 30 seconds. Free, no signup required. If your site needs work, we fix it and deliver before/after scores as proof.",
+        proof_html='''
+                <h2>Try It Right Now</h2>
+                <p class="case-study__summary">Our free audit runs your URL through Google PageSpeed Insights (the same tool Google uses to evaluate sites for search ranking) and checks your HTML for common SEO issues.</p>
+                <div style="text-align: center; margin: var(--space-8) 0;">
+                    <a href="/audit/" class="btn btn--primary btn--lg">Run Your Free Audit</a>
+                </div>
+
+                <h3 style="margin-top: var(--space-8);">What a Fix Looks Like</h3>
+                <div class="gauge-comparison gauge-comparison--compact" data-animate style="margin-top: var(--space-6);">
+                    <div class="gauge-wrapper">
+                        <div class="gauge" data-score="45" data-color="red">
+                            <svg class="gauge__svg" viewBox="0 0 120 120">
+                                <circle class="gauge__bg" cx="60" cy="60" r="54" />
+                                <circle class="gauge__fill gauge__fill--red" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+                            </svg>
+                            <span class="gauge__score" data-target="45">0</span>
+                        </div>
+                        <span class="gauge__label">Before</span>
+                    </div>
+                    <div class="gauge-wrapper gauge-wrapper--arrow">
+                        <span class="gauge-arrow">&rarr;</span>
+                    </div>
+                    <div class="gauge-wrapper">
+                        <div class="gauge" data-score="95" data-color="green">
+                            <svg class="gauge__svg" viewBox="0 0 120 120">
+                                <circle class="gauge__bg" cx="60" cy="60" r="54" />
+                                <circle class="gauge__fill gauge__fill--green" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+                            </svg>
+                            <span class="gauge__score" data-target="95">0</span>
+                        </div>
+                        <span class="gauge__label">After</span>
+                    </div>
+                </div>''',
+        process_steps=[
+            {"title": "Audit", "text": "Run the free audit or request a detailed paid audit. We identify performance bottlenecks, SEO issues, and Core Web Vitals problems."},
+            {"title": "Diagnose", "text": "We pinpoint the specific issues: render-blocking resources, oversized images, JavaScript bloat, server response time."},
+            {"title": "Fix", "text": "We fix the issues and deliver before/after PageSpeed scores as proof. Often the entry point for a full redesign."},
+        ],
+        includes=[
+            "Free instant audit (PageSpeed + SEO checklist)",
+            "Performance bottleneck identification",
+            "Before/after PageSpeed scores",
+            "Image optimization + compression",
+            "Render-blocking resource fixes",
+            "Core Web Vitals improvement",
+        ],
+        stats=[
+            {"number": "Free", "label": "Instant Audit"},
+            {"number": "30s", "label": "Time to Results"},
+            {"number": "90+", "label": "Post-Fix Target"},
+        ],
+        pricing_html=f'''
+                <div class="pricing-table-wrap">
+                    <table class="pricing-table">
+                        <thead><tr><th>Service</th><th>Price</th></tr></thead>
+                        <tbody>
+                            <tr><td>Free Instant Audit</td><td>$0 (<a href="/audit/">try it now</a>)</td></tr>
+                            <tr><td>Detailed Audit + Consult</td><td>$500</td></tr>
+                            <tr><td>Audit + Fix</td><td>${PRICING['pagespeed_fix']['low']:,} to ${PRICING['pagespeed_fix']['high']:,}</td></tr>
+                        </tbody>
+                    </table>
+                </div>''',
+        faqs=[
+            {"question": "Is the audit really free?", "answer": "Yes. The summary scores and SEO checklist are free with no email required. We ask for your email only if you want the detailed report with prioritized fix recommendations."},
+            {"question": "What if my site scores poorly?", "answer": "That is what the fix service is for. We identify the bottlenecks and fix them. You get before/after PageSpeed scores as proof. If your site needs a deeper overhaul, we can discuss a full redesign."},
+            {"question": "Can you fix a WordPress site without migrating?", "answer": "We can optimize within WordPress to some extent (image compression, caching, render-blocking fixes), but the biggest gains come from migrating to static HTML. WordPress has inherent overhead that limits how fast it can be."},
+        ],
+        related_services=[
+            {"slug": "redesign", "name": "Redesign & Migration", "desc": "Migrate your site to static HTML for permanent speed gains."},
+            {"slug": "web-design", "name": "Web Design & Build", "desc": "Start fresh with a site built for speed from day one."},
+        ],
+        cta_title="Start With a Free Audit",
+        cta_text="Run your site through our free audit. See your PageSpeed score, SEO gaps, and what is fixable. Takes 30 seconds.",
+        cta_btn="Get a Free Audit",
+        cta_href="/audit/",
+    )
+
+
+def build_all_service_pages():
+    """Build all 6 individual service detail pages."""
+    build_service_web_design()
+    build_service_redesign()
+    build_service_seo()
+    build_service_events()
+    build_service_ads()
+    build_service_audit()
 
 
 def build_pricing():
@@ -839,16 +1770,16 @@ def build_work():
                     <p class="case-study__summary">An agency-built competitor site on Webflow (reelist.stream) scores 83 on Performance with a 5.0s Speed Index. Our site scores 98 with a 0.9s Speed Index. Same type of content, same audience. The difference is the build approach: static HTML vs. a platform that adds framework overhead to every page load.</p>
 
                     <div class="case-study__comparison">
-                        <table class="pricing-table">
-                            <thead><tr><th>Metric</th><th>SharpPages (getprovyx.com)</th><th>Agency / Webflow</th></tr></thead>
+                        <table class="comparison-table">
+                            <thead><tr><th>Metric</th><th class="col-sharp">SharpPages (getprovyx.com)</th><th class="col-competitor">Agency / Webflow</th></tr></thead>
                             <tbody>
-                                <tr><td>Performance</td><td>98</td><td>83</td></tr>
-                                <tr><td>Speed Index</td><td>0.9s</td><td>5.0s</td></tr>
-                                <tr><td>Total Blocking Time</td><td>30ms</td><td>280ms</td></tr>
-                                <tr><td>Accessibility</td><td>95</td><td>92</td></tr>
-                                <tr><td>Best Practices</td><td>100</td><td>73</td></tr>
-                                <tr><td>SEO</td><td>100</td><td>100</td></tr>
-                                <tr><td>Pages</td><td>398</td><td>~50</td></tr>
+                                <tr><td>Performance</td><td class="col-sharp">98</td><td class="col-competitor">83</td></tr>
+                                <tr><td>Speed Index</td><td class="col-sharp">0.9s</td><td class="col-competitor">5.0s</td></tr>
+                                <tr><td>Total Blocking Time</td><td class="col-sharp">30ms</td><td class="col-competitor">280ms</td></tr>
+                                <tr><td>Accessibility</td><td class="col-sharp">95</td><td class="col-competitor">92</td></tr>
+                                <tr><td>Best Practices</td><td class="col-sharp">100</td><td class="col-competitor">73</td></tr>
+                                <tr><td>SEO</td><td class="col-sharp">100</td><td class="col-competitor">100</td></tr>
+                                <tr><td>Pages</td><td class="col-sharp">398</td><td class="col-competitor">~50</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -886,7 +1817,20 @@ def build_work():
                     <h3>How It Works</h3>
                     <p class="case-study__summary">Each page targets a specific search intent with structured content: firm profiles, comparison pages, industry verticals, location pages. The build script generates all 322 pages from data, with unique titles, meta descriptions, schema markup, and internal links on every page.</p>
                     <p class="case-study__summary">The growth curve was steep. Week 1: 2K impressions. Week 2: 15K. Week 3: 30K. By week 4, the site was generating 45K impressions per day. Google indexed the pages quickly because the site loads fast, the content is structured, and the schema markup is correct on every page.</p>
-                    <p class="case-study__summary">This is the same programmatic SEO approach we offer as a <a href="/services/#seo-content">service</a>. The build system, content architecture, and schema patterns are reusable across industries.</p>
+                    <p class="case-study__summary">This is the same programmatic SEO approach we offer as a <a href="/services/seo/">service</a>. The build system, content architecture, and schema patterns are reusable across industries.</p>
+
+                    <h3>Impression Growth</h3>
+                    <div class="seo-chart" data-animate>
+                        <svg class="seo-chart__svg" viewBox="0 0 600 200" preserveAspectRatio="none">
+                            <polyline class="seo-chart__line" points="0,195 150,180 300,150 450,100 600,10" fill="none" />
+                        </svg>
+                        <div class="seo-chart__labels">
+                            <span class="seo-chart__label" data-delay="0">Week 1: 2K</span>
+                            <span class="seo-chart__label" data-delay="1">Week 2: 15K</span>
+                            <span class="seo-chart__label" data-delay="2">Week 3: 30K</span>
+                            <span class="seo-chart__label" data-delay="3">Week 4: 45K/day</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -895,35 +1839,50 @@ def build_work():
             <div class="container">
                 <div class="case-study">
                     <span class="case-study__label">Ad Campaign Proof</span>
-                    <h2 class="case-study__title">BTL Events: 2x Industry CTR, Lower CPC</h2>
-                    <p class="case-study__summary">A multi-city event campaign with custom audience targeting, retargeting, and a 25-day urgency schedule. The registration sites and ad campaigns were built and managed together, so attribution worked from day one.</p>
+                    <h2 class="case-study__title">BTL Events: 62% Lower Ad Costs, 2x More Clicks</h2>
+                    <p class="case-study__summary">Multi-city physician event campaign. We built the registration sites and ran the ads together, so every dollar spent was tracked from ad impression to completed registration. The result: our clients spent 62% less per click than the industry average while getting double the click-through rate.</p>
 
                     <div class="case-study__stats">
                         <div class="case-study__stat">
+                            <span class="case-study__stat-number">62%</span>
+                            <span class="case-study__stat-label">Lower Ad Costs</span>
+                        </div>
+                        <div class="case-study__stat">
                             <span class="case-study__stat-number">2x</span>
-                            <span class="case-study__stat-label">Industry Avg CTR</span>
-                        </div>
-                        <div class="case-study__stat">
-                            <span class="case-study__stat-number">Lower</span>
-                            <span class="case-study__stat-label">Cost per Click</span>
-                        </div>
-                        <div class="case-study__stat">
-                            <span class="case-study__stat-number">25 days</span>
-                            <span class="case-study__stat-label">Campaign Structure</span>
+                            <span class="case-study__stat-label">More Clicks Than Avg</span>
                         </div>
                         <div class="case-study__stat">
                             <span class="case-study__stat-number">48hrs</span>
-                            <span class="case-study__stat-label">Clone Turnaround</span>
+                            <span class="case-study__stat-label">Per-City Launch</span>
                         </div>
                     </div>
 
-                    <h3>Campaign Structure</h3>
-                    <p class="case-study__summary">Custom audiences built from the client's contact database (physicians, medical device professionals). Facebook matched email and phone records to real user profiles. Carousel ads (6 cards) and static image variations ran with clinical, ROI, and exclusivity copy angles.</p>
-                    <p class="case-study__summary">Retargeting kicked in on day 7: site visitors who did not register saw follow-up ads with full event agendas and countdown messaging. The 25-day schedule progressed from awareness to urgency, with copy updates matching the event timeline.</p>
+                    <h3>Ad Cost Comparison</h3>
+                    <p class="case-study__summary">Reaching physicians with ads is expensive. Most healthcare advertisers pay $3 to $8+ per click. We got it down to $1.50 per click&mdash;62% below the low end of the industry range&mdash;by building custom audiences from the client's own contact database instead of relying on broad targeting.</p>
+                    <div class="cost-comparison" data-animate>
+                        <div class="cost-comparison__bar">
+                            <span class="cost-comparison__label">Industry Average</span>
+                            <div class="cost-comparison__track">
+                                <div class="cost-comparison__fill cost-comparison__fill--competitor" style="width: 0%;" data-width="100%"></div>
+                            </div>
+                            <span class="cost-comparison__value cost-comparison__value--competitor">$3&ndash;$8+</span>
+                        </div>
+                        <div class="cost-comparison__bar">
+                            <span class="cost-comparison__label">SharpPages</span>
+                            <div class="cost-comparison__track">
+                                <div class="cost-comparison__fill cost-comparison__fill--sharp" style="width: 0%;" data-width="38%"></div>
+                            </div>
+                            <span class="cost-comparison__value cost-comparison__value--sharp">$1.50</span>
+                        </div>
+                    </div>
+
+                    <h3>How We Did It</h3>
+                    <p class="case-study__summary">We uploaded the client's physician contact database directly to Facebook, which matched real profiles instead of relying on broad "healthcare" interest targeting. That's why the cost per click was so low&mdash;we were only paying to reach people who were already in the pipeline.</p>
+                    <p class="case-study__summary">Retargeting kicked in on day 7: anyone who visited the registration page but didn't sign up saw follow-up ads with the full event agenda and countdown messaging. The 25-day campaign progressed from awareness to urgency, with copy updates matching the event timeline.</p>
 
                     <h3>The Replication Model</h3>
                     <p class="case-study__summary">The first city took 5 to 7 days for the site build. Each additional city cloned in 48 hours with fresh venue details, local contact lists, and separate tracking. The design, tracking architecture, and proven page structure carried over. By the third city, the per-event cost and setup time were a fraction of the first.</p>
-                    <p class="case-study__summary">Read about our <a href="/services/#event-sites">event registration</a> and <a href="/services/#paid-social">paid social</a> services, or see <a href="/pricing/">pricing</a> for what campaigns like this cost.</p>
+                    <p class="case-study__summary">Read about our <a href="/services/events/">event registration</a> and <a href="/services/ads/">paid social</a> services, or see <a href="/pricing/">pricing</a> for what campaigns like this cost.</p>
                 </div>
             </div>
         </section>
@@ -1765,8 +2724,8 @@ def build_blog_index():
 {generate_cta_section()}'''
 
     html = get_page_wrapper(
-        title="Blog: Event Marketing Guides",
-        description="Practical guides on event registration pages, Facebook ad campaigns, retargeting, and filling seats. Written by Rome Thorndike.",
+        title="Blog: Web Performance, SEO & Digital Marketing Guides",
+        description="Practical guides on PageSpeed optimization, SEO strategy, event marketing, and paid social. Written by Rome Thorndike.",
         canonical_path="/blog/",
         body_content=body,
         active_page="/blog/",
@@ -1934,7 +2893,7 @@ def build_audit():
                     </details>
                     <details class="faq-item">
                         <summary class="faq-item__question">Can you fix my site if it scores poorly?</summary>
-                        <div class="faq-item__answer"><p>Yes. We offer a <a href="/pricing/">PageSpeed audit and fix service</a> starting at ${PRICING["pagespeed_fix"]["low"]:,}. For sites on WordPress or Webflow that need a deeper overhaul, we do full <a href="/services/#website-redesign">redesigns and migrations</a> to static HTML that consistently score 90+.</p></div>
+                        <div class="faq-item__answer"><p>Yes. We offer a <a href="/pricing/">PageSpeed audit and fix service</a> starting at ${PRICING["pagespeed_fix"]["low"]:,}. For sites on WordPress or Webflow that need a deeper overhaul, we do full <a href="/services/redesign/">redesigns and migrations</a> to static HTML that consistently score 90+.</p></div>
                     </details>
                 </div>
             </div>
@@ -2034,6 +2993,8 @@ def copy_static_assets():
 
 def build_sitemap():
     """Generate sitemap.xml from ALL_PAGES list."""
+    from datetime import date
+    today = date.today().isoformat()
     output_path = os.path.join(PROJECT_ROOT, OUTPUT_DIR, "sitemap.xml")
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
@@ -2042,6 +3003,7 @@ def build_sitemap():
     for path, priority, changefreq in ALL_PAGES:
         lines.append("  <url>")
         lines.append(f"    <loc>{SITE_URL}{path}</loc>")
+        lines.append(f"    <lastmod>{today}</lastmod>")
         lines.append(f"    <priority>{priority}</priority>")
         lines.append(f"    <changefreq>{changefreq}</changefreq>")
         lines.append("  </url>")
@@ -2124,6 +3086,7 @@ def main():
     # Pages
     build_homepage()
     build_services()
+    build_all_service_pages()
     build_pricing()
     build_work()
     build_about()

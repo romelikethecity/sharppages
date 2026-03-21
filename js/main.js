@@ -74,9 +74,9 @@
 
   if ('IntersectionObserver' in window) {
 
-    // Gauge animations (PageSpeed comparison circles)
-    var gaugeComparison = document.querySelector('.gauge-comparison[data-animate]');
-    if (gaugeComparison) {
+    // Gauge animations (PageSpeed comparison circles) — support multiple on page
+    var gaugeComparisons = document.querySelectorAll('.gauge-comparison[data-animate]');
+    if (gaugeComparisons.length) {
       var gaugeObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (!entry.isIntersecting) return;
@@ -84,12 +84,25 @@
           animateGauges(entry.target);
         });
       }, { threshold: 0.3 });
-      gaugeObserver.observe(gaugeComparison);
+      gaugeComparisons.forEach(function(gc) { gaugeObserver.observe(gc); });
     }
 
-    // SEO chart animation
-    var seoChart = document.querySelector('.seo-chart[data-animate]');
-    if (seoChart) {
+    // Multi-city clone animation
+    var multiCities = document.querySelectorAll('.multi-city[data-animate]');
+    if (multiCities.length) {
+      var cityObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting) return;
+          cityObserver.unobserve(entry.target);
+          entry.target.classList.add('animated');
+        });
+      }, { threshold: 0.3 });
+      multiCities.forEach(function(mc) { cityObserver.observe(mc); });
+    }
+
+    // SEO chart animation (support multiple on page)
+    var seoCharts = document.querySelectorAll('.seo-chart[data-animate]');
+    if (seoCharts.length) {
       var chartObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (!entry.isIntersecting) return;
@@ -97,7 +110,24 @@
           entry.target.classList.add('animated');
         });
       }, { threshold: 0.3 });
-      chartObserver.observe(seoChart);
+      seoCharts.forEach(function(chart) { chartObserver.observe(chart); });
+    }
+
+    // Cost comparison bar animation
+    var costBars = document.querySelectorAll('.cost-comparison[data-animate]');
+    if (costBars.length) {
+      var costObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting) return;
+          costObserver.unobserve(entry.target);
+          var fills = entry.target.querySelectorAll('.cost-comparison__fill');
+          fills.forEach(function(fill) {
+            var targetWidth = fill.getAttribute('data-width');
+            if (targetWidth) fill.style.width = targetWidth;
+          });
+        });
+      }, { threshold: 0.3 });
+      costBars.forEach(function(bar) { costObserver.observe(bar); });
     }
   }
 
