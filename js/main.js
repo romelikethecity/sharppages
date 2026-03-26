@@ -167,7 +167,7 @@
 
   var auditForm = document.getElementById('audit-form');
   if (auditForm) {
-    var AUDIT_API = 'https://sharppages-audit.rome-thorndike.workers.dev';
+    var AUDIT_API = 'https://sharppages-audit.rome-workers.workers.dev';
 
     auditForm.addEventListener('submit', function(e) {
       e.preventDefault();
