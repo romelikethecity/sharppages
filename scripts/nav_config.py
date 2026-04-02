@@ -15,7 +15,7 @@ COPYRIGHT_YEAR = "2026"
 
 # CTA button
 CTA_HREF = "/contact/"
-CTA_LABEL = "Book a Call"
+CTA_LABEL = "Let's Build It"
 
 # Main navigation items (appear in header)
 NAV_ITEMS = [

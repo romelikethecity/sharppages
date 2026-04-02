@@ -178,7 +178,7 @@ TIERS = [
             "Ongoing content expansion",
         ],
         "featured": False,
-        "cta": "Book a Call",
+        "cta": "Let's Build It",
     },
 ]
 
@@ -443,8 +443,8 @@ def build_homepage():
 
 {generate_cta_section(
     title="Ready to See What Your Site Could Be?",
-    text="Book a call. We will review your current site, discuss your goals, and send a fixed quote within two business days.",
-    button_text="Book a Call",
+    text="Tell us about your site. We will review it, discuss your goals, and send a fixed quote within two business days.",
+    button_text="Let's Build It",
 )}'''
 
     html = get_page_wrapper(
@@ -848,8 +848,8 @@ def build_services():
 
 {generate_cta_section(
     title="Ready to See What Your Site Could Be?",
-    text="Book a call. We will review your current site, discuss your goals, and send a fixed quote within two business days.",
-    button_text="Book a Call",
+    text="Tell us about your site. We will review it, discuss your goals, and send a fixed quote within two business days.",
+    button_text="Let's Build It",
 )}'''
 
     html = get_page_wrapper(
@@ -878,8 +878,8 @@ def _service_page(slug, title, meta_desc, headline, hero_text, proof_html,
                   process_steps, includes, stats, pricing_html, faqs,
                   related_services=None,
                   cta_title="Ready to Get Started?",
-                  cta_text="Book a call. We will scope the work, give you a fixed quote, and explain exactly what is included.",
-                  cta_btn="Book a Call", cta_href="/contact/"):
+                  cta_text="Tell us about your project. We will scope the work, give you a fixed quote, and explain exactly what is included.",
+                  cta_btn="Let's Build It", cta_href="/contact/"):
     """Build an individual service page with standardized structure."""
 
     path = f"/services/{slug}/"
@@ -1593,7 +1593,7 @@ def build_pricing():
         },
         {
             "question": "What if my project does not fit these categories?",
-            "answer": "Book a call. We will scope the work, give you a fixed quote, and explain exactly what is included. If it is not a fit, we will tell you."
+            "answer": "Tell us about your project. We will scope the work, give you a fixed quote, and explain exactly what is included. If it is not a fit, we will tell you."
         },
         {
             "question": "Do you offer payment plans?",
@@ -1970,8 +1970,8 @@ def build_about():
 
 {generate_cta_section(
     title="Ready to Work Together?",
-    text="Book a call. I will review your current site, discuss your goals, and send a fixed quote within two business days.",
-    button_text="Book a Call",
+    text="Tell us about your site. We will review it, discuss your goals, and send a fixed quote within two business days.",
+    button_text="Let's Build It",
 )}'''
 
     html = get_page_wrapper(
@@ -2066,7 +2066,7 @@ def build_contact():
         </section>'''
 
     html = get_page_wrapper(
-        title="Contact SharpPages: Book a Call",
+        title="Contact SharpPages: Let's Build Your Site",
         description="Tell us about your event. We will scope it, price it, and get back to you within one business day. No per-registrant fees, no platform lock-in.",
         canonical_path="/contact/",
         body_content=body,
