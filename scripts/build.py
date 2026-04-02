@@ -270,6 +270,73 @@ def build_homepage():
                     <a href="/audit/" class="btn btn--primary btn--lg">Get a Free Site Audit</a>
                     <a href="/work/" class="btn btn--outline btn--lg">See Our Work</a>
                 </div>
+
+                <div class="hero__mockups">
+                    <div>
+                        <div class="mockup mockup--provyx">
+                            <div class="mockup__chrome">
+                                <span class="mockup__dot mockup__dot--red"></span>
+                                <span class="mockup__dot mockup__dot--yellow"></span>
+                                <span class="mockup__dot mockup__dot--green"></span>
+                                <span class="mockup__url">getprovyx.com</span>
+                            </div>
+                            <div class="mockup__body">
+                                <div class="mockup__site-name">Provyx</div>
+                                <div class="mockup__headline">Healthcare Provider Data. <span>Delivered in Days.</span></div>
+                                <p class="mockup__sub">40+ specialties. NPI verified. No annual contracts.</p>
+                                <span class="mockup__btn">Get Provider Data</span>
+                                <div class="mockup__stats">
+                                    <div>
+                                        <span class="mockup__stat-num">40+</span>
+                                        <span class="mockup__stat-label">Specialties</span>
+                                    </div>
+                                    <div>
+                                        <span class="mockup__stat-num">98</span>
+                                        <span class="mockup__stat-label">PageSpeed</span>
+                                    </div>
+                                    <div>
+                                        <span class="mockup__stat-num">170+</span>
+                                        <span class="mockup__stat-label">Pages</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mockup__label"><a href="https://getprovyx.com" target="_blank" rel="noopener">getprovyx.com</a></p>
+                    </div>
+
+                    <div>
+                        <div class="mockup mockup--verum">
+                            <div class="mockup__chrome">
+                                <span class="mockup__dot mockup__dot--red"></span>
+                                <span class="mockup__dot mockup__dot--yellow"></span>
+                                <span class="mockup__dot mockup__dot--green"></span>
+                                <span class="mockup__url">veruminc.com</span>
+                            </div>
+                            <div class="mockup__body">
+                                <div class="mockup__site-name">Verum</div>
+                                <div class="mockup__headline">B2B Data Enrichment. <span>Actually Works.</span></div>
+                                <p class="mockup__sub">50+ sources. 24-hour turnaround. Human verified.</p>
+                                <span class="mockup__btn">Clean My Data</span>
+                                <div class="mockup__stats">
+                                    <div>
+                                        <span class="mockup__stat-num">93%</span>
+                                        <span class="mockup__stat-label">Deliverability</span>
+                                    </div>
+                                    <div>
+                                        <span class="mockup__stat-num">24hr</span>
+                                        <span class="mockup__stat-label">Turnaround</span>
+                                    </div>
+                                    <div>
+                                        <span class="mockup__stat-num">200+</span>
+                                        <span class="mockup__stat-label">Pages</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mockup__label"><a href="https://veruminc.com" target="_blank" rel="noopener">veruminc.com</a></p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
