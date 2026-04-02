@@ -1,5 +1,4 @@
 /* SharpPages Design Tokens */
-/* Import: tokens.css */
 
 :root {
   /* ── Primary ── */
@@ -113,7 +112,6 @@
   }
 }
 
-/* ── Base Resets ── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;

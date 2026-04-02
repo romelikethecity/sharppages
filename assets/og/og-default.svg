@@ -2,27 +2,20 @@
   <!-- Background -->
   <rect width="1200" height="630" fill="#06090E"/>
 
-  <!-- Subtle grid pattern -->
-  <line x1="0" y1="0" x2="1200" y2="0" stroke="#1E2A38" stroke-width="0.5" opacity="0.3"/>
-  <line x1="0" y1="630" x2="1200" y2="630" stroke="#1E2A38" stroke-width="0.5" opacity="0.3"/>
-
-  <!-- Click icon — large, left side -->
-  <circle cx="260" cy="315" r="140" stroke="#00C2E0" stroke-width="1.5" opacity="0.1"/>
-  <circle cx="260" cy="315" r="105" stroke="#00C2E0" stroke-width="2" opacity="0.18"/>
-  <circle cx="260" cy="315" r="68" stroke="#00C2E0" stroke-width="2.5" opacity="0.3"/>
-  <path d="M248 258L248 390L284 353L338 353Z" fill="#00C2E0"/>
-  <path d="M248 258L248 390L284 353L338 353Z" stroke="#06090E" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Chevron stack — large, left side -->
+  <path d="M180 215L280 315L180 415" stroke="#00C2E0" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M250 215L350 315L250 415" stroke="#00C2E0" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
 
   <!-- Wordmark -->
-  <text x="460" y="290" font-family="Instrument Sans, system-ui, sans-serif" font-weight="700" font-size="72" fill="#E4E8ED" letter-spacing="-0.02em">Sharp</text>
-  <text x="720" y="290" font-family="Instrument Sans, system-ui, sans-serif" font-weight="400" font-size="72" fill="#00C2E0" letter-spacing="-0.02em">Pages</text>
+  <text x="420" y="290" font-family="Instrument Sans, system-ui, sans-serif" font-weight="700" font-size="72" fill="#E4E8ED" letter-spacing="-0.02em">Sharp</text>
+  <text x="680" y="290" font-family="Instrument Sans, system-ui, sans-serif" font-weight="400" font-size="72" fill="#00C2E0" letter-spacing="-0.02em">Pages</text>
 
   <!-- Tagline -->
-  <text x="460" y="340" font-family="DM Sans, system-ui, sans-serif" font-weight="400" font-size="24" fill="#7A8899">Event registration sites that convert.</text>
-  <text x="460" y="372" font-family="DM Sans, system-ui, sans-serif" font-weight="400" font-size="24" fill="#7A8899">Ad campaigns that fill rooms.</text>
+  <text x="420" y="345" font-family="DM Sans, system-ui, sans-serif" font-weight="400" font-size="24" fill="#7A8899">Event registration sites that convert.</text>
+  <text x="420" y="377" font-family="DM Sans, system-ui, sans-serif" font-weight="400" font-size="24" fill="#7A8899">Ad campaigns that fill rooms.</text>
 
   <!-- URL -->
-  <text x="460" y="430" font-family="DM Sans, system-ui, sans-serif" font-weight="500" font-size="18" fill="#3A4A5C">sharppages.com</text>
+  <text x="420" y="435" font-family="DM Sans, system-ui, sans-serif" font-weight="500" font-size="18" fill="#3A4A5C">sharppages.com</text>
 
   <!-- Bottom accent line -->
   <rect x="0" y="620" width="1200" height="10" fill="#00C2E0" opacity="0.6"/>

@@ -271,92 +271,33 @@ def build_homepage():
                     <a href="/work/" class="btn btn--outline btn--lg">See Our Work</a>
                 </div>
 
-                <div class="hero__mockups">
-                    <div>
-                        <div class="mockup mockup--provyx">
-                            <div class="mockup__chrome">
-                                <span class="mockup__dot mockup__dot--red"></span>
-                                <span class="mockup__dot mockup__dot--yellow"></span>
-                                <span class="mockup__dot mockup__dot--green"></span>
-                                <span class="mockup__url">getprovyx.com</span>
-                            </div>
-                            <div class="mockup__body">
-                                <div class="mockup__site-name">Provyx</div>
-                                <div class="mockup__headline">Healthcare Provider Data. <span>Delivered in Days.</span></div>
-                                <p class="mockup__sub">40+ specialties. NPI verified. No annual contracts.</p>
-                                <span class="mockup__btn">Get Provider Data</span>
-                                <div class="mockup__stats">
-                                    <div>
-                                        <span class="mockup__stat-num">40+</span>
-                                        <span class="mockup__stat-label">Specialties</span>
-                                    </div>
-                                    <div>
-                                        <span class="mockup__stat-num">98</span>
-                                        <span class="mockup__stat-label">PageSpeed</span>
-                                    </div>
-                                    <div>
-                                        <span class="mockup__stat-num">170+</span>
-                                        <span class="mockup__stat-label">Pages</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="mockup__label"><a href="https://getprovyx.com" target="_blank" rel="noopener">getprovyx.com</a></p>
-                    </div>
+                <p class="hero__stat-line">Built 700+ pages. Average score: 98.</p>
 
-                    <div>
-                        <div class="mockup mockup--verum">
-                            <div class="mockup__chrome">
-                                <span class="mockup__dot mockup__dot--red"></span>
-                                <span class="mockup__dot mockup__dot--yellow"></span>
-                                <span class="mockup__dot mockup__dot--green"></span>
-                                <span class="mockup__url">veruminc.com</span>
-                            </div>
-                            <div class="mockup__body">
-                                <div class="mockup__site-name">Verum</div>
-                                <div class="mockup__headline">B2B Data Enrichment. <span>Actually Works.</span></div>
-                                <p class="mockup__sub">50+ sources. 24-hour turnaround. Human verified.</p>
-                                <span class="mockup__btn">Clean My Data</span>
-                                <div class="mockup__stats">
-                                    <div>
-                                        <span class="mockup__stat-num">93%</span>
-                                        <span class="mockup__stat-label">Deliverability</span>
-                                    </div>
-                                    <div>
-                                        <span class="mockup__stat-num">24hr</span>
-                                        <span class="mockup__stat-label">Turnaround</span>
-                                    </div>
-                                    <div>
-                                        <span class="mockup__stat-num">200+</span>
-                                        <span class="mockup__stat-label">Pages</span>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="hero__gauge gauge-comparison" data-animate>
+                    <div class="gauge-wrapper">
+                        <div class="gauge" data-score="98" data-color="green">
+                            <svg class="gauge__svg" viewBox="0 0 120 120">
+                                <circle class="gauge__bg" cx="60" cy="60" r="54" />
+                                <circle class="gauge__fill gauge__fill--green" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+                            </svg>
+                            <span class="gauge__score" data-target="98">0</span>
                         </div>
-                        <p class="mockup__label"><a href="https://veruminc.com" target="_blank" rel="noopener">veruminc.com</a></p>
+                        <span class="gauge__label">SharpPages</span>
+                        <span class="gauge__detail">0.9s Speed Index &middot; 30ms TBT</span>
+                    </div>
+                    <div class="gauge-wrapper">
+                        <div class="gauge" data-score="73" data-color="orange">
+                            <svg class="gauge__svg" viewBox="0 0 120 120">
+                                <circle class="gauge__bg" cx="60" cy="60" r="54" />
+                                <circle class="gauge__fill gauge__fill--orange" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29" />
+                            </svg>
+                            <span class="gauge__score" data-target="73">0</span>
+                        </div>
+                        <span class="gauge__label">Average Agency</span>
+                        <span class="gauge__detail">5.0s Speed Index &middot; 280ms TBT</span>
                     </div>
                 </div>
 
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="stats-bar">
-                    <div class="stats-bar__item">
-                        <span class="stats-bar__number">98</span>
-                        <span class="stats-bar__label">Mobile PageSpeed Score</span>
-                    </div>
-                    <div class="stats-bar__item">
-                        <span class="stats-bar__number">0.9s</span>
-                        <span class="stats-bar__label">Speed Index</span>
-                    </div>
-                    <div class="stats-bar__item">
-                        <span class="stats-bar__number">2x</span>
-                        <span class="stats-bar__label">Industry Avg CTR</span>
-                    </div>
-                </div>
-                <p class="social-proof-row">Built 700+ pages across client sites. <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">Run yours through PageSpeed Insights and compare.</a></p>
             </div>
         </section>
 
@@ -383,34 +324,6 @@ def build_homepage():
         <section class="section">
             <div class="container">
                 <h2 class="text-center mb-8">The Proof</h2>
-
-                <div class="proof-section">
-                    <h3 class="proof-section__heading">PageSpeed: SharpPages vs. Average Agency</h3>
-                    <div class="gauge-comparison" data-animate>
-                        <div class="gauge-wrapper">
-                            <div class="gauge" data-score="98" data-color="green">
-                                <svg class="gauge__svg" viewBox="0 0 120 120">
-                                    <circle class="gauge__bg" cx="60" cy="60" r="54" />
-                                    <circle class="gauge__fill gauge__fill--green" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29" />
-                                </svg>
-                                <span class="gauge__score" data-target="98">0</span>
-                            </div>
-                            <span class="gauge__label">SharpPages</span>
-                            <span class="gauge__detail">0.9s Speed Index &middot; 30ms TBT</span>
-                        </div>
-                        <div class="gauge-wrapper">
-                            <div class="gauge" data-score="73" data-color="orange">
-                                <svg class="gauge__svg" viewBox="0 0 120 120">
-                                    <circle class="gauge__bg" cx="60" cy="60" r="54" />
-                                    <circle class="gauge__fill gauge__fill--orange" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29" />
-                                </svg>
-                                <span class="gauge__score" data-target="73">0</span>
-                            </div>
-                            <span class="gauge__label">Average Agency</span>
-                            <span class="gauge__detail">5.0s Speed Index &middot; 280ms TBT</span>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="proof-section">
                     <h3 class="proof-section__heading">SEO: PE Collective Impression Growth</h3>
@@ -461,26 +374,40 @@ def build_homepage():
         <section class="section">
             <div class="container">
                 <h2 class="text-center mb-8">How It Works</h2>
-                <div class="process-steps process-steps--horizontal">
-                    <div class="process-step">
-                        <div class="process-step__number">1</div>
-                        <div class="process-step__content">
-                            <h3>Scope</h3>
-                            <p>You tell us what you need. We review your current site, your goals, and your timeline. You get a fixed quote within two business days.</p>
+                <div class="process-timeline" data-animate>
+                    <div class="process-timeline__track"><div class="process-timeline__fill"></div></div>
+                    <div class="process-timeline__steps">
+                        <div class="process-card">
+                            <div class="process-card__head">
+                                <span class="process-card__step">01</span>
+                                <svg class="process-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            </div>
+                            <h3 class="process-card__title">Scope</h3>
+                            <p class="process-card__text">You tell us what you need. We review your current site, goals, and timeline. Fixed quote within two business days.</p>
                         </div>
-                    </div>
-                    <div class="process-step">
-                        <div class="process-step__number">2</div>
-                        <div class="process-step__content">
-                            <h3>Build</h3>
-                            <p>We build the site, write the copy, configure tracking, and set up SEO. You review drafts and approve before anything goes live.</p>
+                        <div class="process-card">
+                            <div class="process-card__head">
+                                <span class="process-card__step">02</span>
+                                <svg class="process-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </div>
+                            <h3 class="process-card__title">Build</h3>
+                            <p class="process-card__text">We build the site, write copy, configure tracking, and set up SEO. You review and approve before anything goes live.</p>
                         </div>
-                    </div>
-                    <div class="process-step">
-                        <div class="process-step__number">3</div>
-                        <div class="process-step__content">
-                            <h3>Launch</h3>
-                            <p>Site goes live on your domain. You own all files. If you want ongoing SEO or ad management, we set that up too. Otherwise, you are done.</p>
+                        <div class="process-card">
+                            <div class="process-card__head">
+                                <span class="process-card__step">03</span>
+                                <svg class="process-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            </div>
+                            <h3 class="process-card__title">Launch</h3>
+                            <p class="process-card__text">Site goes live on your domain. You own all files. No hosting fees. No lock-in. You are done.</p>
+                        </div>
+                        <div class="process-card">
+                            <div class="process-card__head">
+                                <span class="process-card__step">04</span>
+                                <svg class="process-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                            </div>
+                            <h3 class="process-card__title">Grow</h3>
+                            <p class="process-card__text">Need SEO, ads, or new pages later? Same flat-rate model. No retainer lock-in. Scale when ready.</p>
                         </div>
                     </div>
                 </div>
@@ -2672,6 +2599,21 @@ BLOG_ARTICLES = [
 
 from _blog_new_articles import get_new_articles
 BLOG_ARTICLES.extend(get_new_articles(PRICING))
+
+from _blog_wordpress_contrarian import get_wordpress_contrarian_articles
+BLOG_ARTICLES.extend(get_wordpress_contrarian_articles(PRICING))
+
+from _blog_webflow_contrarian import get_webflow_contrarian_articles
+BLOG_ARTICLES.extend(get_webflow_contrarian_articles(PRICING))
+
+from _blog_pillar_pagespeed import get_pagespeed_pillar_articles
+BLOG_ARTICLES.extend(get_pagespeed_pillar_articles(PRICING))
+
+from _blog_wordpress_tier2 import get_wordpress_tier2_articles
+BLOG_ARTICLES.extend(get_wordpress_tier2_articles(PRICING))
+
+from _blog_webflow_tier2 import get_webflow_tier2_articles
+BLOG_ARTICLES.extend(get_webflow_tier2_articles(PRICING))
 
 
 def build_blog_article(article):
