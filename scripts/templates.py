@@ -41,7 +41,7 @@ from nav_config import (
 # =============================================================================
 
 BASE_URL = "https://sharppages.com"
-CSS_VERSION = "7"
+CSS_VERSION = "8"
 OUTPUT_DIR = "output"
 
 
