@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>Facebook Retargeting for Events: Pixel and Audience Setup | SharpPages</title>
+    <meta name="description" content="Complete guide to Facebook retargeting for event promotion. Covers pixel setup, custom audience creation, ad creative for retargeting, and budget allocation.">
+    <link rel="canonical" href="https://sharppages.com/blog/facebook-retargeting-for-events/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/facebook-retargeting-for-events/">
+    <meta property="og:title" content="Facebook Retargeting for Events: Pixel and Audience Setup | SharpPages">
+    <meta property="og:description" content="Complete guide to Facebook retargeting for event promotion. Covers pixel setup, custom audience creation, ad creative for retargeting, and budget allocation.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Facebook Retargeting for Events: Pixel and Audience Setup | SharpPages">
+    <meta name="twitter:description" content="Complete guide to Facebook retargeting for event promotion. Covers pixel setup, custom audience creation, ad creative for retargeting, and budget allocation.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Facebook Retargeting for Events: Pixel and Audience Setup",
+      "item": "https://sharppages.com/blog/facebook-retargeting-for-events/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Facebook Retargeting for Events: Pixel and Audience Setup",
+  "description": "Complete guide to Facebook retargeting for event promotion. Covers pixel setup, custom audience creation, ad creative for retargeting, and budget allocation.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/facebook-retargeting-for-events/",
+  "mainEntityOfPage": "https://sharppages.com/blog/facebook-retargeting-for-events/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Facebook Retargeting for Events: Pixel and Audience Setup</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Facebook Retargeting for Events: Pixel and Audience Setup</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>Why Retargeting Is the Highest-ROI Event Ad Strategy</h2>
+                <p>Most event promotion budgets go to cold audiences: people who have never heard of your event. Cold traffic converts at 1-5% for event registration pages. Retargeting traffic (people who already visited your registration page but did not register) converts at 10-25%.</p>
+<p>The math is simple. If you spend $500 reaching cold audiences at $5 per click and 3% conversion, you get 3 registrations. If you spend $200 retargeting your 167 non-registrants at $1 per click and 15% conversion, you get 25 registrations. The retargeting budget is smaller and produces 8x the registrations.</p>
+<p>The catch: retargeting only works if you have the pixel infrastructure set up before you start driving traffic. Visitors who land on your page without pixel tracking are invisible to your retargeting campaigns. This guide walks through the complete setup.</p>
+                <h2>Step 1: Install the Facebook Pixel</h2>
+                <p>The Facebook (Meta) Pixel is a snippet of JavaScript that fires on your event registration page. It tells Facebook who visited, what they did, and whether they registered.</p>
+<h3>Base Pixel Installation</h3>
+<p>Place the base pixel code in the <code>&lt;head&gt;</code> of every page on your event site. This fires the <code>PageView</code> event automatically, which tells Facebook someone landed on your page.</p>
+<pre><code>&lt;!-- Meta Pixel Code --&gt;
+&lt;script&gt;
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+&lt;/script&gt;</code></pre>
+<p>Replace <code>YOUR_PIXEL_ID</code> with your actual pixel ID from Meta Events Manager.</p>
+<h3>Important: One Pixel Per Event (or Per Client)</h3>
+<p>If you run multiple events for different purposes, use separate pixels or at minimum separate custom conversions. Mixing event data from a medical conference and a local meetup in the same pixel creates noisy audiences that hurt optimization.</p>
+                <h2>Step 2: Set Up Custom Events</h2>
+                <p>The base pixel tracks page visits. Custom events track specific actions that indicate intent and completion.</p>
+<h3>ViewContent Event (Qualified Visitor)</h3>
+<p>Fire a <code>ViewContent</code> event when a visitor has been on the page for 10 seconds. This filters out bounces and identifies people who actually read the page.</p>
+<pre><code>// Fire ViewContent after 10 seconds on page
+setTimeout(function() {
+  fbq('track', 'ViewContent', {
+    content_name: 'Event Registration Page',
+    content_category: 'Event'
+  });
+}, 10000);</code></pre>
+<p>This 10-second threshold is critical. Facebook optimizes ad delivery based on the events you tell it to optimize for. If you optimize for PageView, Facebook sends anyone who will click (including bots and accidental clicks). If you optimize for ViewContent with a 10-second threshold, Facebook sends people who actually engage with the page.</p>
+<h3>CompleteRegistration Event</h3>
+<p>Fire <code>CompleteRegistration</code> when the registration form is successfully submitted. This is your conversion event.</p>
+<pre><code>// Fire on successful form submission
+function onRegistrationComplete() {
+  fbq('track', 'CompleteRegistration', {
+    content_name: 'Event Name',
+    value: 0.00,  // ticket price, 0 for free events
+    currency: 'USD'
+  });
+}
+
+// Attach to your form's success handler
+document.getElementById('reg-form').addEventListener('submit', function(e) {
+  // After form validation passes:
+  onRegistrationComplete();
+});</code></pre>
+<h3>InitiateCheckout Event (Paid Events)</h3>
+<p>For paid events, fire <code>InitiateCheckout</code> when a visitor clicks to start the payment process but before they complete payment. This creates a middle-funnel audience: people who wanted to pay but did not finish.</p>
+<pre><code>// Fire when user clicks "Proceed to Payment"
+document.getElementById('checkout-btn').addEventListener('click', function() {
+  fbq('track', 'InitiateCheckout', {
+    content_name: 'Event Name',
+    value: 99.00,
+    currency: 'USD'
+  });
+});</code></pre>
+                <h2>Step 3: Build Custom Audiences</h2>
+                <p>With the pixel firing events, build these custom audiences in Meta Ads Manager:</p>
+<h3>Audience 1: All Page Visitors (Exclude Registrants)</h3>
+<p>Go to Audiences > Create Audience > Custom Audience > Website > People who visited specific web pages.</p>
+<ul>
+<li>URL contains: your event registration page URL</li>
+<li>Exclude: people who triggered CompleteRegistration</li>
+<li>Time window: 30 days (adjust based on your promotion timeline)</li>
+</ul>
+<p>This is your primary retargeting audience. Everyone who visited but did not register.</p>
+<h3>Audience 2: Engaged Visitors (Exclude Registrants)</h3>
+<ul>
+<li>People who triggered ViewContent (10-second visitors)</li>
+<li>Exclude: people who triggered CompleteRegistration</li>
+<li>Time window: 14 days</li>
+</ul>
+<p>This is a higher-intent audience. These people read your page but did not convert. They are your best retargeting targets.</p>
+<h3>Audience 3: Checkout Abandoners (Paid Events Only)</h3>
+<ul>
+<li>People who triggered InitiateCheckout</li>
+<li>Exclude: people who triggered CompleteRegistration</li>
+<li>Time window: 7 days</li>
+</ul>
+<p>The highest-intent audience. These people wanted to register enough to start paying but stopped. A reminder ad often recovers 20-30% of checkout abandoners.</p>
+<h3>Audience 4: Registrants (For Upsell or Future Events)</h3>
+<ul>
+<li>People who triggered CompleteRegistration</li>
+<li>Time window: 180 days</li>
+</ul>
+<p>Use this audience to promote ticket upgrades (basic to VIP), add-on workshops, or future events in the series. Do not show these people registration ads. They already registered.</p>
+                <h2>Step 4: Create Retargeting Ad Campaigns</h2>
+                <p>Retargeting ads should be different from your cold-audience ads. The audience already knows about your event. They do not need an introduction. They need a reason to act now.</p>
+<h3>Ad Creative for Retargeting</h3>
+<ul>
+<li><strong>Urgency-based:</strong> "Only 15 spots left for [Event Name]. Register before [date]." Use real scarcity if it exists.</li>
+<li><strong>Social proof:</strong> "200 professionals already registered for [Event Name]. Join them." Use actual numbers.</li>
+<li><strong>Objection-handling:</strong> If people visit but do not register, they have an objection. Common objections for events: "Is it worth the time/money?" Address it directly: "Last year's attendees rated us 4.8/5. Here's what they said."</li>
+<li><strong>New information:</strong> Announce a new speaker, a new session, or a new perk. Give people a reason to revisit the page.</li>
+</ul>
+<h3>Campaign Structure</h3>
+<ul>
+<li><strong>Campaign 1: Page Visitors (Audience 1)</strong> - Broad retargeting. Budget: 30-40% of retargeting spend. Optimize for CompleteRegistration or ViewContent.</li>
+<li><strong>Campaign 2: Engaged Visitors (Audience 2)</strong> - High-intent retargeting. Budget: 40-50% of retargeting spend. Optimize for CompleteRegistration.</li>
+<li><strong>Campaign 3: Checkout Abandoners (Audience 3)</strong> - Recovery campaign. Budget: 10-20% of retargeting spend. Optimize for CompleteRegistration. Use urgency-based creative.</li>
+</ul>
+<h3>Budget Allocation</h3>
+<p>Allocate 20-30% of your total ad budget to retargeting. For example, on a $2,000 event ad budget: $1,400-$1,600 to cold audience campaigns driving traffic to the registration page, $400-$600 to retargeting campaigns converting that traffic.</p>
+<p>The retargeting portion will produce a disproportionate share of registrations relative to spend. That is the point.</p>
+                <h2>Step 5: Optimize for the Right Event</h2>
+                <p>Campaign optimization settings determine which people Facebook shows your ads to. This is where many event promoters go wrong.</p>
+<h3>What to Optimize For</h3>
+<ul>
+<li><strong>Cold campaigns:</strong> Optimize for Link Clicks or ViewContent (10-second event). Do NOT optimize for Landing Page Views. LPV optimization sends cheap, low-quality traffic with high bounce rates. ViewContent ensures Facebook finds people who actually engage with your page.</li>
+<li><strong>Retargeting campaigns:</strong> Optimize for CompleteRegistration if you have enough conversion volume (at least 15-25 conversions per week). If volume is too low, optimize for ViewContent and let the audience targeting do the work.</li>
+</ul>
+<h3>What NOT to Optimize For</h3>
+<ul>
+<li><strong>Landing Page Views.</strong> Facebook defines an LPV as "clicked the link and the page started loading." This includes people who clicked accidentally, clicked and immediately bounced, or had the page load in the background. LPV optimization is cheap but produces junk traffic with 80-97% bounce rates.</li>
+<li><strong>Impressions or Reach.</strong> Unless you are running pure brand awareness (rare for event promotion), optimizing for impressions wastes budget on people who will never register.</li>
+</ul>
+                <h2>Troubleshooting and Common Mistakes</h2>
+                <ul>
+<li><strong>Pixel not firing.</strong> Use the Meta Pixel Helper Chrome extension to verify your pixel fires on every page load. Check that events (ViewContent, CompleteRegistration) fire at the right times. Test in an incognito window to avoid browser extensions blocking the pixel.</li>
+<li><strong>Audiences too small.</strong> Retargeting requires enough page visitors to build a viable audience. Facebook needs at least 100 people in an audience to serve ads. If your event page does not get enough traffic, combine Audiences 1 and 2 into a single audience, or extend the time window.</li>
+<li><strong>Showing retargeting ads to registrants.</strong> Always exclude your CompleteRegistration audience from retargeting campaigns. Showing "Register now!" to someone who already registered is wasteful and annoying.</li>
+<li><strong>Using the same creative for cold and retargeting.</strong> People who already visited your page have seen your event pitch. Showing them the same ad again is a wasted impression. Retargeting creative should add new information, urgency, or social proof.</li>
+<li><strong>Setting retargeting budget too high relative to cold traffic.</strong> Retargeting only works if you have enough visitors to retarget. If your retargeting audience is 200 people and you allocate $500/week to reach them, frequency will spike and performance will drop. Match retargeting budget to audience size: roughly $1-$3 per person in the audience per week.</li>
+<li><strong>Sharing pixels across unrelated events.</strong> Each event (or at minimum, each event type) should have its own pixel or custom conversion events. Mixing data from a 500-person conference and a 30-person dinner in the same optimization signals confuses Facebook's algorithm.</li>
+</ul>
+                <h2>The Full Timeline for Event Retargeting</h2>
+                <p>Here is a typical timeline for event retargeting from setup to event day:</p>
+<h3>4-6 Weeks Before Event</h3>
+<ul>
+<li>Install pixel on registration page</li>
+<li>Set up custom events (ViewContent, CompleteRegistration)</li>
+<li>Verify pixel firing with Meta Pixel Helper</li>
+<li>Launch cold traffic campaigns to drive page visitors</li>
+</ul>
+<h3>3-4 Weeks Before Event</h3>
+<ul>
+<li>Build custom audiences from accumulated visitor data</li>
+<li>Launch retargeting Campaign 1 (All Visitors) and Campaign 2 (Engaged Visitors)</li>
+<li>Monitor frequency. If retargeting frequency exceeds 3-4 impressions per person per week, reduce budget or refresh creative.</li>
+</ul>
+<h3>2 Weeks Before Event</h3>
+<ul>
+<li>Launch Campaign 3 (Checkout Abandoners) if applicable</li>
+<li>Shift budget from cold to retargeting as audiences grow</li>
+<li>Update retargeting creative with urgency messaging ("2 weeks left to register")</li>
+</ul>
+<h3>Final Week</h3>
+<ul>
+<li>Increase retargeting budget for final push</li>
+<li>Use strongest urgency creative ("Last chance: event is [date]")</li>
+<li>Pause cold campaigns if budget is limited (retargeting converts at higher rate)</li>
+</ul>
+<h3>Event Day</h3>
+<ul>
+<li>Pause all registration campaigns</li>
+<li>Switch registrant audience (Audience 4) to future event promotion or thank-you messaging</li>
+</ul>
+<p>This setup requires a custom registration page with pixel control. Eventbrite limits pixel placement and custom events, which makes the full retargeting strategy impossible to execute. If you are spending money on ads to fill an event, the pixel setup alone justifies the cost of a custom page. <a href="/event-registration/">See our event registration service</a> for pages built with full pixel infrastructure from day one.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Facebook retargeting for events?", "acceptedAnswer": {"@type": "Answer", "text": "Facebook retargeting shows ads to people who visited your event registration page but did not register. It works by placing a tracking pixel on your page that identifies visitors, then creating custom audiences in Facebook Ads Manager to serve them follow-up ads. Retargeting traffic converts at 10-25%, compared to 1-5% for cold traffic."}}, {"@type": "Question", "name": "How much should I spend on retargeting vs. cold traffic?", "acceptedAnswer": {"@type": "Answer", "text": "Allocate 20-30% of your total ad budget to retargeting. The remaining 70-80% drives cold traffic to your registration page. Retargeting produces a disproportionate share of registrations relative to spend, but it needs cold traffic to build the audience first."}}, {"@type": "Question", "name": "Can I retarget Eventbrite page visitors?", "acceptedAnswer": {"@type": "Answer", "text": "Eventbrite allows basic pixel placement, but you cannot fire custom events (like timed ViewContent) or build the full audience segmentation described in this guide. For complete retargeting capability, you need a custom registration page where you control pixel placement."}}, {"@type": "Question", "name": "What should Facebook retargeting ads say?", "acceptedAnswer": {"@type": "Answer", "text": "Do not repeat your original ad. Retargeting creative should add new information (new speaker announced), create urgency (registration closing soon), provide social proof (X people already registered), or address objections (what past attendees said about the event). The audience already knows about your event. Give them a reason to act now."}}, {"@type": "Question", "name": "How many people do I need in my retargeting audience?", "acceptedAnswer": {"@type": "Answer", "text": "Facebook requires at least 100 people in a custom audience to serve ads. For effective retargeting, aim for 500+ visitors before launching retargeting campaigns. At typical click-through rates, this means spending $500-$1,500 on cold traffic first to build the audience pool."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">What is Facebook retargeting for events?</summary>
+                    <div class="faq-item__answer"><p>Facebook retargeting shows ads to people who visited your event registration page but did not register. It works by placing a tracking pixel on your page that identifies visitors, then creating custom audiences in Facebook Ads Manager to serve them follow-up ads. Retargeting traffic converts at 10-25%, compared to 1-5% for cold traffic.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How much should I spend on retargeting vs. cold traffic?</summary>
+                    <div class="faq-item__answer"><p>Allocate 20-30% of your total ad budget to retargeting. The remaining 70-80% drives cold traffic to your registration page. Retargeting produces a disproportionate share of registrations relative to spend, but it needs cold traffic to build the audience first.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can I retarget Eventbrite page visitors?</summary>
+                    <div class="faq-item__answer"><p>Eventbrite allows basic pixel placement, but you cannot fire custom events (like timed ViewContent) or build the full audience segmentation described in this guide. For complete retargeting capability, you need a custom registration page where you control pixel placement.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">What should Facebook retargeting ads say?</summary>
+                    <div class="faq-item__answer"><p>Do not repeat your original ad. Retargeting creative should add new information (new speaker announced), create urgency (registration closing soon), provide social proof (X people already registered), or address objections (what past attendees said about the event). The audience already knows about your event. Give them a reason to act now.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How many people do I need in my retargeting audience?</summary>
+                    <div class="faq-item__answer"><p>Facebook requires at least 100 people in a custom audience to serve ads. For effective retargeting, aim for 500+ visitors before launching retargeting campaigns. At typical click-through rates, this means spending $500-$1,500 on cold traffic first to build the audience pool.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>

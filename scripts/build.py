@@ -2667,6 +2667,9 @@ BLOG_ARTICLES.extend(get_listicle_articles(PRICING))
 from _blog_lead_magnets import get_lead_magnet_articles
 BLOG_ARTICLES.extend(get_lead_magnet_articles(PRICING))
 
+from _blog_event_marketing import get_event_marketing_articles
+BLOG_ARTICLES.extend(get_event_marketing_articles(PRICING))
+
 
 def build_blog_article(article):
     """Build a single blog article page."""

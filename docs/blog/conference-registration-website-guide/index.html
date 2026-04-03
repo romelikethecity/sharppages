@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>Conference Registration Website Design Guide | SharpPages</title>
+    <meta name="description" content="How to design a conference registration website that sells tickets. Covers information architecture, pricing tiers, speaker pages, agenda design, and mobile optimization.">
+    <link rel="canonical" href="https://sharppages.com/blog/conference-registration-website-guide/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/conference-registration-website-guide/">
+    <meta property="og:title" content="Conference Registration Website Design Guide | SharpPages">
+    <meta property="og:description" content="How to design a conference registration website that sells tickets. Covers information architecture, pricing tiers, speaker pages, agenda design, and mobile optimization.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Conference Registration Website Design Guide | SharpPages">
+    <meta name="twitter:description" content="How to design a conference registration website that sells tickets. Covers information architecture, pricing tiers, speaker pages, agenda design, and mobile optimization.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Conference Registration Website Design Guide",
+      "item": "https://sharppages.com/blog/conference-registration-website-guide/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Conference Registration Website Design Guide",
+  "description": "How to design a conference registration website that sells tickets. Covers information architecture, pricing tiers, speaker pages, agenda design, and mobile optimization.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/conference-registration-website-guide/",
+  "mainEntityOfPage": "https://sharppages.com/blog/conference-registration-website-guide/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Conference Registration Website Design Guide</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Conference Registration Website Design Guide</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>A Conference Website Is a Sales Page</h2>
+                <p>A conference registration website has one job: sell tickets (or collect registrations for free events). Every design decision should be evaluated against that goal. Not "does it look impressive?" but "does it make someone more likely to register?"</p>
+<p>Conference websites that underperform usually fail for one of three reasons: important information is hard to find, the registration flow has too many steps, or the page loads too slowly on mobile. This guide covers the design decisions that affect conversion, organized by page section.</p>
+                <h2>Homepage: The Decision Architecture</h2>
+                <p>Your conference homepage needs to answer five questions within 10 seconds of a visitor landing. If it does not, they leave. The five questions:</p>
+<ol>
+<li><strong>What is this event?</strong> Conference name and one-line description.</li>
+<li><strong>When?</strong> Date(s) prominently displayed. Not buried in a paragraph.</li>
+<li><strong>Where?</strong> City and venue. For virtual: "Online" with timezone.</li>
+<li><strong>How much?</strong> Starting price visible above the fold. "From $299" is fine. Hiding the price until the registration page is a conversion killer.</li>
+<li><strong>Why should I care?</strong> A single sentence about what makes this conference worth attending. Not your mission statement. A concrete value proposition.</li>
+</ol>
+<p>Place these five elements in the hero section. No hero video. No animated transitions. No stock photos. Just the information visitors need to decide whether to keep reading.</p>
+<p>Below the hero, the homepage should follow this order:</p>
+<ul>
+<li>Keynote speakers (the biggest draw)</li>
+<li>Agenda overview or track descriptions</li>
+<li>Social proof (past attendee stats, testimonials, company logos)</li>
+<li>Pricing tiers</li>
+<li>FAQ</li>
+<li>CTA repeated at bottom</li>
+</ul>
+                <h2>Pricing Tiers: Structure That Sells</h2>
+                <p>Most conferences offer 2-4 pricing tiers. The structure of these tiers affects both total revenue and conversion rate.</p>
+<h3>The Three-Tier Standard</h3>
+<ul>
+<li><strong>Basic/Conference Only:</strong> Access to main sessions. No workshops, no VIP events. This is your entry price point.</li>
+<li><strong>Standard/Full Access:</strong> Conference sessions plus workshops. This should be your most popular tier. Price it 30-50% above Basic.</li>
+<li><strong>VIP/All Access:</strong> Everything plus exclusive events (speaker dinner, executive roundtable, front-row seating). Price it 2-3x Basic.</li>
+</ul>
+<h3>Design Principles for the Pricing Table</h3>
+<ul>
+<li><strong>Highlight the middle tier.</strong> Use a visual emphasis (border, background color, "Most Popular" badge) on the tier you want most people to buy. This is usually the Standard tier.</li>
+<li><strong>List features, not descriptions.</strong> "20+ sessions" is scannable. "Access to our comprehensive session lineup featuring thought leaders from across the industry" is not.</li>
+<li><strong>Show the per-day price for multi-day events.</strong> "$599 for 3 days" feels expensive. "$199/day" feels reasonable. Include both numbers.</li>
+<li><strong>Early bird pricing with a real deadline.</strong> Show the regular price crossed out next to the early bird price. Include the exact cutoff date. When the deadline passes, update the page. Fake deadlines destroy trust.</li>
+</ul>
+                <h2>Speaker Pages: The Primary Conversion Driver</h2>
+                <p>For speaker-driven conferences, the speaker page is the highest-traffic page after the homepage. Design it to sell tickets, not just list names.</p>
+<h3>Speaker Grid (Index Page)</h3>
+<ul>
+<li>Professional headshots, all same dimensions (square or 3:4 ratio)</li>
+<li>Name, title, and company visible without clicking</li>
+<li>Compress headshots to 20-30KB each. 12 headshots at 200KB each means 2.4MB of image data on one page. At 25KB each, it is 300KB.</li>
+<li>Lazy-load all speaker images below the first row</li>
+<li>Link each speaker to their individual bio page or expand a modal with session details</li>
+</ul>
+<h3>Individual Speaker Pages</h3>
+<p>Each speaker should have a dedicated page (or expandable section) with:</p>
+<ul>
+<li>Full bio (3-5 sentences)</li>
+<li>Session title and description</li>
+<li>Session date and time slot</li>
+<li>CTA: "Register to see [Speaker Name]" linking directly to the registration form</li>
+</ul>
+<p>The individual speaker page CTA is important. Visitors often arrive at speaker pages via social media shares or direct links. They need a direct path to registration from that page without going through the homepage first.</p>
+                <h2>Agenda Design: Scannable, Not Overwhelming</h2>
+                <p>Conference agendas can be complex, especially for multi-track, multi-day events. The design challenge is making them scannable without losing necessary detail.</p>
+<h3>Single-Track Events</h3>
+<p>Use a simple timeline layout:</p>
+<ul>
+<li>Time in left column</li>
+<li>Session title and speaker in right column</li>
+<li>Expandable descriptions for each session (click to expand, not visible by default)</li>
+<li>Visual distinction between session types (keynote, breakout, networking, meal)</li>
+</ul>
+<h3>Multi-Track Events</h3>
+<p>Multi-track agendas are harder. Two approaches that work:</p>
+<ul>
+<li><strong>Tab-based:</strong> Tabs for each track. One track visible at a time. Works for 2-4 tracks. Beyond 4, the tabs become hard to navigate on mobile.</li>
+<li><strong>Filter-based:</strong> Show all sessions with filter buttons for track, day, and session type. Better for 5+ tracks or when attendees want to see sessions across tracks.</li>
+</ul>
+<p>Avoid the grid layout (tracks as columns, time slots as rows) on conference websites. It looks organized on desktop but is unusable on mobile. Since 50%+ of traffic is mobile, the grid layout fails for half your audience.</p>
+<h3>Day-Based Navigation</h3>
+<p>For multi-day conferences, add day tabs at the top of the agenda. Default to Day 1. Each day should load quickly without a full page reload (use JavaScript tabs or sections, not separate pages).</p>
+                <h2>Registration Flow: Every Step Costs You Registrants</h2>
+                <p>The registration flow is where conference websites lose the most potential attendees. Every additional step between "I want to register" and "I am registered" costs 10-20% of remaining visitors.</p>
+<h3>Optimal Flow (3 Steps or Fewer)</h3>
+<ol>
+<li>Click "Register" button</li>
+<li>Select tier and fill in personal details (one page)</li>
+<li>Payment (ideally embedded on the same page, not a redirect)</li>
+</ol>
+<h3>What to Avoid</h3>
+<ul>
+<li><strong>Account creation before registration.</strong> Do not make people create an account to register. Capture their email during registration and let them create an account (for session selection, networking features) after they have paid.</li>
+<li><strong>Session selection during registration.</strong> Let people register first, select sessions later. Forcing session selection during checkout adds complexity and decision fatigue. Send a follow-up email with session selection after registration.</li>
+<li><strong>Redirects to third-party platforms.</strong> Every redirect is a drop-off point. If you use a third-party registration tool, embed it via iframe or API integration rather than linking out.</li>
+</ul>
+                <h2>Mobile Design: Not an Afterthought</h2>
+                <p>50-65% of conference website traffic comes from mobile devices. The percentage is highest for traffic from social media promotion and email campaigns (which are read on phones).</p>
+<h3>Mobile-Critical Elements</h3>
+<ul>
+<li><strong>Sticky CTA button.</strong> A fixed "Register" button at the bottom of the mobile viewport. Always visible, always tappable. This single element can improve mobile conversion by 10-15%.</li>
+<li><strong>Single-column agenda.</strong> Do not try to show multi-track grids on mobile. Use day tabs and track filters with a single-column layout.</li>
+<li><strong>Collapsible sections.</strong> Session descriptions, speaker bios, and FAQ answers should be collapsed by default on mobile. Show headings and let users expand what interests them.</li>
+<li><strong>Fast load time.</strong> Conference websites with large speaker image grids often load in 5-8 seconds on mobile. Target under 2 seconds by compressing all images, lazy-loading below the fold, and minimizing JavaScript.</li>
+</ul>
+<h3>What Breaks on Mobile</h3>
+<ul>
+<li>Pricing comparison tables (columns get too narrow to read)</li>
+<li>Embedded maps (often load slowly and are hard to interact with on small screens)</li>
+<li>PDF agendas (require download, pinch-zoom, terrible experience)</li>
+<li>Form fields with tiny tap targets</li>
+</ul>
+<p>Test every page on a real phone before launch. If you cannot register from start to finish on a phone in under 2 minutes, something needs to change.</p>
+<p>Our conference sites are built mobile-first with sub-second load times. Static HTML, no platform bloat. <a href="/event-registration/">See our event registration service</a> or <a href="/audit/">run a free audit</a> on your current conference site.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many pages should a conference website have?", "acceptedAnswer": {"@type": "Answer", "text": "At minimum: homepage (with hero, speakers, agenda overview, pricing), speakers page, full agenda page, registration/checkout page, and FAQ. Larger conferences add: individual speaker pages, sponsor page, venue/travel page, and a blog or news section for pre-event content marketing."}}, {"@type": "Question", "name": "Should I use a conference platform or build a custom site?", "acceptedAnswer": {"@type": "Answer", "text": "Conference platforms (Cvent, Whova, Swoogo) offer built-in features like session selection, networking, and check-in apps. They are convenient but expensive and slow-loading. Custom static sites load faster, convert better, and cost less long-term. For events needing an attendee app, consider a hybrid: custom marketing site plus a lightweight event app. Custom conference sites start at $2,000."}}, {"@type": "Question", "name": "How do I display a multi-track agenda on mobile?", "acceptedAnswer": {"@type": "Answer", "text": "Do not use a grid layout on mobile. Use day tabs at the top and track filter buttons below. Show sessions in a single-column list, organized by time. Each session shows time, title, speaker, and track badge. Collapsible descriptions keep the view scannable. This approach works for any number of tracks."}}, {"@type": "Question", "name": "What is the most important design element for conference ticket sales?", "acceptedAnswer": {"@type": "Answer", "text": "The pricing table. It should be visible without excessive scrolling, highlight the recommended tier, show early bird vs. regular pricing, and have a clear CTA button for each tier. After the pricing table, speaker quality and agenda clarity are the strongest conversion drivers."}}, {"@type": "Question", "name": "How fast should a conference website load?", "acceptedAnswer": {"@type": "Answer", "text": "Under 2 seconds on mobile. Conference sites commonly load in 5-8 seconds due to large speaker image grids and platform overhead. Compress speaker headshots to 20-30KB each, lazy-load images below the first row, and minimize JavaScript. Fast sites convert 15-25% better than slow ones."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">How many pages should a conference website have?</summary>
+                    <div class="faq-item__answer"><p>At minimum: homepage (with hero, speakers, agenda overview, pricing), speakers page, full agenda page, registration/checkout page, and FAQ. Larger conferences add: individual speaker pages, sponsor page, venue/travel page, and a blog or news section for pre-event content marketing.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Should I use a conference platform or build a custom site?</summary>
+                    <div class="faq-item__answer"><p>Conference platforms (Cvent, Whova, Swoogo) offer built-in features like session selection, networking, and check-in apps. They are convenient but expensive and slow-loading. Custom static sites load faster, convert better, and cost less long-term. For events needing an attendee app, consider a hybrid: custom marketing site plus a lightweight event app. Custom conference sites start at $2,000.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How do I display a multi-track agenda on mobile?</summary>
+                    <div class="faq-item__answer"><p>Do not use a grid layout on mobile. Use day tabs at the top and track filter buttons below. Show sessions in a single-column list, organized by time. Each session shows time, title, speaker, and track badge. Collapsible descriptions keep the view scannable. This approach works for any number of tracks.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">What is the most important design element for conference ticket sales?</summary>
+                    <div class="faq-item__answer"><p>The pricing table. It should be visible without excessive scrolling, highlight the recommended tier, show early bird vs. regular pricing, and have a clear CTA button for each tier. After the pricing table, speaker quality and agenda clarity are the strongest conversion drivers.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How fast should a conference website load?</summary>
+                    <div class="faq-item__answer"><p>Under 2 seconds on mobile. Conference sites commonly load in 5-8 seconds due to large speaker image grids and platform overhead. Compress speaker headshots to 20-30KB each, lazy-load images below the first row, and minimize JavaScript. Fast sites convert 15-25% better than slow ones.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>
