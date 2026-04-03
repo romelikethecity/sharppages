@@ -41,7 +41,7 @@ from nav_config import (
 # =============================================================================
 
 BASE_URL = "https://sharppages.com"
-CSS_VERSION = "11"
+CSS_VERSION = "12"
 OUTPUT_DIR = "output"
 
 
@@ -243,6 +243,10 @@ def get_footer_html():
                         <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
                     </a>
                     <p class="footer__tagline">{SITE_TAGLINE}</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-agency-inline.svg" alt="Best PageSpeed Agency 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
                 </div>
                 {columns_html}
             </div>

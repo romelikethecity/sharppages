@@ -55,6 +55,7 @@ FOOTER_COLUMNS = {
     "Resources": [
         {"href": "/blog/", "label": "Blog"},
         {"href": "/audit/", "label": "Free Site Audit"},
+        {"href": "/locations/", "label": "Locations"},
         {"href": "/about/", "label": "About"},
     ],
     "Legal": [
