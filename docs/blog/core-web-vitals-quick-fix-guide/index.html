@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>Core Web Vitals Quick-Fix Guide: Pass All Three in One Weekend | SharpPages</title>
+    <meta name="description" content="A practical weekend guide to fixing LCP, CLS, and INP. Friday evening audit, Saturday image and layout fixes, Sunday JavaScript and verification.">
+    <link rel="canonical" href="https://sharppages.com/blog/core-web-vitals-quick-fix-guide/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/core-web-vitals-quick-fix-guide/">
+    <meta property="og:title" content="Core Web Vitals Quick-Fix Guide: Pass All Three in One Weekend | SharpPages">
+    <meta property="og:description" content="A practical weekend guide to fixing LCP, CLS, and INP. Friday evening audit, Saturday image and layout fixes, Sunday JavaScript and verification.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Core Web Vitals Quick-Fix Guide: Pass All Three in One Weekend | SharpPages">
+    <meta name="twitter:description" content="A practical weekend guide to fixing LCP, CLS, and INP. Friday evening audit, Saturday image and layout fixes, Sunday JavaScript and verification.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Core Web Vitals Quick-Fix Guide: Pass All Three in One Weekend",
+      "item": "https://sharppages.com/blog/core-web-vitals-quick-fix-guide/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Core Web Vitals Quick-Fix Guide: Pass All Three in One Weekend",
+  "description": "A practical weekend guide to fixing LCP, CLS, and INP. Friday evening audit, Saturday image and layout fixes, Sunday JavaScript and verification.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/core-web-vitals-quick-fix-guide/",
+  "mainEntityOfPage": "https://sharppages.com/blog/core-web-vitals-quick-fix-guide/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Core Web Vitals Quick-Fix Guide: Pass All Three in One Weekend</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Core Web Vitals Quick-Fix Guide: Pass All Three in One Weekend</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>The Weekend Plan</h2>
+                <p>Google's Core Web Vitals measure three things: how fast the largest element appears (LCP), how stable the layout is (CLS), and how responsive the page is to interaction (INP). Passing all three means: LCP under 2.5 seconds, CLS under 0.1, INP under 200ms.</p>
+<p>Most sites fail one or two of these on mobile. The fixes are usually straightforward but require focused attention. This guide gives you a weekend plan: Friday evening for diagnosis, Saturday for LCP and CLS fixes, Sunday for INP and verification.</p>
+<p>You will need: access to your site files or CMS, <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a>, and Chrome DevTools. Read our <a href="/blog/core-web-vitals-explained-lcp-cls-tbt/">Core Web Vitals explainer</a> if you need background on what each metric measures.</p>
+                <h2>Friday Evening: Audit and Baseline</h2>
+                <p><strong>Step 1: Record your baselines.</strong> Run your top 5 pages through PageSpeed Insights on mobile. Record LCP, CLS, TBT (proxy for INP), and the overall Performance score. Run each page 3 times and average the results.</p>
+<p><strong>Step 2: Identify the LCP element.</strong> In PageSpeed Insights, expand the "Largest Contentful Paint element" diagnostic. It tells you exactly which element is your LCP: usually a hero image, a large heading, or a background image.</p>
+<p><strong>Step 3: Identify CLS sources.</strong> Expand "Avoid large layout shifts." It shows which elements shifted and by how much. Common culprits: images without dimensions, late-loading fonts, dynamically injected content.</p>
+<p><strong>Step 4: Identify TBT/INP sources.</strong> Expand "Avoid long main-thread tasks." It shows which scripts block the main thread and for how long. Long tasks over 50ms are the ones to fix.</p>
+<p><strong>Step 5: Prioritize.</strong> Which metric is furthest from passing? That is your Saturday focus.</p>
+                <h2>Saturday Morning: Fix LCP</h2>
+                <p>LCP failures are caused by slow-loading hero images, render-blocking CSS/JS, or slow server response. Fix them in this order:</p>
+<p><strong>Optimize the LCP image.</strong> If your LCP element is an image:</p>
+<pre><code>&lt;!-- Before: 800KB JPEG, no sizing --&gt;
+&lt;img src="hero.jpg" alt="..."&gt;
+
+&lt;!-- After: WebP, sized, prioritized --&gt;
+&lt;img src="hero.webp" alt="..."
+     width="1200" height="600"
+     fetchpriority="high"
+     srcset="hero-400.webp 400w, hero-800.webp 800w, hero-1200.webp 1200w"
+     sizes="100vw"&gt;</code></pre>
+<p>Convert to WebP (25-35% smaller). Add explicit dimensions. Add <code>fetchpriority="high"</code>. Add srcset for responsive sizes. Target: hero image under 100KB.</p>
+<p><strong>Eliminate render-blocking CSS.</strong> If your LCP is a text element blocked by CSS:</p>
+<pre><code>&lt;!-- Inline critical CSS in head --&gt;
+&lt;style&gt;
+  /* Only the CSS needed for above-the-fold content */
+  body { font-family: system-ui; color: #333; }
+  .hero { padding: 4rem 0; }
+  .hero h1 { font-size: 2.5rem; }
+&lt;/style&gt;
+
+&lt;!-- Load full CSS asynchronously --&gt;
+&lt;link rel="preload" href="styles.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'"&gt;</code></pre>
+<p><strong>Reduce TTFB.</strong> If your server response is over 600ms, enable server-side caching or switch to a CDN. For WordPress: install WP Rocket. For any platform: put Cloudflare in front (free).</p>
+                <h2>Saturday Afternoon: Fix CLS</h2>
+                <p>CLS fixes are usually quick. The goal is to prevent elements from moving after they start rendering.</p>
+<p><strong>Add dimensions to all images and videos:</strong></p>
+<pre><code>&lt;!-- Before: browser does not know size --&gt;
+&lt;img src="photo.webp" alt="..."&gt;
+
+&lt;!-- After: browser reserves exact space --&gt;
+&lt;img src="photo.webp" alt="..." width="600" height="400"
+     style="max-width: 100%; height: auto;"&gt;</code></pre>
+<p><strong>Fix font loading flash:</strong></p>
+<pre><code>@font-face {
+  font-family: 'YourFont';
+  src: url('font.woff2') format('woff2');
+  font-display: swap; /* Shows fallback instantly */
+}</code></pre>
+<p><strong>Reserve space for dynamic content.</strong> If ads, cookie banners, or embeds inject content after load, give them a fixed-height container:</p>
+<pre><code>.ad-slot { min-height: 250px; }
+.cookie-banner { position: fixed; /* does not shift layout */ }</code></pre>
+<p><strong>Do not inject content above existing content.</strong> If a notification bar appears at the top of the page, it pushes everything down. Use <code>position: fixed</code> or <code>position: sticky</code> instead so it overlays without shifting.</p>
+                <h2>Sunday Morning: Fix INP/TBT</h2>
+                <p>INP (Interaction to Next Paint) measures how fast the page responds to clicks and taps. TBT (Total Blocking Time) in lab tests correlates with INP in the field. Both are caused by JavaScript blocking the main thread.</p>
+<p><strong>Defer non-critical JavaScript:</strong></p>
+<pre><code>&lt;!-- Before: blocks parsing --&gt;
+&lt;script src="analytics.js"&gt;&lt;/script&gt;
+
+&lt;!-- After: executes after HTML parsed --&gt;
+&lt;script src="analytics.js" defer&gt;&lt;/script&gt;</code></pre>
+<p><strong>Load third-party scripts on interaction:</strong></p>
+<pre><code>// Load chat widget only when user scrolls
+let chatLoaded = false;
+window.addEventListener('scroll', function() {
+  if (!chatLoaded) {
+    chatLoaded = true;
+    const s = document.createElement('script');
+    s.src = 'https://chat-widget.example.com/widget.js';
+    document.body.appendChild(s);
+  }
+}, { once: true });</code></pre>
+<p><strong>Break up long tasks.</strong> If a script takes 200ms to execute, split it into smaller chunks using <code>requestIdleCallback</code> or <code>setTimeout(fn, 0)</code> to yield the main thread between chunks.</p>
+<p><strong>Remove heavy plugins.</strong> On WordPress, install the Query Monitor plugin and check which plugins add the most JavaScript. Remove or replace the heaviest ones.</p>
+                <h2>Sunday Afternoon: Verify and Monitor</h2>
+                <p><strong>Re-test all 5 pages.</strong> Run each through PageSpeed Insights 3 times and average the results. Compare against your Friday baselines.</p>
+<p><strong>Check field data.</strong> Lab data (PageSpeed Insights) updates immediately. Field data (Chrome User Experience Report) takes 28 days to reflect changes. Check Google Search Console's Core Web Vitals report weekly for the next month.</p>
+<p><strong>Expected improvements:</strong></p>
+<ul>
+<li>Image optimization alone: 10-20 point improvement</li>
+<li>CSS/JS deferral: 5-15 point improvement</li>
+<li>CLS fixes: 0.05-0.15 CLS reduction</li>
+<li>Third-party script management: 5-10 point improvement</li>
+</ul>
+<p><strong>If you are still below 85 after all fixes:</strong> The platform is the ceiling. WordPress, Webflow, and Squarespace have architectural limits that weekend optimization cannot overcome. A rebuild to static HTML costs $2,500-6,000 and delivers 90-98 permanently. <a href="/audit/">Run a free audit</a> to see the gap.</p>
+<p>For the full technical reference, read our <a href="/blog/page-speed-optimization-guide/">complete page speed optimization guide</a> or the <a href="/blog/website-speed-checklist-47-items/">47-item speed checklist</a>.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I really fix Core Web Vitals in one weekend?", "acceptedAnswer": {"@type": "Answer", "text": "For most sites, yes. The fixes (image optimization, CSS/JS deferral, dimension attributes, font-display) are straightforward. Complex sites with heavy JavaScript frameworks may need more time for the INP fixes."}}, {"@type": "Question", "name": "Which Core Web Vital is hardest to fix?", "acceptedAnswer": {"@type": "Answer", "text": "INP (Interaction to Next Paint) is hardest because it requires reducing JavaScript execution time, which often means removing or restructuring code. LCP and CLS fixes are usually simpler (image optimization, dimension attributes)."}}, {"@type": "Question", "name": "Do I need a developer to fix Core Web Vitals?", "acceptedAnswer": {"@type": "Answer", "text": "Basic fixes (image compression, adding dimensions, defer attributes) can be done by anyone with CMS access. Advanced fixes (critical CSS inlining, script splitting, third-party management) typically require a developer."}}, {"@type": "Question", "name": "How long until Google reflects my improvements?", "acceptedAnswer": {"@type": "Answer", "text": "Lab data (PageSpeed Insights) reflects changes immediately. Field data (what Google uses for rankings) uses a 28-day rolling average from real Chrome users. Expect ranking impact 4-8 weeks after fixes are deployed."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can I really fix Core Web Vitals in one weekend?</summary>
+                    <div class="faq-item__answer"><p>For most sites, yes. The fixes (image optimization, CSS/JS deferral, dimension attributes, font-display) are straightforward. Complex sites with heavy JavaScript frameworks may need more time for the INP fixes.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Which Core Web Vital is hardest to fix?</summary>
+                    <div class="faq-item__answer"><p>INP (Interaction to Next Paint) is hardest because it requires reducing JavaScript execution time, which often means removing or restructuring code. LCP and CLS fixes are usually simpler (image optimization, dimension attributes).</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Do I need a developer to fix Core Web Vitals?</summary>
+                    <div class="faq-item__answer"><p>Basic fixes (image compression, adding dimensions, defer attributes) can be done by anyone with CMS access. Advanced fixes (critical CSS inlining, script splitting, third-party management) typically require a developer.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How long until Google reflects my improvements?</summary>
+                    <div class="faq-item__answer"><p>Lab data (PageSpeed Insights) reflects changes immediately. Field data (what Google uses for rankings) uses a 28-day rolling average from real Chrome users. Expect ranking impact 4-8 weeks after fixes are deployed.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>

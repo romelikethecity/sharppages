@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>Blog: Web Performance, SEO & Digital Marketing Guides | SharpPages</title>
+    <meta name="description" content="Practical guides on PageSpeed optimization, SEO strategy, event marketing, and paid social. Written by Rome Thorndike.">
+    <link rel="canonical" href="https://sharppages.com/blog/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sharppages.com/blog/">
+    <meta property="og:title" content="Blog: Web Performance, SEO & Digital Marketing Guides | SharpPages">
+    <meta property="og:description" content="Practical guides on PageSpeed optimization, SEO strategy, event marketing, and paid social. Written by Rome Thorndike.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog: Web Performance, SEO & Digital Marketing Guides | SharpPages">
+    <meta name="twitter:description" content="Practical guides on PageSpeed optimization, SEO strategy, event marketing, and paid social. Written by Rome Thorndike.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    }
+  ]
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link nav__link--active">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Blog</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Blog</h1>
+                <p class="page-header__subtitle">Practical guides on event registration pages, ad campaigns, and filling seats. No fluff.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="feature-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+                    
+                <a href="/blog/event-registration-page-losing-signups/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Why Your Event Registration Page Is Losing Signups</h3>
+                    <p class="feature-card__text">Most event registration pages lose signups before visitors finish scrolling. Here are the conversion killers and how to fix them.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/eventbrite-vs-custom-event-sites/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Eventbrite vs Custom Event Sites: What Converts Better</h3>
+                    <p class="feature-card__text">Comparing Eventbrite pages with custom event registration sites. Branding, tracking, conversions, and total cost of ownership.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/facebook-retargeting-fills-event-seats/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">How Facebook Retargeting Fills Event Seats</h3>
+                    <p class="feature-card__text">A practical guide to Facebook retargeting for event registration. Custom audiences, pixel setup, urgency schedules, and campaign structure.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/event-marketing-cost-diy-vs-done-for-you/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">The Real Cost of Event Marketing: DIY vs Done-For-You</h3>
+                    <p class="feature-card__text">Comparing the true cost of DIY event marketing tools vs done-for-you services. Platform fees, hidden costs, time investment, and what you actually get.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/agency-website-scores-70-pagespeed/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Why Your Agency Website Scores 70 on PageSpeed</h3>
+                    <p class="feature-card__text">Most agency-built websites score 60-80 on Google PageSpeed. Here is why, what it costs you in rankings and conversions, and how to fix it without rebuilding.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/static-sites-vs-wordpress/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Static Sites vs WordPress: Performance and Cost</h3>
+                    <p class="feature-card__text">A direct comparison of static HTML sites vs WordPress on performance, hosting cost, maintenance, security, and SEO. Includes data from real production sites.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/programmatic-seo-363k-impressions/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">How Programmatic SEO Generated 363K Impressions in 30 Days</h3>
+                    <p class="feature-card__text">A breakdown of how we built 322 programmatic SEO pages and drove 363K Google impressions in 30 days for PE Collective. Strategy, architecture, and results.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/lead-magnet-website-conversion-rate/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">What a Lead Magnet Does for Conversion Rates</h3>
+                    <p class="feature-card__text">Lead magnets convert 2-5x better than static contact forms. Here is why, what types work best, and how to build one into your site with zero server costs.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/how-much-does-custom-website-cost-2026/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">How Much Does a Custom Website Cost in 2026?</h3>
+                    <p class="feature-card__text">Transparent breakdown of custom website pricing in 2026. Flat fee vs hourly billing, what is included, and how to avoid surprise costs on your next project.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/migrate-wordpress-to-static-html-without-losing-seo/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Migrate WordPress to Static HTML Without Losing SEO</h3>
+                    <p class="feature-card__text">Step-by-step guide to migrating from WordPress to static HTML. Covers 301 redirects, canonical tags, meta tag preservation, and how to avoid ranking drops.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/what-is-programmatic-seo-beginners-guide/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">What Is Programmatic SEO? A Beginner's Guide</h3>
+                    <p class="feature-card__text">Programmatic SEO generates hundreds of search-optimized pages from structured data. Learn how it works, when to use it, and see real results from live sites.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/core-web-vitals-explained-lcp-cls-tbt/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Core Web Vitals Explained: LCP, CLS, TBT, and What They Mean</h3>
+                    <p class="feature-card__text">Plain-English guide to Core Web Vitals. What LCP, CLS, and TBT measure, how Google uses them for search rankings, and how to diagnose and fix poor scores.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/facebook-ads-b2b-custom-audiences-vs-interest-targeting/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Facebook Ads for B2B: Custom Audiences vs Interest</h3>
+                    <p class="feature-card__text">Interest targeting wastes B2B ad budgets on unqualified clicks. Custom Audiences from your CRM, website visitors, and lookalikes deliver lower CPL and ROI.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/what-is-a-static-website/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">What Is a Static Website? Speed, Cost, SEO</h3>
+                    <p class="feature-card__text">Static websites serve pre-built HTML files with no database or server-side code. Learn how they work, why they load 5-10x faster, and when they beat WordPress.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/website-design-checklist-before-launch/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Website Design Checklist Before You Launch</h3>
+                    <p class="feature-card__text">Pre-launch website checklist covering mobile responsiveness, PageSpeed scores, schema markup, OG tags, forms, analytics, and the SEO essentials you cannot skip.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/why-your-small-business-doesnt-need-wordpress/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Why Your Small Business Doesn't Need WordPress</h3>
+                    <p class="feature-card__text">WordPress adds complexity most small businesses never use. Static HTML is simpler, faster, cheaper, and more secure for 5-50 page sites with quarterly updates.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/webflow-vs-static-html-performance-compared/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Webflow vs Static HTML: Real Performance Numbers Compared</h3>
+                    <p class="feature-card__text">Side-by-side benchmark of Webflow and static HTML sites covering PageSpeed scores, load times, page weight, hosting costs, and SEO impact on rankings.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/signs-website-needs-complete-rebuild/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">5 Signs Your Website Needs a Full Rebuild</h3>
+                    <p class="feature-card__text">When a website refresh is not enough: five clear signals that your site needs a ground-up rebuild, not a new theme, template swap, or cosmetic redesign.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/what-happens-to-seo-when-you-redesign-website/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">What Happens to Your SEO When You Redesign Your Website?</h3>
+                    <p class="feature-card__text">Website redesigns can destroy or boost SEO rankings. Learn what signals Google watches during a redesign, what to preserve, and how to avoid traffic drops.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/hub-and-spoke-seo-topical-authority/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Hub-and-Spoke SEO: Build Topical Authority</h3>
+                    <p class="feature-card__text">Hub-and-spoke SEO organizes content into topic clusters that signal authority to Google. Learn the architecture, internal linking strategy, and implementation.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/how-to-get-90-pagespeed-score/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">How to Get 90+ PageSpeed Score (And Why Google Cares)</h3>
+                    <p class="feature-card__text">Actionable steps to reach a 90+ mobile PageSpeed score covering image optimization, render-blocking resources, JavaScript reduction, and platform architecture.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/schema-markup-small-business/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Schema Markup for Small Business: A Guide</h3>
+                    <p class="feature-card__text">Practical guide to schema markup for small business sites. Learn which types to implement, how they improve search visibility, and how to set them up.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/local-seo-service-businesses-checklist/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Local SEO Checklist for Service Businesses</h3>
+                    <p class="feature-card__text">The essential local SEO checklist for home services, law firms, med spas, and service businesses. Google Business Profile, citations, reviews, on-page setup.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/high-converting-event-registration-page-examples/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Event Registration Page Examples That Convert</h3>
+                    <p class="feature-card__text">Design patterns, copy frameworks, and technical setup for event registration pages that convert visitors into registrants. Real examples and benchmarks.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/event-landing-page-vs-full-event-website/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Event Landing Page vs Full Event Website: Which Do You Need?</h3>
+                    <p class="feature-card__text">Decision guide for choosing between a single event landing page and a multi-page event website. Covers use cases, budgets, timelines, and when to upgrade.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/multi-city-event-marketing-scale/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Multi-City Event Marketing at Scale</h3>
+                    <p class="feature-card__text">Clone strategy for multi-city event pages: same branding, city-specific content, 48-hour turnaround per city. Cut costs by 70% vs rebuilding each page.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/track-facebook-ad-conversions-meta-pixel-ga4/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">How to Track Facebook Ad Conversions With Meta Pixel and GA4</h3>
+                    <p class="feature-card__text">Step-by-step setup for Meta Pixel and GA4 conversion tracking on your website. Covers pixel installation, event configuration, attribution, and common mistakes.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/facebook-ad-management-cost-agency-vs-diy/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Facebook Ad Management Cost: Agency vs DIY</h3>
+                    <p class="feature-card__text">Transparent breakdown of Facebook ad management costs, including agency fees, DIY time investment, and what results to expect at each budget level for 2026.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/instagram-ads-local-businesses-starter-guide/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Instagram Ads for Local Businesses: A Starter Guide</h3>
+                    <p class="feature-card__text">How local businesses can use Instagram ads to reach nearby customers. Covers targeting, ad creative, budgets, and measuring local campaign results step by step.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/why-your-website-loads-slowly-common-causes/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Why Your Website Loads Slowly (Common Causes)</h3>
+                    <p class="feature-card__text">Diagnose why your website is slow. The seven most common causes of poor load times and practical fixes for each, from images to plugins to hosting architecture.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/pagespeed-insights-vs-gtmetrix-vs-webpagetest/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">PageSpeed vs GTmetrix vs WebPageTest Compared</h3>
+                    <p class="feature-card__text">Comparison of the three main website speed testing tools. What each one measures, when to use each, and which performance scores Google uses for rankings.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/website-compliance-medical-device-companies/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Website Compliance for Medical Device Companies</h3>
+                    <p class="feature-card__text">What medical device company websites must get right for HIPAA, FDA, and ADA compliance. A practical checklist covering regulatory website requirements.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/seo-healthcare-practices/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">SEO for Healthcare Practices: How Patients Find You</h3>
+                    <p class="feature-card__text">How patients search for healthcare providers and what your practice website needs to rank in local search. Covers Google Business Profile and content strategy.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/med-spa-website-design-converts-visitors/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Med Spa Website Design: What Converts Visitors</h3>
+                    <p class="feature-card__text">Design patterns and content strategies that turn med spa website visitors into booked appointments. Covers trust signals, service pages, and booking UX.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/pharma-field-marketing-websites/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Pharma Field Marketing: Website Strategy</h3>
+                    <p class="feature-card__text">How pharma field marketing teams can build compliant, fast, rep-friendly event and campaign websites without enterprise platform overhead or long timelines.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/law-firm-website-design-what-clients-look-for/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Law Firm Website Design: What Clients Look For</h3>
+                    <p class="feature-card__text">What potential clients evaluate on law firm websites before calling. Covers trust signals, practice area pages, attorney bios, and conversion design patterns.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/seo-home-service-companies-local-ranking/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">SEO for Home Service Companies: Local Ranking Guide</h3>
+                    <p class="feature-card__text">How plumbers, electricians, HVAC companies, and contractors rank in local search results. Covers Google Business Profile, service area pages, and reviews.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/professional-services-website-examples-convert/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Professional Services Website Examples</h3>
+                    <p class="feature-card__text">Design patterns and trust signals that turn professional services websites into lead generators. Client logos, case studies, and conversion flows for firms.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/b2b-saas-website-best-practices/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">B2B SaaS Website Best Practices: Speed, SEO, and Conversion</h3>
+                    <p class="feature-card__text">What B2B SaaS marketing sites need to rank and convert. Performance benchmarks, messaging frameworks, social proof placement, and conversion optimization.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/startup-website-on-a-budget/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Startup Website on a Budget: What to Build First</h3>
+                    <p class="feature-card__text">What early-stage startups should build first on a limited budget. A prioritized checklist from single landing page to full marketing site with SEO strategy.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/programmatic-seo-for-saas/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Programmatic SEO for SaaS Companies</h3>
+                    <p class="feature-card__text">How SaaS companies use programmatic SEO to build comparison, alternative, and integration pages at scale. Strategy, architecture, and working examples.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/franchise-website-strategy-one-codebase/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Franchise Website Strategy: One Codebase</h3>
+                    <p class="feature-card__text">How franchise and multi-location businesses manage websites across 10-500 locations with a single codebase. Template strategy, local SEO, and cost savings.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/local-seo-multi-location-page-per-location/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Local SEO for Multi-Location Businesses</h3>
+                    <p class="feature-card__text">How to build and optimize individual location pages for multi-location businesses. Unique content requirements, schema markup, and GBP integration tactics.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/real-estate-website-design-idx-alternatives/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Real Estate Website Design: IDX Alternatives That Load Fast</h3>
+                    <p class="feature-card__text">Why traditional IDX plugins slow down real estate websites and what faster alternatives exist. Performance benchmarks, lead capture, and local SEO strategy.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/seo-real-estate-agents-city-homes-for-sale/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">SEO for Real Estate Agents: City Pages</h3>
+                    <p class="feature-card__text">How real estate agents rank for local home search queries with neighborhood pages, content strategy, and proven tactics for competing against portal sites.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/conference-website-checklist/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Conference Website Checklist: 12 Must-Haves</h3>
+                    <p class="feature-card__text">The 12 features every conference website needs: registration flow, speaker pages, sponsor tiers, agenda display, mobile optimization, SEO, and tracking.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/conference-organizers-cut-registration-platform-fees/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Cut Conference Registration Fees to $0</h3>
+                    <p class="feature-card__text">Replace Eventbrite, Splash, and Cvent registration fees with a custom page. Zero per-registrant fees, full data ownership, and better conversion rates.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/squarespace-vs-custom-website/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Squarespace vs Custom Website: Full Comparison</h3>
+                    <p class="feature-card__text">Squarespace vs custom-built websites for small businesses compared on cost, PageSpeed, SEO, flexibility, and total cost of ownership over three years.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/wix-vs-static-html-comparison/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Wix vs Static HTML: Performance, Cost, and SEO Side-by-Side</h3>
+                    <p class="feature-card__text">Wix vs static HTML websites compared on mobile PageSpeed, hosting cost, SEO capability, page weight, and total cost of ownership. Data from audited sites.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/wordpress-alternatives-small-business/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">WordPress Alternatives for Small Business Websites</h3>
+                    <p class="feature-card__text">WordPress alternatives for small business websites ranked by performance. Static HTML, Webflow, Squarespace, and static site generators compared side by side.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/webflow-alternatives-speed-over-drag-and-drop/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Webflow Alternatives: When You Need Speed Over Drag-and-Drop</h3>
+                    <p class="feature-card__text">Webflow alternatives for teams that prioritize PageSpeed performance over visual editing. Static HTML, headless CMS, and SSG options compared in detail.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/eventbrite-alternatives-corporate-registration/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Eventbrite Alternatives for Corporate Event Registration</h3>
+                    <p class="feature-card__text">Eventbrite alternatives for corporate and B2B events: custom registration pages, Splash, Cvent, and Hopin compared on fees, branding, and data ownership.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/splash-vs-custom-event-sites/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Splash vs Custom Event Sites: Feature and Cost Comparison</h3>
+                    <p class="feature-card__text">Splash event platform vs custom-built event pages compared on features, annual cost, branding control, PageSpeed performance, and data ownership in detail.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/medical-device-event-marketing-fill-seats/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Medical Device Event Marketing: Fill Every Seat</h3>
+                    <p class="feature-card__text">How medical device companies fill physician dinners and KOL events using custom registration pages, targeted Facebook ads, and proper conversion tracking.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/facebook-ads-b2b-events-playbook/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Facebook Ads for B2B Events: A Playbook</h3>
+                    <p class="feature-card__text">Step-by-step guide to running Facebook ad campaigns for B2B events. Custom audiences, retargeting, ad creative, budgets, and conversion tracking.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/event-registration-page-not-converting/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Why Your Event Registration Page Isn't Converting</h3>
+                    <p class="feature-card__text">Common reasons event registration pages underperform and specific fixes for each. Page speed, form design, mobile UX, tracking, and social proof.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/event-landing-page-best-practices/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Event Landing Page Best Practices That Fill Seats</h3>
+                    <p class="feature-card__text">Proven event landing page best practices for higher registration rates. Page structure, copy hierarchy, form design, speed, and tracking setup for B2B and medical events.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/meta-pixel-ga4-setup-event-registration/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Meta Pixel and GA4 Setup for Event Registration Pages</h3>
+                    <p class="feature-card__text">Step-by-step guide to installing Meta Pixel and GA4 on event registration pages. Track registrations, build retargeting audiences, and measure cost per lead.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/lunch-and-learn-marketing-medical-device/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Lunch and Learn Marketing for Medical Device Companies</h3>
+                    <p class="feature-card__text">How medical device companies fill lunch-and-learn seats with targeted digital marketing. Registration pages, Facebook ads, email sequences, and tracking.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/custom-event-registration-page-vs-eventbrite/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Custom Event Registration Page vs Eventbrite: Full Comparison</h3>
+                    <p class="feature-card__text">A direct comparison of custom event registration pages vs Eventbrite on cost, speed, conversion rates, branding, tracking, and control. Real pricing included.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/facebook-retargeting-conference-attendees/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Facebook Retargeting for Conference Attendees</h3>
+                    <p class="feature-card__text">How to use Facebook retargeting to convert event page visitors into registrants and past attendees into repeat attendees. Pixel setup, audience segmentation, and ad sequencing.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/linkedin-ads-vs-facebook-ads-b2b-events/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">LinkedIn Ads vs Facebook Ads for B2B Events</h3>
+                    <p class="feature-card__text">A direct comparison of LinkedIn and Facebook ads for promoting B2B events. CPM, cost per lead, targeting options, retargeting, and when each platform wins.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/event-registration-page-checklist/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Event Registration Page Checklist: 15 Elements</h3>
+                    <p class="feature-card__text">A 15-point checklist for event registration pages that convert. Covers headline, form design, speed, tracking, mobile UX, and social proof with actionable steps.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/facebook-custom-audiences-event-marketing/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Facebook Custom Audiences for Event Marketing</h3>
+                    <p class="feature-card__text">Step-by-step guide to setting up Facebook Custom Audiences for event promotion. List uploads, match rates, lookalikes, and retargeting setup explained.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/event-confirmation-email-templates/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Event Confirmation Emails That Drive Attendance</h3>
+                    <p class="feature-card__text">Email templates and sequences for event confirmation, reminders, and follow-up. Subject lines, timing, and content that reduce no-shows and boost attendance.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/track-event-roi-facebook-ads-filled-seats/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Track Event ROI: Facebook Ads to Filled Seats</h3>
+                    <p class="feature-card__text">How to set up full attribution from Facebook ad spend to event registrations to actual attendance. UTM parameters, GA4, Meta Pixel, and ROI calculation.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/event-landing-page-speed-optimization/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Event Landing Page Speed Optimization Guide</h3>
+                    <p class="feature-card__text">How to make event registration pages load in under 1 second. Image compression, lazy loading, font optimization, hosting, and platform comparison.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/event-countdown-email-sequence/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Event Countdown Email Sequence: When to Send What</h3>
+                    <p class="feature-card__text">A week-by-week email schedule for promoting events before registration closes. Subject lines, content angles, and send timing for each phase of the countdown.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/why-is-my-wordpress-site-so-slow/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Why Is My WordPress Site So Slow? The Real Answer</h3>
+                    <p class="feature-card__text">WordPress is slow because of its architecture, not your hosting plan. Database queries, PHP execution, and plugin overhead create a performance floor no optimization can fix.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/is-wordpress-worth-it-2026/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Is WordPress Worth It in 2026? An Honest Cost Breakdown</h3>
+                    <p class="feature-card__text">WordPress market share is declining, maintenance costs are rising, and faster alternatives exist. Here is the honest math on whether WordPress is still the right choice in 2026.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/true-cost-wordpress-website/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">The True Cost of a WordPress Website Nobody Tells You Before You Buy</h3>
+                    <p class="feature-card__text">WordPress is free software with expensive dependencies. Hosting, plugins, maintenance, and security add $1,300-$3,900 per year that nobody mentions upfront.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/wordpress-security-vulnerabilities-2026/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">11,334 Vulnerabilities in One Year: The WordPress Security Problem</h3>
+                    <p class="feature-card__text">WordPress had 11,334 new security vulnerabilities in 2025 alone. 92% came from plugins. Here is what that means for your site and how to eliminate the risk entirely.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/wordpress-maintenance-trap/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">WordPress Maintenance Is a Trap: What Small Business Owners Learn Too Late</h3>
+                    <p class="feature-card__text">WordPress requires ongoing maintenance that costs $50-200 per month and breaks your site regularly. Here is what the maintenance cycle really looks like and how to escape it.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/why-webflow-site-scores-55-mobile/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Why Your Webflow Site Scores 55 on Mobile PageSpeed</h3>
+                    <p class="feature-card__text">Webflow sites average 55-75 on mobile PageSpeed because of platform JavaScript, interaction scripts, and CMS overhead. Here is exactly what slows them down and what to do about it.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/true-cost-webflow-website/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">The True Cost of a Webflow Website: $468/Year for Something You Don't Own</h3>
+                    <p class="feature-card__text">Webflow hosting costs $168-$468 per year and you never own your code. Here is the full cost breakdown and what it means for your business long-term.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/framer-alternatives-own-your-code/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Framer Alternatives: The Case for Owning Your Website's Code</h3>
+                    <p class="feature-card__text">Framer generates React for marketing pages that don't need React. Here are the alternatives for teams that want speed, code ownership, and no monthly platform fees.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/migrate-webflow-to-static-html/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">How to Migrate From Webflow to Static HTML (Step-by-Step)</h3>
+                    <p class="feature-card__text">A practical guide to migrating from Webflow to static HTML without losing SEO rankings. Covers CMS content extraction, URL preservation, and the export limitations you need to plan for.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/framer-vs-custom-website-react-overkill/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Framer vs Custom Website: When React Is Overkill for Your Marketing Site</h3>
+                    <p class="feature-card__text">Framer outputs React for every page. A marketing site does not need React. Here is when custom static HTML outperforms Framer on speed, cost, and long-term ownership.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/page-speed-optimization-guide/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Page Speed Optimization: The Complete Guide for 2026</h3>
+                    <p class="feature-card__text">Everything you need to know about page speed optimization in 2026. Covers Core Web Vitals, image optimization, render-blocking resources, caching, CDNs, CMS overhead, and when to rebuild instead of optimize.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/wordpress-vs-jamstack-small-business/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">WordPress vs Jamstack: What Small Business Owners Need to Know</h3>
+                    <p class="feature-card__text">Jamstack is the developer answer to WordPress. Static HTML is the business owner answer. Here is how all three compare on speed, cost, and complexity for small business sites.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/wordpress-plugin-bloat-slowing-site/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">WordPress Plugin Bloat: How 20 Plugins Are Slowing Your Site to a Crawl</h3>
+                    <p class="feature-card__text">Each WordPress plugin adds JavaScript, CSS, and database queries to every page load. Here is exactly how plugin bloat destroys performance and what to do about it.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/ditched-wordpress-site-3x-faster/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">I Ditched WordPress and My Site Got 3x Faster Overnight</h3>
+                    <p class="feature-card__text">A real migration story: WordPress site scoring 52 on mobile, rebuilt as static HTML, scoring 97. Same design, same content, 3x faster. Here is exactly what changed.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/why-developer-recommends-wordpress/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Why Your Web Developer Keeps Recommending WordPress (Hint: It's Not About You)</h3>
+                    <p class="feature-card__text">WordPress creates recurring revenue for developers through hosting markups, maintenance retainers, and plugin dependencies. Understanding the incentives helps you choose the right platform.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/90-pagespeed-score-business-impact/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">What a 90+ PageSpeed Score Actually Means for Your Business</h3>
+                    <p class="feature-card__text">A 90+ PageSpeed score is not a vanity metric. It means faster load times, higher conversions, better rankings, and lower bounce rates. Here is the business case in concrete numbers.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/escaping-webflow-vendor-lock-in/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Escaping Webflow Vendor Lock-In: A Business Owner's Guide</h3>
+                    <p class="feature-card__text">Webflow does not let you meaningfully export your site. CMS content is stripped, interactions break, and generated code is unmaintainable. Here is what lock-in looks like and how to escape.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/tested-50-webflow-sites-pagespeed/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">I Tested 50 Webflow Sites on PageSpeed Insights. Here's What I Found.</h3>
+                    <p class="feature-card__text">We ran 50 real Webflow sites through Google PageSpeed Insights on mobile. The average score was 61. Only 3 broke 80. Here are the full results and what they mean.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/zero-dollar-website-hosting-static-html/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">The $0/Month Website: How Static HTML on GitHub Pages Beats Paid Hosting</h3>
+                    <p class="feature-card__text">GitHub Pages, Cloudflare Pages, and Netlify offer free hosting with global CDN, SSL, and unlimited bandwidth. Here is how static HTML eliminates your hosting bill permanently.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/website-builder-is-your-landlord/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Your Website Builder Is Your Landlord: The Hidden Cost of Not Owning Your Code</h3>
+                    <p class="feature-card__text">Webflow, Framer, Squarespace, and Wix charge monthly rent for something you built. Here is why owning your website code is a business decision, not a technical one.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/agencies-ditching-webflow-static-2026/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Why Agencies Are Ditching Webflow for Static Sites in 2026</h3>
+                    <p class="feature-card__text">Web agencies are moving away from Webflow to static HTML and Astro. The reasons: client PageSpeed demands, hosting cost pressure, and code ownership requirements.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/sharppages-vs-wordpress-agencies/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">SharpPages vs WordPress Agencies: Speed, Cost, and Ownership Compared</h3>
+                    <p class="feature-card__text">A direct comparison of SharpPages static sites vs WordPress agency builds on PageSpeed, hosting cost, maintenance burden, and code ownership.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/sharppages-vs-webflow-agencies/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">SharpPages vs Webflow Agencies: Performance and Total Cost</h3>
+                    <p class="feature-card__text">Comparing SharpPages static sites to Webflow agency builds on PageSpeed performance, hosting fees, code export limitations, and long-term vendor lock-in.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/sharppages-vs-squarespace/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">SharpPages vs Squarespace: When DIY Costs More Than Done-for-You</h3>
+                    <p class="feature-card__text">Squarespace looks affordable at $16/month. Over 3 years with a PageSpeed score of 40-65, DIY costs more than a professionally built static site that scores 90+.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/sharppages-vs-wix/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">SharpPages vs Wix: Performance, SEO, and the Hidden Costs</h3>
+                    <p class="feature-card__text">Wix sites score 35-60 on mobile PageSpeed, have SEO limitations Google has documented, and cost more over 3 years than a static site scoring 90+.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/sharppages-vs-traditional-agencies/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">SharpPages vs Traditional Agencies: 3x Faster at Half the Price</h3>
+                    <p class="feature-card__text">Traditional web agencies take 6-12 weeks and charge $10K-25K. SharpPages delivers in 2-4 weeks at a fraction of the cost with better performance.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/best-pagespeed-optimization-services/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Best Page Speed Optimization Services in 2026</h3>
+                    <p class="feature-card__text">Comparing the top page speed optimization services in 2026: SharpPages, NitroPack, WP Rocket, Cloudflare, and GTmetrix. Which one actually fixes the root cause of slow load times?</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/best-wordpress-migration-services/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Best WordPress Migration Services: Move to a Faster Platform</h3>
+                    <p class="feature-card__text">The best WordPress migration services in 2026 compared. Migrate from WordPress to static HTML, Webflow, Squarespace, Shopify, or another WordPress host.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/best-flat-fee-web-design-agencies/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Best Flat-Fee Web Design Agencies (No Hourly Billing)</h3>
+                    <p class="feature-card__text">The best flat-fee web design agencies in 2026. No hourly billing, no surprise invoices. Compare SharpPages, Jepto, Jenga Creative, and more on price, PageSpeed, and deliverables.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/best-alternatives-expensive-web-agencies/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Best Alternatives to Expensive Web Agencies in 2026</h3>
+                    <p class="feature-card__text">Five alternatives to expensive web agencies: SharpPages, Carrd, Webflow DIY, Framer, and WordPress.com. Get a professional site without a $10K+ agency fee.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/best-website-audit-tools-services/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Best Website Audit Tools and Services in 2026</h3>
+                    <p class="feature-card__text">The best website audit tools and services in 2026: SharpPages free audit, PageSpeed Insights, GTmetrix, Screaming Frog, and Ahrefs. Which one finds the problems that actually matter?</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/website-speed-checklist-47-items/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">The Complete Website Speed Checklist: 47 Things to Check</h3>
+                    <p class="feature-card__text">A 47-item checklist covering images, CSS, JavaScript, fonts, server configuration, third-party scripts, and CMS-specific fixes to maximize your PageSpeed score.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/core-web-vitals-quick-fix-guide/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Core Web Vitals Quick-Fix Guide: Pass All Three in One Weekend</h3>
+                    <p class="feature-card__text">A practical weekend guide to fixing LCP, CLS, and INP. Friday evening audit, Saturday image and layout fixes, Sunday JavaScript and verification.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                <a href="/blog/website-migration-checklist-30-steps/" class="feature-card" style="text-decoration: none; display: block;">
+                    <h3 class="feature-card__title">Website Migration Checklist: 30 Steps to Switch Platforms Without Losing Rankings</h3>
+                    <p class="feature-card__text">A 30-step checklist for migrating from WordPress, Webflow, or any CMS to a new platform. Pre-migration, during migration, and post-migration steps to preserve SEO rankings.</p>
+                    <span style="color: var(--color-primary); font-size: var(--text-sm); font-weight: 600; margin-top: var(--space-3); display: inline-block;">Read article &rarr;</span>
+                </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>

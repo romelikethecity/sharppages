@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>Event Landing Page Speed Optimization Guide | SharpPages</title>
+    <meta name="description" content="How to make event registration pages load in under 1 second. Image compression, lazy loading, font optimization, hosting, and platform comparison.">
+    <link rel="canonical" href="https://sharppages.com/blog/event-landing-page-speed-optimization/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/event-landing-page-speed-optimization/">
+    <meta property="og:title" content="Event Landing Page Speed Optimization Guide | SharpPages">
+    <meta property="og:description" content="How to make event registration pages load in under 1 second. Image compression, lazy loading, font optimization, hosting, and platform comparison.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Event Landing Page Speed Optimization Guide | SharpPages">
+    <meta name="twitter:description" content="How to make event registration pages load in under 1 second. Image compression, lazy loading, font optimization, hosting, and platform comparison.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Event Landing Page Speed Optimization Guide",
+      "item": "https://sharppages.com/blog/event-landing-page-speed-optimization/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Event Landing Page Speed Optimization Guide",
+  "description": "How to make event registration pages load in under 1 second. Image compression, lazy loading, font optimization, hosting, and platform comparison.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/event-landing-page-speed-optimization/",
+  "mainEntityOfPage": "https://sharppages.com/blog/event-landing-page-speed-optimization/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Event Landing Page Speed Optimization Guide</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Event Landing Page Speed Optimization Guide</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>Speed Is the First Conversion Factor</h2>
+                <p>Your event registration page gets most of its traffic from Facebook ads and email links. Both channels deliver visitors who are on their phone, between tasks, with limited patience. <a href="https://web.dev/learn/performance/why-speed-matters" target="_blank" rel="noopener noreferrer">Google's performance research</a> shows that 53% of mobile visits are abandoned if a page takes longer than 3 seconds to load.</p>
+<p>For event pages, this is not theoretical. You are paying for every click. A $1.50 click that bounces because the page loaded in 4 seconds is $1.50 burned. Multiply that across a campaign with 400 clicks, and slow speed costs you hundreds of dollars in wasted ad spend before anyone even sees your registration form.</p>
+<p>The target: under 1 second to interactive on a mobile connection. This guide covers every optimization that gets you there.</p>
+                <h2>Measure Before You Optimize</h2>
+                <p>Run your page through <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a> using the mobile setting. Note four numbers:</p>
+<ul>
+<li><strong>Performance score:</strong> 0-100. Target: 90+.</li>
+<li><strong>Largest Contentful Paint (LCP):</strong> How long until the largest visible element loads. Target: under 2.5 seconds.</li>
+<li><strong>Total Blocking Time (TBT):</strong> How long the browser is blocked by JavaScript. Target: under 200ms.</li>
+<li><strong>Cumulative Layout Shift (CLS):</strong> How much the page layout shifts while loading. Target: under 0.1.</li>
+</ul>
+<p>These are <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener noreferrer">Core Web Vitals</a>, the metrics Google uses as ranking factors. They also directly correlate with user experience and conversion rates.</p>
+<p>Run the test three times and average the results. PageSpeed scores fluctuate between runs because they simulate variable network conditions. For a full breakdown of these metrics, read our <a href="/blog/core-web-vitals-explained-lcp-cls-tbt/">Core Web Vitals guide</a>.</p>
+                <h2>Image Optimization: The Biggest Win</h2>
+                <p>Images are the single largest contributor to slow page loads on event pages. A hero image of the venue, speaker headshots, sponsor logos. If any of these are unoptimized, they add seconds to load time.</p>
+<p><strong>Use WebP or AVIF format.</strong> A 500KB JPEG becomes a 100-150KB WebP file with no visible quality loss. Every modern browser supports WebP. AVIF compresses further but has slightly less browser support. Stick with WebP for maximum compatibility.</p>
+<p><strong>Size images to their container.</strong> If a speaker headshot displays at 200x200 pixels, do not upload a 2000x2000 pixel original. Resize it to 400x400 (2x for retina displays) before upload. A 2000px image scaled down by CSS still downloads at full size.</p>
+<p><strong>Use responsive srcset.</strong> Serve different image sizes to different devices. A phone with a 390px-wide viewport does not need the same image as a 1920px desktop monitor. The <code>srcset</code> attribute lets the browser pick the right size automatically.</p>
+<p><strong>Compress aggressively.</strong> Tools like <a href="https://squoosh.app/" target="_blank" rel="noopener noreferrer">Squoosh</a> (free, by Google) let you dial quality down to 75-80% for WebP with minimal visual difference. For event page images, 80% quality is indistinguishable from 100% on a phone screen.</p>
+                <h2>Lazy Loading Below-the-Fold Images</h2>
+                <p>Only images visible on the initial screen need to load immediately. Speaker bios, venue maps, sponsor logos, and agenda details below the fold can use lazy loading.</p>
+<p>Add <code>loading="lazy"</code> to any <code>&lt;img&gt;</code> tag below the fold. The browser will not download the image until the user scrolls near it. This reduces the initial page weight and speeds up the first paint.</p>
+<p>Do NOT lazy-load the hero image or any image visible above the fold. Lazy loading those causes a blank space that fills in after a delay, which worsens LCP and looks broken to the visitor.</p>
+<p>For background images set via CSS, lazy loading requires JavaScript (Intersection Observer API). For most event pages, converting CSS backgrounds to <code>&lt;img&gt;</code> tags with <code>loading="lazy"</code> is simpler and more effective.</p>
+                <h2>Font Optimization</h2>
+                <p>Custom fonts (Google Fonts, Adobe Fonts, self-hosted font files) are a common source of render delay. The browser discovers the font file, downloads it, and then re-renders all text. Until the font loads, text either flashes (FOUT) or remains invisible (FOIT).</p>
+<p><strong>Self-host your fonts.</strong> Instead of loading from Google Fonts CDN (which requires a DNS lookup + connection to fonts.googleapis.com), download the font files and serve them from your own domain. This eliminates one network roundtrip.</p>
+<p><strong>Use font-display: swap.</strong> Add <code>font-display: swap;</code> to your @font-face declarations. This tells the browser to show text in a fallback font immediately while the custom font loads. The text flashes once when the custom font arrives, but the content is readable from the first frame.</p>
+<p><strong>Subset the font.</strong> If you only use Latin characters, download a Latin-only subset instead of the full Unicode font file. A full Google Font with all character sets can be 100-300KB. The Latin subset is 15-30KB.</p>
+<p><strong>Consider system fonts.</strong> For event pages where brand typography is not critical, system font stacks (<code>-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif</code>) load instantly with zero network requests. The visual difference on a phone screen is negligible.</p>
+                <h2>Minimize JavaScript</h2>
+                <p>Every JavaScript file blocks page rendering until it downloads and executes. An event registration page needs very little JavaScript: form validation, the Meta Pixel, and GA4. That is it.</p>
+<p>If your page loads jQuery, a CSS framework's JS, animation libraries, chat widgets, or a page builder runtime, each one adds to Total Blocking Time. A typical WordPress page loads 8-20 JavaScript files. A static event page loads 1-2.</p>
+<p><strong>Defer non-critical scripts.</strong> Add <code>defer</code> to any script tag that does not need to run before the page renders. GA4 and Meta Pixel scripts should use <code>async</code> so they do not block rendering.</p>
+<p><strong>Remove unused scripts.</strong> Audit every script on the page. If a script is not essential for the registration form, tracking, or basic page functionality, remove it. Social share buttons, live chat widgets, and third-party analytics beyond GA4 are common culprits.</p>
+<p>The goal: Total Blocking Time under 50ms. A static HTML event page achieves this by default because there is almost no JavaScript to block rendering in the first place.</p>
+                <h2>Hosting and CDN</h2>
+                <p>Where your page is hosted determines the baseline latency before any optimization takes effect.</p>
+<p><strong>Shared WordPress hosting (GoDaddy, Bluehost, HostGator):</strong> Server response times of 200-800ms. The server is shared with hundreds of other sites and runs PHP + MySQL on every request. This latency is added before the browser starts receiving content.</p>
+<p><strong>Managed WordPress hosting (WP Engine, Kinsta):</strong> 100-300ms server response. Better infrastructure, but still running the WordPress stack.</p>
+<p><strong>Static hosting on a CDN (GitHub Pages, Cloudflare Pages, Netlify):</strong> 10-50ms server response. The HTML file sits on a CDN edge node physically close to the visitor. No database, no PHP, no server-side processing. The file is delivered instantly.</p>
+<p>For event pages where most traffic comes from ads (meaning visitors are geographically distributed), CDN hosting matters. A visitor in Miami clicking your ad should get the page from a Miami edge node, not a server in Oregon. CDN-based static hosting does this automatically. Traditional hosting does not.</p>
+<p>Static hosting also costs $0 on GitHub Pages, Cloudflare Pages, and Netlify. Compared to $5-50/month for WordPress hosting, the cost savings are a bonus on top of the performance improvement.</p>
+                <h2>Platform Speed Comparison</h2>
+                <p>The platform you build on sets a speed ceiling that optimization cannot exceed.</p>
+<p><strong>Static HTML (our event pages):</strong> 95-99 PageSpeed mobile score. LCP under 1 second. TBT under 50ms.</p>
+<p><strong>Webflow:</strong> 75-85 PageSpeed mobile score. Ships a JavaScript runtime on every page. LCP 1.5-3 seconds.</p>
+<p><strong>Eventbrite hosted pages:</strong> 40-65 PageSpeed mobile score. Heavy JavaScript, third-party scripts, platform overhead. LCP 3-5 seconds.</p>
+<p><strong>Splash:</strong> 50-70 PageSpeed mobile score. Template-driven, but still runs significant JavaScript. LCP 2-4 seconds.</p>
+<p><strong>WordPress with caching:</strong> 65-80 PageSpeed mobile score. Caching helps, but the PHP/MySQL stack and plugin overhead set a floor. LCP 2-4 seconds.</p>
+<p><strong>WordPress without caching:</strong> 40-60 PageSpeed mobile score. Every page load queries the database and executes PHP. LCP 3-6 seconds.</p>
+<p>If your current platform scores below 80 on mobile and you are spending money on ads, the platform is costing you registrations. For a detailed comparison, see our guide on <a href="/blog/webflow-vs-static-html-performance-compared/">Webflow vs static HTML performance</a>.</p>
+                <h2>Quick Wins Checklist</h2>
+                <p>In order of impact, these optimizations deliver the most improvement for the least effort:</p>
+<ol>
+<li><strong>Convert images to WebP</strong> and resize to actual display dimensions. This alone can cut page weight by 50-80%.</li>
+<li><strong>Lazy-load below-the-fold images.</strong> Add <code>loading="lazy"</code> to every image not visible on the initial screen.</li>
+<li><strong>Self-host fonts</strong> instead of loading from Google Fonts CDN. Eliminates a DNS lookup and external connection.</li>
+<li><strong>Add defer/async to scripts.</strong> Move non-critical JavaScript out of the render path.</li>
+<li><strong>Remove unused CSS and JavaScript.</strong> If a stylesheet or script file is not used on the event page, do not load it.</li>
+<li><strong>Enable gzip or Brotli compression</strong> on your server. Most modern hosts support this, but it is not always enabled by default.</li>
+<li><strong>Set cache headers.</strong> Static assets (images, CSS, fonts) should have <code>Cache-Control: max-age=31536000</code> so returning visitors load them from cache.</li>
+</ol>
+<p>Run PageSpeed Insights again after each change to measure the impact. Some optimizations (like image compression) produce dramatic improvements. Others (like cache headers) improve repeat visits but do not affect first-load scores.</p>
+                <h2>Get a Fast Page From Day One</h2>
+                <p>Every event page we build scores 90+ on PageSpeed mobile out of the box. Static HTML, CDN-hosted, WebP images, self-hosted fonts, minimal JavaScript. The speed optimization described in this guide is baked into the build process, not bolted on afterward.</p>
+<p>Event pages start at $2,000 to $4,000. Clones for additional events: $500 to $1,000. <a href="/audit/">Run a free audit</a> on your current event page to see where it stands, or <a href="/contact/">contact us</a> to build a fast one from scratch. See <a href="/pricing/">pricing</a> for full details.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good PageSpeed score for an event registration page?", "acceptedAnswer": {"@type": "Answer", "text": "90+ on mobile. This corresponds to a page that loads in under 1 second and passes all Core Web Vitals thresholds. Most event platform pages (Eventbrite, Splash) score 40-70 on mobile. Static HTML pages consistently score 95-99."}}, {"@type": "Question", "name": "How much does page speed affect event registrations?", "acceptedAnswer": {"@type": "Answer", "text": "Every second of load time above 3 seconds on mobile costs roughly 7% in conversions, per Google's performance research. For an event page receiving 500 ad-driven visitors, a 2-second improvement could mean 35-70 additional registrations."}}, {"@type": "Question", "name": "Is WebP supported by all browsers?", "acceptedAnswer": {"@type": "Answer", "text": "All modern browsers (Chrome, Firefox, Safari, Edge) support WebP. Safari added support in 2020. The only browsers that do not support WebP are Internet Explorer (discontinued) and very old mobile browsers. For event pages, WebP coverage is effectively 100%."}}, {"@type": "Question", "name": "Should I use a CDN for my event page?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. CDN hosting (GitHub Pages, Cloudflare Pages, Netlify) serves your page from an edge node close to each visitor, cutting latency from 200-800ms to 10-50ms. It is also free. If your event draws attendees from multiple cities, CDN hosting ensures fast load times regardless of location."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">What is a good PageSpeed score for an event registration page?</summary>
+                    <div class="faq-item__answer"><p>90+ on mobile. This corresponds to a page that loads in under 1 second and passes all Core Web Vitals thresholds. Most event platform pages (Eventbrite, Splash) score 40-70 on mobile. Static HTML pages consistently score 95-99.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How much does page speed affect event registrations?</summary>
+                    <div class="faq-item__answer"><p>Every second of load time above 3 seconds on mobile costs roughly 7% in conversions, per Google's performance research. For an event page receiving 500 ad-driven visitors, a 2-second improvement could mean 35-70 additional registrations.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Is WebP supported by all browsers?</summary>
+                    <div class="faq-item__answer"><p>All modern browsers (Chrome, Firefox, Safari, Edge) support WebP. Safari added support in 2020. The only browsers that do not support WebP are Internet Explorer (discontinued) and very old mobile browsers. For event pages, WebP coverage is effectively 100%.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Should I use a CDN for my event page?</summary>
+                    <div class="faq-item__answer"><p>Yes. CDN hosting (GitHub Pages, Cloudflare Pages, Netlify) serves your page from an edge node close to each visitor, cutting latency from 200-800ms to 10-50ms. It is also free. If your event draws attendees from multiple cities, CDN hosting ensures fast load times regardless of location.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>

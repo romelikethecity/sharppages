@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>Framer vs Custom Website: When React Is Overkill for Your Marketing Site | SharpPages</title>
+    <meta name="description" content="Framer outputs React for every page. A marketing site does not need React. Here is when custom static HTML outperforms Framer on speed, cost, and long-term ownership.">
+    <link rel="canonical" href="https://sharppages.com/blog/framer-vs-custom-website-react-overkill/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/framer-vs-custom-website-react-overkill/">
+    <meta property="og:title" content="Framer vs Custom Website: When React Is Overkill for Your Marketing Site | SharpPages">
+    <meta property="og:description" content="Framer outputs React for every page. A marketing site does not need React. Here is when custom static HTML outperforms Framer on speed, cost, and long-term ownership.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Framer vs Custom Website: When React Is Overkill for Your Marketing Site | SharpPages">
+    <meta name="twitter:description" content="Framer outputs React for every page. A marketing site does not need React. Here is when custom static HTML outperforms Framer on speed, cost, and long-term ownership.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Framer vs Custom Website: When React Is Overkill for Your Marketing Site",
+      "item": "https://sharppages.com/blog/framer-vs-custom-website-react-overkill/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Framer vs Custom Website: When React Is Overkill for Your Marketing Site",
+  "description": "Framer outputs React for every page. A marketing site does not need React. Here is when custom static HTML outperforms Framer on speed, cost, and long-term ownership.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/framer-vs-custom-website-react-overkill/",
+  "mainEntityOfPage": "https://sharppages.com/blog/framer-vs-custom-website-react-overkill/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Framer vs Custom Website: When React Is Overkill for Your Marketing Site</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Framer vs Custom Website: When React Is Overkill for Your Marketing Site</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>Two Ways to Build a Website</h2>
+                <p>Framer lets designers build websites visually and publishes them as React applications. A custom website is hand-coded in HTML, CSS, and optionally JavaScript. Both produce a website. The difference is what gets shipped to the browser.</p>
+<p>Framer ships a React application: runtime, components, hydration code, framework CSS. A custom static site ships HTML, CSS, and minimal JavaScript. The difference in payload is 200-400KB of framework overhead that Framer adds and a custom site does not.</p>
+<p>For a web application (a dashboard, a SaaS product, a social platform), React makes sense. For a marketing website (homepage, about, services, contact, blog), React is overhead with no benefit.</p>
+                <h2>Performance: The Numbers</h2>
+                <p>We compared typical Framer marketing sites against custom static sites of similar complexity:</p>
+<table>
+<tr><th>Metric</th><th>Framer (avg)</th><th>Custom Static (avg)</th></tr>
+<tr><td>Mobile PageSpeed</td><td>58</td><td>96</td></tr>
+<tr><td>LCP</td><td>3.2s</td><td>0.8s</td></tr>
+<tr><td>Total Blocking Time</td><td>350ms</td><td>15ms</td></tr>
+<tr><td>CLS</td><td>0.12</td><td>0.01</td></tr>
+<tr><td>Total page weight</td><td>1.4MB</td><td>150KB</td></tr>
+<tr><td>JavaScript shipped</td><td>400-600KB</td><td>5-15KB</td></tr>
+</table>
+<p>The 38-point PageSpeed gap is the difference between failing and passing Google's <a href="/blog/core-web-vitals-explained-lcp-cls-tbt/">Core Web Vitals</a> thresholds. Framer sites typically fail LCP and TBT on mobile. Static sites pass all three metrics comfortably.</p>
+<p>The JavaScript difference is the most telling: Framer ships 400-600KB of JavaScript for a page that needs 5-15KB. That is 30-40x more JavaScript than necessary. On mobile, every KB of JavaScript costs parse time, compile time, and execution time.</p>
+                <h2>What React Does on Your Marketing Page</h2>
+                <p>When a visitor loads a Framer page, here is what React does:</p>
+<ol>
+<li><strong>Server sends HTML.</strong> The initial HTML is server-rendered. This is fast. But it is not interactive yet.</li>
+<li><strong>React runtime loads.</strong> The browser downloads 40-50KB (gzipped) of React framework code.</li>
+<li><strong>Hydration begins.</strong> React walks through the entire DOM, attaches event listeners, and reconciles the server-rendered HTML with the client-side React tree. This means React re-processes every element on the page.</li>
+<li><strong>Components initialize.</strong> Framer's component library initializes animations, responsive behaviors, and interaction handlers.</li>
+<li><strong>Page becomes interactive.</strong> Only after steps 2-4 complete can the user interact with the page. Total time: 200-500ms on desktop, 500-1,500ms on mobile.</li>
+</ol>
+<p>On a static HTML page, step 1 happens and the page is done. It is interactive immediately. There is no hydration because there is no framework to hydrate. There are no components to initialize because there are no components. Click events work because they are native HTML, not React synthetic events.</p>
+<p>Hydration is the silent tax. It costs nothing when the page loads on a fast laptop with a fast connection. It costs 500-1,500ms on a mobile phone on a 4G connection. Google's PageSpeed test simulates exactly that scenario.</p>
+                <h2>Cost Comparison</h2>
+                <table>
+<tr><th></th><th>Framer</th><th>Custom Static</th></tr>
+<tr><td>Build cost (designer/developer)</td><td>$3,000-10,000</td><td>$3,000-6,000</td></tr>
+<tr><td>Monthly hosting</td><td>$10-30/site</td><td>$0</td></tr>
+<tr><td>Annual hosting</td><td>$120-360</td><td>$0</td></tr>
+<tr><td>3-year hosting total</td><td>$360-1,080</td><td>$0</td></tr>
+<tr><td>Code ownership</td><td>No (platform-locked)</td><td>Yes (full ownership)</td></tr>
+<tr><td>Export capability</td><td>No usable export</td><td>N/A (you already own the files)</td></tr>
+<tr><td>Mobile PageSpeed</td><td>50-70</td><td>90-99</td></tr>
+</table>
+<p>Build costs are comparable. The cost difference is in hosting (Framer charges monthly, static is free) and ownership (Framer locks you in, static gives you everything).</p>
+<p>Over 3 years, a Framer site costs $360-1,080 more in hosting alone. Factor in the performance disadvantage and the lock-in risk, and the total cost of ownership for Framer is significantly higher.</p>
+                <h2>When Framer Wins</h2>
+                <p>Framer is the right tool when:</p>
+<ul>
+<li><strong>Designers need to ship without developers.</strong> If your workflow is designer-builds, designer-publishes, and no developer is involved, Framer is genuinely faster to build. The Figma-like interface is unmatched for designer-led teams.</li>
+<li><strong>You are prototyping rapidly.</strong> If you need to test 10 landing page variants in a week, Framer's speed-to-publish is valuable. Performance matters less when the page is a 2-week experiment.</li>
+<li><strong>Interactions are the product.</strong> If your site IS the portfolio and the interactions demonstrate your design capabilities, Framer's animation engine justifies the overhead.</li>
+</ul>
+<p>For everything else (business websites, service pages, content sites, anything that needs to rank in search), custom static HTML is faster, cheaper, and gives you ownership.</p>
+                <h2>Making the Decision</h2>
+                <p>Ask two questions:</p>
+<ol>
+<li><strong>Does your site need to rank in organic search?</strong> If yes, static HTML gives you a 30-40 point PageSpeed advantage. In competitive search categories, that is the difference between page 1 and page 2.</li>
+<li><strong>Do you want to pay monthly for hosting forever?</strong> If no, static HTML on GitHub Pages or Cloudflare Pages costs $0. Framer charges $10-30/month indefinitely.</li>
+</ol>
+<p>If both answers point to static, the choice is clear. New builds start at $3,000. <a href="/audit/">Audit your current site</a> or <a href="/contact/">get a quote</a>. See all <a href="/pricing/">pricing options</a>.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is Framer faster to build than custom code?", "acceptedAnswer": {"@type": "Answer", "text": "For designers working without developers, yes. Framer's visual editor is faster for initial builds. But the ongoing costs (hosting, lock-in, performance limitations) make custom static HTML cheaper over time. Build speed vs long-term total cost is the core trade-off."}}, {"@type": "Question", "name": "Can Framer sites rank on Google?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, Framer sites can rank. But they compete with a PageSpeed disadvantage. Mobile scores of 50-70 mean failing Core Web Vitals thresholds. In competitive niches where other factors are equal, faster sites outrank slower ones. The ranking ceiling is lower on Framer than on static HTML."}}, {"@type": "Question", "name": "Is React bad for websites?", "acceptedAnswer": {"@type": "Answer", "text": "React is excellent for web applications (dashboards, SaaS products, interactive tools). It is overkill for marketing websites. The runtime, hydration, and component overhead add 200-400KB of JavaScript to pages that need 5-15KB. The right tool depends on what you are building."}}, {"@type": "Question", "name": "What is hydration and why does it slow my site?", "acceptedAnswer": {"@type": "Answer", "text": "Hydration is the process where React re-processes server-rendered HTML on the client side to attach event listeners and make the page interactive. On a marketing page with minimal interactivity, hydration adds 200-500ms of JavaScript execution time for little benefit. Static HTML is interactive immediately without hydration."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">Is Framer faster to build than custom code?</summary>
+                    <div class="faq-item__answer"><p>For designers working without developers, yes. Framer's visual editor is faster for initial builds. But the ongoing costs (hosting, lock-in, performance limitations) make custom static HTML cheaper over time. Build speed vs long-term total cost is the core trade-off.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can Framer sites rank on Google?</summary>
+                    <div class="faq-item__answer"><p>Yes, Framer sites can rank. But they compete with a PageSpeed disadvantage. Mobile scores of 50-70 mean failing Core Web Vitals thresholds. In competitive niches where other factors are equal, faster sites outrank slower ones. The ranking ceiling is lower on Framer than on static HTML.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Is React bad for websites?</summary>
+                    <div class="faq-item__answer"><p>React is excellent for web applications (dashboards, SaaS products, interactive tools). It is overkill for marketing websites. The runtime, hydration, and component overhead add 200-400KB of JavaScript to pages that need 5-15KB. The right tool depends on what you are building.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">What is hydration and why does it slow my site?</summary>
+                    <div class="faq-item__answer"><p>Hydration is the process where React re-processes server-rendered HTML on the client side to attach event listeners and make the page interactive. On a marketing page with minimal interactivity, hydration adds 200-500ms of JavaScript execution time for little benefit. Static HTML is interactive immediately without hydration.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>

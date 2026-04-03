@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="40" viewBox="0 0 260 40" fill="none">
+  <!-- Chevron stack icon -->
+  <path d="M4 4L16 20L4 36" stroke="#00C2E0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 4L26 20L14 36" stroke="#00C2E0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+  <!-- Wordmark -->
+  <text x="40" y="27" font-family="Instrument Sans, system-ui, sans-serif" font-weight="700" font-size="22" fill="#E4E8ED" letter-spacing="-0.02em">Sharp</text>
+  <text x="108" y="27" font-family="Instrument Sans, system-ui, sans-serif" font-weight="400" font-size="22" fill="#00C2E0" letter-spacing="-0.02em">Pages</text>
+</svg>

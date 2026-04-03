@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>Static Sites vs WordPress: Performance and Cost | SharpPages</title>
+    <meta name="description" content="A direct comparison of static HTML sites vs WordPress on performance, hosting cost, maintenance, security, and SEO. Includes data from real production sites.">
+    <link rel="canonical" href="https://sharppages.com/blog/static-sites-vs-wordpress/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/static-sites-vs-wordpress/">
+    <meta property="og:title" content="Static Sites vs WordPress: Performance and Cost | SharpPages">
+    <meta property="og:description" content="A direct comparison of static HTML sites vs WordPress on performance, hosting cost, maintenance, security, and SEO. Includes data from real production sites.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Static Sites vs WordPress: Performance and Cost | SharpPages">
+    <meta name="twitter:description" content="A direct comparison of static HTML sites vs WordPress on performance, hosting cost, maintenance, security, and SEO. Includes data from real production sites.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Static Sites vs WordPress: Performance and Cost",
+      "item": "https://sharppages.com/blog/static-sites-vs-wordpress/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Static Sites vs WordPress: Performance and Cost",
+  "description": "A direct comparison of static HTML sites vs WordPress on performance, hosting cost, maintenance, security, and SEO. Includes data from real production sites.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/static-sites-vs-wordpress/",
+  "mainEntityOfPage": "https://sharppages.com/blog/static-sites-vs-wordpress/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Static Sites vs WordPress: Performance and Cost</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Static Sites vs WordPress: Performance, Cost, and SEO Compared</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>Two Different Architectures</h2>
+                <p>WordPress is a dynamic CMS. When someone visits your site, the server runs PHP code, queries a MySQL database, assembles the page from templates and content blocks, and sends the result to the browser. This happens on every page load (unless caching is configured correctly, which it often is not).</p>
+<p>A static site is a collection of pre-built HTML, CSS, and JavaScript files. When someone visits, the server sends the file directly. No database, no server-side processing, no runtime. The file is ready before the request arrives.</p>
+<p>Both approaches produce the same output: an HTML page in the browser. The difference is when that page gets built. WordPress builds it on demand. Static sites build it ahead of time. Learn more in our <a href="/blog/what-is-a-static-website/">guide to static websites</a>.</p>
+                <h2>Performance Comparison</h2>
+                <p>We ran both architectures through <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a> across real production sites:</p>
+<p><strong>Static site (getprovyx.com):</strong> 98 Performance, 0.9s Speed Index, 30ms Total Blocking Time, 398 pages.</p>
+<p><strong>Average WordPress site:</strong> 55-75 Performance, 3-5s Speed Index, 200-500ms Total Blocking Time.</p>
+<p><strong>WordPress with caching (best case):</strong> 75-85 Performance, 2-3s Speed Index, 100-250ms Total Blocking Time.</p>
+<p>The gap is architectural. WordPress cannot match static performance because it carries framework overhead. Even with caching plugins (WP Rocket, W3 Total Cache), the PHP execution, database connection, and plugin loading add latency that static sites eliminate entirely.</p>
+                <h2>Hosting Cost</h2>
+                <p><strong>WordPress:</strong> Shared hosting ($5-15/mo), managed WordPress hosting ($25-50/mo for WP Engine, Kinsta, Flywheel), or VPS ($20-80/mo). Annual cost: $60 to $960. Plus domain ($12/yr) and SSL (usually included).</p>
+<p><strong>Static:</strong> GitHub Pages ($0), Cloudflare Pages ($0), Netlify ($0 for most sites). Annual cost: $0 to $0. Plus domain ($12/yr). SSL is automatic and free.</p>
+<p>Over 3 years, WordPress hosting costs $180 to $2,880. Static hosting costs $0. The savings alone often cover the cost of migrating from WordPress to static. See our <a href="/blog/how-much-does-custom-website-cost-2026/">full cost breakdown</a> for more detail.</p>
+                <h2>Maintenance and Security</h2>
+                <p><strong>WordPress:</strong> Core updates (monthly), plugin updates (weekly), theme updates (periodic), PHP version updates (annual), security patches (as needed). A WordPress site with 15 plugins needs maintenance attention roughly every 2 weeks. Neglected updates are the number one vector for WordPress hacks.</p>
+<p><strong>Static:</strong> Nothing to update. No CMS, no plugins, no server-side code, no database. The attack surface is zero. A static site cannot be hacked through a vulnerability in a contact form plugin because there is no contact form plugin. Forms submit to an external service (Formspree, Netlify Forms).</p>
+<p>WordPress powers 43% of the web and is the target of 90% of CMS-based attacks. If you have ever received an email from your hosting provider about a compromised site, you know the cost of a security breach: downtime, cleanup, reputation damage.</p>
+                <h2>SEO Capabilities</h2>
+                <p>WordPress has Yoast, Rank Math, and other SEO plugins. They make it easy to set meta titles, descriptions, and Open Graph tags. For basic SEO, WordPress is sufficient.</p>
+<p>Static sites handle SEO through the build process. Every page gets a unique title, meta description, canonical URL, Open Graph tags, and structured data (JSON-LD) generated at build time. Sitemaps and robots.txt are auto-generated. <a href="/blog/schema-markup-small-business/">Schema markup</a> is baked into every page template.</p>
+<p>For <a href="/blog/programmatic-seo-363k-impressions/">programmatic SEO</a> (generating hundreds of pages from data), static sites have a clear advantage. A Python build script can generate 400 pages with unique content, schema markup, and internal links in seconds. WordPress would need a custom plugin or a database full of custom post types, and each page load would still require a database query.</p>
+<p>We built 398 pages for one client and 322 for another using static build scripts. Both rank on page one for their target keywords. The build approach scales to thousands of pages without performance degradation.</p>
+                <h2>Content Management</h2>
+                <p>This is where WordPress wins for non-technical teams. The admin panel lets anyone with a login edit content, publish blog posts, and upload images. No coding required.</p>
+<p>Static sites require editing HTML or Markdown files and running a build command. For technical teams (developers, engineers, technical marketers), this is natural. For teams that need a visual editor, it is a barrier.</p>
+<p>Headless CMS options (Netlify CMS, Contentful, Sanity) bridge this gap by providing a visual editor that outputs to static files. But they add complexity. For most business sites with 5-50 pages that change infrequently, the editing requirement is minimal. You update the site a few times per year, not daily.</p>
+                <h2>When WordPress Makes Sense</h2>
+                <p>WordPress is the right choice when: your team publishes content daily, you need e-commerce (WooCommerce), you rely on specific WordPress plugins for business-critical features, or your content editors are non-technical and need a visual interface.</p>
+<p>For content-heavy sites with daily publishing, WordPress with good caching is a reasonable trade-off. The performance penalty is worth the editorial convenience.</p>
+                <h2>When Static Makes Sense</h2>
+                <p>Static is the right choice when: performance and SEO matter, you want zero maintenance, security is a concern, hosting costs matter, or you need programmatic SEO at scale.</p>
+<p>Most business websites (marketing sites, service businesses, professional firms, SaaS landing pages) update content quarterly, not daily. For these sites, the WordPress overhead buys convenience you do not use while costing performance you cannot afford.</p>
+<p>If you are considering a migration, start with a <a href="/audit/">free site audit</a> to see your current PageSpeed score. Our <a href="/services/#website-redesign">migration service</a> starts at $2,500 for WordPress sites. Same design, 90+ performance, $0 hosting. See all <a href="/pricing/">pricing</a>.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can a static site have a blog?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Blog posts are generated from data during the build process. Each post gets its own URL, Article schema, and proper SEO markup. Adding a new post means adding content to the build data and running the build command."}}, {"@type": "Question", "name": "Can a static site have contact forms?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Forms submit to external services like Formspree or Netlify Forms. No server-side code needed. The form works the same as a WordPress form from the user's perspective."}}, {"@type": "Question", "name": "How hard is it to migrate from WordPress to static?", "acceptedAnswer": {"@type": "Answer", "text": "We replicate your existing design in static HTML/CSS. The migration preserves your visual design, URL structure, and SEO signals (redirects, canonicals). Typical migration takes 2 to 4 weeks."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can a static site have a blog?</summary>
+                    <div class="faq-item__answer"><p>Yes. Blog posts are generated from data during the build process. Each post gets its own URL, Article schema, and proper SEO markup. Adding a new post means adding content to the build data and running the build command.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can a static site have contact forms?</summary>
+                    <div class="faq-item__answer"><p>Yes. Forms submit to external services like Formspree or Netlify Forms. No server-side code needed. The form works the same as a WordPress form from the user's perspective.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How hard is it to migrate from WordPress to static?</summary>
+                    <div class="faq-item__answer"><p>We replicate your existing design in static HTML/CSS. The migration preserves your visual design, URL structure, and SEO signals (redirects, canonicals). Typical migration takes 2 to 4 weeks.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>

@@ -42,7 +42,7 @@ from nav_config import (
 
 BASE_URL = "https://sharppages.com"
 CSS_VERSION = "12"
-OUTPUT_DIR = "output"
+OUTPUT_DIR = "docs"
 
 
 # =============================================================================

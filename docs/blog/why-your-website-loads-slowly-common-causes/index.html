@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>Why Your Website Loads Slowly (Common Causes) | SharpPages</title>
+    <meta name="description" content="Diagnose why your website is slow. The seven most common causes of poor load times and practical fixes for each, from images to plugins to hosting architecture.">
+    <link rel="canonical" href="https://sharppages.com/blog/why-your-website-loads-slowly-common-causes/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/why-your-website-loads-slowly-common-causes/">
+    <meta property="og:title" content="Why Your Website Loads Slowly (Common Causes) | SharpPages">
+    <meta property="og:description" content="Diagnose why your website is slow. The seven most common causes of poor load times and practical fixes for each, from images to plugins to hosting architecture.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why Your Website Loads Slowly (Common Causes) | SharpPages">
+    <meta name="twitter:description" content="Diagnose why your website is slow. The seven most common causes of poor load times and practical fixes for each, from images to plugins to hosting architecture.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Why Your Website Loads Slowly (Common Causes)",
+      "item": "https://sharppages.com/blog/why-your-website-loads-slowly-common-causes/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why Your Website Loads Slowly (Common Causes)",
+  "description": "Diagnose why your website is slow. The seven most common causes of poor load times and practical fixes for each, from images to plugins to hosting architecture.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/why-your-website-loads-slowly-common-causes/",
+  "mainEntityOfPage": "https://sharppages.com/blog/why-your-website-loads-slowly-common-causes/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Why Your Website Loads Slowly (Common Causes)</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Why Your Website Loads Slowly: The 7 Most Common Causes</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>1. Unoptimized Images</h2>
+                <p>The most common culprit. A 3MB hero image on a page that displays it at 400px wide adds 2-4 seconds of load time on mobile. Multiply by every image on the page.</p>
+<p><strong>Fix:</strong> Convert to WebP format (60-80% smaller than JPEG). Size images to the container. Use responsive <code>srcset</code> to serve different sizes to different devices. Lazy-load below-the-fold images. This single fix can improve PageSpeed by 10-30 points.</p>
+                <h2>2. Too Many Plugins (WordPress)</h2>
+                <p>A WordPress site with 15-25 plugins loads JavaScript and CSS from each one on every page. A slider plugin you use on one page still loads its scripts globally. A social sharing plugin adds 3 external script requests.</p>
+<p><strong>Fix:</strong> Audit every plugin. Remove any you do not actively use. For remaining plugins, check if they load assets on pages where they are not needed. Use a plugin like Asset CleanUp to conditionally load scripts. Or migrate to <a href="/blog/what-is-a-static-website/">static HTML</a> and eliminate the plugin layer entirely.</p>
+                <h2>3. Render-Blocking CSS and JavaScript</h2>
+                <p>The browser cannot display any content until it downloads and processes all CSS and JavaScript in the <code>&lt;head&gt;</code>. A typical WordPress site loads 5-15 CSS files and 8-20 JavaScript files before the first pixel appears.</p>
+<p><strong>Fix:</strong> Inline critical CSS (the styles needed for above-the-fold content). Defer non-critical CSS. Add <code>defer</code> or <code>async</code> to JavaScript that is not needed for initial render. Move scripts to the bottom of the body tag.</p>
+                <h2>4. Slow Server Response Time</h2>
+                <p>WordPress and other CMS platforms query a database and execute server-side code on every request. Cheap shared hosting makes this worse: your site shares CPU and memory with hundreds of other sites.</p>
+<p><strong>Fix:</strong> Upgrade hosting (managed WordPress hosting from WP Engine or Kinsta improves response times). Enable page caching so the server does not rebuild pages on every request. Or switch to static HTML and eliminate server-side processing entirely, dropping response times from 200-800ms to 10-50ms.</p>
+                <h2>5. No Browser Caching</h2>
+                <p>Without caching headers, the browser downloads every asset (images, CSS, JS) on every visit. Returning visitors wait just as long as first-time visitors.</p>
+<p><strong>Fix:</strong> Set <code>Cache-Control</code> headers on static assets. CSS and JavaScript: cache for 1 year (use versioned filenames for cache busting). Images: cache for 1 year. HTML pages: cache for 1 hour or use no-cache with ETag validation.</p>
+                <h2>6. Third-Party Scripts</h2>
+                <p>Google Tag Manager, Facebook Pixel, Hotjar, Intercom, live chat, analytics, social widgets: each one adds 20-100KB of JavaScript and 1-3 network requests. Five third-party scripts can add 1-2 seconds to load time.</p>
+<p><strong>Fix:</strong> Audit every third-party script. Remove ones you do not actively use. Load remaining scripts asynchronously or after user interaction (e.g., load chat widget only when the user clicks the chat button). Consider server-side alternatives for tracking.</p>
+                <h2>7. Wrong Platform for the Job</h2>
+                <p>Squarespace, Wix, and even WordPress carry platform overhead that cannot be optimized away. If your site is a 10-page business website running on a platform designed for thousands of dynamic pages, you are paying a speed penalty for features you do not use.</p>
+<p><strong>Fix:</strong> For business sites with 5-50 pages that update infrequently, static HTML eliminates all platform overhead. Same design, 3-5x faster, $0 hosting. See our <a href="/blog/agency-website-scores-70-pagespeed/">PageSpeed article</a> for platform comparisons.</p>
+                <h2>How to Diagnose Your Site</h2>
+                <p>Run your URL through <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">Google PageSpeed Insights</a> on mobile. The "Opportunities" and "Diagnostics" sections list specific issues with estimated time savings for each fix. Focus on mobile, not desktop: Google uses mobile scores for rankings.</p>
+<p>Common patterns by score range:</p>
+<ul>
+<li><strong>Score 0-30:</strong> Multiple causes stacking. Usually unoptimized images plus render-blocking resources plus slow hosting. Start with images (biggest impact, easiest fix).</li>
+<li><strong>Score 30-60:</strong> Typically 2-3 causes. Images may be partially optimized but render-blocking scripts and third-party tags are dragging the score down.</li>
+<li><strong>Score 60-80:</strong> One or two causes remaining. Often third-party scripts or platform overhead preventing the last push to 90+.</li>
+<li><strong>Score 80-89:</strong> Fine-tuning territory. Consider whether your platform can reach 90+ or if architectural changes (static migration) are needed.</li>
+</ul>
+<p>For a deeper comparison of testing tools, read our guide on <a href="/blog/pagespeed-insights-vs-gtmetrix-vs-webpagetest/">PageSpeed Insights vs GTmetrix vs WebPageTest</a>. Each tool surfaces different details about what is slowing your site down.</p>
+                <h2>The Compounding Cost of Slow Load Times</h2>
+                <p>Google reports that as page load time increases from 1 second to 3 seconds, bounce probability increases by 32%. From 1 to 5 seconds, it increases by 90%. Every second of delay costs conversions.</p>
+<p>The impact compounds across your entire traffic base. A site getting 5,000 monthly visitors with a 3% conversion rate loses roughly 50 conversions per month if load time pushes bounce rate up by just 10%. At a $200 average order value, that is $10,000/month in lost revenue from speed alone.</p>
+<p>Speed also affects <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener noreferrer">Core Web Vitals</a>, which Google uses as a ranking signal. A slow site ranks lower, gets less traffic, and converts less of the traffic it does get. The penalty is multiplicative.</p>
+                <h2>Fix Your Slow Site</h2>
+                <p>Not sure which causes apply to your site? Our <a href="/audit/">free audit</a> identifies the specific issues and recommends fixes. View our <a href="/pricing/">pricing</a> for optimization packages. Speed fixes start at $1,000. Full <a href="/services/redesign/">migrations</a> start at $2,500. <a href="/contact/">Get in touch</a>.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which of these causes is most common?", "acceptedAnswer": {"@type": "Answer", "text": "Unoptimized images. Nearly every site we audit has images that are 3-10x larger than they need to be. It is also the easiest fix: converting to WebP and sizing correctly takes minutes and can improve scores by 10-30 points."}}, {"@type": "Question", "name": "Can I fix all of these on WordPress?", "acceptedAnswer": {"@type": "Answer", "text": "You can improve all of them on WordPress, but the platform architecture limits how far you can go. Aggressive optimization gets WordPress to 75-80 on mobile PageSpeed. Breaking into 90+ consistently requires a different architecture."}}, {"@type": "Question", "name": "How do I know which issues affect my site?", "acceptedAnswer": {"@type": "Answer", "text": "Run your URL through PageSpeed Insights (pagespeed.web.dev) on mobile. The Opportunities and Diagnostics sections list specific issues and estimated time savings for each fix."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">Which of these causes is most common?</summary>
+                    <div class="faq-item__answer"><p>Unoptimized images. Nearly every site we audit has images that are 3-10x larger than they need to be. It is also the easiest fix: converting to WebP and sizing correctly takes minutes and can improve scores by 10-30 points.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can I fix all of these on WordPress?</summary>
+                    <div class="faq-item__answer"><p>You can improve all of them on WordPress, but the platform architecture limits how far you can go. Aggressive optimization gets WordPress to 75-80 on mobile PageSpeed. Breaking into 90+ consistently requires a different architecture.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How do I know which issues affect my site?</summary>
+                    <div class="faq-item__answer"><p>Run your URL through PageSpeed Insights (pagespeed.web.dev) on mobile. The Opportunities and Diagnostics sections list specific issues and estimated time savings for each fix.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>

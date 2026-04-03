@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>PageSpeed vs GTmetrix vs WebPageTest Compared | SharpPages</title>
+    <meta name="description" content="Comparison of the three main website speed testing tools. What each one measures, when to use each, and which performance scores Google uses for rankings.">
+    <link rel="canonical" href="https://sharppages.com/blog/pagespeed-insights-vs-gtmetrix-vs-webpagetest/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/pagespeed-insights-vs-gtmetrix-vs-webpagetest/">
+    <meta property="og:title" content="PageSpeed vs GTmetrix vs WebPageTest Compared | SharpPages">
+    <meta property="og:description" content="Comparison of the three main website speed testing tools. What each one measures, when to use each, and which performance scores Google uses for rankings.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PageSpeed vs GTmetrix vs WebPageTest Compared | SharpPages">
+    <meta name="twitter:description" content="Comparison of the three main website speed testing tools. What each one measures, when to use each, and which performance scores Google uses for rankings.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "PageSpeed vs GTmetrix vs WebPageTest Compared",
+      "item": "https://sharppages.com/blog/pagespeed-insights-vs-gtmetrix-vs-webpagetest/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "PageSpeed vs GTmetrix vs WebPageTest Compared",
+  "description": "Comparison of the three main website speed testing tools. What each one measures, when to use each, and which performance scores Google uses for rankings.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/pagespeed-insights-vs-gtmetrix-vs-webpagetest/",
+  "mainEntityOfPage": "https://sharppages.com/blog/pagespeed-insights-vs-gtmetrix-vs-webpagetest/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">PageSpeed vs GTmetrix vs WebPageTest Compared</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">PageSpeed vs GTmetrix vs WebPageTest Compared</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>The Short Answer</h2>
+                <p>Google uses PageSpeed Insights data for rankings. If you only check one tool, check PageSpeed Insights on mobile. But each tool has a different strength:</p>
+<ul>
+<li><strong>PageSpeed Insights:</strong> The score Google uses. Check this for rankings impact.</li>
+<li><strong>GTmetrix:</strong> The best waterfall chart. Check this to diagnose specific slow resources.</li>
+<li><strong>WebPageTest:</strong> The most detailed analysis. Check this for deep technical debugging.</li>
+</ul>
+<p>They often show different scores for the same URL because they test from different locations, on different simulated devices, with different network conditions. This is normal. Focus on PageSpeed Insights mobile as your primary metric.</p>
+                <h2>PageSpeed Insights</h2>
+                <p><a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a> is Google's own tool. It shows two types of data:</p>
+<p><strong>Lab data:</strong> Simulated test on a mid-tier mobile device (Moto G Power) with a throttled 4G connection. This produces the 0-100 Performance score. It is consistent and reproducible but represents a slower experience than most users have.</p>
+<p><strong>Field data:</strong> Real user data from Chrome browsers over the past 28 days (Chrome User Experience Report / CrUX). This is what Google uses for rankings. Not all sites have field data: you need enough Chrome traffic to generate it.</p>
+<p><strong>Use it for:</strong> Checking the score Google cares about. Comparing mobile vs desktop performance. Seeing if you pass <a href="/blog/core-web-vitals-explained-lcp-cls-tbt/">Core Web Vitals</a> thresholds.</p>
+                <h2>GTmetrix</h2>
+                <p><a href="https://gtmetrix.com/" target="_blank" rel="noopener noreferrer">GTmetrix</a> shows a performance waterfall: a visual timeline of every resource your page loads. Each resource (HTML, CSS, JavaScript, images, fonts, third-party scripts) appears as a horizontal bar showing when it started loading, how long it took, and its size.</p>
+<p>The waterfall makes it immediately obvious which resources are slow. A 2-second bar for a 4MB image jumps out visually. A chain of render-blocking CSS files shows as stacked bars that delay everything after them.</p>
+<p><strong>Use it for:</strong> Diagnosing which specific files or resources are causing slowness. Understanding the loading sequence. Identifying third-party scripts that add unexpected delays.</p>
+<p>Note: GTmetrix uses Lighthouse (same as PageSpeed Insights) but may test from a different location with different settings. Scores can differ by 5-15 points. PageSpeed Insights is authoritative for Google rankings.</p>
+                <h2>WebPageTest</h2>
+                <p><a href="https://www.webpagetest.org/" target="_blank" rel="noopener noreferrer">WebPageTest</a> is the most configurable tool. You can test from 30+ global locations, on specific devices, with custom network speeds, and with or without ad blockers.</p>
+<p>Its unique features:</p>
+<ul>
+<li><strong>Filmstrip view:</strong> Frame-by-frame screenshots of your page loading. See exactly what the user sees at each second.</li>
+<li><strong>Video comparison:</strong> Test two URLs side by side and watch them load simultaneously.</li>
+<li><strong>Repeat view testing:</strong> Shows performance for returning visitors (with cached resources) vs first-time visitors.</li>
+<li><strong>Connection view:</strong> Shows TCP connections, DNS lookups, and TLS handshakes for every request.</li>
+</ul>
+<p><strong>Use it for:</strong> Deep technical analysis. Comparing your site against a competitor visually. Testing from specific geographic locations. Understanding caching behavior.</p>
+                <h2>Score Differences Explained</h2>
+                <p>You will almost always get different scores from each tool for the same page. Here is why:</p>
+<ul>
+<li><strong>Test location:</strong> PageSpeed Insights tests from a nearby Google data center. GTmetrix defaults to Vancouver, Canada. WebPageTest lets you choose. A page hosted in Dallas will score higher from a Dallas test server than from London.</li>
+<li><strong>Device simulation:</strong> PageSpeed Insights simulates a Moto G Power (mid-tier Android). GTmetrix uses its own device profile. The CPU throttling and memory limits differ.</li>
+<li><strong>Network throttling:</strong> Each tool simulates a different connection speed. PageSpeed Insights uses a throttled 4G. GTmetrix simulates an unthrottled broadband connection by default.</li>
+<li><strong>Test variability:</strong> Any single test can fluctuate 3-8 points based on server load, network conditions, and third-party script timing. Run each test 3 times and take the median.</li>
+</ul>
+<p>The scores are not contradicting each other. They are measuring the same page under different conditions. A page scoring 95 on GTmetrix desktop and 72 on PageSpeed Insights mobile is performing well on fast connections and struggling on throttled mobile, which is common.</p>
+                <h2>A Practical Testing Workflow</h2>
+                <p>Use all three tools in sequence for a complete picture:</p>
+<p><strong>Step 1: PageSpeed Insights mobile.</strong> Run your URL at <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">pagespeed.web.dev</a>. Check the performance score and <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener noreferrer">Core Web Vitals</a> status. If you score 90+ and pass all Web Vitals, speed is not holding your SEO back.</p>
+<p><strong>Step 2: GTmetrix waterfall.</strong> If your PageSpeed score is below 90, run the same URL on <a href="https://gtmetrix.com/" target="_blank" rel="noopener noreferrer">GTmetrix</a>. Open the waterfall tab. Sort by load time or size to find the biggest bottlenecks. This tells you exactly what to fix first.</p>
+<p><strong>Step 3: WebPageTest (if needed).</strong> For complex issues (third-party script conflicts, geographic latency, caching problems), run a <a href="https://www.webpagetest.org/" target="_blank" rel="noopener noreferrer">WebPageTest</a> from the location closest to your target audience. Use the filmstrip view to see what users experience second by second.</p>
+<p>For more on what causes slow scores, read <a href="/blog/why-your-website-loads-slowly-common-causes/">why your website loads slowly</a> and our guide to <a href="/blog/how-to-get-90-pagespeed-score/">hitting a 90+ PageSpeed score</a>.</p>
+                <h2>Which to Trust</h2>
+                <p>For SEO and rankings: <strong>PageSpeed Insights mobile score.</strong> This is the data Google uses. If your PageSpeed Insights mobile score is 90+, your site passes Core Web Vitals and receives the ranking boost.</p>
+<p>For diagnosing problems: <strong>GTmetrix waterfall.</strong> When PageSpeed Insights tells you to "reduce render-blocking resources" or "optimize images," GTmetrix shows you exactly which resources and how much time they cost.</p>
+<p>For deep debugging: <strong>WebPageTest.</strong> When you need to understand exactly why a specific metric is off, WebPageTest's detailed views provide the answer.</p>
+<p>Start with PageSpeed Insights. If your score is below 90, use GTmetrix to identify the specific issues. If the issues are complex (third-party script interactions, caching problems, geographic latency), use WebPageTest for the deep dive.</p>
+<p>Want us to run the analysis for you? Our <a href="/audit/">free audit</a> covers all three tools. View our <a href="/pricing/">pricing</a> for optimization packages. <a href="/services/audit/">PageSpeed optimization</a> starts at $1,000. <a href="/contact/">Contact us</a>.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why do the three tools give different scores?", "acceptedAnswer": {"@type": "Answer", "text": "Each tool tests from a different server location, with different simulated devices and network speeds. PageSpeed Insights simulates a mid-tier phone on 4G. GTmetrix defaults to a desktop in Canada. WebPageTest lets you choose. The underlying metrics are the same; the testing conditions create score differences."}}, {"@type": "Question", "name": "How often should I test my site?", "acceptedAnswer": {"@type": "Answer", "text": "Monthly for routine monitoring. After any change to the site (new content, updated scripts, platform updates). After deploying a redesign or migration. PageSpeed Insights scores can fluctuate 3-5 points between tests: run 3 times and take the median."}}, {"@type": "Question", "name": "Does a perfect score guarantee good rankings?", "acceptedAnswer": {"@type": "Answer", "text": "No. PageSpeed is one of many ranking factors. Content relevance, backlinks, and search intent matching are more important. But in competitive categories where content quality is similar, speed is the tiebreaker. A 90+ score ensures speed is not holding you back."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">Why do the three tools give different scores?</summary>
+                    <div class="faq-item__answer"><p>Each tool tests from a different server location, with different simulated devices and network speeds. PageSpeed Insights simulates a mid-tier phone on 4G. GTmetrix defaults to a desktop in Canada. WebPageTest lets you choose. The underlying metrics are the same; the testing conditions create score differences.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How often should I test my site?</summary>
+                    <div class="faq-item__answer"><p>Monthly for routine monitoring. After any change to the site (new content, updated scripts, platform updates). After deploying a redesign or migration. PageSpeed Insights scores can fluctuate 3-5 points between tests: run 3 times and take the median.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Does a perfect score guarantee good rankings?</summary>
+                    <div class="faq-item__answer"><p>No. PageSpeed is one of many ranking factors. Content relevance, backlinks, and search intent matching are more important. But in competitive categories where content quality is similar, speed is the tiebreaker. A 90+ score ensures speed is not holding you back.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>

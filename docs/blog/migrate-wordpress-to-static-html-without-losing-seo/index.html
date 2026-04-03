@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>Migrate WordPress to Static HTML Without Losing SEO | SharpPages</title>
+    <meta name="description" content="Step-by-step guide to migrating from WordPress to static HTML. Covers 301 redirects, canonical tags, meta tag preservation, and how to avoid ranking drops.">
+    <link rel="canonical" href="https://sharppages.com/blog/migrate-wordpress-to-static-html-without-losing-seo/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/migrate-wordpress-to-static-html-without-losing-seo/">
+    <meta property="og:title" content="Migrate WordPress to Static HTML Without Losing SEO | SharpPages">
+    <meta property="og:description" content="Step-by-step guide to migrating from WordPress to static HTML. Covers 301 redirects, canonical tags, meta tag preservation, and how to avoid ranking drops.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Migrate WordPress to Static HTML Without Losing SEO | SharpPages">
+    <meta name="twitter:description" content="Step-by-step guide to migrating from WordPress to static HTML. Covers 301 redirects, canonical tags, meta tag preservation, and how to avoid ranking drops.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Migrate WordPress to Static HTML Without Losing SEO",
+      "item": "https://sharppages.com/blog/migrate-wordpress-to-static-html-without-losing-seo/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Migrate WordPress to Static HTML Without Losing SEO",
+  "description": "Step-by-step guide to migrating from WordPress to static HTML. Covers 301 redirects, canonical tags, meta tag preservation, and how to avoid ranking drops.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/migrate-wordpress-to-static-html-without-losing-seo/",
+  "mainEntityOfPage": "https://sharppages.com/blog/migrate-wordpress-to-static-html-without-losing-seo/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Migrate WordPress to Static HTML Without Losing SEO</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Migrate WordPress to Static HTML Without Losing SEO</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>The Fear That Stops People</h2>
+                <p>You want a faster site. You know WordPress is slowing you down. But you have rankings. Maybe page 1 for a few keywords. Maybe years of accumulated domain authority. The last thing you want is to rebuild and watch your traffic disappear.</p>
+<p>That fear is valid. Poorly executed migrations destroy rankings. We have seen sites lose 60% of their organic traffic after a redesign because basic SEO signals were broken in the transition.</p>
+<p>But a well-executed migration preserves every signal Google uses to rank your site. In many cases, the speed improvement from static HTML improves rankings within weeks of launch. Here is exactly how to do it.</p>
+                <h2>Step 1: Crawl and Document Everything</h2>
+                <p>Before touching any code, crawl your existing WordPress site and document every URL, title tag, meta description, heading structure, and internal link. Tools like Screaming Frog (free for under 500 URLs) or Sitebulb will export this as a spreadsheet.</p>
+<p>What to capture for every page:</p>
+<ul>
+<li>Full URL (including trailing slashes)</li>
+<li>Title tag (exact text)</li>
+<li>Meta description (exact text)</li>
+<li>H1 tag</li>
+<li>Canonical URL</li>
+<li>All internal links on the page</li>
+<li>Any structured data (schema markup)</li>
+<li>Open Graph tags</li>
+</ul>
+<p>This spreadsheet becomes your migration checklist. Every item on it must exist on the new site. Missing a single canonical URL or changing a title tag without intent can signal to Google that the page has changed, triggering a re-evaluation.</p>
+                <h2>Step 2: Match URL Structure Exactly</h2>
+                <p>If your WordPress site has a blog post at <code>/blog/my-post/</code>, the static site must serve that same URL. Not <code>/blog/my-post</code> (no trailing slash). Not <code>/posts/my-post/</code>. The exact same path.</p>
+<p>URL changes are the number one cause of ranking drops during migrations. Every URL change requires a 301 redirect. Miss one and Google sees a 404 for a page it has been indexing for months. That page drops from the index. The ranking disappears.</p>
+<p>WordPress uses several URL patterns depending on your permalink settings:</p>
+<ul>
+<li><code>/post-name/</code> (most common)</li>
+<li><code>/category/post-name/</code></li>
+<li><code>/yyyy/mm/post-name/</code> (date-based)</li>
+</ul>
+<p>Your static site must replicate whichever pattern your WordPress site uses. With static HTML, each URL maps to a folder with an <code>index.html</code> file inside it. <code>/blog/my-post/</code> becomes the file <code>blog/my-post/index.html</code>.</p>
+                <h2>Step 3: Preserve All Meta Tags</h2>
+                <p>Copy every title tag and meta description exactly. Do not "improve" them during migration. If your current page ranks for a keyword with its existing title, changing the title risks that ranking.</p>
+<p>After the migration is complete and stable (4 to 6 weeks with no ranking fluctuations), you can optimize meta tags. But during migration, preservation is the priority.</p>
+<p>The same applies to:</p>
+<ul>
+<li><strong>Canonical URLs.</strong> Every page should have a <code>&lt;link rel="canonical"&gt;</code> pointing to itself. This tells Google which URL is the authoritative version.</li>
+<li><strong>Open Graph tags.</strong> Social sharing previews should remain identical. A changed OG image or title can affect click-through rates from social platforms.</li>
+<li><strong>Schema markup.</strong> If your WordPress site had Organization, LocalBusiness, or Article schema (via Yoast or Rank Math), replicate it in the static build. Better yet, improve it with more complete structured data. See our <a href="/blog/schema-markup-small-business/">schema markup guide</a> for implementation details.</li>
+</ul>
+                <h2>Step 4: Set Up 301 Redirects</h2>
+                <p>Even with identical URL structures, you need 301 redirects for any URLs that will change. Common cases:</p>
+<ul>
+<li><strong>WordPress admin URLs</strong> (<code>/wp-admin/</code>, <code>/wp-login.php</code>): Redirect to homepage or remove. Bots will still hit these.</li>
+<li><strong>Feed URLs</strong> (<code>/feed/</code>, <code>/rss/</code>): Redirect to blog index if you do not maintain an RSS feed.</li>
+<li><strong>Pagination URLs</strong> (<code>/page/2/</code>): If your static site handles pagination differently, redirect old pagination URLs.</li>
+<li><strong>Category and tag archives</strong> (<code>/category/marketing/</code>): Redirect to the closest equivalent page on the static site.</li>
+</ul>
+<p>For static sites hosted on GitHub Pages or Cloudflare Pages, 301 redirects can be handled through a <code>_redirects</code> file (Cloudflare/Netlify) or JavaScript-based redirects in a custom 404 page. For more control, Cloudflare Workers can handle redirects at the edge with no performance penalty.</p>
+                <h2>Step 5: Submit and Monitor</h2>
+                <p>After launch:</p>
+<ol>
+<li><strong>Submit the new sitemap</strong> to <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener noreferrer">Google Search Console</a>. Your static build should auto-generate a sitemap with all page URLs, last-modified dates, and priority values.</li>
+<li><strong>Request indexing</strong> for your most important pages using the URL Inspection tool in Search Console. Google will re-crawl them within hours.</li>
+<li><strong>Monitor coverage</strong> in Search Console for the first 4 weeks. Watch for: new 404 errors (missed URLs), drops in indexed pages, crawl errors, or mobile usability issues.</li>
+<li><strong>Check rankings daily</strong> for your top keywords during the first 2 weeks. Minor fluctuations (1-3 positions) are normal during re-indexing. Drops of 10+ positions indicate a migration issue that needs immediate attention.</li>
+</ol>
+<p>Most migrations stabilize within 2 to 4 weeks. The speed improvement from static HTML often produces a ranking boost once Google re-evaluates <a href="/blog/core-web-vitals-explained-lcp-cls-tbt/">Core Web Vitals</a> for the new site.</p>
+                <h2>The Speed Bonus</h2>
+                <p>WordPress sites typically score 55 to 75 on <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">Google PageSpeed</a> (mobile). Static HTML sites score 90 to 98. Google uses Core Web Vitals as a ranking factor. When your migrated site loads 3 to 5 times faster, Google notices.</p>
+<p>We have seen clients gain 5 to 15 ranking positions within 6 weeks of migration, purely from the performance improvement. The content did not change. The backlinks did not change. Only the speed changed.</p>
+<p>This is the upside of migration that most people do not account for. You are not just preserving rankings. You are setting up conditions for rankings to improve.</p>
+                <h2>Common Mistakes to Avoid</h2>
+                <p><strong>Changing URLs and titles simultaneously.</strong> If you change the URL and the title tag at the same time, Google has two signals that the page is different. Change one at a time, with weeks between.</p>
+<p><strong>Forgetting image URLs.</strong> If your WordPress images lived at <code>/wp-content/uploads/2024/image.jpg</code>, those URLs need to either remain valid or redirect. Broken image URLs do not directly hurt rankings, but they create 404 errors that clutter your crawl reports.</p>
+<p><strong>Launching on a Friday.</strong> If something goes wrong, you want business hours to fix it. Launch on a Tuesday or Wednesday when you can monitor for 3 full business days before the weekend.</p>
+<p><strong>Not testing the full site before DNS switch.</strong> Deploy the static site to a staging URL first. Crawl it with Screaming Frog. Compare every URL, title, and meta description against your original spreadsheet. Fix discrepancies before going live.</p>
+                <h2>Get Help With Your Migration</h2>
+                <p>We migrate WordPress, Webflow, and Squarespace sites to static HTML. Every migration preserves your URL structure, meta tags, schema markup, and internal links. The result is the same design (or better) loading 3-5x faster with a 90+ PageSpeed score.</p>
+<p>WordPress and Squarespace migrations start at $2,500. Webflow migrations start at $3,000. See our full <a href="/services/redesign/">redesign and migration service</a> or <a href="/contact/">contact us</a> for a custom quote. View all <a href="/pricing/">pricing</a>.</p>
+<p>Not sure if migration is right for you? Start with a <a href="/audit/">free site audit</a> to see your current performance score and what a migration could improve.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Will I lose my Google rankings during migration?", "acceptedAnswer": {"@type": "Answer", "text": "Not if the migration preserves URL structure, meta tags, canonical URLs, and internal links. Properly executed migrations maintain rankings and often improve them due to faster load times. Minor fluctuations during the first 2-4 weeks are normal."}}, {"@type": "Question", "name": "How long does a WordPress to static migration take?", "acceptedAnswer": {"@type": "Answer", "text": "Typical migrations take 2 to 4 weeks. The timeline depends on the number of pages, complexity of the design, and amount of custom functionality that needs to be replicated."}}, {"@type": "Question", "name": "What about my WordPress blog posts?", "acceptedAnswer": {"@type": "Answer", "text": "Blog posts are migrated to the static site with identical URLs and content. The static build system generates blog pages from structured data, maintaining the same URL structure, meta tags, and content. New posts are added by updating the build data and running the build script."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">Will I lose my Google rankings during migration?</summary>
+                    <div class="faq-item__answer"><p>Not if the migration preserves URL structure, meta tags, canonical URLs, and internal links. Properly executed migrations maintain rankings and often improve them due to faster load times. Minor fluctuations during the first 2-4 weeks are normal.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How long does a WordPress to static migration take?</summary>
+                    <div class="faq-item__answer"><p>Typical migrations take 2 to 4 weeks. The timeline depends on the number of pages, complexity of the design, and amount of custom functionality that needs to be replicated.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">What about my WordPress blog posts?</summary>
+                    <div class="faq-item__answer"><p>Blog posts are migrated to the static site with identical URLs and content. The static build system generates blog pages from structured data, maintaining the same URL structure, meta tags, and content. New posts are added by updating the build data and running the build script.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>

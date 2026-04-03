@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>Page Speed Optimization: The Complete Guide for 2026 | SharpPages</title>
+    <meta name="description" content="Everything you need to know about page speed optimization in 2026. Covers Core Web Vitals, image optimization, render-blocking resources, caching, CDNs, CMS overhead, and when to rebuild instead of optimize.">
+    <link rel="canonical" href="https://sharppages.com/blog/page-speed-optimization-guide/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/page-speed-optimization-guide/">
+    <meta property="og:title" content="Page Speed Optimization: The Complete Guide for 2026 | SharpPages">
+    <meta property="og:description" content="Everything you need to know about page speed optimization in 2026. Covers Core Web Vitals, image optimization, render-blocking resources, caching, CDNs, CMS overhead, and when to rebuild instead of optimize.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Page Speed Optimization: The Complete Guide for 2026 | SharpPages">
+    <meta name="twitter:description" content="Everything you need to know about page speed optimization in 2026. Covers Core Web Vitals, image optimization, render-blocking resources, caching, CDNs, CMS overhead, and when to rebuild instead of optimize.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Page Speed Optimization: The Complete Guide for 2026",
+      "item": "https://sharppages.com/blog/page-speed-optimization-guide/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Page Speed Optimization: The Complete Guide for 2026",
+  "description": "Everything you need to know about page speed optimization in 2026. Covers Core Web Vitals, image optimization, render-blocking resources, caching, CDNs, CMS overhead, and when to rebuild instead of optimize.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/page-speed-optimization-guide/",
+  "mainEntityOfPage": "https://sharppages.com/blog/page-speed-optimization-guide/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Page Speed Optimization: The Complete Guide for 2026</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Page Speed Optimization: The Complete Guide for 2026</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>Why Page Speed Matters More Than Ever</h2>
+                <p>Page speed is not a vanity metric. It is a ranking factor, a conversion factor, and a user experience factor. In 2026, Google's Core Web Vitals are established ranking signals. Sites that pass all three thresholds get a measurable boost in competitive search categories. Sites that fail lose positions to faster competitors.</p>
+<p>The data is clear. <a href="https://web.dev/learn/performance/why-speed-matters" target="_blank" rel="noopener noreferrer">Google's research</a> shows that 53% of mobile visits are abandoned if a page takes longer than 3 seconds to load. Every additional second costs roughly 7% in conversions. For an e-commerce site doing $1 million in annual revenue, a 1-second improvement in load time is worth $70,000 per year.</p>
+<p>For service businesses, the math is different but the direction is the same. A law firm generating 50 leads per month from organic search loses 3-4 leads per month if their site loads in 4 seconds instead of 2. At $5,000 per client, that is $15,000-20,000 in lost annual revenue from slow page loads alone.</p>
+<p>Speed also compounds through SEO. Faster sites get better Core Web Vitals scores, which contribute to higher rankings, which drive more traffic, which generates more conversions. Slower sites enter a negative cycle: poor vitals, lower rankings, less traffic, fewer conversions.</p>
+<p>This guide covers everything: what to measure, what to fix, which fixes have the highest impact, and when optimization is not enough and a rebuild is the right answer.</p>
+                <h2>Understanding Core Web Vitals</h2>
+                <p>Google uses three Core Web Vitals metrics as ranking signals. Understanding what each measures is the foundation of any speed optimization effort.</p>
+<h3>Largest Contentful Paint (LCP)</h3>
+<p>LCP measures how long it takes for the largest visible element on the page to render. This is usually a hero image, a large heading, or a video poster image. Google's threshold: under 2.5 seconds is "good," 2.5-4 seconds "needs improvement," over 4 seconds is "poor."</p>
+<p>LCP is the metric most sites fail on mobile. The typical causes: large unoptimized images, slow server response times (high TTFB), render-blocking CSS and JavaScript, and client-side rendering that delays content visibility.</p>
+<p>To check your LCP: open <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a>, enter your URL, and look at the LCP value in the mobile results. If it is over 2.5 seconds, you have work to do.</p>
+<h3>Interaction to Next Paint (INP)</h3>
+<p>INP replaced First Input Delay (FID) in March 2024. It measures the responsiveness of the page to user interactions (clicks, taps, key presses). Specifically, it tracks the delay between the user's interaction and the next visual update on screen.</p>
+<p>Google's threshold: under 200ms is "good," 200-500ms "needs improvement," over 500ms is "poor."</p>
+<p>INP failures are caused by heavy JavaScript execution that blocks the main thread. If the browser is busy parsing and executing JavaScript when the user taps a button, the response is delayed. This is why sites with large JavaScript frameworks (React, Angular, Vue) often fail INP on mobile devices with slower processors.</p>
+<h3>Cumulative Layout Shift (CLS)</h3>
+<p>CLS measures visual stability. It tracks how much the page layout shifts unexpectedly during loading. A CLS score of 0 means nothing moves. A score of 0.25 means elements shifted significantly.</p>
+<p>Google's threshold: under 0.1 is "good," 0.1-0.25 "needs improvement," over 0.25 is "poor."</p>
+<p>CLS problems come from: images without explicit width/height attributes (the browser does not know how much space to reserve), dynamically injected content (ads, embeds, cookie banners), and web fonts that cause text to reflow when they load (FOUT/FOIT).</p>
+<h3>How Vitals Affect Rankings</h3>
+<p>Core Web Vitals are not the most important ranking factor. Content relevance, backlinks, and search intent still dominate. But vitals are a tiebreaker. When two pages are equally relevant for a query, the one with better vitals ranks higher.</p>
+<p>In competitive niches (local services, e-commerce, SaaS) where multiple sites have similar content and authority, the speed advantage is measurable. We have seen clients gain 5-15 ranking positions within 6 weeks of improving their Core Web Vitals from "poor" to "good." Read more about vitals in our <a href="/blog/core-web-vitals-explained-lcp-cls-tbt/">Core Web Vitals explainer</a>.</p>
+                <h2>How to Measure Page Speed</h2>
+                <p>Before optimizing, you need accurate measurements. Different tools measure different things. Here is what to use and when.</p>
+<h3>Google PageSpeed Insights</h3>
+<p><a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a> is the primary tool. It runs a Lighthouse audit on your page and returns a performance score (0-100) plus detailed metrics. The mobile test simulates a mid-range phone on a 4G connection, which is the environment Google uses for ranking signals.</p>
+<p>Key numbers to record: Performance score, LCP, TBT (Total Blocking Time, which correlates with INP), CLS, Speed Index, and First Contentful Paint (FCP). Run the test 3 times and average the results, as scores fluctuate by 3-5 points between runs.</p>
+<h3>Google Search Console</h3>
+<p><a href="https://search.google.com/search-console" target="_blank" rel="noopener noreferrer">Search Console</a> shows your Core Web Vitals as Google's crawler experiences them in the real world (field data from Chrome users). This is the data Google actually uses for rankings, not the lab data from PageSpeed Insights. Check the Core Web Vitals report to see which pages pass and fail.</p>
+<h3>Chrome DevTools</h3>
+<p>For diagnosing specific issues, open Chrome DevTools (F12), go to the Performance tab, and record a page load. The waterfall chart shows exactly what loads, when, and how long each resource takes. The Network tab shows every HTTP request with file sizes and timing. This is where you find the specific resources that slow your page.</p>
+<h3>WebPageTest</h3>
+<p><a href="https://www.webpagetest.org/" target="_blank" rel="noopener noreferrer">WebPageTest</a> provides the most detailed analysis. It shows filmstrip views (visual progression of page load), waterfall charts, and connection-level timing. It can test from multiple locations and device types. Use it for deep diagnosis of complex performance problems.</p>
+<p>For a comparison of these tools, read our <a href="/blog/pagespeed-insights-vs-gtmetrix-vs-webpagetest/">PageSpeed Insights vs GTmetrix vs WebPageTest</a> comparison.</p>
+                <h2>Image Optimization: The Highest-Impact Fix</h2>
+                <p>Images are the single largest contributor to slow page loads on most websites. Fixing images alone can improve your PageSpeed score by 15-30 points. Start here.</p>
+<h3>Use Modern Formats (WebP and AVIF)</h3>
+<p>WebP is 25-35% smaller than JPEG at the same visual quality. AVIF is 30-50% smaller. Both are supported by all modern browsers (Chrome, Firefox, Safari, Edge). If your images are still in JPEG or PNG, converting to WebP is the single highest-impact change you can make.</p>
+<p>Implementation: use the <code>&lt;picture&gt;</code> element with WebP as the primary source and JPEG as the fallback:</p>
+<pre><code>&lt;picture&gt;
+  &lt;source srcset="hero.webp" type="image/webp"&gt;
+  &lt;img src="hero.jpg" alt="Description" width="1200" height="600"&gt;
+&lt;/picture&gt;</code></pre>
+<p>For build systems, tools like Sharp (Node.js) or Pillow (Python) can batch-convert images during the build process. We convert all images at build time for our client sites.</p>
+<h3>Responsive Images with srcset</h3>
+<p>A hero image displayed at 1200px wide on desktop does not need to be 1200px wide on a 375px mobile screen. The <code>srcset</code> attribute tells the browser which image size to download based on the device screen:</p>
+<pre><code>&lt;img
+  srcset="hero-400.webp 400w, hero-800.webp 800w, hero-1200.webp 1200w"
+  sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px"
+  src="hero-1200.webp"
+  alt="Description"
+  width="1200" height="600"&gt;</code></pre>
+<p>This reduces mobile image payloads by 50-75%. A 1200px image at 150KB becomes a 400px image at 30KB on mobile. The visual quality is identical because the image matches the display resolution.</p>
+<h3>Lazy Loading Below-the-Fold Images</h3>
+<p>Images below the visible viewport should not load until the user scrolls near them. Native lazy loading is one attribute:</p>
+<pre><code>&lt;img src="photo.webp" alt="Description" loading="lazy" width="600" height="400"&gt;</code></pre>
+<p>Do NOT lazy-load the hero image or any image visible in the initial viewport. Those need to load immediately for a fast LCP. Only lazy-load images that are below the fold.</p>
+<h3>Explicit Width and Height</h3>
+<p>Always include <code>width</code> and <code>height</code> attributes on every <code>&lt;img&gt;</code> tag. Without them, the browser does not know how much space to reserve, causing layout shift (CLS) when the image loads and pushes content down.</p>
+<p>This is the most common cause of CLS failures and the easiest to fix. Add the actual dimensions of the image. CSS can still make it responsive with <code>max-width: 100%; height: auto;</code>.</p>
+<h3>Image Compression</h3>
+<p>After format conversion and resizing, compress images to the minimum quality that looks good. For WebP, quality 75-80 is visually identical to JPEG quality 85-90 at a smaller file size. For hero images, quality 80 is sufficient. For thumbnails, quality 70 works.</p>
+<p>Target file sizes: hero images under 100KB, content images under 50KB, thumbnails under 20KB. If any single image exceeds 200KB, it needs attention.</p>
+                <h2>Eliminating Render-Blocking Resources</h2>
+                <p>Render-blocking resources are CSS and JavaScript files that prevent the browser from displaying any content until they finish loading. They are the second highest-impact fix after images.</p>
+<h3>Identify Render-Blocking Resources</h3>
+<p>In PageSpeed Insights, look for the "Eliminate render-blocking resources" opportunity. It lists every CSS and JavaScript file that blocks rendering. In Chrome DevTools, the Performance tab shows these as long blue (CSS) and yellow (JavaScript) bars at the top of the waterfall.</p>
+<h3>Inline Critical CSS</h3>
+<p>Critical CSS is the CSS needed to render the visible viewport (above-the-fold content). Inlining it directly in the <code>&lt;head&gt;</code> eliminates the round trip to fetch an external CSS file. The browser can start rendering immediately.</p>
+<p>For small sites (under 50KB of total CSS), inlining all CSS in the HTML is practical and eliminates the render-blocking request entirely. For larger sites, tools like Critical (npm package) can extract above-the-fold CSS automatically.</p>
+<h3>Defer Non-Critical CSS</h3>
+<p>CSS for below-the-fold content, print styles, and component-specific styles can be loaded asynchronously:</p>
+<pre><code>&lt;link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"&gt;
+&lt;noscript&gt;&lt;link rel="stylesheet" href="styles.css"&gt;&lt;/noscript&gt;</code></pre>
+<p>This lets the browser download the CSS without blocking rendering. The page displays with critical CSS first, then applies the full stylesheet when it arrives.</p>
+<h3>Defer JavaScript</h3>
+<p>Most JavaScript on a marketing site is not needed for initial render. Add the <code>defer</code> attribute to script tags:</p>
+<pre><code>&lt;script src="main.js" defer&gt;&lt;/script&gt;</code></pre>
+<p><code>defer</code> tells the browser to download the script in parallel but execute it after the HTML is parsed. This eliminates JavaScript as a render-blocking resource while maintaining execution order.</p>
+<p>For third-party scripts (analytics, chat widgets, tracking pixels), use <code>async</code> or load them after the page's <code>DOMContentLoaded</code> event. These scripts do not need to block anything.</p>
+<h3>Reduce Total JavaScript</h3>
+<p>The best JavaScript is no JavaScript. Audit every script on your page:</p>
+<ul>
+<li>Do you still use that jQuery library? Modern CSS and vanilla JavaScript replace most jQuery use cases.</li>
+<li>Is the chat widget loaded on every page or just the pages where users need it?</li>
+<li>Are you loading the full Bootstrap framework for a single component?</li>
+<li>Does your analytics setup load multiple tracking scripts that could be consolidated?</li>
+</ul>
+<p>Every KB of JavaScript has a cost: download time, parse time, compile time, and execution time. On a mid-range mobile phone, 100KB of JavaScript takes 200-400ms to parse and execute. A site with 500KB of JavaScript spends 1-2 seconds just processing scripts before the page becomes interactive.</p>
+                <h2>Server Response Time (TTFB)</h2>
+                <p>Time to First Byte (TTFB) measures how long it takes for the server to respond to a request. It is the starting point of every page load. If your server takes 800ms to respond, nothing else can start until that 800ms passes.</p>
+<h3>What Causes Slow TTFB</h3>
+<ul>
+<li><strong>Shared hosting:</strong> Your site shares CPU and memory with hundreds of other sites. When other sites get traffic spikes, your server response slows down. TTFB on shared hosting: 200-1,000ms.</li>
+<li><strong>Database queries:</strong> CMS platforms (WordPress, Drupal) query a database on every page load. Complex queries, unindexed tables, and large databases slow response times. TTFB with database overhead: 200-800ms.</li>
+<li><strong>Server-side processing:</strong> PHP execution (WordPress), template rendering, and middleware processing add time before the response is ready. TTFB with heavy processing: 300-1,200ms.</li>
+<li><strong>Geographic distance:</strong> If your server is in Virginia and your visitor is in California, the data travels 2,500 miles each way. At the speed of light through fiber, that is 25ms of latency per round trip. Multiply by 3-5 round trips for a typical page load.</li>
+</ul>
+<h3>How to Improve TTFB</h3>
+<p><strong>Upgrade hosting.</strong> Move from shared to managed or VPS hosting. Expected improvement: 200-500ms.</p>
+<p><strong>Add server-side caching.</strong> Cache the fully rendered HTML so the server skips database queries and processing on repeat requests. WordPress caching plugins (WP Rocket, LiteSpeed Cache) do this. Expected improvement: 300-700ms.</p>
+<p><strong>Use a CDN.</strong> A Content Delivery Network caches your pages on servers worldwide. The visitor gets the page from the nearest server instead of your origin. Cloudflare (free tier) reduces TTFB to 20-50ms for cached pages.</p>
+<p><strong>Go static.</strong> Static HTML sites served from a CDN have a TTFB of 10-30ms. There is no database, no server processing, and no server-side code. The CDN serves a pre-built file from the nearest edge location. This is the fastest possible TTFB.</p>
+<p>Target TTFB: under 200ms. Under 100ms is excellent. Over 600ms needs immediate attention.</p>
+                <h2>Font Optimization</h2>
+                <p>Web fonts are a common source of performance problems. A poorly loaded font can add 500ms to your page load and cause visible text flash (FOUT) or invisible text (FOIT).</p>
+<h3>Use font-display: swap</h3>
+<p>The <code>font-display: swap</code> CSS property tells the browser to show text immediately in a fallback font, then swap to the custom font when it loads. This prevents invisible text during font loading:</p>
+<pre><code>@font-face {
+  font-family: 'Inter';
+  src: url('inter.woff2') format('woff2');
+  font-display: swap;
+}</code></pre>
+<h3>Self-Host Fonts</h3>
+<p>Loading fonts from Google Fonts requires a DNS lookup to fonts.googleapis.com, a CSS file download, and then the font file download. That is 3 round trips. Self-hosting the font file eliminates 2 of those round trips.</p>
+<p>Download the WOFF2 file from <a href="https://gwfh.mranftl.com/fonts" target="_blank" rel="noopener noreferrer">Google Webfonts Helper</a>, host it on your domain, and reference it directly in your CSS. One round trip instead of three.</p>
+<h3>Preload Key Fonts</h3>
+<p>For the primary body or heading font, use <code>preload</code> to tell the browser to start downloading it immediately:</p>
+<pre><code>&lt;link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin&gt;</code></pre>
+<p>This moves font loading earlier in the waterfall, reducing the time before the font is available for rendering.</p>
+<h3>Limit Font Variations</h3>
+<p>Each font weight and style is a separate file. Loading Inter Regular, Bold, and Italic is 3 files (60-90KB total). Loading Regular, Medium, SemiBold, Bold, and Italic is 5 files (100-150KB). Use only the weights your design actually requires. Two to three weights cover most designs.</p>
+<h3>Use Variable Fonts</h3>
+<p>Variable fonts contain all weights in a single file. Inter Variable is one 100KB file that replaces multiple static files. The total download is often smaller than loading 3-4 individual weight files, and you get access to every weight value (not just 400, 700).</p>
+                <h2>Caching Strategy</h2>
+                <p>Caching tells browsers and CDNs to reuse previously downloaded resources instead of requesting them again. Proper caching can make subsequent page loads nearly instant.</p>
+<h3>Browser Caching (Cache-Control Headers)</h3>
+<p>Set <code>Cache-Control</code> headers on your static assets (CSS, JavaScript, images, fonts) with a long max-age:</p>
+<pre><code>Cache-Control: public, max-age=31536000, immutable</code></pre>
+<p>This tells the browser to cache the file for 1 year and never revalidate it. When the visitor returns or navigates to another page, the browser uses the cached file instantly.</p>
+<p>For HTML pages, use shorter cache times or no caching to ensure visitors always get the latest content:</p>
+<pre><code>Cache-Control: public, max-age=3600</code></pre>
+<p>To bust the cache when CSS or JavaScript changes, use versioned filenames (<code>styles.css?v=9</code>) or content hashes (<code>styles.a1b2c3.css</code>). When the filename changes, the browser treats it as a new file.</p>
+<h3>CDN Caching</h3>
+<p>A CDN (Cloudflare, Fastly, AWS CloudFront) caches your pages at edge servers worldwide. The first visitor triggers a cache miss (the CDN fetches from your origin server). Every subsequent visitor in the same region gets the cached version instantly.</p>
+<p>For static sites, the CDN is the only infrastructure you need. GitHub Pages, Cloudflare Pages, and Netlify all include global CDN distribution for free. TTFB from a CDN edge: 10-30ms regardless of where the visitor is located.</p>
+<h3>Service Worker Caching</h3>
+<p>For sites that need offline capability or ultra-fast repeat visits, a service worker can cache pages and assets locally. The service worker intercepts network requests and serves cached responses when available. This makes repeat page loads nearly instant (under 50ms).</p>
+<p>Service workers add complexity and are not necessary for most marketing sites. They are most valuable for web apps, documentation sites, and content-heavy sites where users browse multiple pages per session.</p>
+                <h2>The Platform Problem: WordPress, Webflow, and Squarespace</h2>
+                <p>The optimization techniques above work on any platform. But the platform itself sets a performance ceiling that no amount of optimization can exceed. Understanding these ceilings helps you decide whether to optimize or rebuild.</p>
+<h3>WordPress: Ceiling of 75-85</h3>
+<p>A fully optimized WordPress site (lightweight theme, minimal plugins, server-side caching, CDN, optimized images) can reach 75-85 on mobile PageSpeed. Getting above 85 requires removing most plugins and using a developer-grade theme, which negates the ease-of-use benefit that justified choosing WordPress.</p>
+<p>The floor is set by: PHP execution (50-200ms), database queries (50-400ms), and plugin JavaScript/CSS that loads globally. Even with caching, the browser-side overhead from plugins cannot be eliminated without removing the plugins.</p>
+<p>Read our deep dive on <a href="/blog/why-is-my-wordpress-site-so-slow/">why WordPress is slow</a> for the full technical breakdown.</p>
+<h3>Webflow: Ceiling of 80-85</h3>
+<p>Webflow's ceiling is slightly higher than WordPress because it produces cleaner code. But the webflow.js runtime (70-120KB), platform CSS (150-400KB), and Webflow analytics load on every page regardless of optimization.</p>
+<p>A fully optimized Webflow site (compressed images, minimal interactions, no CMS) can reach 80-85 on mobile. Most Webflow sites land at 55-75. See <a href="/blog/why-webflow-site-scores-55-mobile/">why Webflow sites score low</a>.</p>
+<h3>Squarespace: Ceiling of 65-70</h3>
+<p>Squarespace has the lowest ceiling because you cannot control the rendering pipeline. The platform loads its full JavaScript framework, font system, and analytics on every page. Even a single-page site carries the overhead of the entire Squarespace platform. Optimization options are limited to image compression and content reduction.</p>
+<h3>Static HTML: No Ceiling</h3>
+<p>Static HTML sites have no platform overhead. The performance ceiling is 100 (we consistently hit 95-99 on mobile). There is no CMS, no framework, no runtime. The only factors affecting score are your CSS size, JavaScript size, and image optimization, all of which you control completely.</p>
+<p>If your WordPress site is at 65 and you need 90+, optimization can get you to 75-80 but not further. The gap from 80 to 90+ requires changing the architecture, not tweaking the existing one. Our <a href="/services/redesign/">migration service</a> starts at $2,500 for WordPress and $3,000 for Webflow.</p>
+                <h2>Advanced Optimization: Preloading, Prefetching, and Resource Hints</h2>
+                <p>Once the basics are covered (images, render-blocking resources, caching, TTFB), resource hints provide incremental improvements.</p>
+<h3>Preload Critical Resources</h3>
+<p><code>&lt;link rel="preload"&gt;</code> tells the browser to start downloading a resource immediately, before it discovers it in the HTML. Use for: the primary font file, the hero image, and critical CSS if loaded externally.</p>
+<pre><code>&lt;link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin&gt;
+&lt;link rel="preload" href="/images/hero.webp" as="image"&gt;</code></pre>
+<p>Do not preload everything. Preloading too many resources competes for bandwidth and can slow down the critical rendering path. Limit preloads to 2-3 critical resources.</p>
+<h3>DNS Prefetch for Third-Party Domains</h3>
+<p>If your page loads resources from third-party domains (Google Analytics, fonts, CDN), DNS prefetch resolves the domain name early:</p>
+<pre><code>&lt;link rel="dns-prefetch" href="https://www.googletagmanager.com"&gt;
+&lt;link rel="dns-prefetch" href="https://fonts.googleapis.com"&gt;</code></pre>
+<p>This saves 50-100ms per third-party domain by resolving DNS before the resource is requested.</p>
+<h3>Preconnect to Critical Third Parties</h3>
+<p><code>preconnect</code> goes further than DNS prefetch by also establishing the TCP connection and TLS handshake early:</p>
+<pre><code>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</code></pre>
+<p>This saves 100-200ms for the first request to that domain. Use for domains that deliver critical resources (fonts, CDN). Limit to 2-3 preconnects to avoid consuming connection slots.</p>
+<h3>Fetchpriority for the Hero Image</h3>
+<p>The <code>fetchpriority</code> attribute tells the browser to prioritize downloading a specific resource:</p>
+<pre><code>&lt;img src="hero.webp" alt="Description" fetchpriority="high" width="1200" height="600"&gt;</code></pre>
+<p>This is especially useful for LCP optimization. The hero image is usually the LCP element. Giving it high fetch priority ensures the browser downloads it before less important resources.</p>
+                <h2>Third-Party Script Management</h2>
+                <p>Third-party scripts (analytics, tracking, chat widgets, social embeds, A/B testing tools) are the silent performance killers on most websites. They run code you do not control on your domain.</p>
+<h3>Audit Your Third-Party Scripts</h3>
+<p>Open Chrome DevTools, go to the Network tab, and filter by "Third-party." Count the requests and measure the total download size. Common offenders:</p>
+<table>
+<tr><th>Script</th><th>Typical Size</th><th>Impact</th></tr>
+<tr><td>Google Tag Manager</td><td>30-80KB + tags</td><td>Loads additional scripts dynamically</td></tr>
+<tr><td>Google Analytics (GA4)</td><td>40-50KB</td><td>Low impact if loaded correctly</td></tr>
+<tr><td>Facebook Pixel</td><td>60-80KB</td><td>Moderate impact, loads additional resources</td></tr>
+<tr><td>Intercom / Drift / HubSpot chat</td><td>200-400KB</td><td>High impact, loads on every page</td></tr>
+<tr><td>Hotjar / FullStory</td><td>50-100KB</td><td>Records sessions, adds CPU overhead</td></tr>
+<tr><td>Optimizely / VWO</td><td>80-150KB</td><td>Render-blocking for A/B tests</td></tr>
+</table>
+<p>A site with Google Tag Manager, GA4, Facebook Pixel, Intercom, and Hotjar loads 380-660KB of third-party JavaScript. That is more than most entire static websites.</p>
+<h3>Load Third-Party Scripts After Page Load</h3>
+<p>Most third-party scripts do not need to run during initial page load. Load them after the <code>DOMContentLoaded</code> event or on user interaction (first scroll, first click):</p>
+<pre><code>document.addEventListener('DOMContentLoaded', function() {
+  // Load analytics after page renders
+  var script = document.createElement('script');
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXX';
+  script.async = true;
+  document.head.appendChild(script);
+});</code></pre>
+<h3>Remove What You Do Not Use</h3>
+<p>Audit every third-party script quarterly. Ask: "Are we looking at this data? Is this tool still active? When was the last time someone checked this dashboard?" If the answer is "never" or "I do not know," remove the script. Every removed script improves page speed with zero effort.</p>
+<p>The most impactful removal is usually the chat widget. If fewer than 1% of visitors use it, replacing it with a contact page link saves 200-400KB on every page load for the 99% who do not use it.</p>
+                <h2>CSS Optimization</h2>
+                <p>CSS optimization has less impact than images and JavaScript but still matters, especially for LCP and FCP (First Contentful Paint).</p>
+<h3>Remove Unused CSS</h3>
+<p>Most websites load CSS for components that do not appear on the current page. A WordPress site with a page builder typically loads 200-500KB of CSS, of which 60-80% is unused on any given page.</p>
+<p>Tools like PurgeCSS or UnCSS scan your HTML and remove CSS rules that are not referenced. For static sites, this can be run during the build process. For WordPress, this is harder because plugins generate HTML dynamically.</p>
+<p>Our static sites ship 25-40KB of total CSS because every rule is intentional. There is no framework CSS, no component library, and no unused styles.</p>
+<h3>Minify CSS</h3>
+<p>Minification removes whitespace, comments, and redundant syntax from CSS. Tools like cssnano (PostCSS), CleanCSS, or Lightning CSS reduce file size by 15-30%. This is a quick win with no visual impact.</p>
+<h3>Avoid CSS @import</h3>
+<p><code>@import</code> in CSS creates sequential loading. The browser downloads the first CSS file, parses it, discovers the @import, then downloads the imported file. Two round trips instead of one. Use <code>&lt;link&gt;</code> tags in HTML instead, which the browser downloads in parallel.</p>
+<h3>Use Modern CSS Instead of JavaScript</h3>
+<p>Many effects that previously required JavaScript can now be done in CSS:</p>
+<ul>
+<li><strong>Smooth scroll:</strong> <code>scroll-behavior: smooth;</code> replaces JavaScript smooth scroll libraries.</li>
+<li><strong>Scroll-driven animations:</strong> CSS <code>animation-timeline: scroll()</code> replaces scroll-triggered JavaScript animations (in supported browsers).</li>
+<li><strong>Hover/focus interactions:</strong> CSS <code>:hover</code>, <code>:focus-within</code>, and <code>:has()</code> replace many JavaScript interaction handlers.</li>
+<li><strong>Accordions:</strong> The <code>&lt;details&gt;</code>/<code>&lt;summary&gt;</code> HTML elements replace JavaScript accordion components.</li>
+</ul>
+                <h2>HTML Optimization</h2>
+                <p>HTML optimization is often overlooked but matters for sites with bloated markup (page builders, frameworks).</p>
+<h3>Reduce DOM Size</h3>
+<p>Google recommends keeping the DOM under 1,500 elements. Page builders like Elementor and Divi generate DOM trees of 3,000-5,000+ elements for a typical page. Each element takes memory, slows style recalculation, and increases layout computation time.</p>
+<p>Hand-written HTML for the same design typically uses 200-500 elements. The 10x reduction in DOM size directly improves rendering performance, especially on mobile devices with limited memory and processing power.</p>
+<h3>Semantic HTML</h3>
+<p>Use semantic elements (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>) instead of generic <code>&lt;div&gt;</code> wrappers. Semantic HTML is not faster per se, but it is cleaner, more accessible, and produces less markup than the nested <code>&lt;div&gt;</code> structures that page builders generate.</p>
+<h3>Minify HTML</h3>
+<p>HTML minification removes whitespace and comments. For a 50KB HTML file, minification saves 5-10KB. Less impactful than CSS or JavaScript minification but still a free improvement during the build process.</p>
+                <h2>Mobile-Specific Optimization</h2>
+                <p>Google uses mobile performance for ranking signals. Mobile optimization is not optional. It is the primary target.</p>
+<h3>Why Mobile Is Harder</h3>
+<p>Mobile devices have slower processors, less memory, and higher-latency connections than desktops. A mid-range phone (the PageSpeed Insights simulation target) processes JavaScript 3-5x slower than a laptop. A 4G connection adds 50-150ms of latency per request compared to broadband.</p>
+<p>This means every KB of JavaScript costs more on mobile. Every HTTP request costs more. Every unoptimized image costs more. Optimizations that seem minor on desktop can be significant on mobile.</p>
+<h3>Mobile-First CSS</h3>
+<p>Write CSS for mobile first, then add desktop styles in media queries. This ensures mobile devices download only the CSS they need and desktop enhancements are additive. The reverse (desktop-first with mobile overrides) forces mobile devices to download and process styles they immediately override.</p>
+<h3>Touch Target Sizing</h3>
+<p>Not a speed metric, but Google flags small touch targets as a mobile usability issue. Buttons and links should be at least 48x48px with 8px of spacing between them. This affects your Core Web Vitals report in Search Console even though it does not affect the PageSpeed score directly.</p>
+<h3>Viewport Meta Tag</h3>
+<p>Ensure your page has the viewport meta tag:</p>
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
+<p>Without it, mobile browsers render the page at desktop width and zoom out, triggering CLS and failing mobile usability checks.</p>
+                <h2>When to Optimize vs When to Rebuild</h2>
+                <p>Optimization has diminishing returns. At some point, the cost of squeezing more performance from a slow platform exceeds the cost of rebuilding on a fast one.</p>
+<h3>Optimize If:</h3>
+<ul>
+<li>Your site scores 70+ and you need to reach 80-85</li>
+<li>The main issues are images and third-party scripts (fixable without changing platform)</li>
+<li>You recently invested in a redesign and cannot justify rebuilding</li>
+<li>Your content team depends on the CMS editing interface daily</li>
+</ul>
+<h3>Rebuild If:</h3>
+<ul>
+<li>Your site scores below 60 on mobile</li>
+<li>You need 90+ to compete in your search category</li>
+<li>Your platform (WordPress, Webflow, Squarespace) is the bottleneck, not your content</li>
+<li>You are paying $100+/month in hosting and maintenance for a 10-page site</li>
+<li>You want to eliminate recurring costs and own your code</li>
+</ul>
+<h3>The Cost of Each Approach</h3>
+<p><strong>Optimization project:</strong> $500-3,000 depending on scope. Expected improvement: 10-20 points. Gets a 60 to 75 or a 70 to 85. Does not change the platform ceiling.</p>
+<p><strong>Rebuild to static HTML:</strong> $2,500-6,000 from WordPress, $3,000-8,000 from Webflow. Expected score: 90-98. Eliminates hosting costs ($0/month). Zero ongoing maintenance. No performance ceiling.</p>
+<p>For most sites scoring below 70, the rebuild pays for itself within 1-2 years through eliminated hosting and maintenance costs, while delivering a permanent 90+ score that optimization cannot achieve.</p>
+<p>Start with a <a href="/audit/">free site audit</a> to see where you stand. We will tell you whether optimization or a rebuild is the right path for your specific situation. See our <a href="/pricing/">pricing</a> for all options.</p>
+                <h2>Page Speed Optimization Checklist</h2>
+                <p>Use this checklist to audit and improve any website. Items are ordered by typical impact.</p>
+<h3>High Impact (do first)</h3>
+<ul>
+<li>Convert all images to WebP or AVIF format</li>
+<li>Add responsive srcset to all images with multiple size variants</li>
+<li>Lazy-load all below-the-fold images</li>
+<li>Add explicit width and height to every img tag</li>
+<li>Defer all non-critical JavaScript with the defer attribute</li>
+<li>Remove unused JavaScript libraries and plugins</li>
+<li>Enable server-side caching or use a CDN</li>
+<li>Remove or defer chat widgets and heavy third-party scripts</li>
+</ul>
+<h3>Medium Impact</h3>
+<ul>
+<li>Inline critical CSS or reduce CSS to a single small file</li>
+<li>Self-host fonts and use font-display: swap</li>
+<li>Preload the primary font file and hero image</li>
+<li>Minify CSS, JavaScript, and HTML</li>
+<li>Remove unused CSS rules</li>
+<li>Add Cache-Control headers with long max-age for static assets</li>
+<li>Use preconnect for critical third-party domains</li>
+</ul>
+<h3>Lower Impact (polish)</h3>
+<ul>
+<li>Use variable fonts instead of multiple static font files</li>
+<li>Add fetchpriority="high" to the hero image</li>
+<li>DNS prefetch third-party domains</li>
+<li>Replace JavaScript interactions with CSS where possible</li>
+<li>Reduce DOM size (aim for under 1,500 elements)</li>
+<li>Compress HTML through minification</li>
+<li>Audit and remove unused third-party scripts quarterly</li>
+</ul>
+<h3>Platform-Level (if above items are not enough)</h3>
+<ul>
+<li>Evaluate whether your CMS platform is the bottleneck</li>
+<li>Consider migrating to static HTML if you need 90+ and your platform caps at 75-85</li>
+<li>Compare the cost of ongoing optimization vs one-time rebuild</li>
+</ul>
+                </div>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good PageSpeed score?", "acceptedAnswer": {"@type": "Answer", "text": "90-100 is good (green). 50-89 needs improvement (orange). Below 50 is poor (red). For competitive SEO, aim for 90+ on mobile. Most WordPress sites score 55-75, Webflow sites 55-85, and static HTML sites 90-99."}}, {"@type": "Question", "name": "How long does page speed optimization take?", "acceptedAnswer": {"@type": "Answer", "text": "Basic optimization (images, caching, defer scripts) takes 1-2 days and improves scores by 10-20 points. Advanced optimization (critical CSS, font optimization, third-party script management) takes 3-5 days. A full rebuild to static HTML takes 2-4 weeks but delivers 90+ scores permanently."}}, {"@type": "Question", "name": "Does page speed affect SEO rankings?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Google confirmed Core Web Vitals (LCP, INP, CLS) as ranking signals. Sites that pass all three thresholds get a ranking boost in competitive categories. The impact is most visible when competing against sites with similar content and backlink profiles."}}, {"@type": "Question", "name": "Can I improve PageSpeed without changing my CMS?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, up to a point. Image optimization, script deferral, caching, and third-party script management work on any platform. But each CMS has a performance ceiling: WordPress tops out at 75-85, Webflow at 80-85, Squarespace at 65-70. To exceed those ceilings, you need to change the platform."}}, {"@type": "Question", "name": "What is the fastest website platform?", "acceptedAnswer": {"@type": "Answer", "text": "Static HTML served from a CDN. No database, no server-side processing, no framework overhead. Typical mobile PageSpeed: 90-99. TTFB: 10-30ms. Total page weight: 100-350KB. Followed by static site generators (Astro, Hugo, Eleventy) which produce static HTML during the build process."}}, {"@type": "Question", "name": "How much does page speed optimization cost?", "acceptedAnswer": {"@type": "Answer", "text": "Optimization-only projects: $500-3,000 depending on scope. A full rebuild to static HTML: $2,500-6,000 from WordPress, $3,000-8,000 from Webflow. New static builds: $3,000-6,000. The rebuild eliminates ongoing hosting and maintenance costs."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">What is a good PageSpeed score?</summary>
+                    <div class="faq-item__answer"><p>90-100 is good (green). 50-89 needs improvement (orange). Below 50 is poor (red). For competitive SEO, aim for 90+ on mobile. Most WordPress sites score 55-75, Webflow sites 55-85, and static HTML sites 90-99.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How long does page speed optimization take?</summary>
+                    <div class="faq-item__answer"><p>Basic optimization (images, caching, defer scripts) takes 1-2 days and improves scores by 10-20 points. Advanced optimization (critical CSS, font optimization, third-party script management) takes 3-5 days. A full rebuild to static HTML takes 2-4 weeks but delivers 90+ scores permanently.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Does page speed affect SEO rankings?</summary>
+                    <div class="faq-item__answer"><p>Yes. Google confirmed Core Web Vitals (LCP, INP, CLS) as ranking signals. Sites that pass all three thresholds get a ranking boost in competitive categories. The impact is most visible when competing against sites with similar content and backlink profiles.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can I improve PageSpeed without changing my CMS?</summary>
+                    <div class="faq-item__answer"><p>Yes, up to a point. Image optimization, script deferral, caching, and third-party script management work on any platform. But each CMS has a performance ceiling: WordPress tops out at 75-85, Webflow at 80-85, Squarespace at 65-70. To exceed those ceilings, you need to change the platform.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">What is the fastest website platform?</summary>
+                    <div class="faq-item__answer"><p>Static HTML served from a CDN. No database, no server-side processing, no framework overhead. Typical mobile PageSpeed: 90-99. TTFB: 10-30ms. Total page weight: 100-350KB. Followed by static site generators (Astro, Hugo, Eleventy) which produce static HTML during the build process.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How much does page speed optimization cost?</summary>
+                    <div class="faq-item__answer"><p>Optimization-only projects: $500-3,000 depending on scope. A full rebuild to static HTML: $2,500-6,000 from WordPress, $3,000-8,000 from Webflow. New static builds: $3,000-6,000. The rebuild eliminates ongoing hosting and maintenance costs.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>

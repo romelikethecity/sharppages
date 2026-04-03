@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>How to Migrate From Webflow to Static HTML (Step-by-Step) | SharpPages</title>
+    <meta name="description" content="A practical guide to migrating from Webflow to static HTML without losing SEO rankings. Covers CMS content extraction, URL preservation, and the export limitations you need to plan for.">
+    <link rel="canonical" href="https://sharppages.com/blog/migrate-webflow-to-static-html/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/migrate-webflow-to-static-html/">
+    <meta property="og:title" content="How to Migrate From Webflow to Static HTML (Step-by-Step) | SharpPages">
+    <meta property="og:description" content="A practical guide to migrating from Webflow to static HTML without losing SEO rankings. Covers CMS content extraction, URL preservation, and the export limitations you need to plan for.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Migrate From Webflow to Static HTML (Step-by-Step) | SharpPages">
+    <meta name="twitter:description" content="A practical guide to migrating from Webflow to static HTML without losing SEO rankings. Covers CMS content extraction, URL preservation, and the export limitations you need to plan for.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Migrate From Webflow to Static HTML (Step-by-Step)",
+      "item": "https://sharppages.com/blog/migrate-webflow-to-static-html/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Migrate From Webflow to Static HTML (Step-by-Step)",
+  "description": "A practical guide to migrating from Webflow to static HTML without losing SEO rankings. Covers CMS content extraction, URL preservation, and the export limitations you need to plan for.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/migrate-webflow-to-static-html/",
+  "mainEntityOfPage": "https://sharppages.com/blog/migrate-webflow-to-static-html/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">How to Migrate From Webflow to Static HTML (Step-by-Step)</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">How to Migrate From Webflow to Static HTML Without Losing SEO</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>Why Migrate From Webflow</h2>
+                <p>Three reasons drive most Webflow-to-static migrations:</p>
+<ol>
+<li><strong>Performance.</strong> Your Webflow site scores 55-75 on mobile PageSpeed. You need 90+ to compete on search rankings. Read <a href="/blog/why-webflow-site-scores-55-mobile/">why Webflow sites score low</a> for the technical explanation.</li>
+<li><strong>Cost.</strong> Webflow hosting costs $168-468/year. Static hosting costs $0. Over 3 years, that is $500-1,400 saved. See the <a href="/blog/true-cost-webflow-website/">full cost breakdown</a>.</li>
+<li><strong>Ownership.</strong> You want to own your code and not depend on a platform that controls your hosting, limits your export options, and can change pricing.</li>
+</ol>
+<p>The migration preserves your design, content, and URL structure. Your visitors see the same site loading 3-5x faster. Google sees a faster site and re-evaluates your <a href="/blog/core-web-vitals-explained-lcp-cls-tbt/">Core Web Vitals</a>.</p>
+                <h2>Step 1: Audit Your Current Webflow Site</h2>
+                <p>Before migrating, document everything:</p>
+<ul>
+<li><strong>Run a full crawl.</strong> Use Screaming Frog (free for under 500 URLs) to crawl your Webflow site. Export the full URL list, title tags, meta descriptions, H1 tags, canonical URLs, and internal links.</li>
+<li><strong>Note CMS content.</strong> List every CMS collection: blog posts, team members, portfolio items, testimonials. Count the items in each collection. This content will NOT come through Webflow's code export and needs manual extraction.</li>
+<li><strong>Screenshot key pages.</strong> Capture the visual design of your homepage, key landing pages, and any pages with custom interactions. These screenshots become the design reference for the static rebuild.</li>
+<li><strong>Document interactions.</strong> List every Webflow interaction (hover effects, scroll animations, page transitions). Decide which ones to replicate in CSS/JS and which to drop. Most marketing site interactions can be replicated with CSS transitions and a few lines of JavaScript.</li>
+<li><strong>Record current PageSpeed scores.</strong> Run every key page through <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a>. These are your "before" numbers for measuring improvement.</li>
+</ul>
+                <h2>Step 2: Extract CMS Content</h2>
+                <p>This is the step Webflow makes hardest. The code export feature does not include CMS-generated content. You need to extract it separately.</p>
+<p><strong>Option A: Webflow API.</strong> If you are on the CMS or Business plan, use the Webflow CMS API to pull all collection items as JSON. This gives you structured data (titles, body text, images, custom fields) that you can feed into a static build system.</p>
+<p><strong>Option B: Manual export.</strong> For sites with fewer than 50 CMS items, copy the content manually. Open each CMS item in the Webflow editor and copy the content into your build data files (JSON, YAML, or markdown).</p>
+<p><strong>Option C: Scraping.</strong> For large sites, crawl the live Webflow site and extract content from the rendered HTML. Tools like Puppeteer or Playwright can automate this. The content in the HTML is the same content in the CMS.</p>
+<p>Regardless of method, verify that every piece of CMS content has been captured. A missed blog post means a missing URL in the static site, which means a 404 that hurts your SEO.</p>
+                <h2>Step 3: Rebuild in Static HTML</h2>
+                <p>This is not a code export and cleanup. It is a clean rebuild using the original design as reference. Here is why:</p>
+<p>Webflow's generated HTML is deeply nested, uses auto-generated class names, and carries platform-specific markup. Cleaning it up takes longer than rebuilding from scratch. A skilled developer can recreate a 10-page Webflow design in static HTML in 1-2 weeks with cleaner, lighter code.</p>
+<p>The rebuild process:</p>
+<ol>
+<li><strong>Set up the project structure.</strong> Create the folder structure that mirrors your URL pattern. Each URL becomes a folder with an index.html file.</li>
+<li><strong>Build the layout.</strong> Create a base template with your header, footer, and global styles. Every page extends this template.</li>
+<li><strong>Recreate pages.</strong> For each page, write the HTML and CSS that reproduces the Webflow design. Use the screenshots as reference. The CSS will be 5-10x smaller than Webflow's output.</li>
+<li><strong>Add CMS content.</strong> For blog posts and collection items, build a simple data-driven system (Python, Node, or a static site generator) that generates pages from the extracted content data.</li>
+<li><strong>Replicate interactions.</strong> Rebuild key interactions in CSS transitions or vanilla JavaScript. Most Webflow interactions (fade-in on scroll, hover effects, smooth scrolling) are 5-20 lines of code each.</li>
+</ol>
+                <h2>Step 4: Preserve URLs and SEO Signals</h2>
+                <p>This step is critical. URL changes are the number one cause of ranking drops during migration.</p>
+<ul>
+<li><strong>Match every URL exactly.</strong> If Webflow served <code>/about</code>, the static site must serve <code>/about/</code> (with trailing slash, matching Webflow's pattern). Webflow typically uses trailing slashes. Verify with your crawl data.</li>
+<li><strong>Preserve all meta tags.</strong> Copy title tags, meta descriptions, canonical URLs, and Open Graph tags exactly from the crawl export. Do not "improve" them during migration. Optimize after the migration stabilizes (4-6 weeks).</li>
+<li><strong>Maintain internal links.</strong> Every internal link must point to the correct URL on the static site. Broken internal links hurt crawlability and user experience.</li>
+<li><strong>Transfer schema markup.</strong> If your Webflow site had structured data (via custom code embed), replicate it in the static build. Better yet, improve it with more complete schema. See our <a href="/blog/schema-markup-small-business/">schema markup guide</a>.</li>
+<li><strong>Submit the new sitemap.</strong> Generate a sitemap.xml with all URLs and submit it to <a href="https://search.google.com/search-console" target="_blank" rel="noopener noreferrer">Google Search Console</a> after launch.</li>
+</ul>
+<p>For a detailed URL migration playbook, read our <a href="/blog/migrate-wordpress-to-static-html-without-losing-seo/">WordPress migration guide</a>. The URL preservation principles are identical regardless of the source platform.</p>
+                <h2>Step 5: Launch and Monitor</h2>
+                <p><strong>Before launch:</strong> Deploy the static site to a staging URL. Crawl it with Screaming Frog. Compare every URL, title tag, and meta description against the original Webflow crawl data. Fix all discrepancies.</p>
+<p><strong>Launch day:</strong> Update your DNS to point to the new hosting (GitHub Pages, Cloudflare Pages, or Netlify). DNS propagation takes 1-24 hours. During propagation, some visitors see the old site and some see the new one. This is normal.</p>
+<p><strong>Week 1-2:</strong> Monitor Google Search Console daily. Watch for: new 404 errors (missed URLs), drops in indexed pages, crawl errors, or mobile usability issues. Request indexing for your top 10 pages using the URL Inspection tool.</p>
+<p><strong>Week 3-4:</strong> Check PageSpeed scores for key pages. You should see scores jump from 55-75 to 90+. Monitor keyword rankings. Minor fluctuations (1-3 positions) are normal during re-indexing.</p>
+<p><strong>Month 2+:</strong> Rankings stabilize. Core Web Vitals improvement shows in Search Console within 28 days (Google uses a 28-day rolling average). At this point, you can start optimizing title tags and meta descriptions for SEO improvement.</p>
+                <h2>What to Expect After Migration</h2>
+                <p>Based on our migration projects:</p>
+<ul>
+<li><strong>PageSpeed:</strong> 55-75 on Webflow to 90-98 on static. Immediate improvement visible on launch day.</li>
+<li><strong>Hosting cost:</strong> $14-39/month to $0/month. Savings begin immediately.</li>
+<li><strong>Page weight:</strong> 1-2MB (Webflow) to 100-350KB (static). 3-10x reduction.</li>
+<li><strong>Rankings:</strong> Stable or improved. The speed boost from static HTML often produces ranking gains within 4-6 weeks as Google re-evaluates Core Web Vitals.</li>
+<li><strong>Maintenance:</strong> Zero. No platform updates, no CMS maintenance, no JavaScript framework upgrades. The site runs without attention.</li>
+</ul>
+<p>Webflow to static migrations start at $3,000. <a href="/audit/">Audit your Webflow site</a> to see the performance gap, or <a href="/contact/">contact us</a> for a migration quote.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does a Webflow to static migration take?", "acceptedAnswer": {"@type": "Answer", "text": "2-4 weeks for a typical 10-20 page site. Sites with extensive CMS content (100+ blog posts) may take 4-6 weeks due to content extraction and data migration."}}, {"@type": "Question", "name": "Will I lose my Webflow interactions?", "acceptedAnswer": {"@type": "Answer", "text": "Most Webflow interactions (scroll animations, hover effects, fade-ins) can be replicated in CSS and vanilla JavaScript. Complex multi-step interactions may be simplified. We discuss which interactions to keep and which to simplify before starting the migration."}}, {"@type": "Question", "name": "Can I keep using Webflow CMS for content?", "acceptedAnswer": {"@type": "Answer", "text": "Not with a static migration. The point of migrating is to eliminate platform dependency. Content management shifts to editing build data files (JSON, markdown) or using a headless CMS like Sanity or Contentful. For sites that update content quarterly, direct file editing is simplest."}}, {"@type": "Question", "name": "What if I change my mind after migrating?", "acceptedAnswer": {"@type": "Answer", "text": "You own all the static files. You can always re-import content into a new Webflow project if you decide to return. But most migration clients do not return because the performance, cost, and ownership benefits are immediately obvious."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">How long does a Webflow to static migration take?</summary>
+                    <div class="faq-item__answer"><p>2-4 weeks for a typical 10-20 page site. Sites with extensive CMS content (100+ blog posts) may take 4-6 weeks due to content extraction and data migration.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Will I lose my Webflow interactions?</summary>
+                    <div class="faq-item__answer"><p>Most Webflow interactions (scroll animations, hover effects, fade-ins) can be replicated in CSS and vanilla JavaScript. Complex multi-step interactions may be simplified. We discuss which interactions to keep and which to simplify before starting the migration.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can I keep using Webflow CMS for content?</summary>
+                    <div class="faq-item__answer"><p>Not with a static migration. The point of migrating is to eliminate platform dependency. Content management shifts to editing build data files (JSON, markdown) or using a headless CMS like Sanity or Contentful. For sites that update content quarterly, direct file editing is simplest.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">What if I change my mind after migrating?</summary>
+                    <div class="faq-item__answer"><p>You own all the static files. You can always re-import content into a new Webflow project if you decide to return. But most migration clients do not return because the performance, cost, and ownership benefits are immediately obvious.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>

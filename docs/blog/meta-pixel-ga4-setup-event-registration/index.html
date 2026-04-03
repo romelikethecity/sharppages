@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>Meta Pixel and GA4 Setup for Event Registration Pages | SharpPages</title>
+    <meta name="description" content="Step-by-step guide to installing Meta Pixel and GA4 on event registration pages. Track registrations, build retargeting audiences, and measure cost per lead.">
+    <link rel="canonical" href="https://sharppages.com/blog/meta-pixel-ga4-setup-event-registration/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/meta-pixel-ga4-setup-event-registration/">
+    <meta property="og:title" content="Meta Pixel and GA4 Setup for Event Registration Pages | SharpPages">
+    <meta property="og:description" content="Step-by-step guide to installing Meta Pixel and GA4 on event registration pages. Track registrations, build retargeting audiences, and measure cost per lead.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meta Pixel and GA4 Setup for Event Registration Pages | SharpPages">
+    <meta name="twitter:description" content="Step-by-step guide to installing Meta Pixel and GA4 on event registration pages. Track registrations, build retargeting audiences, and measure cost per lead.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Meta Pixel and GA4 Setup for Event Registration Pages",
+      "item": "https://sharppages.com/blog/meta-pixel-ga4-setup-event-registration/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Meta Pixel and GA4 Setup for Event Registration Pages",
+  "description": "Step-by-step guide to installing Meta Pixel and GA4 on event registration pages. Track registrations, build retargeting audiences, and measure cost per lead.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/meta-pixel-ga4-setup-event-registration/",
+  "mainEntityOfPage": "https://sharppages.com/blog/meta-pixel-ga4-setup-event-registration/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Meta Pixel and GA4 Setup for Event Registration Pages</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">How to Set Up Meta Pixel and GA4 on Event Registration Pages</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>Why You Need Both, Not One or the Other</h2>
+                <p>Meta Pixel and GA4 answer different questions. The Meta Pixel tells Facebook which ad clicks turned into registrations so the algorithm can find more people like your converters. GA4 tells you how visitors behave on the page: where they came from, how long they stayed, what device they used, and where they dropped off.</p>
+<p>Running ads without the Meta Pixel means Facebook optimizes for clicks, not registrations. You pay for traffic that does not convert. Running a page without GA4 means you cannot diagnose why visitors are not registering. You see the symptom (low registrations) but not the cause.</p>
+<p>Install both before the first ad dollar goes out. The setup takes 30 minutes if you have access to the page code and your Meta Business Suite. If you are on a platform like Eventbrite or Splash, you are limited to what their integration supports, which is often incomplete.</p>
+                <h2>Meta Pixel: Creating and Installing the Base Code</h2>
+                <p>Go to <a href="https://business.facebook.com/events_manager" target="_blank" rel="noopener noreferrer">Meta Events Manager</a>. Click "Connect data sources," select "Web," and choose "Meta Pixel." Name it after the event or your organization (not "My Pixel" because you will forget which one it is in 6 months).</p>
+<p>Meta gives you a base code snippet. It looks like this: a script tag that loads the Facebook SDK, initializes the pixel with your pixel ID, and fires a PageView event. This snippet goes in the head section of every page where you want tracking.</p>
+<p>For event registration sites, install the base code on both the registration page and the confirmation/thank-you page. The base code fires PageView automatically on both pages. The conversion event (which we set up next) only fires on the confirmation page.</p>
+<p>If you are running events for different clients or brands, use a separate pixel for each. Sharing a pixel across unrelated events contaminates the audience data and makes retargeting useless. One pixel per event series or per client.</p>
+                <h2>Firing the Lead Event on Registration Completion</h2>
+                <p>The base code tracks page views. That tells Facebook someone visited the registration page. But the valuable signal is who completed registration. For that, you fire a standard event on the confirmation page.</p>
+<p>Two approaches:</p>
+<p><strong>Approach 1: Confirmation page redirect.</strong> After form submission, redirect the visitor to a separate thank-you page (e.g., /event/thank-you/). On that page, include the base pixel code plus an additional fbq('track', 'Lead') call. This is the simplest and most reliable method. The event fires once per page load, and since the only way to reach the thank-you page is through the form, every Lead event corresponds to a real registration.</p>
+<p><strong>Approach 2: Inline event firing.</strong> If your form submits without a page redirect (AJAX submission), fire the Lead event in the form's success callback. This works but requires careful implementation. If the event fires before the form submission completes, or if it fires on validation errors, you get false conversions in your data.</p>
+<p>Approach 1 is better for most teams. It separates the tracking from the form logic and eliminates timing issues.</p>
+                <h2>Conversions API: Server-Side Backup</h2>
+                <p>Browser-based pixel tracking has a problem: ad blockers, iOS privacy restrictions, and browser cookie policies block the pixel for 20-40% of visitors. That means 20-40% of your registrations do not get attributed to the ad that drove them.</p>
+<p>The <a href="https://developers.facebook.com/docs/marketing-api/conversions-api" target="_blank" rel="noopener noreferrer">Conversions API (CAPI)</a> fixes this by sending conversion data directly from your server to Meta. When someone registers, your server sends the event to Meta independent of what the browser does. The pixel and CAPI work together through deduplication: both fire the same event with the same event ID, and Meta counts it once.</p>
+<p>For event registration pages with form submissions going to a backend (or a service like Formspree, Zapier, or a webhook), CAPI can be triggered from that backend. The implementation is more technical than the pixel, but for campaigns spending $500+ in ad budget, the improved attribution is worth it.</p>
+<p>If you are not ready for CAPI, at minimum ensure the browser pixel is correctly installed. CAPI is an enhancement, not a replacement.</p>
+                <h2>GA4: Property Setup and Tag Installation</h2>
+                <p>Go to <a href="https://analytics.google.com/" target="_blank" rel="noopener noreferrer">Google Analytics</a> and create a GA4 property for the event (or use your existing property if the event lives on your main domain). GA4 gives you a Measurement ID that starts with "G-". This ID goes into the gtag.js snippet on every page.</p>
+<p>The gtag.js snippet goes in the head section, same as the Meta Pixel. It loads Google's analytics library and sends a page_view event automatically. For a basic setup, that is the entire installation. GA4 starts collecting data immediately: page views, sessions, traffic sources, devices, geography.</p>
+<p>For event sites on a separate domain (e.g., yourevent.com), create a dedicated GA4 property. For event pages on your main domain (e.g., yourcompany.com/event/), use your existing property and filter by page path in reports. Either approach works. The key is having GA4 installed before the campaign launches.</p>
+                <h2>Tracking Registration as a GA4 Conversion</h2>
+                <p>GA4 tracks page views automatically, but it does not know which page view is a registration completion unless you tell it. There are two ways to mark registrations as conversions.</p>
+<p><strong>Method 1: Destination-based goal.</strong> If your form redirects to a thank-you page, go to GA4 Admin, select "Events," then "Create Event." Create an event where the event name is "page_view" and the parameter "page_location" contains "/thank-you" (or whatever your confirmation page URL path is). Name this event "registration_complete." Then go to "Conversions" and mark "registration_complete" as a conversion event.</p>
+<p><strong>Method 2: Custom event.</strong> Fire a custom GA4 event in the form's success handler using gtag('event', 'registration_complete'). Then mark that event as a conversion in GA4. This works for AJAX forms that do not redirect.</p>
+<p>Method 1 is more reliable because it does not depend on JavaScript execution timing. The page load itself is the trigger, and GA4 handles page_view events natively.</p>
+                <h2>Building Retargeting Audiences From Pixel Data</h2>
+                <p>The Meta Pixel is not just for measuring conversions. It builds audiences you can retarget later. Once the pixel has been on your registration page for a few days with ads running, you have three valuable audiences in Meta Events Manager:</p>
+<p><strong>Visited but did not register:</strong> People who viewed the registration page but did not reach the confirmation page. These are warm leads who showed interest but did not convert. Retarget them with reminder ads, a different angle on the value proposition, or urgency messaging as the event date approaches.</p>
+<p><strong>Registered:</strong> People who completed registration. Exclude them from acquisition ads (do not waste budget showing register ads to people who already registered). Use them for event reminders, upsell messaging, or as a seed audience for lookalikes.</p>
+<p><strong>Lookalike of registered:</strong> Meta builds a lookalike audience from the people who registered. This audience shares demographic and behavioral traits with your converters. For multi-city or recurring events, this is gold. The algorithm already knows what a registrant looks like.</p>
+<p>For more on retargeting strategy, see our <a href="/blog/facebook-retargeting-conference-attendees/">guide to retargeting conference attendees</a>.</p>
+                <h2>Testing the Setup Before Launch</h2>
+                <p>Do not launch ads and discover a week later that the pixel was not firing. Test everything before the first dollar goes out.</p>
+<p><strong>Meta Pixel test:</strong> Install the <a href="https://chrome.google.com/webstore/detail/meta-pixel-helper/fdgfkebogiimcoedlicjlajpkdmockpc" target="_blank" rel="noopener noreferrer">Meta Pixel Helper Chrome extension</a>. Visit the registration page and verify the PageView event fires. Submit a test registration and verify the Lead event fires on the confirmation page. Then check Events Manager to confirm the events appear in the real-time view.</p>
+<p><strong>GA4 test:</strong> Open GA4 and go to "Real-time" in the left sidebar. Visit the registration page in a new browser tab. You should see the page view appear within seconds. Submit a test registration and verify the conversion event appears.</p>
+<p><strong>End-to-end test:</strong> Run a $5 test ad to yourself. Click it, register, and verify the full chain: ad click shows in Ads Manager, page view shows in GA4, conversion shows in both. This catches issues that unit testing misses, like redirect chains that strip tracking parameters.</p>
+                <h2>Common Mistakes That Break Event Tracking</h2>
+                <p><strong>Pixel on the registration page but not the confirmation page.</strong> Facebook sees visitors but no conversions. Your campaign reports zero results even though people are registering. This is the most common mistake we see.</p>
+<p><strong>Same pixel across unrelated events.</strong> Audience data gets mixed. A retargeting ad for your New York event shows to someone who visited the Chicago event page. Wasted spend, confused messaging.</p>
+<p><strong>GA4 not marking the registration event as a conversion.</strong> GA4 tracks it as a regular event but does not surface it in conversion reports. You have the data but cannot find it without digging into custom reports.</p>
+<p><strong>No deduplication between Pixel and CAPI.</strong> If both fire the same event without a shared event_id, Meta counts each registration twice. Your cost-per-lead looks half of what it really is, and your lookalike audiences include phantom data.</p>
+<p><strong>Testing with ad blockers enabled.</strong> You test the page with uBlock Origin running, the pixel does not fire, and you assume it is broken. Test in an incognito window with extensions disabled, or use the Meta Pixel Helper extension directly.</p>
+                <h2>What Proper Tracking Makes Possible</h2>
+                <p>With both Meta Pixel and GA4 correctly installed, you can answer every question that matters during an event campaign:</p>
+<p>Which ad set produces the lowest cost per registration? Which creative (image, copy) generates the most conversions? What percentage of mobile visitors register vs desktop? How long do visitors spend on the page before deciding? Which traffic source (email, ads, organic) converts at the highest rate?</p>
+<p>These answers turn a guessing game into an optimization loop. Mid-campaign, you shift budget toward the winning ad set. Post-campaign, you know exactly what worked for next time.</p>
+<p>If you want tracking set up correctly from day one, our <a href="/services/events/">event registration sites</a> include Meta Pixel and GA4 as standard. No extra charge, no configuration headaches. See <a href="/pricing/">pricing</a> or <a href="/contact/">book a call</a> to discuss your next event.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I install Meta Pixel on an event registration page?", "acceptedAnswer": {"@type": "Answer", "text": "Add the Meta Pixel base code to the head section of both your registration page and confirmation page. Fire a PageView event on both pages (automatic with the base code) and a Lead event on the confirmation page only. Test with the Meta Pixel Helper Chrome extension before launching ads."}}, {"@type": "Question", "name": "Can I use GA4 and Meta Pixel on the same page?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. They are independent tracking systems that serve different purposes. Meta Pixel feeds conversion data back to Facebook for ad optimization. GA4 provides behavioral analytics for diagnosing page performance. Both go in the head section and do not conflict."}}, {"@type": "Question", "name": "What is the Meta Conversions API and do I need it?", "acceptedAnswer": {"@type": "Answer", "text": "The Conversions API sends conversion data from your server directly to Meta, bypassing browser-side ad blockers and privacy restrictions. It improves attribution accuracy by 20-40%. It is recommended for campaigns spending $500+ but not strictly required for smaller budgets."}}, {"@type": "Question", "name": "How do I track event registrations as conversions in GA4?", "acceptedAnswer": {"@type": "Answer", "text": "Create a custom event in GA4 that fires when a visitor reaches the confirmation/thank-you page. Mark that event as a conversion in GA4 Admin. The simplest method is a destination-based trigger on the thank-you page URL path."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">How do I install Meta Pixel on an event registration page?</summary>
+                    <div class="faq-item__answer"><p>Add the Meta Pixel base code to the head section of both your registration page and confirmation page. Fire a PageView event on both pages (automatic with the base code) and a Lead event on the confirmation page only. Test with the Meta Pixel Helper Chrome extension before launching ads.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can I use GA4 and Meta Pixel on the same page?</summary>
+                    <div class="faq-item__answer"><p>Yes. They are independent tracking systems that serve different purposes. Meta Pixel feeds conversion data back to Facebook for ad optimization. GA4 provides behavioral analytics for diagnosing page performance. Both go in the head section and do not conflict.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">What is the Meta Conversions API and do I need it?</summary>
+                    <div class="faq-item__answer"><p>The Conversions API sends conversion data from your server directly to Meta, bypassing browser-side ad blockers and privacy restrictions. It improves attribution accuracy by 20-40%. It is recommended for campaigns spending $500+ but not strictly required for smaller budgets.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How do I track event registrations as conversions in GA4?</summary>
+                    <div class="faq-item__answer"><p>Create a custom event in GA4 that fires when a visitor reaches the confirmation/thank-you page. Mark that event as a conversion in GA4 Admin. The simplest method is a destination-based trigger on the thank-you page URL path.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>

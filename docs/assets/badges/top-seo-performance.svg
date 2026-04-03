@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" width="200" height="220">
+  <rect width="200" height="220" rx="12" fill="#0C0E12"/>
+  <rect width="200" height="220" rx="12" fill="none" stroke="#D4A054" stroke-width="1" opacity="0.3"/>
+
+  <!-- Diamond trio -->
+  <g transform="translate(100, 34)">
+    <rect x="-6" y="-6" width="12" height="12" rx="2" fill="#D4A054" transform="rotate(45)"/>
+    <rect x="-16" y="-6" width="10" height="10" rx="2" fill="#D4A054" transform="rotate(45)" opacity="0.5"/>
+    <rect x="6" y="-6" width="10" height="10" rx="2" fill="#D4A054" transform="rotate(45)" opacity="0.3"/>
+  </g>
+
+  <text x="100" y="72" text-anchor="middle" fill="#F0F0F0" font-family="'Source Serif 4', Georgia, serif" font-size="15" font-weight="700" font-style="italic">Top SEO</text>
+  <text x="100" y="92" text-anchor="middle" fill="#F0F0F0" font-family="'Outfit', system-ui, sans-serif" font-size="14" font-weight="600">Performance</text>
+
+  <!-- Year -->
+  <text x="100" y="128" text-anchor="middle" fill="#D4A054" font-family="'Outfit', system-ui, sans-serif" font-size="28" font-weight="800" letter-spacing="4">2026</text>
+
+  <!-- Dividers with diamond -->
+  <line x1="30" y1="142" x2="88" y2="142" stroke="#D4A054" stroke-width="0.5" opacity="0.4"/>
+  <rect x="96" y="138" width="8" height="8" rx="1" fill="#D4A054" transform="rotate(45 100 142)" opacity="0.4"/>
+  <line x1="112" y1="142" x2="170" y2="142" stroke="#D4A054" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Label -->
+  <text x="100" y="170" text-anchor="middle" fill="#7A7A7A" font-family="'Source Serif 4', Georgia, serif" font-size="10" font-style="italic" letter-spacing="2">SULTAN'S PICK</text>
+
+  <text x="100" y="200" text-anchor="middle" fill="#5A5A5A" font-family="'Outfit', system-ui, sans-serif" font-size="9" font-weight="500" letter-spacing="1.5">SULTAN OF SAAS</text>
+</svg>

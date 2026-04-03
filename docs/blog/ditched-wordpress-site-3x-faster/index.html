@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>I Ditched WordPress and My Site Got 3x Faster Overnight | SharpPages</title>
+    <meta name="description" content="A real migration story: WordPress site scoring 52 on mobile, rebuilt as static HTML, scoring 97. Same design, same content, 3x faster. Here is exactly what changed.">
+    <link rel="canonical" href="https://sharppages.com/blog/ditched-wordpress-site-3x-faster/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/ditched-wordpress-site-3x-faster/">
+    <meta property="og:title" content="I Ditched WordPress and My Site Got 3x Faster Overnight | SharpPages">
+    <meta property="og:description" content="A real migration story: WordPress site scoring 52 on mobile, rebuilt as static HTML, scoring 97. Same design, same content, 3x faster. Here is exactly what changed.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="I Ditched WordPress and My Site Got 3x Faster Overnight | SharpPages">
+    <meta name="twitter:description" content="A real migration story: WordPress site scoring 52 on mobile, rebuilt as static HTML, scoring 97. Same design, same content, 3x faster. Here is exactly what changed.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "I Ditched WordPress and My Site Got 3x Faster Overnight",
+      "item": "https://sharppages.com/blog/ditched-wordpress-site-3x-faster/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "I Ditched WordPress and My Site Got 3x Faster Overnight",
+  "description": "A real migration story: WordPress site scoring 52 on mobile, rebuilt as static HTML, scoring 97. Same design, same content, 3x faster. Here is exactly what changed.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/ditched-wordpress-site-3x-faster/",
+  "mainEntityOfPage": "https://sharppages.com/blog/ditched-wordpress-site-3x-faster/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">I Ditched WordPress and My Site Got 3x Faster Overnight</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">I Ditched WordPress and My Site Got 3x Faster Overnight</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>The Before</h2>
+                <p>The site was a 12-page service business website built on WordPress with Elementor. Standard setup: managed hosting on WP Engine ($30/month), 18 active plugins, a premium theme, and images uploaded directly from the photographer without optimization.</p>
+<p>Mobile PageSpeed score: 52. LCP: 4.1 seconds. Total Blocking Time: 420ms. Page weight: 2.8MB. The site loaded in 5-6 seconds on a mobile connection.</p>
+<p>The business owner was paying $30/month for WP Engine hosting, $200/year for Elementor Pro, $99/year for Yoast Premium, $59/year for WP Rocket, and $100/month for a maintenance service. Total recurring cost: $718/year.</p>
+                <h2>Why Optimization Was Not Enough</h2>
+                <p>We tried the standard optimization playbook first: compressed images to WebP, enabled WP Rocket caching, deferred non-critical JavaScript, and removed 6 unused plugins. The score improved from 52 to 68. Better, but still orange. Still failing LCP on mobile.</p>
+<p>The ceiling was Elementor. Even with caching and optimization, Elementor loaded 320KB of JavaScript and 85KB of CSS on every page. The deeply nested HTML (6-10 div levels per section) pushed the DOM to 3,200 elements. WP Rocket could cache the server response, but it could not remove the Elementor bloat from the browser.</p>
+<p>Getting from 68 to 90+ would require replacing Elementor with a lightweight theme and rebuilding every page. At that point, we were already rebuilding. Might as well rebuild as static HTML and eliminate WordPress entirely.</p>
+                <h2>The Migration</h2>
+                <p>The rebuild took 2 weeks. Here is what happened:</p>
+<ol>
+<li><strong>Day 1-2:</strong> Crawled the WordPress site. Documented every URL, title tag, meta description, and heading. Captured screenshots of all 12 pages as design reference. Exported content from WordPress admin.</li>
+<li><strong>Day 3-7:</strong> Rebuilt all 12 pages in clean HTML and CSS. Replicated the design from screenshots. Converted images to WebP with responsive srcset. Built the contact form with Formspree. Added schema markup, OG tags, and sitemap generation to the build script.</li>
+<li><strong>Day 8-9:</strong> Testing. Compared every URL, title tag, and meta description against the WordPress crawl data. Tested forms, mobile responsiveness, and accessibility. Ran PageSpeed on every page.</li>
+<li><strong>Day 10:</strong> Deployed to Cloudflare Pages. Updated DNS. The migration was live by end of day.</li>
+</ol>
+                <h2>The After</h2>
+                <p>The numbers speak for themselves:</p>
+<table>
+<tr><th>Metric</th><th>WordPress</th><th>Static HTML</th><th>Change</th></tr>
+<tr><td>Mobile PageSpeed</td><td>52</td><td>97</td><td>+45 points</td></tr>
+<tr><td>LCP</td><td>4.1s</td><td>0.8s</td><td>5.1x faster</td></tr>
+<tr><td>Total Blocking Time</td><td>420ms</td><td>10ms</td><td>42x less</td></tr>
+<tr><td>Page weight</td><td>2.8MB</td><td>210KB</td><td>13x lighter</td></tr>
+<tr><td>DOM elements</td><td>3,200</td><td>280</td><td>11x fewer</td></tr>
+<tr><td>HTTP requests</td><td>45</td><td>8</td><td>5.6x fewer</td></tr>
+<tr><td>Monthly hosting</td><td>$30</td><td>$0</td><td>-$360/yr</td></tr>
+<tr><td>Annual recurring cost</td><td>$718</td><td>$12 (domain only)</td><td>-$706/yr</td></tr>
+</table>
+<p>Same design. Same content. Same URLs. The site just loads in under 1 second instead of 5.</p>
+                <h2>The SEO Impact</h2>
+                <p>Rankings were stable during the first 2 weeks (normal re-indexing period). By week 4, three target keywords had moved up 5-8 positions. By week 8, the site was on page 1 for two keywords that had been on page 2 for over a year.</p>
+<p>The content did not change. The backlinks did not change. The only variable was page speed. Google re-evaluated Core Web Vitals, saw a site that went from failing to passing all three metrics, and adjusted rankings accordingly.</p>
+<p>Google Search Console confirmed the improvement: all pages moved from "poor" to "good" in the Core Web Vitals report within 28 days of migration (Google uses a 28-day rolling average).</p>
+                <h2>What the Owner Says Now</h2>
+                <p>Six months later:</p>
+<ul>
+<li><strong>Zero maintenance tickets.</strong> No plugin updates, no security alerts, no broken pages after updates. The maintenance service was cancelled.</li>
+<li><strong>$706/year saved</strong> in hosting, plugins, and maintenance costs.</li>
+<li><strong>Rankings improved</strong> for the keywords that matter most to the business.</li>
+<li><strong>Page loads in under 1 second.</strong> Visitors who previously bounced on mobile now stay and convert.</li>
+</ul>
+<p>The migration cost was a one-time fee. It paid for itself in saved recurring costs within the first year.</p>
+                <h2>Is This Right for Your Site</h2>
+                <p>This migration pattern works for WordPress sites that:</p>
+<ul>
+<li>Have 5-50 pages</li>
+<li>Score below 70 on mobile PageSpeed</li>
+<li>Use a page builder (Elementor, Divi, WPBakery)</li>
+<li>Update content a few times per year, not daily</li>
+<li>Pay $50+/month in hosting and maintenance</li>
+</ul>
+<p>If that describes your site, the math is straightforward. Migration cost: $2,500-6,000. Annual savings: $500-2,000+. PageSpeed improvement: 30-50 points. <a href="/audit/">Start with a free audit</a> to see your actual numbers.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does a WordPress to static migration take?", "acceptedAnswer": {"@type": "Answer", "text": "2-4 weeks for a typical 10-20 page site. The timeline depends on design complexity and content volume. The process preserves your design, content, and URL structure."}}, {"@type": "Question", "name": "Will my site look different after migration?", "acceptedAnswer": {"@type": "Answer", "text": "No. The design is replicated exactly from the WordPress version. Same colors, fonts, layout, imagery. The difference is under the hood: cleaner code, faster load times, and zero platform overhead."}}, {"@type": "Question", "name": "What if I need to update content after migration?", "acceptedAnswer": {"@type": "Answer", "text": "Content updates are done by editing HTML files directly or through a build system that generates pages from data files. For sites that update a few times per year, this is simpler than maintaining a full CMS."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">How long does a WordPress to static migration take?</summary>
+                    <div class="faq-item__answer"><p>2-4 weeks for a typical 10-20 page site. The timeline depends on design complexity and content volume. The process preserves your design, content, and URL structure.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Will my site look different after migration?</summary>
+                    <div class="faq-item__answer"><p>No. The design is replicated exactly from the WordPress version. Same colors, fonts, layout, imagery. The difference is under the hood: cleaner code, faster load times, and zero platform overhead.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">What if I need to update content after migration?</summary>
+                    <div class="faq-item__answer"><p>Content updates are done by editing HTML files directly or through a build system that generates pages from data files. For sites that update a few times per year, this is simpler than maintaining a full CMS.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>

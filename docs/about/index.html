@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>About SharpPages: Performance Web Studio | SharpPages</title>
+    <meta name="description" content="SharpPages is a performance web studio built by Rome Thorndike (UC Berkeley Haas MBA, ex-Salesforce, Microsoft, Databricks). Fast sites, real SEO, flat fees.">
+    <link rel="canonical" href="https://sharppages.com/about/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sharppages.com/about/">
+    <meta property="og:title" content="About SharpPages: Performance Web Studio | SharpPages">
+    <meta property="og:description" content="SharpPages is a performance web studio built by Rome Thorndike (UC Berkeley Haas MBA, ex-Salesforce, Microsoft, Databricks). Fast sites, real SEO, flat fees.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About SharpPages: Performance Web Studio | SharpPages">
+    <meta name="twitter:description" content="SharpPages is a performance web studio built by Rome Thorndike (UC Berkeley Haas MBA, ex-Salesforce, Microsoft, Databricks). Fast sites, real SEO, flat fees.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://sharppages.com/about/"
+    }
+  ]
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">About</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">About <span class="text-accent">SharpPages</span></h1>
+                <p class="page-header__subtitle">A performance web studio that competes with agencies on outcomes, not hours. One person, full stack, measurable results.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="about-intro">
+                    <div>
+                        <div style="background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8); text-align: center;">
+                            <h3 style="margin-bottom: var(--space-2);">Rome Thorndike</h3>
+                            <p style="color: var(--color-text-muted); font-size: var(--text-sm);">Founder, SharpPages</p>
+                        </div>
+                    </div>
+                    <div class="about-intro__text">
+                        <h2>Data + Marketing + Engineering</h2>
+                        <p>I spent a decade in enterprise SaaS before starting SharpPages. I sold software at <a href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer">Salesforce</a>, ran customer success at Microsoft, and helped scale a data startup (Datajoy) that was acquired by <a href="https://www.databricks.com/" target="_blank" rel="noopener noreferrer">Databricks</a>. Along the way, I earned my MBA at <a href="https://haas.berkeley.edu/" target="_blank" rel="noopener noreferrer">UC Berkeley Haas</a>.</p>
+                        <p>SharpPages grew out of a pattern I kept seeing: businesses paying agencies $150 to $300 per hour for sites that score 70 on PageSpeed, take 8 weeks to deliver, and come with change orders for every revision. Then those same businesses wonder why their site does not rank and their ads do not convert.</p>
+                        <p>I started building sites the way I thought they should be built: static HTML that loads in under a second, programmatic SEO that generates hundreds of targeted pages, and ad campaigns with full attribution from impression to conversion. The results spoke for themselves. A 98 PageSpeed score across 398 pages. 363K impressions in 30 days from programmatic SEO. 2x industry CTR on paid social campaigns.</p>
+                        <p>Agencies staff projects across junior designers, developers, and project managers. Every handoff introduces delay and information loss. SharpPages is one person doing all of it: site architecture, design, development, SEO, content, and ad management. Faster delivery, tighter feedback loops, and zero "let me check with the developer and get back to you."</p>
+                        <ul class="credentials-list">
+                            <li>UC Berkeley, Haas School of Business (MBA)</li>
+                            <li>Databricks (via Datajoy acquisition)</li>
+                            <li>Microsoft, Customer Success</li>
+                            <li>Salesforce, Enterprise Sales</li>
+                            <li>Snapdocs, GTM Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section section--alt">
+            <div class="container">
+                <h2 class="text-center mb-8">Why This Approach Wins</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3 class="feature-card__title">Speed Matters More Than Agencies Admit</h3>
+                        <p class="feature-card__text">Google uses Core Web Vitals as a ranking factor. A 98 PageSpeed score means your site loads in under a second. Most agency-built sites on WordPress or Webflow score 60 to 80. The performance gap shows up in search rankings, bounce rates, and conversion rates.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-card__title">SEO at Scale Requires Engineering</h3>
+                        <p class="feature-card__text">Building 300+ pages of keyword-targeted content requires build scripts, data structures, and template systems. Agencies hire copywriters to produce 4 blog posts per month. We generate hundreds of pages from structured data, each with unique content, schema markup, and internal links.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-card__title">Flat Fees Align Incentives</h3>
+                        <p class="feature-card__text">Agencies profit from scope creep and change orders. Hourly billing rewards slow work. Flat fees mean I am incentivized to scope correctly, build efficiently, and ship on time. If the scope changes, you get a new quote before any extra work starts.</p>
+                    </div>
+                </div>
+                <p style="color: var(--color-text-muted); text-align: center; margin-top: var(--space-8); line-height: var(--leading-relaxed);">See the proof in our <a href="/work/">case studies</a>, review <a href="/services/">services and pricing</a>, or <a href="/audit/">run a free audit</a> on your current site.</p>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Work Together?</h2>
+                    <p class="cta-section__text">Tell us about your site. We will review it, discuss your goals, and send a fixed quote within two business days.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>

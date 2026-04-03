@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>Core Web Vitals Explained: LCP, CLS, TBT, and What They Mean | SharpPages</title>
+    <meta name="description" content="Plain-English guide to Core Web Vitals. What LCP, CLS, and TBT measure, how Google uses them for search rankings, and how to diagnose and fix poor scores.">
+    <link rel="canonical" href="https://sharppages.com/blog/core-web-vitals-explained-lcp-cls-tbt/">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/core-web-vitals-explained-lcp-cls-tbt/">
+    <meta property="og:title" content="Core Web Vitals Explained: LCP, CLS, TBT, and What They Mean | SharpPages">
+    <meta property="og:description" content="Plain-English guide to Core Web Vitals. What LCP, CLS, and TBT measure, how Google uses them for search rankings, and how to diagnose and fix poor scores.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Core Web Vitals Explained: LCP, CLS, TBT, and What They Mean | SharpPages">
+    <meta name="twitter:description" content="Plain-English guide to Core Web Vitals. What LCP, CLS, and TBT measure, how Google uses them for search rankings, and how to diagnose and fix poor scores.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Core Web Vitals Explained: LCP, CLS, TBT, and What They Mean",
+      "item": "https://sharppages.com/blog/core-web-vitals-explained-lcp-cls-tbt/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Core Web Vitals Explained: LCP, CLS, TBT, and What They Mean",
+  "description": "Plain-English guide to Core Web Vitals. What LCP, CLS, and TBT measure, how Google uses them for search rankings, and how to diagnose and fix poor scores.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/core-web-vitals-explained-lcp-cls-tbt/",
+  "mainEntityOfPage": "https://sharppages.com/blog/core-web-vitals-explained-lcp-cls-tbt/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Core Web Vitals Explained: LCP, CLS, TBT, and What They Mean</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Core Web Vitals Explained: LCP, CLS, TBT, and What They Mean</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>What Core Web Vitals Are</h2>
+                <p><a href="https://web.dev/articles/vitals" target="_blank" rel="noopener noreferrer">Core Web Vitals</a> are three metrics Google uses to measure how fast and stable your website feels to visitors. They became a confirmed ranking factor in 2021. Sites with good Core Web Vitals get a ranking boost in search results. Sites with poor scores do not get penalized directly, but they miss the boost their competitors receive.</p>
+<p>The three metrics are:</p>
+<ul>
+<li><strong>LCP (Largest Contentful Paint):</strong> How fast the main content loads.</li>
+<li><strong>CLS (Cumulative Layout Shift):</strong> How much the page layout moves around while loading.</li>
+<li><strong>TBT (Total Blocking Time):</strong> How long the page is frozen and unresponsive.</li>
+</ul>
+<p>Google measures these on real user devices through Chrome User Experience Report (CrUX) data. PageSpeed Insights shows both lab data (simulated) and field data (real users). The field data is what Google uses for rankings.</p>
+                <h2>LCP: Largest Contentful Paint</h2>
+                <p>LCP measures how long it takes for the largest visible element to render on screen. This is usually a hero image, a large heading, or a video thumbnail. It answers the question: "How long does the visitor wait before they see the main content?"</p>
+<p><strong>Good:</strong> Under 2.5 seconds.<br>
+<strong>Needs improvement:</strong> 2.5 to 4.0 seconds.<br>
+<strong>Poor:</strong> Over 4.0 seconds.</p>
+<p>Most WordPress and Webflow sites fall in the 2.5 to 5.0 second range on mobile. <a href="/blog/what-is-a-static-website/">Static HTML sites</a> typically achieve 0.8 to 1.5 seconds.</p>
+<p><strong>What causes slow LCP:</strong></p>
+<ul>
+<li>Unoptimized images (3MB hero images that should be 100KB WebP files)</li>
+<li>Slow server response time (WordPress database queries adding 200-800ms)</li>
+<li>Render-blocking CSS and JavaScript (the browser cannot paint until these load)</li>
+<li>Client-side rendering frameworks (React, Vue) that build the page in the browser instead of serving ready HTML</li>
+</ul>
+<p><strong>How to fix it:</strong> Serve images in WebP/AVIF format at the correct dimensions. Inline critical CSS. Defer non-essential JavaScript. Use a CDN. Or switch to static HTML where LCP is inherently fast because the HTML is ready before the request arrives.</p>
+                <h2>CLS: Cumulative Layout Shift</h2>
+                <p>CLS measures how much the page content shifts around while loading. You have experienced this: you start reading a paragraph, an ad loads above it, and the text jumps down. You click a button, an image loads above it, and you accidentally click something else. That is layout shift.</p>
+<p><strong>Good:</strong> Under 0.1.<br>
+<strong>Needs improvement:</strong> 0.1 to 0.25.<br>
+<strong>Poor:</strong> Over 0.25.</p>
+<p><strong>What causes layout shift:</strong></p>
+<ul>
+<li>Images without width and height attributes (the browser does not know how much space to reserve)</li>
+<li>Ads, embeds, or iframes that load after the initial content</li>
+<li>Web fonts that swap in after system fonts have rendered (FOUT, or Flash of Unstyled Text)</li>
+<li>Dynamically injected content (cookie banners, notification bars, chat widgets)</li>
+</ul>
+<p><strong>How to fix it:</strong> Always set explicit width and height on images and video elements. Use <code>font-display: swap</code> with preloaded font files. Reserve space for ads and embeds with CSS <code>aspect-ratio</code> or min-height. Load third-party widgets after the main content is stable.</p>
+<p>Static sites have an advantage here because there is no dynamic content injection. The HTML describes exactly what renders. No surprises during load.</p>
+                <h2>TBT: Total Blocking Time</h2>
+                <p>TBT measures how long the main thread is blocked by JavaScript during page load. While the main thread is blocked, the page is frozen. Clicks do not register. Scrolling stutters. The page looks loaded but does not respond.</p>
+<p><strong>Good:</strong> Under 200 milliseconds.<br>
+<strong>Needs improvement:</strong> 200 to 600 milliseconds.<br>
+<strong>Poor:</strong> Over 600 milliseconds.</p>
+<p>TBT is a lab metric that approximates First Input Delay (FID) and Interaction to Next Paint (INP) in the field. Google uses INP as the official field metric, but TBT in PageSpeed Insights is a reliable proxy.</p>
+<p><strong>What causes high TBT:</strong></p>
+<ul>
+<li>Large JavaScript bundles (React, Angular, Vue frameworks ship 100-500KB of JavaScript)</li>
+<li>WordPress plugins loading scripts on every page (analytics, chat, social, forms, sliders)</li>
+<li>Third-party scripts (Google Tag Manager, Facebook Pixel, Hotjar, Intercom) competing for the main thread</li>
+<li>Unminified or uncompressed JavaScript</li>
+</ul>
+<p><strong>How to fix it:</strong> Remove unused JavaScript. Defer non-critical scripts with <code>async</code> or <code>defer</code> attributes. Split large bundles into smaller chunks. Or build with static HTML where the total JavaScript is under 10KB instead of 200-500KB.</p>
+                <h2>How Google Uses These Scores</h2>
+                <p>Core Web Vitals are one of many ranking signals. They do not override content relevance, backlinks, or search intent matching. A fast site with irrelevant content will not outrank a slow site with exactly what the searcher needs.</p>
+<p>But among pages with similar content quality and relevance, Core Web Vitals act as a tiebreaker. In competitive search categories where 10 sites have equally good content, the faster sites get the edge.</p>
+<p>Google evaluates Core Web Vitals at the page level, not the site level. A single slow page does not drag down your entire domain. But if most of your pages have poor scores, the cumulative effect limits your search visibility.</p>
+<p>The practical impact: sites that improve from poor to good Core Web Vitals typically see a 5 to 15% increase in organic traffic within 4 to 8 weeks. The lift comes from both ranking improvements and reduced bounce rates (fast sites keep visitors longer).</p>
+                <h2>How to Check Your Scores</h2>
+                <p>Three tools, each measuring slightly different things:</p>
+<p><strong><a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a></strong>: the standard. Shows both lab data (simulated on a mid-tier mobile device) and field data (real Chrome users over the past 28 days). The field data is what Google uses for rankings. This is the score that matters most.</p>
+<p><strong><a href="https://gtmetrix.com/" target="_blank" rel="noopener noreferrer">GTmetrix</a></strong>: shows a performance waterfall chart that makes it easy to see exactly which resources are slow. Useful for diagnosing specific issues.</p>
+<p><strong><a href="https://www.webpagetest.org/" target="_blank" rel="noopener noreferrer">WebPageTest</a></strong>: the most detailed. Lets you test from different locations, different devices, different connection speeds. Shows filmstrip views of the page loading frame by frame. Best for deep technical analysis.</p>
+<p>Start with PageSpeed Insights. Enter your URL, run the test on mobile (not desktop, since mobile scores are typically 20-40 points lower and mobile is what Google prioritizes), and note your LCP, CLS, and TBT scores. For a deeper dive, read our <a href="/blog/how-to-get-90-pagespeed-score/">guide to scoring 90+</a>.</p>
+                <h2>Score Benchmarks by Platform</h2>
+                <p>Based on our audits of hundreds of sites across platforms:</p>
+<ul>
+<li><strong>Squarespace:</strong> 40-65 mobile PageSpeed. LCP 3-6s. TBT 300-800ms. CLS 0.05-0.3. The platform overhead is baked in and cannot be optimized away.</li>
+<li><strong>WordPress (no optimization):</strong> 35-60. LCP 3-7s. TBT 400-1000ms. Plugin bloat is the main culprit.</li>
+<li><strong>WordPress (optimized):</strong> 65-80. LCP 2-4s. TBT 150-400ms. Caching and image optimization help but cannot eliminate the architecture overhead.</li>
+<li><strong>Webflow:</strong> 70-85. LCP 2-3.5s. TBT 100-300ms. Cleaner than WordPress but still ships framework JavaScript.</li>
+<li><strong>Static HTML/CSS:</strong> 90-99. LCP 0.6-1.5s. TBT 10-50ms. CLS 0-0.02. No framework, no overhead, no ceiling.</li>
+</ul>
+<p>If your site is on <a href="/blog/why-your-small-business-doesnt-need-wordpress/">WordPress</a> or Squarespace and scores below 70, the platform is the bottleneck. Optimization can improve scores incrementally, but the architecture sets a ceiling. Breaking through that ceiling requires a different approach.</p>
+                <h2>Get Your Score Checked</h2>
+                <p>Our <a href="/audit/">free site audit</a> runs your URL through PageSpeed Insights and shows your Core Web Vitals scores alongside actionable recommendations. Takes 15 seconds.</p>
+<p>If your scores need work, we offer two paths: optimization of your existing site (fixing images, scripts, and caching) or migration to static HTML for a permanent fix. Optimization starts at $1,000. Full migrations start at $2,500. See our <a href="/pricing/">pricing</a> for details or <a href="/contact/">get in touch</a> for a custom recommendation.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do Core Web Vitals affect rankings?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Google confirmed them as a ranking signal in 2021. They act as a tiebreaker among pages with similar content quality. Sites that improve from poor to good scores typically see 5-15% increases in organic traffic."}}, {"@type": "Question", "name": "Should I check mobile or desktop scores?", "acceptedAnswer": {"@type": "Answer", "text": "Mobile. Google uses mobile-first indexing, meaning it evaluates the mobile version of your site for rankings. Mobile scores are also typically 20-40 points lower than desktop due to slower processors and connections on mobile devices."}}, {"@type": "Question", "name": "Can I fix Core Web Vitals without rebuilding my site?", "acceptedAnswer": {"@type": "Answer", "text": "You can improve scores through image optimization, JavaScript deferral, and caching. But the platform architecture sets a ceiling. WordPress and Squarespace sites can reach 75-80 with aggressive optimization. Breaking into 90+ consistently requires static HTML architecture."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">Do Core Web Vitals affect rankings?</summary>
+                    <div class="faq-item__answer"><p>Yes. Google confirmed them as a ranking signal in 2021. They act as a tiebreaker among pages with similar content quality. Sites that improve from poor to good scores typically see 5-15% increases in organic traffic.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Should I check mobile or desktop scores?</summary>
+                    <div class="faq-item__answer"><p>Mobile. Google uses mobile-first indexing, meaning it evaluates the mobile version of your site for rankings. Mobile scores are also typically 20-40 points lower than desktop due to slower processors and connections on mobile devices.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can I fix Core Web Vitals without rebuilding my site?</summary>
+                    <div class="faq-item__answer"><p>You can improve scores through image optimization, JavaScript deferral, and caching. But the platform architecture sets a ceiling. WordPress and Squarespace sites can reach 75-80 with aggressive optimization. Breaking into 90+ consistently requires static HTML architecture.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>
