@@ -244,7 +244,7 @@ def get_footer_html():
                     </a>
                     <p class="footer__tagline">{SITE_TAGLINE}</p>
                     <div class="footer__badges">
-                        <img src="/assets/badges/best-pagespeed-agency-inline.svg" alt="Best PageSpeed Agency 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
                         <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
                     </div>
                 </div>

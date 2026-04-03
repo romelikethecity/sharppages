@@ -9,12 +9,12 @@ import os
 OUTPUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "badges")
 
 BADGES = [
-    {"id": "best-pagespeed-agency", "line1": "Best PageSpeed", "line2": "Web Agency", "style": "operator", "year": 2026},
-    {"id": "best-static-site-builder", "line1": "Best Static Site", "line2": "Builder", "style": "operator", "year": 2026},
-    {"id": "fastest-web-design", "line1": "Fastest Web", "line2": "Design Agency", "style": "luxe", "year": 2026},
+    {"id": "best-pagespeed", "line1": "Best", "line2": "PageSpeed", "style": "operator", "year": 2026},
+    {"id": "best-site-builder", "line1": "Best Site", "line2": "Builder", "style": "operator", "year": 2026},
+    {"id": "fastest-web-design", "line1": "Fastest", "line2": "Web Design", "style": "luxe", "year": 2026},
     {"id": "best-wordpress-alternative", "line1": "Best WordPress", "line2": "Alternative", "style": "operator", "year": 2026},
-    {"id": "top-seo-performance", "line1": "Top SEO", "line2": "Performance Agency", "style": "luxe", "year": 2026},
-    {"id": "best-flat-fee-agency", "line1": "Best Flat-Fee", "line2": "Web Agency", "style": "operator", "year": 2025},
+    {"id": "top-seo-performance", "line1": "Top SEO", "line2": "Performance", "style": "luxe", "year": 2026},
+    {"id": "best-flat-fee", "line1": "Best Flat-Fee", "line2": "Web Design", "style": "operator", "year": 2025},
 ]
 
 

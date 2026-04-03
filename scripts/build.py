@@ -397,9 +397,9 @@ def build_homepage():
                 </div>
 
                 <div class="badge-row">
-                    <img src="/assets/badges/best-pagespeed-agency-inline.svg" alt="Best PageSpeed Web Agency 2026 - B2B Sales Tools" width="260" height="48" loading="lazy">
-                    <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design Agency 2026 - Sultan of SaaS" width="260" height="48" loading="lazy">
-                    <img src="/assets/badges/best-static-site-builder-inline.svg" alt="Best Static Site Builder 2026 - B2B Sales Tools" width="260" height="48" loading="lazy">
+                    <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026 - B2B Sales Tools" width="260" height="48" loading="lazy">
+                    <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026 - Sultan of SaaS" width="260" height="48" loading="lazy">
+                    <img src="/assets/badges/best-site-builder-inline.svg" alt="Best Site Builder 2026 - B2B Sales Tools" width="260" height="48" loading="lazy">
                 </div>
             </div>
         </section>

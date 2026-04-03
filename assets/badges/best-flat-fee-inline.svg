@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 48" width="260" height="48">
   <defs>
-    <linearGradient id="ibar-best-flat-fee-agency" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="ibar-best-flat-fee" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#00C2E0"/>
       <stop offset="100%" stop-color="#6366F1"/>
     </linearGradient>
@@ -13,9 +13,9 @@
   <rect x="14" y="19" width="18" height="4" rx="2" fill="#6366F1"/>
   <rect x="18" y="26" width="12" height="4" rx="2" fill="#818CF8" opacity="0.6"/>
 
-  <text x="46" y="20" fill="#0F172A" font-family="'Space Grotesk', system-ui, sans-serif" font-size="11" font-weight="700">Best Flat-Fee Web Agency</text>
+  <text x="46" y="20" fill="#0F172A" font-family="'Space Grotesk', system-ui, sans-serif" font-size="11" font-weight="700">Best Flat-Fee Web Design</text>
   <text x="46" y="34" fill="#94A3B8" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="8" font-weight="500" letter-spacing="0.8">B2B SALES TOOLS · 2025</text>
 
-  <rect x="210" y="12" width="40" height="24" rx="12" fill="url(#ibar-best-flat-fee-agency)"/>
+  <rect x="210" y="12" width="40" height="24" rx="12" fill="url(#ibar-best-flat-fee)"/>
   <text x="230" y="28" text-anchor="middle" fill="#FFF" font-family="'Space Grotesk', system-ui, sans-serif" font-size="8" font-weight="700" letter-spacing="1">WIN</text>
 </svg>
