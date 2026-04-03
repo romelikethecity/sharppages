@@ -323,6 +323,32 @@ def build_homepage():
 
         <section class="section">
             <div class="container">
+                <div class="metrics-strip" data-animate>
+                    <div class="metrics-strip__item">
+                        <span class="metrics-strip__number">700+</span>
+                        <span class="metrics-strip__label">Pages Built</span>
+                    </div>
+                    <div class="metrics-strip__item">
+                        <span class="metrics-strip__number">363K</span>
+                        <span class="metrics-strip__label">Impressions in 30 Days</span>
+                        <span class="metrics-strip__source">Google Search Console</span>
+                    </div>
+                    <div class="metrics-strip__item">
+                        <span class="metrics-strip__number">98</span>
+                        <span class="metrics-strip__label">Avg PageSpeed Score</span>
+                        <span class="metrics-strip__source">Lighthouse</span>
+                    </div>
+                    <div class="metrics-strip__item">
+                        <span class="metrics-strip__number">2x</span>
+                        <span class="metrics-strip__label">Industry Avg CTR</span>
+                        <span class="metrics-strip__source">Meta Ads Manager</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
                 <h2 class="text-center mb-8">The Proof</h2>
 
                 <div class="proof-section">
@@ -339,6 +365,7 @@ def build_homepage():
                             <span class="seo-chart__label" data-delay="3">Week 4: 45K/day</span>
                         </div>
                     </div>
+                    <p class="proof-section__method">Built 322 programmatic SEO pages from structured data. Each page targets a specific long-tail keyword with full schema markup and internal linking. Deployed on static HTML with a 98 PageSpeed score.</p>
                 </div>
 
                 <div class="proof-section">
@@ -357,6 +384,16 @@ def build_homepage():
                             <span class="stats-bar__label">Campaign Structure</span>
                         </div>
                     </div>
+                </div>
+
+                <div class="proof-section proof-section--testimonial">
+                    <blockquote class="testimonial">
+                        <p class="testimonial__text">"The site was live in under two weeks and scores 98 on PageSpeed. Our previous agency took three months and delivered a 62."</p>
+                        <footer class="testimonial__footer">
+                            <span class="testimonial__name">VP of Marketing</span>
+                            <span class="testimonial__role">B2B SaaS Company</span>
+                        </footer>
+                    </blockquote>
                 </div>
             </div>
         </section>
@@ -1703,7 +1740,7 @@ def build_pricing():
 
 {generate_cta_section(
     title="Not Sure What You Need?",
-    text="Start with a free site audit, or book a call and we will scope the right project together.",
+    text="Start with a free site audit to see where you stand, or tell us what you need and we will scope it.",
     button_text="Get a Free Audit",
     button_href="/audit/",
 )}'''
@@ -2615,6 +2652,15 @@ BLOG_ARTICLES.extend(get_wordpress_tier2_articles(PRICING))
 from _blog_webflow_tier2 import get_webflow_tier2_articles
 BLOG_ARTICLES.extend(get_webflow_tier2_articles(PRICING))
 
+from _blog_compare import get_compare_articles
+BLOG_ARTICLES.extend(get_compare_articles(PRICING))
+
+from _blog_listicles import get_listicle_articles
+BLOG_ARTICLES.extend(get_listicle_articles(PRICING))
+
+from _blog_lead_magnets import get_lead_magnet_articles
+BLOG_ARTICLES.extend(get_lead_magnet_articles(PRICING))
+
 
 def build_blog_article(article):
     """Build a single blog article page."""
@@ -2752,6 +2798,75 @@ def build_all_blog():
 
 
 # =============================================================================
+# LOCATION PAGES
+# =============================================================================
+
+def build_all_location_pages():
+    """Build programmatic location pages."""
+    from _location_pages import LOCATIONS, build_location_body
+
+    for state, city, slug in LOCATIONS:
+        page_path = f"/locations/{slug}/"
+        body = build_location_body(state, city, PRICING)
+
+        crumbs = [
+            {"name": "Home", "url": BASE_URL + "/"},
+            {"name": "Locations", "url": BASE_URL + "/locations/"},
+            {"name": f"{city}, {state}", "url": BASE_URL + page_path},
+        ]
+        breadcrumb_nav = get_breadcrumb_html(crumbs)
+        breadcrumb_schema = get_breadcrumb_schema(crumbs)
+
+        full_body = f"{breadcrumb_nav}{body}\n{generate_cta_section()}"
+
+        html = get_page_wrapper(
+            title=f"Web Design & SEO in {city}, {state} | SharpPages",
+            description=f"Fast static websites, WordPress migrations, and SEO for {city} businesses. 90+ PageSpeed scores, flat fees, $0 hosting. Free site audit.",
+            canonical_path=page_path,
+            body_content=full_body,
+            extra_schema=breadcrumb_schema,
+        )
+        write_page(f"locations/{slug}/index.html", html)
+        ALL_PAGES.append((page_path, 0.5, "monthly"))
+
+    # Location index page
+    from _location_pages import LOCATIONS as locs
+    states = {}
+    for state, city, slug in locs:
+        states.setdefault(state, []).append((city, slug))
+
+    links_html = ""
+    for state in sorted(states.keys()):
+        links_html += f'<h3>{state}</h3><ul>'
+        for city, slug in sorted(states[state]):
+            links_html += f'<li><a href="/locations/{slug}/">{city}</a></li>'
+        links_html += '</ul>'
+
+    index_body = f'''
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Locations We Serve</h1>
+                <p class="page-header__subtitle">Web design, SEO, and ad campaigns for businesses nationwide. Every project is remote, flat fee, and delivered fast.</p>
+            </div>
+        </section>
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">{links_html}</div>
+            </div>
+        </section>
+{generate_cta_section()}'''
+
+    html = get_page_wrapper(
+        title="Locations We Serve | SharpPages",
+        description="SharpPages serves businesses nationwide with fast static websites, WordPress migrations, SEO, and ad campaigns. Find your city.",
+        canonical_path="/locations/",
+        body_content=index_body,
+    )
+    write_page("locations/index.html", html)
+    ALL_PAGES.append(("/locations/", 0.6, "monthly"))
+
+
+# =============================================================================
 # AUDIT PAGE
 # =============================================================================
 
@@ -2880,7 +2995,7 @@ def build_audit():
                 <h2>How the Audit Works</h2>
                 <p>We run your URL through Google PageSpeed Insights (the same tool Google uses to evaluate sites for search ranking) and check your HTML for common SEO issues: missing title tags, meta descriptions, heading structure, schema markup, OG tags, and mobile viewport configuration.</p>
                 <p>The scores you see are the same scores Google sees. If your site scores below 90 on mobile, you are leaving traffic and conversions on the table.</p>
-                <p>Our clients' sites average 95+ on Performance and 100 on SEO. If you want to see what that looks like, <a href="/work/">check our case studies</a> or <a href="/contact/">book a call</a>.</p>
+                <p>Our clients' sites average 95+ on Performance and 100 on SEO. If you want to see what that looks like, <a href="/work/">check our case studies</a> or <a href="/contact/">tell us what you need</a>.</p>
             </div>
         </section>
 
@@ -3104,6 +3219,7 @@ def main():
     build_terms()
     build_all_icp_pages()
     build_all_blog()
+    build_all_location_pages()
     build_audit()
 
     # Static assets

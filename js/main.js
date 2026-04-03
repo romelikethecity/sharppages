@@ -100,6 +100,19 @@
       multiCities.forEach(function(mc) { cityObserver.observe(mc); });
     }
 
+    // Metrics strip animation
+    var metricsStrips = document.querySelectorAll('.metrics-strip[data-animate]');
+    if (metricsStrips.length) {
+      var metricsObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting) return;
+          metricsObserver.unobserve(entry.target);
+          entry.target.classList.add('animated');
+        });
+      }, { threshold: 0.3 });
+      metricsStrips.forEach(function(ms) { metricsObserver.observe(ms); });
+    }
+
     // Process timeline animation
     var processTimelines = document.querySelectorAll('.process-timeline[data-animate]');
     if (processTimelines.length) {
