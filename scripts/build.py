@@ -1405,7 +1405,7 @@ def build_service_events():
             {"question": "Why not use Eventbrite or Splash?", "answer": "Platform registration sites charge per registrant, put their branding on your page, and limit your tracking. Our sites live on your domain with your branding. Every registration fires a conversion event you own."},
             {"question": "What tracking is included?", "answer": "GA4 and Meta Pixel are pre-installed. Every form submission fires a conversion event. You get full attribution from ad impression to registration."},
             {"question": "How fast can you build the first site?", "answer": "5 to 7 business days for a new event site. Additional cities clone in 48 hours."},
-            {"question": "Can you also run the ads?", "answer": "Yes. We offer paid social management as a separate service. When we build the site and run the ads together, attribution is seamless."},
+            {"question": "Can you also run the ads?", "answer": "Yes. We offer paid social management as a separate service. When we build the site and run the ads together, attribution is smooth."},
         ],
         related_services=[
             {"slug": "ads", "name": "Paid Social", "desc": "Run Meta ad campaigns to fill seats at your events."},
