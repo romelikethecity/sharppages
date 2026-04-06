@@ -68,7 +68,7 @@ def get_html_head(title, description, canonical_path, extra_schema="",
     if noindex:
         robots_tag = '\n    <meta name="robots" content="noindex">'
     else:
-        robots_tag = '\n    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">'
+        robots_tag = '\n    <meta name="robots" content="index, follow">'
 
     return f'''<!DOCTYPE html>
 <html lang="en">
