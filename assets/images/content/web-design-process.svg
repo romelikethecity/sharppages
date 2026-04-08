@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#06090E"/>
+  <text x="600" y="44" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#E4E8ED" text-anchor="middle">Web Design That Converts</text>
+  <!-- Process steps -->
+  <g transform="translate(40,80)">
+    <rect width="260" height="240" rx="12" fill="#0C1118" stroke="#1E2A38" stroke-width="1.5"/>
+    <rect x="0" y="0" width="260" height="4" rx="2" fill="#00C2E0"/>
+    <circle cx="130" cy="48" r="24" fill="#00C2E0" opacity="0.12"/>
+    <text x="130" y="54" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#00C2E0" text-anchor="middle">1</text>
+    <text x="130" y="92" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#E4E8ED" text-anchor="middle">Discovery</text>
+    <text x="130" y="116" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899" text-anchor="middle">Understand your business,</text>
+    <text x="130" y="134" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899" text-anchor="middle">audience, and goals</text>
+    <rect x="24" y="156" width="212" height="30" rx="6" fill="rgba(0,194,224,0.06)"/>
+    <text x="130" y="176" font-family="system-ui,sans-serif" font-size="11" fill="#00C2E0" text-anchor="middle">ICP research + competitor audit</text>
+    <rect x="24" y="194" width="212" height="30" rx="6" fill="rgba(0,194,224,0.04)"/>
+    <text x="130" y="214" font-family="system-ui,sans-serif" font-size="11" fill="#00C2E0" text-anchor="middle">Content strategy mapping</text>
+  </g>
+  <g transform="translate(320,80)">
+    <rect width="260" height="240" rx="12" fill="#0C1118" stroke="#1E2A38" stroke-width="1.5"/>
+    <rect x="0" y="0" width="260" height="4" rx="2" fill="#E8B931"/>
+    <circle cx="130" cy="48" r="24" fill="#E8B931" opacity="0.12"/>
+    <text x="130" y="54" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#E8B931" text-anchor="middle">2</text>
+    <text x="130" y="92" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#E4E8ED" text-anchor="middle">Design</text>
+    <text x="130" y="116" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899" text-anchor="middle">Custom design that matches</text>
+    <text x="130" y="134" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899" text-anchor="middle">your brand and converts</text>
+    <rect x="24" y="156" width="212" height="30" rx="6" fill="rgba(232,185,49,0.06)"/>
+    <text x="130" y="176" font-family="system-ui,sans-serif" font-size="11" fill="#E8B931" text-anchor="middle">Mobile-first responsive layouts</text>
+    <rect x="24" y="194" width="212" height="30" rx="6" fill="rgba(232,185,49,0.04)"/>
+    <text x="130" y="214" font-family="system-ui,sans-serif" font-size="11" fill="#E8B931" text-anchor="middle">Performance optimized (90+ PSI)</text>
+  </g>
+  <g transform="translate(600,80)">
+    <rect width="260" height="240" rx="12" fill="#0C1118" stroke="#1E2A38" stroke-width="1.5"/>
+    <rect x="0" y="0" width="260" height="4" rx="2" fill="#00C2E0"/>
+    <circle cx="130" cy="48" r="24" fill="#00C2E0" opacity="0.12"/>
+    <text x="130" y="54" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#00C2E0" text-anchor="middle">3</text>
+    <text x="130" y="92" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#E4E8ED" text-anchor="middle">Build</text>
+    <text x="130" y="116" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899" text-anchor="middle">Clean code, fast load times,</text>
+    <text x="130" y="134" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899" text-anchor="middle">SEO built in from day one</text>
+    <rect x="24" y="156" width="212" height="30" rx="6" fill="rgba(0,194,224,0.06)"/>
+    <text x="130" y="176" font-family="system-ui,sans-serif" font-size="11" fill="#00C2E0" text-anchor="middle">Schema markup + meta tags</text>
+    <rect x="24" y="194" width="212" height="30" rx="6" fill="rgba(0,194,224,0.04)"/>
+    <text x="130" y="214" font-family="system-ui,sans-serif" font-size="11" fill="#00C2E0" text-anchor="middle">Core Web Vitals optimized</text>
+  </g>
+  <g transform="translate(880,80)">
+    <rect width="280" height="240" rx="12" fill="#0C1118" stroke="#00C2E0" stroke-width="2"/>
+    <rect x="0" y="0" width="280" height="4" rx="2" fill="#34D399"/>
+    <circle cx="140" cy="48" r="24" fill="#34D399" opacity="0.12"/>
+    <text x="140" y="54" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#34D399" text-anchor="middle">4</text>
+    <text x="140" y="92" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#E4E8ED" text-anchor="middle">Launch + Grow</text>
+    <text x="140" y="116" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899" text-anchor="middle">Deploy, measure, iterate based</text>
+    <text x="140" y="134" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899" text-anchor="middle">on real performance data</text>
+    <rect x="24" y="156" width="232" height="30" rx="6" fill="rgba(52,211,153,0.06)"/>
+    <text x="140" y="176" font-family="system-ui,sans-serif" font-size="11" fill="#34D399" text-anchor="middle">Analytics + conversion tracking</text>
+    <rect x="24" y="194" width="232" height="30" rx="6" fill="rgba(52,211,153,0.04)"/>
+    <text x="140" y="214" font-family="system-ui,sans-serif" font-size="11" fill="#34D399" text-anchor="middle">Ongoing SEO + content growth</text>
+  </g>
+  <!-- Stats bar -->
+  <g transform="translate(40,360)">
+    <rect width="1120" height="100" rx="10" fill="#0C1118" stroke="#1E2A38" stroke-width="1"/>
+    <g transform="translate(80,16)">
+      <text x="0" y="28" font-family="system-ui,sans-serif" font-size="36" font-weight="800" fill="#00C2E0">90+</text>
+      <text x="0" y="52" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899">PageSpeed Score</text>
+    </g>
+    <g transform="translate(320,16)">
+      <text x="0" y="28" font-family="system-ui,sans-serif" font-size="36" font-weight="800" fill="#E4E8ED">2-4wk</text>
+      <text x="0" y="52" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899">Delivery Timeline</text>
+    </g>
+    <g transform="translate(560,16)">
+      <text x="0" y="28" font-family="system-ui,sans-serif" font-size="36" font-weight="800" fill="#E8B931">100%</text>
+      <text x="0" y="52" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899">Custom Design</text>
+    </g>
+    <g transform="translate(800,16)">
+      <text x="0" y="28" font-family="system-ui,sans-serif" font-size="36" font-weight="800" fill="#34D399">SEO</text>
+      <text x="0" y="52" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899">Built In From Day 1</text>
+    </g>
+  </g>
+  <!-- Bottom CTA area -->
+  <g transform="translate(40,490)">
+    <rect width="1120" height="110" rx="10" fill="#111820"/>
+    <text x="560" y="36" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#E4E8ED" text-anchor="middle">What You Get</text>
+    <g transform="translate(40,56)">
+      <text x="0" y="16" font-family="system-ui,sans-serif" font-size="13" fill="#00C2E0">Custom design</text>
+      <text x="0" y="36" font-family="system-ui,sans-serif" font-size="11" fill="#7A8899">Not templates</text>
+    </g>
+    <g transform="translate(220,56)">
+      <text x="0" y="16" font-family="system-ui,sans-serif" font-size="13" fill="#00C2E0">Fast loading</text>
+      <text x="0" y="36" font-family="system-ui,sans-serif" font-size="11" fill="#7A8899">Sub-2s load times</text>
+    </g>
+    <g transform="translate(400,56)">
+      <text x="0" y="16" font-family="system-ui,sans-serif" font-size="13" fill="#E8B931">SEO optimized</text>
+      <text x="0" y="36" font-family="system-ui,sans-serif" font-size="11" fill="#7A8899">Schema + meta + Core Web Vitals</text>
+    </g>
+    <g transform="translate(640,56)">
+      <text x="0" y="16" font-family="system-ui,sans-serif" font-size="13" fill="#E8B931">Conversion focused</text>
+      <text x="0" y="36" font-family="system-ui,sans-serif" font-size="11" fill="#7A8899">CTAs that actually work</text>
+    </g>
+    <g transform="translate(880,56)">
+      <text x="0" y="16" font-family="system-ui,sans-serif" font-size="13" fill="#34D399">You own it</text>
+      <text x="0" y="36" font-family="system-ui,sans-serif" font-size="11" fill="#7A8899">No monthly hosting lock-in</text>
+    </g>
+  </g>
+</svg>

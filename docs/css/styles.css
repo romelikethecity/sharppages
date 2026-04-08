@@ -2635,3 +2635,7 @@ img[loading="lazy"] {
 .hero__gauge {
   margin-top: var(--space-8);
 }
+
+.content-figure { margin: 2rem 0; border-radius: 12px; overflow: hidden; background: var(--color-surface, #0C1118); border: 1px solid var(--color-border, #1E2A38); }
+.content-figure img { display: block; width: 100%; height: auto; }
+.content-figure figcaption { padding: 0.75rem 1rem; font-size: 0.8125rem; color: var(--color-text-muted, #7A8899); text-align: center; border-top: 1px solid var(--color-border, #1E2A38); }

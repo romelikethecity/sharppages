@@ -2346,6 +2346,10 @@ def build_icp_page(icp):
             <div class="container">
                 <h2>How We Work with {icp["name"]}</h2>
                 {workflow_html}
+                <figure class="content-figure">
+                    <img src="/assets/images/content/web-design-process.svg" alt="SharpPages web design process for {icp['name'].lower()} — discovery, design, build, and launch" width="1200" height="630" loading="lazy">
+                    <figcaption>Our 4-step process delivers a conversion-optimized website for {icp['name'].lower()} in 2-4 weeks.</figcaption>
+                </figure>
             </div>
         </section>
 
@@ -2735,6 +2739,15 @@ def build_blog_article(article):
                 <div class="legal-content">
                     {sections_html}
                 </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <figure class="content-figure">
+                    <img src="/assets/images/content/web-design-process.svg" alt="SharpPages web design process showing discovery, design, build, and launch phases with performance metrics" width="1200" height="630" loading="lazy">
+                    <figcaption>The SharpPages process: from discovery to a conversion-optimized website in 2-4 weeks.</figcaption>
+                </figure>
             </div>
         </section>
 
