@@ -130,10 +130,10 @@ def get_html_head(title, description, canonical_path, extra_schema="",
         }});
       }}
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ10BSXG7H"></script>
     <script>
       gtag('js', new Date());
-      gtag('config', 'G-PLACEHOLDER');
+      gtag('config', 'G-HZ10BSXG7H');
     </script>
 </head>'''
 
