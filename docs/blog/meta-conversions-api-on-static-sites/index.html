@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06090E">
+    <title>Meta Conversions API on Static Sites | SharpPages</title>
+    <meta name="description" content="How to set up Meta Conversions API on a static website using Cloudflare Workers, serverless functions, or external services. Browser pixel alone loses 15-40% of events.">
+    <link rel="canonical" href="https://sharppages.com/blog/meta-conversions-api-on-static-sites/">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sharppages.com/blog/meta-conversions-api-on-static-sites/">
+    <meta property="og:title" content="Meta Conversions API on Static Sites | SharpPages">
+    <meta property="og:description" content="How to set up Meta Conversions API on a static website using Cloudflare Workers, serverless functions, or external services. Browser pixel alone loses 15-40% of events.">
+    <meta property="og:site_name" content="SharpPages">
+    <meta property="og:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meta Conversions API on Static Sites | SharpPages">
+    <meta name="twitter:description" content="How to set up Meta Conversions API on a static website using Cloudflare Workers, serverless functions, or external services. Browser pixel alone loses 15-40% of events.">
+    <meta name="twitter:image" content="https://sharppages.com/assets/og/og-default.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sharppages.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://sharppages.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Meta Conversions API on Static Sites",
+      "item": "https://sharppages.com/blog/meta-conversions-api-on-static-sites/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Meta Conversions API on Static Sites",
+  "description": "How to set up Meta Conversions API on a static website using Cloudflare Workers, serverless functions, or external services. Browser pixel alone loses 15-40% of events.",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SharpPages",
+    "url": "https://sharppages.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sharppages.com/assets/logos/logo-full-dark.svg"
+    }
+  },
+  "url": "https://sharppages.com/blog/meta-conversions-api-on-static-sites/",
+  "mainEntityOfPage": "https://sharppages.com/blog/meta-conversions-api-on-static-sites/"
+}
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/favicons/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css?v=12">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _sc = localStorage.getItem('sharppages-consent');
+      if (_sc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ10BSXG7H"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-HZ10BSXG7H');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="header__logo-icon" width="140" height="32" fetchpriority="high">
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Let's Build It</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li><a href="/services/" class="nav__link">Services</a></li>
+<li><a href="/pricing/" class="nav__link">Pricing</a></li>
+<li><a href="/work/" class="nav__link">Work</a></li>
+<li><a href="/audit/" class="nav__link">Free Audit</a></li>
+<li><a href="/blog/" class="nav__link">Blog</a></li>
+
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Let's Build It</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://sharppages.com/">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://sharppages.com/blog/">Blog</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Meta Conversions API on Static Sites</span>
+        </nav>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Meta Conversions API on Static Sites: The Complete Setup</h1>
+                <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-2);">By Rome Thorndike</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                <h2>Why CAPI Matters Now</h2>
+                <p>Browser-based pixel tracking has been losing reliability for years. iOS App Tracking Transparency, Safari Intelligent Tracking Prevention, ad blockers, and regulatory cookie restrictions have all eaten into pixel coverage. Meta itself estimates that browser pixel alone now misses 15-40% of conversions, depending on audience.</p>
+<p>The fix is server-side tracking through Meta Conversions API (CAPI). Events fire from your server, not the browser, which bypasses most of the blocking mechanisms. The result: more accurate event reporting, better optimization for ad campaigns, and a measurable lift in attributed conversions.</p>
+<p>For dynamic sites with a backend, CAPI setup is straightforward. For static sites, the question is: where does the server-side code run? The answer depends on where you host.</p>
+                <h2>Option 1: Cloudflare Workers</h2>
+                <p>Cloudflare Workers run JavaScript at the edge in response to HTTP requests. They are free for the first 100,000 requests per day, which covers most marketing sites comfortably. They are also fast, with response times typically under 50ms.</p>
+<p>The setup pattern: deploy a Worker that accepts POST requests from your form submissions and lead actions. The Worker validates the request, hashes the email and phone numbers as Meta requires, and forwards a properly formatted event to the Meta CAPI endpoint. Your site sends a fetch request to the Worker URL when a conversion happens.</p>
+<p>This pattern keeps your Meta Pixel access token off the client side (security) and eliminates the dependency on browser-based tracking. It works regardless of cookie consent state because the user has already submitted their form, indicating active interest.</p>
+                <h2>Option 2: Serverless Functions (Vercel, Netlify, AWS Lambda)</h2>
+                <p>If you host on Vercel, Netlify, or AWS, serverless functions are the equivalent pattern. Deploy a single function that handles CAPI events. Point your form submissions and key conversion events at the function URL. The function authenticates with Meta and forwards the event server-side.</p>
+<p>Vercel functions are free for the first 100K invocations/month. Netlify Functions are free for the first 125K. AWS Lambda is free for the first 1M. All three are well-suited for CAPI on static sites.</p>
+                <h2>Option 3: External Service (Stape, Tagging Server)</h2>
+                <p>If you do not want to write code, services like Stape provide hosted server-side tagging that supports Meta CAPI alongside other platforms. You configure the events in a UI, get an endpoint, and call it from your static site forms. The trade-off is monthly cost ($20-100/mo depending on volume) for less engineering work.</p>
+<p>This is a good option for marketing teams without a developer. For teams with any technical capability, Cloudflare Workers or serverless functions are cheaper and offer more control.</p>
+                <h2>What to Send to CAPI</h2>
+                <p>The minimum CAPI event includes: event name (Lead, Purchase, CompleteRegistration, ViewContent, etc.), event time, event source URL, action source (typically "website"), and user data (hashed email, hashed phone, IP address, user agent, Facebook click ID if available, Facebook browser ID).</p>
+<p>Email and phone must be SHA-256 hashed before sending to Meta. The hashing is the most common implementation mistake. Use a vetted library or follow Meta's documentation exactly.</p>
+<p>Higher-quality events also include: external_id (your CRM contact ID), customer_value, currency, and content_ids. The more matching signals you send, the better Meta's Event Match Quality score, and the better optimization performance.</p>
+                <h2>Pixel + CAPI Together (Deduplication)</h2>
+                <p>The recommended pattern is to fire both browser pixel and CAPI for the same conversion event. Meta deduplicates the events on its end using a shared event_id. This maximizes coverage (browser catches some events CAPI misses, CAPI catches some events browser misses) without double-counting conversions.</p>
+<p>To deduplicate properly: generate a unique event_id when the conversion happens, pass it to both the browser pixel call and the CAPI call. Meta will see the same event_id from both sources and merge them.</p>
+                <h2>Why Static Sites Win Here</h2>
+                <p>Adding CAPI to a WordPress site requires installing yet another plugin, managing the plugin updates, and praying it does not conflict with your other 14 plugins. Adding CAPI to a static site means deploying a Cloudflare Worker once and pointing your forms at it. Total setup time: 30-60 minutes.</p>
+<p>Static sites also avoid the consent management mess that complicates CMS-based CAPI. Without cookies, without pixels firing on every page load, the consent layer simplifies dramatically. Form submissions and explicit conversion events are first-party intent, which has clearer legal standing than cookie-based tracking.</p>
+<p>If you need help setting up CAPI on a static site, we ship CAPI setups as part of every site we build. New sites include browser pixel + CAPI deduplication from day one. Pricing starts at $3,000. See <a href="/services/">services</a> or <a href="/contact/">contact us</a> to scope the project.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <figure class="content-figure">
+                    <img src="/assets/images/content/event-registration-flow.svg" alt="Event registration flow from landing page to registration, confirmation, and follow-up with GA4 and Meta Pixel attribution" width="1200" height="630" loading="lazy">
+                    <figcaption>Full event registration flow with attribution at every step.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Meta Conversions API?", "acceptedAnswer": {"@type": "Answer", "text": "Meta Conversions API (CAPI) is a server-to-server tracking method that sends conversion events directly from your server to Meta, bypassing the browser. It complements browser-based Meta Pixel tracking and recovers conversions that browser pixels miss due to ad blockers, ITP, ATT, and consent restrictions."}}, {"@type": "Question", "name": "Do I need both Meta Pixel and CAPI?", "acceptedAnswer": {"@type": "Answer", "text": "For most use cases, yes. Meta recommends running both with proper deduplication via shared event_ids. Browser pixel catches events that fire instantly. CAPI catches events that browser pixel misses due to blockers. Together they maximize event coverage without double-counting."}}, {"@type": "Question", "name": "How much does CAPI cost on a static site?", "acceptedAnswer": {"@type": "Answer", "text": "Free, in most cases. Cloudflare Workers offer 100K free requests per day. Vercel, Netlify, and AWS Lambda offer free tiers that cover marketing site volume. The only cost is implementation time (typically 30-60 minutes for a developer who has done it before)."}}, {"@type": "Question", "name": "Will CAPI improve my Facebook ad performance?", "acceptedAnswer": {"@type": "Answer", "text": "Usually yes. Meta uses event quality and event volume to optimize ad delivery. Sending more events with better quality (full user_data parameters, accurate event_time, server-side event source) improves Meta's ability to find similar audiences and convert your campaigns more efficiently. Most accounts see 10-25% lift in attributed conversions after CAPI implementation."}}]}</script>
+        <section class="section faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">What is Meta Conversions API?</summary>
+                    <div class="faq-item__answer"><p>Meta Conversions API (CAPI) is a server-to-server tracking method that sends conversion events directly from your server to Meta, bypassing the browser. It complements browser-based Meta Pixel tracking and recovers conversions that browser pixels miss due to ad blockers, ITP, ATT, and consent restrictions.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Do I need both Meta Pixel and CAPI?</summary>
+                    <div class="faq-item__answer"><p>For most use cases, yes. Meta recommends running both with proper deduplication via shared event_ids. Browser pixel catches events that fire instantly. CAPI catches events that browser pixel misses due to blockers. Together they maximize event coverage without double-counting.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How much does CAPI cost on a static site?</summary>
+                    <div class="faq-item__answer"><p>Free, in most cases. Cloudflare Workers offer 100K free requests per day. Vercel, Netlify, and AWS Lambda offer free tiers that cover marketing site volume. The only cost is implementation time (typically 30-60 minutes for a developer who has done it before).</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Will CAPI improve my Facebook ad performance?</summary>
+                    <div class="faq-item__answer"><p>Usually yes. Meta uses event quality and event volume to optimize ad delivery. Sending more events with better quality (full user_data parameters, accurate event_time, server-side event source) improves Meta's ability to find similar audiences and convert your campaigns more efficiently. Most accounts see 10-25% lift in attributed conversions after CAPI implementation.</p></div>
+                </details>
+            </div>
+        </section>
+
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Ready to Fill Your Next Event?</h2>
+                    <p class="cta-section__text">We build the page, set up the pixels, and run the ads. You run the event.</p>
+                </div>
+                
+                <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/logos/logo-full-dark.svg" alt="SharpPages" class="footer__logo-icon" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer__tagline">Fast sites. Real SEO results.</p>
+                    <div class="footer__badges">
+                        <img src="/assets/badges/best-pagespeed-inline.svg" alt="Best PageSpeed 2026" width="260" height="48" loading="lazy">
+                        <img src="/assets/badges/fastest-web-design-inline.svg" alt="Fastest Web Design 2026" width="260" height="48" loading="lazy">
+                    </div>
+                </div>
+                
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/">All Services</a></li>
+<li><a href="/services/web-design/">Web Design & Build</a></li>
+<li><a href="/services/redesign/">Redesign & Migration</a></li>
+<li><a href="/services/seo/">SEO & Content</a></li>
+<li><a href="/services/events/">Event Sites</a></li>
+<li><a href="/services/ads/">Paid Social</a></li>
+<li><a href="/services/audit/">PageSpeed Audit</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Industries</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/medical-device-companies/">Medical Devices</a></li>
+<li><a href="/for/pharma-field-marketing/">Pharma</a></li>
+<li><a href="/for/b2b-saas/">B2B SaaS</a></li>
+<li><a href="/for/conference-organizers/">Conferences</a></li>
+<li><a href="/for/med-spas/">Med Spas</a></li>
+<li><a href="/for/real-estate/">Real Estate</a></li>
+<li><a href="/for/healthcare-practices/">Healthcare</a></li>
+<li><a href="/for/law-firms/">Law Firms</a></li>
+<li><a href="/for/home-services/">Home Services</a></li>
+<li><a href="/for/professional-services/">Professional Services</a></li>
+<li><a href="/for/startups/">Startups</a></li>
+<li><a href="/for/franchise-multi-location/">Franchise</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="/blog/">Blog</a></li>
+<li><a href="/audit/">Free Site Audit</a></li>
+<li><a href="/locations/">Locations</a></li>
+<li><a href="/about/">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Legal</h4>
+                <ul class="footer__links">
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 SharpPages. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="sharpConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="sharpConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function sharpConsent(v){
+      localStorage.setItem('sharppages-consent',v);
+      if(v==='granted'){
+        gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      }
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('sharppages-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js?v=12" defer></script>
+</body>
+</html>
