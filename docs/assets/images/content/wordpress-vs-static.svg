@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#06090E"/>
+  <text x="600" y="44" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#E4E8ED" text-anchor="middle">WordPress vs Static HTML: The Real Tradeoffs</text>
+  <text x="600" y="66" font-family="system-ui,sans-serif" font-size="13" fill="#7A8899" text-anchor="middle">What you give up, what you gain</text>
+
+  <!-- Comparison table -->
+  <g transform="translate(40,100)">
+    <rect width="1120" height="480" rx="12" fill="#0C1118" stroke="#1E2A38" stroke-width="1.5"/>
+
+    <!-- Header row -->
+    <g font-family="system-ui,sans-serif">
+      <rect x="0" y="0" width="1120" height="54" rx="12" fill="#111820"/>
+      <rect x="0" y="42" width="1120" height="12" fill="#111820"/>
+      <text x="40" y="34" font-size="13" font-weight="700" fill="#7A8899">CATEGORY</text>
+      <text x="540" y="34" font-size="14" font-weight="800" fill="#E8B931" text-anchor="middle">WordPress</text>
+      <text x="880" y="34" font-size="14" font-weight="800" fill="#00C2E0" text-anchor="middle">Static HTML</text>
+      <line x1="400" y1="0" x2="400" y2="54" stroke="#1E2A38" stroke-width="1"/>
+      <line x1="720" y1="0" x2="720" y2="54" stroke="#1E2A38" stroke-width="1"/>
+    </g>
+
+    <!-- Rows -->
+    <g font-family="system-ui,sans-serif">
+      <!-- Row 1 -->
+      <g transform="translate(0,54)">
+        <text x="40" y="32" font-size="12" fill="#E4E8ED">PageSpeed (mobile)</text>
+        <text x="540" y="32" font-size="12" fill="#E85A50" text-anchor="middle">40-65</text>
+        <text x="880" y="32" font-size="12" fill="#34D399" text-anchor="middle">90-100</text>
+        <line x1="40" y1="54" x2="1080" y2="54" stroke="#1E2A38" stroke-width="1"/>
+      </g>
+      <!-- Row 2 -->
+      <g transform="translate(0,108)">
+        <text x="40" y="32" font-size="12" fill="#E4E8ED">Monthly hosting cost</text>
+        <text x="540" y="32" font-size="12" fill="#E85A50" text-anchor="middle">$29-$79/mo</text>
+        <text x="880" y="32" font-size="12" fill="#34D399" text-anchor="middle">$0/mo</text>
+        <line x1="40" y1="54" x2="1080" y2="54" stroke="#1E2A38" stroke-width="1"/>
+      </g>
+      <!-- Row 3 -->
+      <g transform="translate(0,162)">
+        <text x="40" y="32" font-size="12" fill="#E4E8ED">Plugin vulnerabilities</text>
+        <text x="540" y="32" font-size="12" fill="#E85A50" text-anchor="middle">Frequent CVEs</text>
+        <text x="880" y="32" font-size="12" fill="#34D399" text-anchor="middle">Zero attack surface</text>
+        <line x1="40" y1="54" x2="1080" y2="54" stroke="#1E2A38" stroke-width="1"/>
+      </g>
+      <!-- Row 4 -->
+      <g transform="translate(0,216)">
+        <text x="40" y="32" font-size="12" fill="#E4E8ED">Maintenance burden</text>
+        <text x="540" y="32" font-size="12" fill="#E85A50" text-anchor="middle">Weekly updates</text>
+        <text x="880" y="32" font-size="12" fill="#34D399" text-anchor="middle">None</text>
+        <line x1="40" y1="54" x2="1080" y2="54" stroke="#1E2A38" stroke-width="1"/>
+      </g>
+      <!-- Row 5 -->
+      <g transform="translate(0,270)">
+        <text x="40" y="32" font-size="12" fill="#E4E8ED">Non-technical editing</text>
+        <text x="540" y="32" font-size="12" fill="#34D399" text-anchor="middle">Visual editor</text>
+        <text x="880" y="32" font-size="12" fill="#E8B931" text-anchor="middle">Code or CMS layer</text>
+        <line x1="40" y1="54" x2="1080" y2="54" stroke="#1E2A38" stroke-width="1"/>
+      </g>
+      <!-- Row 6 -->
+      <g transform="translate(0,324)">
+        <text x="40" y="32" font-size="12" fill="#E4E8ED">Dynamic features</text>
+        <text x="540" y="32" font-size="12" fill="#34D399" text-anchor="middle">Thousands of plugins</text>
+        <text x="880" y="32" font-size="12" fill="#E8B931" text-anchor="middle">API-driven or custom</text>
+        <line x1="40" y1="54" x2="1080" y2="54" stroke="#1E2A38" stroke-width="1"/>
+      </g>
+      <!-- Row 7 -->
+      <g transform="translate(0,378)">
+        <text x="40" y="32" font-size="12" fill="#E4E8ED">Ownership</text>
+        <text x="540" y="32" font-size="12" fill="#E8B931" text-anchor="middle">DB + theme files</text>
+        <text x="880" y="32" font-size="12" fill="#34D399" text-anchor="middle">You own all files</text>
+        <line x1="40" y1="54" x2="1080" y2="54" stroke="#1E2A38" stroke-width="1"/>
+      </g>
+      <!-- Row 8 -->
+      <g transform="translate(0,432)">
+        <text x="40" y="32" font-size="12" fill="#E4E8ED">Best for</text>
+        <text x="540" y="32" font-size="11" fill="#7A8899" text-anchor="middle">Blogs, e-commerce, user content</text>
+        <text x="880" y="32" font-size="11" fill="#7A8899" text-anchor="middle">Marketing sites, SEO, landing pages</text>
+      </g>
+    </g>
+
+    <!-- Column dividers -->
+    <line x1="400" y1="54" x2="400" y2="480" stroke="#1E2A38" stroke-width="1"/>
+    <line x1="720" y1="54" x2="720" y2="480" stroke="#1E2A38" stroke-width="1"/>
+  </g>
+</svg>

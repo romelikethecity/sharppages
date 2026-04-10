@@ -914,6 +914,7 @@ def _service_breadcrumbs(service_name, service_path):
 def _service_page(slug, title, meta_desc, headline, hero_text, proof_html,
                   process_steps, includes, stats, pricing_html, faqs,
                   related_services=None,
+                  content_svg=None, content_svg_alt=None, content_svg_caption=None,
                   cta_title="Ready to Get Started?",
                   cta_text="Tell us about your project. We will scope the work, give you a fixed quote, and explain exactly what is included.",
                   cta_btn="Let's Build It", cta_href="/contact/"):
@@ -983,6 +984,10 @@ def _service_page(slug, title, meta_desc, headline, hero_text, proof_html,
                 <div class="service-block__includes">
                     {includes_html}
                 </div>
+                {f'''<figure class="content-figure" style="margin-top: var(--space-8);">
+                    <img src="/assets/images/content/{content_svg}" alt="{content_svg_alt or title}" width="1200" height="630" loading="lazy">
+                    <figcaption>{content_svg_caption or title}</figcaption>
+                </figure>''' if content_svg else ''}
             </div>
         </section>
 
@@ -1044,6 +1049,9 @@ def build_service_web_design():
     """Build individual service page: Website Design & Build."""
     _service_page(
         slug="web-design",
+        content_svg="web-design-process.svg",
+        content_svg_alt="SharpPages web design process showing discovery, design, build, and launch phases with performance metrics",
+        content_svg_caption="The SharpPages process: from discovery to a conversion-optimized website in 2-4 weeks.",
         title="Website Design & Build",
         meta_desc="Static HTML/CSS sites that load in under a second. 90+ PageSpeed scores, $0/mo hosting, you own every file. Flat fee, no platform lock-in.",
         headline='Sites That Load in <span class="text-accent">Under a Second</span>',
@@ -1139,6 +1147,9 @@ def build_service_redesign():
     """Build individual service page: Website Redesign & Migration."""
     _service_page(
         slug="redesign",
+        content_svg="redesign-before-after.svg",
+        content_svg_alt="Before and after WordPress to static HTML migration showing PageSpeed, Core Web Vitals, hosting cost, and security comparison",
+        content_svg_caption="WordPress to static HTML: same design, 5x faster, zero recurring hosting costs.",
         title="Website Redesign & Migration",
         meta_desc="Migrate from WordPress, Webflow, or Squarespace to static HTML. Same design, 5x faster load times, zero recurring hosting costs.",
         headline='Same Design. <span class="text-accent">5x Faster.</span>',
@@ -1228,6 +1239,9 @@ def build_service_seo():
     """Build individual service page: SEO & Content Strategy."""
     _service_page(
         slug="seo",
+        content_svg="seo-strategy.svg",
+        content_svg_alt="Hub-and-spoke SEO architecture: keyword research, content templates, schema markup, technical SEO, internal linking, indexing, and rankings",
+        content_svg_caption="Hub-and-spoke architecture for programmatic SEO at scale.",
         title="SEO & Content Strategy",
         meta_desc="Programmatic SEO at scale. 322 pages drove 363K impressions in 30 days. Hub-and-spoke architecture, keyword targeting, schema markup.",
         headline='363K Impressions. <span class="text-accent">30 Days.</span>',
@@ -1318,6 +1332,9 @@ def build_service_events():
     """Build individual service page: Event Registration Sites."""
     _service_page(
         slug="events",
+        content_svg="event-registration-flow.svg",
+        content_svg_alt="Event registration flow from landing page to registration, confirmation, and follow-up with GA4 and Meta Pixel attribution",
+        content_svg_caption="Full event registration flow with attribution at every step.",
         title="Event Registration Sites",
         meta_desc="Custom event registration pages with GA4 + Meta Pixel. Multi-city cloning in 48 hours. No per-registrant fees, no Eventbrite branding.",
         headline='One Site Built. <span class="text-accent">Every City Cloned.</span>',
@@ -1418,6 +1435,9 @@ def build_service_ads():
     """Build individual service page: Paid Social Advertising."""
     _service_page(
         slug="ads",
+        content_svg="facebook-ads-funnel.svg",
+        content_svg_alt="Meta ads funnel from impressions to clicks, landing page views, leads, and conversions with pixel attribution at every stage",
+        content_svg_caption="Meta ads funnel with pixel attribution and fast landing pages at every stage.",
         title="Paid Social Advertising",
         meta_desc="Facebook and Instagram campaigns with 62% lower ad costs and 2x industry CTR. Custom audience targeting, retargeting, full attribution.",
         headline='62% Lower Ad Costs. <span class="text-accent">2x More Clicks.</span>',
@@ -1492,6 +1512,9 @@ def build_service_audit():
     """Build individual service page: PageSpeed Audit & Fix."""
     _service_page(
         slug="audit",
+        content_svg="website-audit-dashboard.svg",
+        content_svg_alt="Website audit dashboard showing Performance, SEO, Accessibility, and Best Practices scores with issue findings",
+        content_svg_caption="Website audit scoring across Performance, SEO, Accessibility, and Best Practices.",
         title="PageSpeed Audit & Fix",
         meta_desc="Free instant PageSpeed audit. See your scores, SEO gaps, and performance bottlenecks in 30 seconds. Paid fix service available.",
         headline='Find Out What Is <span class="text-accent">Slowing You Down</span>',
@@ -2725,6 +2748,41 @@ def build_blog_article(article):
 
     faq_html = generate_faq_html(article["faqs"])
 
+    # Pick a page-type-specific SVG based on topic keywords
+    _topic_blob = f"{slug} {article.get('title', '')} {article.get('description', '')}".lower()
+    if "wordpress" in _topic_blob and ("static" in _topic_blob or "vs" in _topic_blob or "migration" in _topic_blob or "contrarian" in _topic_blob):
+        _article_svg = "wordpress-vs-static.svg"
+        _article_svg_alt = "WordPress vs static HTML comparison across PageSpeed, hosting cost, plugin vulnerabilities, maintenance, and ownership"
+        _article_svg_caption = "WordPress vs static HTML: the real tradeoffs across performance, cost, and security."
+    elif "redesign" in _topic_blob or "migration" in _topic_blob or "before-after" in _topic_blob or "ditched" in _topic_blob or "escaping" in _topic_blob or "lock-in" in _topic_blob:
+        _article_svg = "redesign-before-after.svg"
+        _article_svg_alt = "Before and after migration showing PageSpeed, Core Web Vitals, hosting cost, and security comparison"
+        _article_svg_caption = "Before and after: what a static HTML migration actually changes."
+    elif "event" in _topic_blob or "registration" in _topic_blob or "eventbrite" in _topic_blob or "conference" in _topic_blob:
+        _article_svg = "event-registration-flow.svg"
+        _article_svg_alt = "Event registration flow from landing page to registration, confirmation, and follow-up with GA4 and Meta Pixel attribution"
+        _article_svg_caption = "Full event registration flow with attribution at every step."
+    elif "facebook" in _topic_blob or "meta ads" in _topic_blob or "instagram ads" in _topic_blob or "retargeting" in _topic_blob or "ad management" in _topic_blob:
+        _article_svg = "facebook-ads-funnel.svg"
+        _article_svg_alt = "Meta ads funnel from impressions to clicks, landing page views, leads, and conversions with pixel attribution"
+        _article_svg_caption = "Meta ads funnel: impression to conversion with pixel attribution."
+    elif "audit" in _topic_blob:
+        _article_svg = "website-audit-dashboard.svg"
+        _article_svg_alt = "Website audit dashboard showing Performance, SEO, Accessibility, and Best Practices scores with issue findings"
+        _article_svg_caption = "What a real website audit measures."
+    elif ("seo" in _topic_blob or "programmatic" in _topic_blob or "hub-and-spoke" in _topic_blob or "topical authority" in _topic_blob or "keyword" in _topic_blob or "rankings" in _topic_blob or "ai-seo" in _topic_blob):
+        _article_svg = "seo-strategy.svg"
+        _article_svg_alt = "Hub-and-spoke SEO architecture: keyword research, content templates, schema markup, technical SEO, internal linking, indexing, and rankings"
+        _article_svg_caption = "Hub-and-spoke architecture for programmatic SEO at scale."
+    elif ("pagespeed" in _topic_blob or "core web vitals" in _topic_blob or "speed" in _topic_blob or "lcp" in _topic_blob or "cls" in _topic_blob or "tbt" in _topic_blob or "fcp" in _topic_blob or "performance" in _topic_blob or "fast" in _topic_blob):
+        _article_svg = "site-speed-metrics.svg"
+        _article_svg_alt = "PageSpeed dashboard showing LCP, CLS, TBT, FCP scores and comparison of SharpPages vs agency and WordPress sites"
+        _article_svg_caption = "Core Web Vitals thresholds and what Google actually measures."
+    else:
+        _article_svg = "web-design-process.svg"
+        _article_svg_alt = "SharpPages web design process showing discovery, design, build, and launch phases with performance metrics"
+        _article_svg_caption = "The SharpPages process: from discovery to a conversion-optimized website in 2-4 weeks."
+
     body = f'''
         {breadcrumb_nav}
         <section class="page-header">
@@ -2745,8 +2803,8 @@ def build_blog_article(article):
         <section class="content-section">
             <div class="container">
                 <figure class="content-figure">
-                    <img src="/assets/images/content/web-design-process.svg" alt="SharpPages web design process showing discovery, design, build, and launch phases with performance metrics" width="1200" height="630" loading="lazy">
-                    <figcaption>The SharpPages process: from discovery to a conversion-optimized website in 2-4 weeks.</figcaption>
+                    <img src="/assets/images/content/{_article_svg}" alt="{_article_svg_alt}" width="1200" height="630" loading="lazy">
+                    <figcaption>{_article_svg_caption}</figcaption>
                 </figure>
             </div>
         </section>

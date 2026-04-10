@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#06090E"/>
+  <text x="600" y="44" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#E4E8ED" text-anchor="middle">Before &amp; After: WordPress to Static Migration</text>
+  <text x="600" y="66" font-family="system-ui,sans-serif" font-size="13" fill="#7A8899" text-anchor="middle">Same design. Same content. 5x faster.</text>
+
+  <!-- BEFORE panel -->
+  <g transform="translate(40,100)">
+    <rect width="540" height="360" rx="12" fill="#0C1118" stroke="#E85A50" stroke-width="1.5"/>
+    <rect x="0" y="0" width="540" height="4" rx="2" fill="#E85A50"/>
+    <text x="270" y="34" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#E85A50" text-anchor="middle">BEFORE &middot; WordPress</text>
+
+    <!-- Score -->
+    <g transform="translate(40,50)">
+      <circle cx="60" cy="60" r="50" fill="none" stroke="#1E2A38" stroke-width="8"/>
+      <circle cx="60" cy="60" r="50" fill="none" stroke="#E85A50" stroke-width="8"
+              stroke-dasharray="141 314" transform="rotate(-90 60 60)" stroke-linecap="round"/>
+      <text x="60" y="72" font-family="system-ui,sans-serif" font-size="34" font-weight="800" fill="#E85A50" text-anchor="middle">45</text>
+      <text x="60" y="136" font-family="system-ui,sans-serif" font-size="11" fill="#7A8899" text-anchor="middle">PageSpeed</text>
+    </g>
+
+    <!-- Metrics list -->
+    <g font-family="system-ui,sans-serif" transform="translate(180,56)">
+      <g>
+        <text x="0" y="14" font-size="11" fill="#7A8899">LCP</text>
+        <text x="260" y="14" font-size="12" font-weight="700" fill="#E85A50" text-anchor="end">4.2s</text>
+        <rect x="0" y="20" width="260" height="5" rx="2" fill="#1E2A38"/>
+        <rect x="0" y="20" width="230" height="5" rx="2" fill="#E85A50"/>
+      </g>
+      <g transform="translate(0,38)">
+        <text x="0" y="14" font-size="11" fill="#7A8899">TBT</text>
+        <text x="260" y="14" font-size="12" font-weight="700" fill="#E85A50" text-anchor="end">680ms</text>
+        <rect x="0" y="20" width="260" height="5" rx="2" fill="#1E2A38"/>
+        <rect x="0" y="20" width="210" height="5" rx="2" fill="#E85A50"/>
+      </g>
+      <g transform="translate(0,76)">
+        <text x="0" y="14" font-size="11" fill="#7A8899">CLS</text>
+        <text x="260" y="14" font-size="12" font-weight="700" fill="#E8B931" text-anchor="end">0.24</text>
+        <rect x="0" y="20" width="260" height="5" rx="2" fill="#1E2A38"/>
+        <rect x="0" y="20" width="180" height="5" rx="2" fill="#E8B931"/>
+      </g>
+      <g transform="translate(0,114)">
+        <text x="0" y="14" font-size="11" fill="#7A8899">Page Weight</text>
+        <text x="260" y="14" font-size="12" font-weight="700" fill="#E85A50" text-anchor="end">4.8MB</text>
+        <rect x="0" y="20" width="260" height="5" rx="2" fill="#1E2A38"/>
+        <rect x="0" y="20" width="240" height="5" rx="2" fill="#E85A50"/>
+      </g>
+    </g>
+
+    <!-- Cost callouts -->
+    <g font-family="system-ui,sans-serif" transform="translate(40,230)">
+      <rect width="460" height="30" rx="6" fill="rgba(232,90,80,0.06)"/>
+      <text x="14" y="20" font-size="11" fill="#E85A50">Hosting</text>
+      <text x="446" y="20" font-size="11" font-weight="700" fill="#E4E8ED" text-anchor="end">$59/mo ($708/yr)</text>
+
+      <rect y="38" width="460" height="30" rx="6" fill="rgba(232,90,80,0.06)"/>
+      <text x="14" y="58" font-size="11" fill="#E85A50">Plugin updates</text>
+      <text x="446" y="58" font-size="11" font-weight="700" fill="#E4E8ED" text-anchor="end">Weekly maintenance</text>
+
+      <rect y="76" width="460" height="30" rx="6" fill="rgba(232,90,80,0.06)"/>
+      <text x="14" y="96" font-size="11" fill="#E85A50">Security vulns</text>
+      <text x="446" y="96" font-size="11" font-weight="700" fill="#E4E8ED" text-anchor="end">23 active in plugins</text>
+    </g>
+  </g>
+
+  <!-- Arrow -->
+  <g transform="translate(600,260)">
+    <circle cx="0" cy="20" r="24" fill="#0C1118" stroke="#00C2E0" stroke-width="2"/>
+    <line x1="-10" y1="20" x2="8" y2="20" stroke="#00C2E0" stroke-width="2.5"/>
+    <polygon points="12,20 4,15 4,25" fill="#00C2E0"/>
+  </g>
+
+  <!-- AFTER panel -->
+  <g transform="translate(620,100)">
+    <rect width="540" height="360" rx="12" fill="#0C1118" stroke="#34D399" stroke-width="1.5"/>
+    <rect x="0" y="0" width="540" height="4" rx="2" fill="#34D399"/>
+    <text x="270" y="34" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#34D399" text-anchor="middle">AFTER &middot; Static HTML</text>
+
+    <!-- Score -->
+    <g transform="translate(40,50)">
+      <circle cx="60" cy="60" r="50" fill="none" stroke="#1E2A38" stroke-width="8"/>
+      <circle cx="60" cy="60" r="50" fill="none" stroke="#34D399" stroke-width="8"
+              stroke-dasharray="298 314" transform="rotate(-90 60 60)" stroke-linecap="round"/>
+      <text x="60" y="72" font-family="system-ui,sans-serif" font-size="34" font-weight="800" fill="#34D399" text-anchor="middle">95</text>
+      <text x="60" y="136" font-family="system-ui,sans-serif" font-size="11" fill="#7A8899" text-anchor="middle">PageSpeed</text>
+    </g>
+
+    <!-- Metrics list -->
+    <g font-family="system-ui,sans-serif" transform="translate(180,56)">
+      <g>
+        <text x="0" y="14" font-size="11" fill="#7A8899">LCP</text>
+        <text x="260" y="14" font-size="12" font-weight="700" fill="#34D399" text-anchor="end">0.9s</text>
+        <rect x="0" y="20" width="260" height="5" rx="2" fill="#1E2A38"/>
+        <rect x="0" y="20" width="60" height="5" rx="2" fill="#34D399"/>
+      </g>
+      <g transform="translate(0,38)">
+        <text x="0" y="14" font-size="11" fill="#7A8899">TBT</text>
+        <text x="260" y="14" font-size="12" font-weight="700" fill="#34D399" text-anchor="end">30ms</text>
+        <rect x="0" y="20" width="260" height="5" rx="2" fill="#1E2A38"/>
+        <rect x="0" y="20" width="16" height="5" rx="2" fill="#34D399"/>
+      </g>
+      <g transform="translate(0,76)">
+        <text x="0" y="14" font-size="11" fill="#7A8899">CLS</text>
+        <text x="260" y="14" font-size="12" font-weight="700" fill="#34D399" text-anchor="end">0.02</text>
+        <rect x="0" y="20" width="260" height="5" rx="2" fill="#1E2A38"/>
+        <rect x="0" y="20" width="10" height="5" rx="2" fill="#34D399"/>
+      </g>
+      <g transform="translate(0,114)">
+        <text x="0" y="14" font-size="11" fill="#7A8899">Page Weight</text>
+        <text x="260" y="14" font-size="12" font-weight="700" fill="#34D399" text-anchor="end">380KB</text>
+        <rect x="0" y="20" width="260" height="5" rx="2" fill="#1E2A38"/>
+        <rect x="0" y="20" width="28" height="5" rx="2" fill="#34D399"/>
+      </g>
+    </g>
+
+    <!-- Cost callouts -->
+    <g font-family="system-ui,sans-serif" transform="translate(40,230)">
+      <rect width="460" height="30" rx="6" fill="rgba(52,211,153,0.06)"/>
+      <text x="14" y="20" font-size="11" fill="#34D399">Hosting</text>
+      <text x="446" y="20" font-size="11" font-weight="700" fill="#E4E8ED" text-anchor="end">$0/mo (GitHub Pages)</text>
+
+      <rect y="38" width="460" height="30" rx="6" fill="rgba(52,211,153,0.06)"/>
+      <text x="14" y="58" font-size="11" fill="#34D399">Plugin updates</text>
+      <text x="446" y="58" font-size="11" font-weight="700" fill="#E4E8ED" text-anchor="end">None needed</text>
+
+      <rect y="76" width="460" height="30" rx="6" fill="rgba(52,211,153,0.06)"/>
+      <text x="14" y="96" font-size="11" fill="#34D399">Security vulns</text>
+      <text x="446" y="96" font-size="11" font-weight="700" fill="#E4E8ED" text-anchor="end">Zero attack surface</text>
+    </g>
+  </g>
+
+  <!-- Bottom summary -->
+  <g transform="translate(40,490)">
+    <rect width="1120" height="100" rx="10" fill="#0C1118" stroke="#1E2A38" stroke-width="1"/>
+    <g transform="translate(80,16)">
+      <text x="0" y="28" font-family="system-ui,sans-serif" font-size="36" font-weight="800" fill="#00C2E0">5x</text>
+      <text x="0" y="52" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899">Faster load times</text>
+    </g>
+    <g transform="translate(320,16)">
+      <text x="0" y="28" font-family="system-ui,sans-serif" font-size="36" font-weight="800" fill="#E4E8ED">301s</text>
+      <text x="0" y="52" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899">SEO preserved</text>
+    </g>
+    <g transform="translate(560,16)">
+      <text x="0" y="28" font-family="system-ui,sans-serif" font-size="36" font-weight="800" fill="#E8B931">$708/yr</text>
+      <text x="0" y="52" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899">Hosting saved</text>
+    </g>
+    <g transform="translate(800,16)">
+      <text x="0" y="28" font-family="system-ui,sans-serif" font-size="36" font-weight="800" fill="#34D399">2-4wk</text>
+      <text x="0" y="52" font-family="system-ui,sans-serif" font-size="12" fill="#7A8899">Migration timeline</text>
+    </g>
+  </g>
+</svg>
