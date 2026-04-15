@@ -7,21 +7,15 @@
   'use strict';
   var header = document.querySelector('.header');
 
-  // Header shadow on scroll
+  // Header shadow on scroll + mobile sticky CTA
+  var mobileCta = document.getElementById('mobile-cta');
   if (header) {
     window.addEventListener('scroll', function() {
       header.classList.toggle('header--scrolled', window.scrollY > 10);
+      if (mobileCta) {
+        mobileCta.classList.toggle('visible', window.scrollY > 400);
+      }
     }, { passive: true });
-  }
-
-  // Mobile menu toggle
-  var menuToggle = document.querySelector('.menu-toggle');
-  var mobileNav = document.querySelector('.nav--mobile');
-  if (menuToggle && mobileNav) {
-    menuToggle.addEventListener('click', function() {
-      menuToggle.classList.toggle('active');
-      mobileNav.classList.toggle('active');
-    });
   }
 
   // Smooth scroll for anchor links

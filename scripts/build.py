@@ -178,7 +178,7 @@ TIERS = [
             "Ongoing content expansion",
         ],
         "featured": False,
-        "cta": "Let's Build It",
+        "cta": "Get Started",
     },
 ]
 
@@ -267,7 +267,7 @@ def build_homepage():
                 <h1 class="hero__title">Fast sites. Real SEO results. <span class="text-accent">No hourly billing.</span></h1>
                 <p class="hero__subtitle">Sites that load in under a second. SEO that drives traffic in weeks. Ad campaigns with 2x industry CTR. No change orders, no surprises.</p>
                 <div class="hero__cta-group">
-                    <a href="/contact/" class="btn btn--primary btn--lg">Let's Build It</a>
+                    <a href="/contact/" class="btn btn--primary btn--lg">Get Started</a>
                     <a href="/work/" class="btn btn--outline btn--lg">See Our Work</a>
                 </div>
 
@@ -481,7 +481,7 @@ def build_homepage():
 {generate_cta_section(
     title="Ready to See What Your Site Could Be?",
     text="Tell us about your site. We will review it, discuss your goals, and send a fixed quote within two business days.",
-    button_text="Let's Build It",
+    button_text="Get Started",
 )}'''
 
     html = get_page_wrapper(
@@ -886,7 +886,7 @@ def build_services():
 {generate_cta_section(
     title="Ready to See What Your Site Could Be?",
     text="Tell us about your site. We will review it, discuss your goals, and send a fixed quote within two business days.",
-    button_text="Let's Build It",
+    button_text="Get Started",
 )}'''
 
     html = get_page_wrapper(
@@ -917,7 +917,7 @@ def _service_page(slug, title, meta_desc, headline, hero_text, proof_html,
                   content_svg=None, content_svg_alt=None, content_svg_caption=None,
                   cta_title="Ready to Get Started?",
                   cta_text="Tell us about your project. We will scope the work, give you a fixed quote, and explain exactly what is included.",
-                  cta_btn="Let's Build It", cta_href="/contact/"):
+                  cta_btn="Get Started", cta_href="/contact/"):
     """Build an individual service page with standardized structure."""
 
     path = f"/services/{slug}/"
@@ -2031,7 +2031,7 @@ def build_about():
 {generate_cta_section(
     title="Ready to Work Together?",
     text="Tell us about your site. We will review it, discuss your goals, and send a fixed quote within two business days.",
-    button_text="Let's Build It",
+    button_text="Get Started",
 )}'''
 
     html = get_page_wrapper(
