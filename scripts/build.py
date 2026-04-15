@@ -479,7 +479,7 @@ def build_homepage():
 {faq_html}
 
 {generate_cta_section(
-    title="Ready to See What Your Site Could Be?",
+    title="Fast Site. Real Rankings. One Flat Price.",
     text="Tell us about your site. We will review it, discuss your goals, and send a fixed quote within two business days.",
     button_text="Get Started",
 )}'''
@@ -884,7 +884,7 @@ def build_services():
 {faq_html}
 
 {generate_cta_section(
-    title="Ready to See What Your Site Could Be?",
+    title="Fast Site. Real Rankings. One Flat Price.",
     text="Tell us about your site. We will review it, discuss your goals, and send a fixed quote within two business days.",
     button_text="Get Started",
 )}'''
