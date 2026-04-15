@@ -1,5 +1,30 @@
 /* SharpPages Design Tokens */
 
+/* Self-hosted fonts */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/assets/fonts/instrument-sans.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/assets/fonts/dm-sans.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/dm-sans-italic.woff') format('woff');
+}
+
 :root {
   /* ── Primary ── */
   --color-midnight: #06090E;
@@ -93,23 +118,6 @@
   --max-width: 1200px;
   --max-width-narrow: 720px;
   --max-width-wide: 1440px;
-}
-
-/* ── Light Mode Override ── */
-@media (prefers-color-scheme: light) {
-  :root.auto-theme {
-    --color-bg: #F6F8FA;
-    --color-surface: #FFFFFF;
-    --color-card: #FFFFFF;
-    --color-card-hover: #F0F2F5;
-    --color-border: #D8DCE4;
-    --color-border-hover: #C0C6D0;
-    --color-text: #0C1118;
-    --color-text-muted: #5A6577;
-    --color-text-subtle: #8A94A6;
-    --color-primary: #0A7EA8;
-    --color-primary-hover: #0990BE;
-  }
 }
 
 *, *::before, *::after {

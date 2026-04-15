@@ -73,9 +73,6 @@
 }
     </script>
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
@@ -355,7 +352,6 @@
 <p>This saves 50-100ms per third-party domain by resolving DNS before the resource is requested.</p>
 <h3>Preconnect to Critical Third Parties</h3>
 <p><code>preconnect</code> goes further than DNS prefetch by also establishing the TCP connection and TLS handshake early:</p>
-<pre><code>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</code></pre>
 <p>This saves 100-200ms for the first request to that domain. Use for domains that deliver critical resources (fonts, CDN). Limit to 2-3 preconnects to avoid consuming connection slots.</p>
 <h3>Fetchpriority for the Hero Image</h3>
 <p>The <code>fetchpriority</code> attribute tells the browser to prioritize downloading a specific resource:</p>
