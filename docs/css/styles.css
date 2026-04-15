@@ -769,8 +769,6 @@ main {
   justify-content: center;
   gap: var(--space-8);
   padding: var(--space-8) 0;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .stats-bar__item {
@@ -1295,22 +1293,7 @@ main {
   gap: var(--space-6);
   text-align: center;
   padding: var(--space-12) 0;
-  position: relative;
 }
-
-/* Top and bottom decorative lines */
-.metrics-strip::before,
-.metrics-strip::after {
-  content: '';
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-border-hover), transparent);
-}
-
-.metrics-strip::before { top: 0; }
-.metrics-strip::after { bottom: 0; }
 
 @media (min-width: 768px) {
   .metrics-strip {
@@ -1382,9 +1365,8 @@ main {
 }
 
 .proof-section--testimonial {
-  margin-top: var(--space-8);
-  padding-top: var(--space-8);
-  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
 }
 
 .testimonial {
@@ -1452,8 +1434,6 @@ main {
   gap: var(--space-4);
   flex-wrap: wrap;
   margin-top: var(--space-8);
-  padding-top: var(--space-8);
-  border-top: 1px solid var(--color-border);
 }
 
 .badge-row img {
@@ -2146,18 +2126,6 @@ main {
 
 .section--alt {
   background: var(--color-surface);
-  position: relative;
-}
-
-/* Subtle top edge glow on alternating sections */
-.section--alt::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 10%;
-  right: 10%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 194, 224, 0.2), transparent);
 }
 
 .text-center {
@@ -2201,11 +2169,10 @@ img[loading="lazy"] {
 
 .proof-section {
   padding: var(--space-12) 0;
-  border-bottom: 1px solid var(--color-border);
 }
 
-.proof-section:last-child {
-  border-bottom: none;
+.proof-section + .proof-section {
+  padding-top: var(--space-8);
 }
 
 .proof-section__heading {
