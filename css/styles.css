@@ -261,18 +261,20 @@
   font-size: var(--text-sm);
   text-decoration: none;
   cursor: pointer;
-  transition: background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
 .btn--primary {
   background: var(--color-primary);
   color: var(--color-text-inverse);
+  box-shadow: 0 0 0 rgba(0, 194, 224, 0);
 }
 
 .btn--primary:hover {
   background: var(--color-primary-hover);
   color: var(--color-text-inverse);
-  box-shadow: 0 0 20px rgba(0, 194, 224, 0.3);
+  box-shadow: 0 0 24px rgba(0, 194, 224, 0.35), 0 0 60px rgba(0, 194, 224, 0.1);
+  transform: translateY(-1px);
 }
 
 .btn--sm {
@@ -451,6 +453,20 @@
   text-align: center;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse at center, rgba(0, 194, 224, 0.06) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .cta-section__header {
@@ -677,6 +693,42 @@ main {
 .hero {
   padding: var(--space-24) 0 var(--space-16);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Radial glow behind hero content */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(0, 194, 224, 0.08) 0%, rgba(0, 194, 224, 0.03) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Subtle grid pattern overlay */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero__title {
@@ -770,18 +822,56 @@ main {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-8);
-  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal), transform var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle top accent line on cards */
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-muted));
+  opacity: 0;
+  transition: opacity var(--transition-normal);
 }
 
 .feature-card:hover {
   border-color: var(--color-border-hover);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 32px rgba(0, 194, 224, 0.08);
+  transform: translateY(-2px);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
 }
 
 .feature-card__icon {
-  font-size: var(--text-3xl);
+  width: 40px;
+  height: 40px;
   margin-bottom: var(--space-4);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: rgba(0, 194, 224, 0.08);
+  color: var(--color-primary);
+  font-size: var(--text-xl);
+  line-height: 1;
+}
+
+.feature-card__icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--color-primary);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .feature-card__title {
@@ -794,6 +884,25 @@ main {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   line-height: var(--leading-relaxed);
+}
+
+/* Pain-point cards — subtle red/warning treatment */
+.feature-card--pain {
+  border-color: rgba(239, 68, 68, 0.15);
+}
+
+.feature-card--pain::before {
+  background: linear-gradient(90deg, rgba(239, 68, 68, 0.4), rgba(239, 68, 68, 0.1));
+  opacity: 1;
+}
+
+.feature-card--pain .feature-card__title {
+  color: #EF6B6B;
+}
+
+.feature-card--pain:hover {
+  border-color: rgba(239, 68, 68, 0.3);
+  box-shadow: 0 8px 32px rgba(239, 68, 68, 0.06);
 }
 
 /* =============================================================================
@@ -1079,16 +1188,17 @@ main {
   text-align: center;
   padding: var(--space-6) var(--space-4) var(--space-4);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out, border-color 0.3s, background 0.3s;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, border-color 0.3s, background 0.3s, box-shadow 0.3s;
 }
 
 .process-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(0, 194, 224, 0.15);
+  background: var(--color-card-hover);
+  border-color: rgba(0, 194, 224, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 194, 224, 0.06);
 }
 
 /* Staggered reveal */
@@ -1108,16 +1218,24 @@ main {
 
 .process-card__step {
   font-family: var(--font-heading);
-  font-size: var(--text-xl);
+  font-size: var(--text-sm);
   font-weight: 700;
   color: var(--color-primary);
-  opacity: 0.3;
   line-height: 1;
-  transition: opacity 0.4s;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: rgba(0, 194, 224, 0.1);
+  border: 1px solid rgba(0, 194, 224, 0.2);
+  transition: background 0.3s, border-color 0.3s;
 }
 
 .process-card:hover .process-card__step {
-  opacity: 0.6;
+  background: rgba(0, 194, 224, 0.15);
+  border-color: rgba(0, 194, 224, 0.4);
 }
 
 /* Icon — small inline SVG with stroke-draw animation */
@@ -1176,7 +1294,23 @@ main {
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-6);
   text-align: center;
+  padding: var(--space-12) 0;
+  position: relative;
 }
+
+/* Top and bottom decorative lines */
+.metrics-strip::before,
+.metrics-strip::after {
+  content: '';
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border-hover), transparent);
+}
+
+.metrics-strip::before { top: 0; }
+.metrics-strip::after { bottom: 0; }
 
 @media (min-width: 768px) {
   .metrics-strip {
@@ -1188,19 +1322,29 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
+  padding: var(--space-4);
 }
 
 .metrics-strip__number {
   font-family: var(--font-heading);
-  font-size: var(--text-4xl);
+  font-size: var(--text-5xl);
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-primary);
   line-height: 1;
+  letter-spacing: var(--tracking-tight);
+}
+
+@media (max-width: 767px) {
+  .metrics-strip__number {
+    font-size: var(--text-4xl);
+  }
 }
 
 .metrics-strip__label {
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
+  color: var(--color-text);
+  font-weight: 500;
+  margin-top: var(--space-2);
 }
 
 .metrics-strip__source {
@@ -1245,16 +1389,41 @@ main {
 
 .testimonial {
   text-align: center;
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
+  position: relative;
+  padding: var(--space-8) var(--space-6);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+/* Large decorative quotation mark */
+.testimonial::before {
+  content: '\201C';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--color-primary);
+  opacity: 0.3;
+  font-family: Georgia, serif;
 }
 
 .testimonial__text {
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   font-style: italic;
   line-height: var(--leading-relaxed);
   color: var(--color-text);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+@media (max-width: 767px) {
+  .testimonial__text {
+    font-size: var(--text-lg);
+  }
 }
 
 .testimonial__footer {
@@ -1267,7 +1436,7 @@ main {
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: var(--text-sm);
-  color: var(--color-text);
+  color: var(--color-primary);
 }
 
 .testimonial__role {
@@ -1977,6 +2146,18 @@ main {
 
 .section--alt {
   background: var(--color-surface);
+  position: relative;
+}
+
+/* Subtle top edge glow on alternating sections */
+.section--alt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 194, 224, 0.2), transparent);
 }
 
 .text-center {
@@ -2133,6 +2314,7 @@ img[loading="lazy"] {
   stroke: var(--color-primary);
   stroke-width: 3;
   stroke-linecap: round;
+  filter: drop-shadow(0 0 8px rgba(0, 194, 224, 0.4));
   stroke-linejoin: round;
   stroke-dasharray: 900;
   stroke-dashoffset: 900;
@@ -2207,12 +2389,14 @@ img[loading="lazy"] {
   font-size: var(--text-sm);
   font-weight: 500;
   text-align: center;
-  transition: border-color var(--transition-fast), color var(--transition-fast);
+  transition: border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .industry-grid a:hover {
   border-color: var(--color-primary);
   color: var(--color-primary);
+  box-shadow: 0 4px 16px rgba(0, 194, 224, 0.06);
+  transform: translateY(-1px);
 }
 
 /* =============================================================================
