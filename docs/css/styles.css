@@ -2933,119 +2933,18 @@ img[loading="lazy"] {
   font-family: var(--font-body);
 }
 
-.browser-mockup__body {
-  padding: var(--space-6);
-  background: var(--color-bg);
-  min-height: 200px;
-  position: relative;
+.browser-mockup__img-link {
+  display: block;
+  overflow: hidden;
 }
 
-.browser-mockup__link {
-  position: absolute;
-  bottom: var(--space-4);
-  right: var(--space-4);
-  font-size: var(--text-xs);
-  font-weight: 600;
-  color: var(--color-primary);
-  text-decoration: none;
-  opacity: 0.7;
-  transition: opacity var(--transition-fast);
+.browser-mockup__img-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
 }
 
-.browser-mockup__link:hover {
-  opacity: 1;
-}
-
-/* Stylized site content */
-.mockup-nav {
-  height: 6px;
-  width: 40%;
-  background: var(--color-border);
-  border-radius: 3px;
-  margin-bottom: var(--space-6);
-}
-
-.mockup-hero {
-  margin-bottom: var(--space-6);
-}
-
-.mockup-line {
-  border-radius: 3px;
-  margin-bottom: var(--space-2);
-}
-
-.mockup-line--heading {
-  height: 14px;
-  background: var(--color-text);
-  opacity: 0.7;
-  margin-bottom: var(--space-3);
-}
-
-.mockup-line--text {
-  height: 8px;
-  background: var(--color-text-subtle);
-  opacity: 0.5;
-}
-
-.mockup-btn {
-  width: 80px;
-  height: 24px;
-  background: var(--color-primary);
-  border-radius: var(--radius-sm);
-  margin-top: var(--space-4);
-  opacity: 0.8;
-}
-
-.mockup-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-3);
-  margin-bottom: var(--space-4);
-}
-
-.mockup-card {
-  height: 60px;
-  background: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-}
-
-/* 4-col grid for PE Collective (more pages) */
-.browser-mockup__body--pec .mockup-grid {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-/* Side-by-side mockups for BTL */
-.browser-mockup-row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
-  margin: var(--space-8) 0;
-}
-
-@media (min-width: 768px) {
-  .browser-mockup-row {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.browser-mockup--sm {
-  max-width: none;
-}
-
-.browser-mockup--sm .browser-mockup__body {
-  min-height: 140px;
-}
-
-/* Color accents per site */
-.browser-mockup__body--provyx .mockup-btn {
-  background: #1ABC9C;
-}
-
-.browser-mockup__body--pec .mockup-btn {
-  background: #3B82F6;
-}
-
-.browser-mockup__body--btl .mockup-btn {
-  background: #E8B931;
+.browser-mockup__img-link:hover img {
+  transform: scale(1.02);
 }
