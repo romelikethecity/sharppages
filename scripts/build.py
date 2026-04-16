@@ -3182,6 +3182,7 @@ def copy_static_assets():
     file_copies = [
         ("tokens.css", "tokens.css"),
         ("site.webmanifest", "site.webmanifest"),
+        ("llms.txt", "llms.txt"),
     ]
     for src_file, dest_file in file_copies:
         src = os.path.join(PROJECT_ROOT, src_file)

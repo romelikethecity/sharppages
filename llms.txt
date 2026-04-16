@@ -1,0 +1,45 @@
+# SharpPages
+
+> SharpPages is a performance web studio that builds fast static sites, runs programmatic SEO at scale, and manages paid social campaigns. Sites load in under a second, score 90+ on PageSpeed, and ship with full schema markup, OG tags, and sitemaps. No WordPress, no Webflow, no hourly billing. Flat fees, you own all files, no platform lock-in. Built 700+ pages with an average PageSpeed score of 98.
+
+SharpPages serves B2B SaaS companies, medical device companies, pharma field marketing teams, conference organizers, med spas, healthcare practices, real estate firms, law firms, home services, professional services, startups, and franchise/multi-location businesses. The studio handles everything from website design and migration to SEO strategy and Facebook/Instagram ad management.
+
+## Core Pages
+
+- [Homepage](https://sharppages.com/): Fast sites, real SEO results, no hourly billing
+- [Services](https://sharppages.com/services/): Full catalog of web development, SEO, and ad management services
+- [Pricing](https://sharppages.com/pricing/): Flat-fee pricing for all service tiers
+- [Work](https://sharppages.com/work/): Portfolio and case studies
+- [Free Site Audit](https://sharppages.com/audit/): Instant PageSpeed and SEO audit tool
+- [Blog](https://sharppages.com/blog/): Web performance, SEO, and digital marketing articles
+- [About](https://sharppages.com/about/): Company background and founder
+- [Contact](https://sharppages.com/contact/): Project inquiry form
+- [Locations](https://sharppages.com/locations/): Service areas
+
+## Services
+
+- [Website Design & Build](https://sharppages.com/services/web-design/): Static HTML/CSS sites with sub-1-second load times and 90+ PageSpeed scores
+- [Website Redesign & Migration](https://sharppages.com/services/redesign/): WordPress, Webflow, and Squarespace to static migration
+- [SEO & Content Strategy](https://sharppages.com/services/seo/): Programmatic SEO at scale with hub-and-spoke architecture
+- [Event Registration Sites](https://sharppages.com/services/events/): Custom registration pages with GA4 and Meta Pixel, 48hr turnaround
+- [Paid Social Advertising](https://sharppages.com/services/ads/): Facebook/Instagram campaign management with 2x industry-average CTR
+- [PageSpeed Audit & Fix](https://sharppages.com/services/audit/): Performance bottleneck identification and resolution
+
+## Industries
+
+- [Medical Device Companies](https://sharppages.com/for/medical-device-companies/): Web and marketing for medical device sales teams
+- [Pharma Field Marketing](https://sharppages.com/for/pharma-field-marketing/): Event sites and digital campaigns for pharma
+- [B2B SaaS](https://sharppages.com/for/b2b-saas/): High-performance sites for SaaS companies
+- [Conference Organizers](https://sharppages.com/for/conference-organizers/): Registration sites and event marketing
+- [Med Spas](https://sharppages.com/for/med-spas/): Fast sites and local SEO for medical spas
+- [Healthcare Practices](https://sharppages.com/for/healthcare-practices/): Web presence for healthcare providers
+- [Real Estate](https://sharppages.com/for/real-estate/): Property and brokerage sites
+- [Law Firms](https://sharppages.com/for/law-firms/): Legal practice websites
+- [Home Services](https://sharppages.com/for/home-services/): Contractor and home services sites
+- [Startups](https://sharppages.com/for/startups/): Early-stage SaaS and startup sites
+- [Franchise & Multi-Location](https://sharppages.com/for/franchise-multi-location/): Multi-location business sites
+
+## Legal
+
+- [Privacy Policy](https://sharppages.com/privacy/): Privacy and data handling
+- [Terms of Service](https://sharppages.com/terms/): Terms of use

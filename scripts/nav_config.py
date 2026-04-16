@@ -58,10 +58,10 @@ FOOTER_COLUMNS = {
         {"href": "/locations/", "label": "Locations"},
         {"href": "/about/", "label": "About"},
     ],
-    "Our Properties": [
+    "Our Services": [
         {"href": "https://getprovyx.com", "label": "Provyx", "external": True},
-        {"href": "https://b2bsalestools.com", "label": "B2B Sales Tools", "external": True},
-        {"href": "https://theaimarketpulse.com", "label": "AI Market Pulse", "external": True},
+        {"href": "https://veruminc.com", "label": "Verum", "external": True},
+        {"href": "https://runfieldwork.com", "label": "Fieldwork", "external": True},
     ],
     "Legal": [
         {"href": "/privacy/", "label": "Privacy Policy"},
