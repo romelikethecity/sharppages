@@ -72,6 +72,8 @@
   "mainEntityOfPage": "https://sharppages.com/blog/page-speed-optimization-guide/"
 }
     </script>
+    <!-- Fonts -->
+
     <!-- Favicons -->
     <link rel="icon" href="/assets/favicons/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/assets/favicons/favicon-32.png" sizes="32x32" type="image/png">
@@ -350,7 +352,6 @@
 <p>This saves 50-100ms per third-party domain by resolving DNS before the resource is requested.</p>
 <h3>Preconnect to Critical Third Parties</h3>
 <p><code>preconnect</code> goes further than DNS prefetch by also establishing the TCP connection and TLS handshake early:</p>
-<pre><code>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</code></pre>
 <p>This saves 100-200ms for the first request to that domain. Use for domains that deliver critical resources (fonts, CDN). Limit to 2-3 preconnects to avoid consuming connection slots.</p>
 <h3>Fetchpriority for the Hero Image</h3>
 <p>The <code>fetchpriority</code> attribute tells the browser to prioritize downloading a specific resource:</p>
@@ -601,11 +602,11 @@
                 </ul>
             </div>
             <div class="footer__column">
-                <h4 class="footer__heading">Our Services</h4>
+                <h4 class="footer__heading">Our Properties</h4>
                 <ul class="footer__links">
-                    <li><a href="https://getprovyx.com" target="_blank" rel="noopener noreferrer">Provyx: Healthcare Data</a></li>
-<li><a href="https://veruminc.com" target="_blank" rel="noopener noreferrer">Verum: Data Cleaning</a></li>
-<li><a href="https://runfieldwork.com" target="_blank" rel="noopener noreferrer">Fieldwork: Hiring Intel</a></li>
+                    <li><a href="https://getprovyx.com" target="_blank" rel="noopener noreferrer">Provyx</a></li>
+<li><a href="https://b2bsalestools.com" target="_blank" rel="noopener noreferrer">B2B Sales Tools</a></li>
+<li><a href="https://theaimarketpulse.com" target="_blank" rel="noopener noreferrer">AI Market Pulse</a></li>
 
                 </ul>
             </div>
@@ -624,6 +625,7 @@
         </div>
     </footer>
 
+    <div class="mobile-cta" id="mobile-cta"><a href="/contact/" class="btn btn--primary">Get Started</a></div>
     <div id="consent-banner" class="consent-banner" style="display:none">
         <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
         <div class="consent-banner__actions">
