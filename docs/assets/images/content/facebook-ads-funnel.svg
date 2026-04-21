@@ -8,32 +8,32 @@
     <!-- Stage 1: Impressions -->
     <g>
       <polygon points="140,110 1060,110 1000,170 200,170" fill="#0C1118" stroke="#00C2E0" stroke-width="1.5"/>
-      <text x="600" y="140" font-size="14" font-weight="700" fill="#00C2E0" text-anchor="middle">1 &middot; IMPRESSIONS</text>
-      <text x="600" y="158" font-size="11" fill="#7A8899" text-anchor="middle">Interest + lookalike targeting &middot; 250K reach</text>
+      <text x="600" y="140" font-size="14" font-weight="700" fill="#00C2E0" text-anchor="middle">1 · IMPRESSIONS</text>
+      <text x="600" y="158" font-size="11" fill="#7A8899" text-anchor="middle">Interest + lookalike targeting · 250K reach</text>
     </g>
     <!-- Stage 2: Clicks -->
     <g>
       <polygon points="210,180 990,180 920,240 280,240" fill="#0C1118" stroke="#E8B931" stroke-width="1.5"/>
-      <text x="600" y="210" font-size="14" font-weight="700" fill="#E8B931" text-anchor="middle">2 &middot; CLICKS</text>
-      <text x="600" y="228" font-size="11" fill="#7A8899" text-anchor="middle">Link clicks to landing page &middot; 6.8K at $0.18 CPC</text>
+      <text x="600" y="210" font-size="14" font-weight="700" fill="#E8B931" text-anchor="middle">2 · CLICKS</text>
+      <text x="600" y="228" font-size="11" fill="#7A8899" text-anchor="middle">Link clicks to landing page · 6.8K at $0.18 CPC</text>
     </g>
     <!-- Stage 3: Landing -->
     <g>
       <polygon points="290,250 910,250 830,310 370,310" fill="#0C1118" stroke="#00C2E0" stroke-width="1.5"/>
-      <text x="600" y="280" font-size="14" font-weight="700" fill="#00C2E0" text-anchor="middle">3 &middot; LANDING PAGE</text>
-      <text x="600" y="298" font-size="11" fill="#7A8899" text-anchor="middle">Fast page + pixel fires ViewContent &middot; 6.2K views</text>
+      <text x="600" y="280" font-size="14" font-weight="700" fill="#00C2E0" text-anchor="middle">3 · LANDING PAGE</text>
+      <text x="600" y="298" font-size="11" fill="#7A8899" text-anchor="middle">Fast page + pixel fires ViewContent · 6.2K views</text>
     </g>
     <!-- Stage 4: Leads -->
     <g>
       <polygon points="380,320 820,320 740,380 460,380" fill="#0C1118" stroke="#E8B931" stroke-width="1.5"/>
-      <text x="600" y="350" font-size="14" font-weight="700" fill="#E8B931" text-anchor="middle">4 &middot; LEADS</text>
-      <text x="600" y="368" font-size="11" fill="#7A8899" text-anchor="middle">Form submissions &middot; 245 leads at $24 CPL</text>
+      <text x="600" y="350" font-size="14" font-weight="700" fill="#E8B931" text-anchor="middle">4 · LEADS</text>
+      <text x="600" y="368" font-size="11" fill="#7A8899" text-anchor="middle">Form submissions · 245 leads at $24 CPL</text>
     </g>
     <!-- Stage 5: Conversions -->
     <g>
       <polygon points="470,390 730,390 670,450 530,450" fill="#0C1118" stroke="#34D399" stroke-width="2"/>
-      <text x="600" y="420" font-size="14" font-weight="700" fill="#34D399" text-anchor="middle">5 &middot; CONVERSIONS</text>
-      <text x="600" y="438" font-size="11" fill="#7A8899" text-anchor="middle">38 signups &middot; $156 CAC</text>
+      <text x="600" y="420" font-size="14" font-weight="700" fill="#34D399" text-anchor="middle">5 · CONVERSIONS</text>
+      <text x="600" y="438" font-size="11" fill="#7A8899" text-anchor="middle">38 signups · $156 CAC</text>
     </g>
   </g>
 
@@ -67,7 +67,7 @@
     <text x="30" y="30" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#E4E8ED">Why the Landing Page Matters</text>
     <g transform="translate(30,48)">
       <text x="0" y="14" font-family="system-ui,sans-serif" font-size="11" fill="#7A8899">Fast landing pages reduce ad cost</text>
-      <text x="0" y="32" font-family="system-ui,sans-serif" font-size="11" fill="#7A8899">Meta optimizes away bounces &middot; Lower cost per result</text>
+      <text x="0" y="32" font-family="system-ui,sans-serif" font-size="11" fill="#7A8899">Meta optimizes away bounces · Lower cost per result</text>
     </g>
     <g transform="translate(450,36)">
       <text x="0" y="28" font-family="system-ui,sans-serif" font-size="28" font-weight="800" fill="#00C2E0">-38%</text>

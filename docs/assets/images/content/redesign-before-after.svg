@@ -7,7 +7,7 @@
   <g transform="translate(40,100)">
     <rect width="540" height="360" rx="12" fill="#0C1118" stroke="#E85A50" stroke-width="1.5"/>
     <rect x="0" y="0" width="540" height="4" rx="2" fill="#E85A50"/>
-    <text x="270" y="34" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#E85A50" text-anchor="middle">BEFORE &middot; WordPress</text>
+    <text x="270" y="34" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#E85A50" text-anchor="middle">BEFORE · WordPress</text>
 
     <!-- Score -->
     <g transform="translate(40,50)">
@@ -73,7 +73,7 @@
   <g transform="translate(620,100)">
     <rect width="540" height="360" rx="12" fill="#0C1118" stroke="#34D399" stroke-width="1.5"/>
     <rect x="0" y="0" width="540" height="4" rx="2" fill="#34D399"/>
-    <text x="270" y="34" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#34D399" text-anchor="middle">AFTER &middot; Static HTML</text>
+    <text x="270" y="34" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#34D399" text-anchor="middle">AFTER · Static HTML</text>
 
     <!-- Score -->
     <g transform="translate(40,50)">
